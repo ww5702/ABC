@@ -13,3 +13,6 @@ touchLabel을 만들어 해당 label에 UITapGestureRecognizer()을 통해 label
 User Interaction Enabled가 해제되어있어서 그렇다는 사실을 발견   
 label이 안눌려있도록 되어있던거라 체크하여 해제   
 
+-- 다음
+stack에 label을 2개 집어넣어 몇번째 테스트인지 표시   
+만약 일찍 누른다면 오류 발생시키기.   
