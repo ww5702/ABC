@@ -19,6 +19,7 @@ class GameMainViewController: UIViewController, UITableViewDelegate, UITableView
     var count = 1
     var color = "gray"
     var reactionarr : [Int] = [1,2,3,4,5]
+    var reactionAvg = 0
     
     // time trigger
     var timeTrigger = true
@@ -44,7 +45,11 @@ class GameMainViewController: UIViewController, UITableViewDelegate, UITableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let text:String = String(reactionarr[indexPath.row])
-        cell.textLabel?.text = text
+        if reactionarr[indexPath.row] > 5 {
+            cell.textLabel?.text = text + " ms"
+        } else {
+            cell.textLabel?.text = text + " 번째 시도"
+        }
         return cell
     }
     
@@ -79,10 +84,12 @@ class GameMainViewController: UIViewController, UITableViewDelegate, UITableView
         print("count : \(count)")
         print("randomTime : \(randomTime)")
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+randomTime) {
+            //self.checkTime = CFAbsoluteTimeGetCurrent()
+            // 여기서 호출해야함 다시하자 여긴
             self.touchlabel.backgroundColor = UIColor.green
             self.isColorChange = true
             print("함수 실행")
-            if self.count >= 2 {
+            if self.count >= 5 {
                 self.stopTimer()
             }
         }
@@ -127,15 +134,21 @@ class GameMainViewController: UIViewController, UITableViewDelegate, UITableView
         if self.isColorChange == true {
             let changemilli = (CFAbsoluteTimeGetCurrent() - self.checkTime)*1000
             reactionarr[count-1] = Int(changemilli)
+            reactionAvg += Int(changemilli)
+            tableView.reloadData()
             
             // 다시 빨간색으로 변경
             self.touchlabel.backgroundColor = UIColor.red
             self.isColorChange = false
             count += 1
-            
-            if count > 2 {
-                self.touchlabel.text = "측정이 전부 끝났습니다!!"
+
+            if count > 5 {
+                reactionAvg /= reactionarr.count
+                self.countlabel.text = "종료"
+                self.touchlabel.text = "측정이 전부 끝났습니다!!\n평균 = \(reactionAvg) 입니다."
                 print(reactionarr)
+            } else {
+                self.countlabel.text = "\(count)번째 측정"
             }
         }
         
