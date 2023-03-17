@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GameMainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ReactionGameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var countlabel: UILabel!

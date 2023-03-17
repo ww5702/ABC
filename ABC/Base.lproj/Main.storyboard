@@ -33,18 +33,96 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-98" y="-27"/>
+            <point key="canvasLocation" x="-811" y="-27"/>
         </scene>
-        <!--Game Main View Controller-->
+        <!--Game Select View Controller-->
+        <scene sceneID="6vj-Tl-Ryr">
+            <objects>
+                <viewController storyboardIdentifier="GameSelectViewController" id="4of-xZ-JLa" customClass="GameSelectViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="axt-xr-sfR">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Vq2-Sm-GMV">
+                                <rect key="frame" x="20" y="123" width="353" height="655"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Zu7-MH-iqx">
+                                        <rect key="frame" x="0.0" y="0.0" width="353" height="205"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kn-ng-0gF">
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Reaction"/>
+                                                <connections>
+                                                    <action selector="gotoReaction:" destination="4of-xZ-JLa" eventType="touchUpInside" id="nXk-Vn-SOe"/>
+                                                    <segue destination="nea-uo-wwy" kind="show" id="XOZ-ee-TRU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gjp-vm-L2Z">
+                                                <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="4qO-0P-G8W">
+                                        <rect key="frame" x="0.0" y="225" width="353" height="205"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJo-QA-clq">
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fog-C0-vEY">
+                                                <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ihW-W5-4mN">
+                                        <rect key="frame" x="0.0" y="450" width="353" height="205"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-Td-uVG">
+                                                <rect key="frame" x="0.0" y="0.0" width="166.66666666666666" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bYU-bg-1Xj">
+                                                <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="205"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="X3Z-kt-KJe"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Vq2-Sm-GMV" firstAttribute="leading" secondItem="X3Z-kt-KJe" secondAttribute="leading" constant="20" id="ASJ-R4-2Wg"/>
+                            <constraint firstItem="X3Z-kt-KJe" firstAttribute="bottom" secondItem="Vq2-Sm-GMV" secondAttribute="bottom" constant="40" id="NDh-DK-Gcj"/>
+                            <constraint firstItem="Vq2-Sm-GMV" firstAttribute="top" secondItem="X3Z-kt-KJe" secondAttribute="top" constant="20" id="Q9b-XA-k5t"/>
+                            <constraint firstItem="X3Z-kt-KJe" firstAttribute="trailing" secondItem="Vq2-Sm-GMV" secondAttribute="trailing" constant="20" id="RDb-bU-Ttx"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="mYV-WN-RnR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bci-n2-PEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="691" y="-27"/>
+        </scene>
+        <!--Reaction Game View Controller-->
         <scene sceneID="Tvf-Yy-HqZ">
             <objects>
-                <viewController storyboardIdentifier="GameMainViewController" id="nea-uo-wwy" customClass="GameMainViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ReactionGameViewController" id="nea-uo-wwy" customClass="ReactionGameViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xoq-ON-mJL">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kjH-ow-iVr">
-                                <rect key="frame" x="0.0" y="69" width="393" height="450"/>
+                                <rect key="frame" x="0.0" y="113" width="393" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-w2-YzX">
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
@@ -93,7 +171,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="56c-Ij-RtM">
-                                <rect key="frame" x="10" y="529" width="373" height="248.66666666666663"/>
+                                <rect key="frame" x="10" y="573" width="373" height="204.66666666666663"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="7Aa-VV-PSw">
@@ -126,6 +204,7 @@
                             <constraint firstItem="kjH-ow-iVr" firstAttribute="top" secondItem="bEj-ml-HUU" secondAttribute="top" constant="10" id="pIZ-zv-Utm"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="JMZ-gR-ELY"/>
                     <connections>
                         <outlet property="countlabel" destination="YoH-w2-YzX" id="Zd1-AW-a0x"/>
                         <outlet property="tableView" destination="56c-Ij-RtM" id="IMV-AR-ljl"/>
@@ -135,7 +214,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lJ6-S8-Jr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1280" y="-27"/>
+            <point key="canvasLocation" x="1518" y="-198"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Zxc-Ap-VT1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9Ku-hf-sE9" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Yva-0L-aCD">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="4of-xZ-JLa" kind="relationship" relationship="rootViewController" id="FuT-TP-RGM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jo5-bn-MCP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-59" y="-27"/>
         </scene>
     </scenes>
     <resources>

@@ -15,7 +15,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "GameMainViewController")
+        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController")
         // 전체 화면
         vcName?.modalPresentationStyle = .fullScreen
         // 전환 애니메이션
