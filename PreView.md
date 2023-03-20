@@ -10,3 +10,10 @@
    
    
    
+   
+<img width="448" alt="스크린샷 2023-03-20 오후 6 04 07" src="https://user-images.githubusercontent.com/60501045/226293313-50c13eb9-d8d2-4cfc-bb0b-b0c84a982b6e.png">   
+   
+   
+<img width="447" alt="스크린샷 2023-03-20 오후 6 04 13" src="https://user-images.githubusercontent.com/60501045/226293327-b29a4365-7ac5-4227-8792-284a4b4a9b5d.png">   
+   
+   
