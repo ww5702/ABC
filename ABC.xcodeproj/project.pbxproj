@@ -13,10 +13,12 @@
 		C13759A329C04BC40072DA77 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13759A129C04BC40072DA77 /* Main.storyboard */; };
 		C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13759A429C04BC50072DA77 /* Assets.xcassets */; };
 		C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */; };
-		C13759B329C04F0B0072DA77 /* 01.png in Resources */ = {isa = PBXBuildFile; fileRef = C13759B129C04F0B0072DA77 /* 01.png */; };
-		C13759B429C04F0B0072DA77 /* 02.png in Resources */ = {isa = PBXBuildFile; fileRef = C13759B229C04F0B0072DA77 /* 02.png */; };
 		C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
+		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
+		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */; };
+		C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */; };
+		C1AC6C1329C84A09008A4D58 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C1229C84A09008A4D58 /* words.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +30,12 @@
 		C13759A429C04BC50072DA77 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C13759A729C04BC50072DA77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13759A929C04BC50072DA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C13759B129C04F0B0072DA77 /* 01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 01.png; sourceTree = "<group>"; };
-		C13759B229C04F0B0072DA77 /* 02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 02.png; sourceTree = "<group>"; };
 		C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
+		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
+		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryIcon.png; sourceTree = "<group>"; };
+		C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryViewController.swift; sourceTree = "<group>"; };
+		C1AC6C1229C84A09008A4D58 /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,19 +68,29 @@
 		C137599A29C04BC40072DA77 /* ABC */ = {
 			isa = PBXGroup;
 			children = (
-				C13759B129C04F0B0072DA77 /* 01.png */,
-				C13759B229C04F0B0072DA77 /* 02.png */,
+				C1AC6C0B29C83DC9008A4D58 /* Image */,
 				C137599B29C04BC40072DA77 /* AppDelegate.swift */,
 				C137599D29C04BC40072DA77 /* SceneDelegate.swift */,
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
-				C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
+				C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */,
+				C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */,
+				C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
 				C13759A929C04BC50072DA77 /* Info.plist */,
+				C1AC6C1229C84A09008A4D58 /* words.txt */,
 			);
 			path = ABC;
+			sourceTree = "<group>";
+		};
+		C1AC6C0B29C83DC9008A4D58 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,10 +151,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C13759B429C04F0B0072DA77 /* 02.png in Resources */,
 				C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */,
+				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryIcon.png in Resources */,
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,
-				C13759B329C04F0B0072DA77 /* 01.png in Resources */,
+				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
 				C13759A329C04BC40072DA77 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -152,6 +166,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
+				C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */,
 				C13759A029C04BC40072DA77 /* ViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,

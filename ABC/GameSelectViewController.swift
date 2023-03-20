@@ -26,11 +26,11 @@ class GameSelectViewController: UIViewController {
     */
     
     @IBAction func gotoReaction(_ sender: Any) {
-        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController")
-        else {
-            return
-        }
-        self.navigationController?.pushViewController(uvc, animated: true)
+//        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController")
+//        else {
+//            return
+//        }
+//        self.navigationController?.pushViewController(uvc, animated: true)
     }
     
     
