@@ -4,8 +4,9 @@ Are U Better than Chimpanzee?
    
 ***   
 To Do List   
-화면을 너무 빠르게 누르면 초기화시키는 과정을 집어넣었는데   
+1. 화면을 너무 빠르게 누르면 초기화시키는 과정을 집어넣었는데   
 몇초뒤에 시작시키려는 DispatchQueue함수가 이미 실행된 상태에서 초기화를 시키면 이미 선입력된 DispatchQueue함수가 자동으로 실행되는 오류   
+2. 게임 전환을 그저 우클릭으로 action segue show로 하였는데 navigation으로 변환시키기   
 ***
    
 -- 2023.03.14   
