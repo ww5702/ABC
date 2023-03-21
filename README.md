@@ -30,5 +30,6 @@ TableView를 통해 5번의 기록 저장
 평균 반응속도를 화면에 출력   
    
 -- 2023.03.20   
-VerbalMemoryViewController & VerbalMemoryScoreViewController Crete   
+VerbalMemoryViewController & VerbalMemoryScoreViewController Create   
 영단어를 랜덤으로 출력하여 본적 있다면 SEEN 새로 본 단어라면 NEW를 눌러 암기력을 테스트하는 기능 구현   
+결과 페이지에 점수 및 설명글 출력 기능 필요 (다른 화면으로 값 넘기기 기능 추가 필요)   
