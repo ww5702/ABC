@@ -34,11 +34,10 @@ class VerbalMemoryViewController: UIViewController {
         // 한번 랜덤으로 섞어준다
         words.shuffle()
         print(words)
-        print(words.shuffled())
         
         // 보여질 txt
-        wordLabel.text = words[0]
-        checka = words[0]
+        wordLabel.text = words[wordcount]
+        checka = words[wordcount]
     }
     
     
@@ -62,19 +61,29 @@ class VerbalMemoryViewController: UIViewController {
             score += 1
             scoreLabel.text = "Score | \(score)"
             
+            print("save : \(saveArr)")
+            print("shuffle : \(shuffleArr)")
+            // 새로운 단어를 배열에 추가
+            // 단 txt단어가 전부 들어가기전까지 추가
+            if wordcount < words.count-1 {
+                wordcount += 1
+                print("ss\(wordcount)")
+                shuffleArr.append(words[wordcount])
+            }
             // 셔플해서 새로운 단어 보여주기
-            let random = saveArr.shuffled()
-            wordLabel.text = "\(random)"
-            checka = "\(random)"
+            showword()
             
         } else {
-            life -= 1
-            lifeLabel.text = "Life | \(life)"
+            if life > 1 {
+                life -= 1
+                lifeLabel.text = "Life | \(life)"
+                
+                // 셔플해서 중복되더라도 단어 보여주기
+                showword()
+            } else {
+                gotoResult()
+            }
             
-            // 셔플해서 중복되더라도 단어 보여주기
-            let random = shuffleArr.shuffled()
-            wordLabel.text = "\(random)"
-            checka = "\(random)"
         }
     }
     
@@ -87,22 +96,40 @@ class VerbalMemoryViewController: UIViewController {
             
             // 단어를 본 배열에 저장
             saveArr.append(checka)
-            shuffleArr.append(checka)
+            print("save : \(saveArr)")
+            print("shuffle : \(shuffleArr)")
             // 새로운 단어를 배열에 추가
-            wordcount += 1
-            shuffleArr.append(words[wordcount])
-            // 셔플해서 중복된 단어일지라도 다시 보여주기
-            let random = shuffleArr.shuffled()
-            wordLabel.text = "\(random)"
-            checka = "\(random)"
+            // 단 txt단어가 전부 들어가기전까지 추가
+            if wordcount < words.count-1 {
+                wordcount += 1
+                print("s\(wordcount)")
+                shuffleArr.append(words[wordcount])
+            }
+            // 새로 단어 하나를 추가한 배열을 셔플해서 중복된 단어일지라도 다시 보여주기
+            showword()
         } else {
-            life -= 1
-            lifeLabel.text = "Life | \(life)"
-            
-            // 셔플해서 중복되더라도 단어 보여주기
-            let random = shuffleArr.shuffled()
-            wordLabel.text = "\(random)"
-            checka = "\(random)"
+            if life > 1 {
+                life -= 1
+                lifeLabel.text = "Life | \(life)"
+                
+                // 셔플해서 중복되더라도 단어 보여주기
+                showword()
+            } else {
+                gotoResult()
+            }
+        }
+    }
+    
+    func showword() {
+        shuffleArr.shuffle()
+        print(shuffleArr)
+        wordLabel.text = "\(shuffleArr.first!)"
+        checka = "\(shuffleArr.first!)"
+    }
+    func gotoResult() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryScoreViewController") as? VerbalMemoryScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
         }
     }
 }

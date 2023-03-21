@@ -36,6 +36,7 @@ class VerbalMemoryExplainViewController: UIViewController {
         self.explainLabel.attributedText = attributeString
     }
     
+    // navigation으로 화면 이동
     @IBAction func gotoGameButton(_ sender: UIButton) {
         guard let nextVC = self.storyboard?.instantiateViewController(identifier: "VerbalMemoryViewController") else {return}
         self.navigationController?.pushViewController(nextVC, animated: true)

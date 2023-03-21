@@ -113,7 +113,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                 self.countStart = CFAbsoluteTimeGetCurrent()
             }
             print("함수 실행")
-            if self.count >= 2 {
+            if self.count >= 5 {
                 self.stopTimer()
             }
         }
@@ -178,7 +178,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
             self.isColorChange = "red"
             count += 1
             
-            if count > 2 {
+            if count > 5 {
                 reactionAvg /= reactionarr.count
                 self.countlabel.text = "\(reactionAvg) ms"
                 self.touchlabel.text = "측정이 전부 끝났습니다!!\n평균 속도 : \(reactionAvg) ms 입니다."
@@ -190,7 +190,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
         }
         
     }
-    
+
     func tooEarlytouch() {
         let tooEarly = UIAlertController(title: "오류", message: "너무 빨리 눌렀습니다!\n운을 기대하지 마세요ㅋ", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
@@ -209,5 +209,14 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
         reset.addAction(okAction)
         present(reset,animated: true)
     }
+    
+    
+    @IBAction func infoRankBtn(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameScoreViewController") as? ReactionGameScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
+    
 }
 

@@ -14,6 +14,8 @@
 		C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C13759A429C04BC50072DA77 /* Assets.xcassets */; };
 		C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */; };
 		C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */; };
+		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
+		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
 		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */; };
@@ -31,6 +33,8 @@
 		C13759A729C04BC50072DA77 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C13759A929C04BC50072DA77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameViewController.swift; sourceTree = "<group>"; };
+		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
+		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryIcon.png; sourceTree = "<group>"; };
@@ -74,8 +78,10 @@
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
 				C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */,
+				C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */,
 				C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */,
 				C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */,
+				C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
@@ -166,9 +172,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */,
 				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
 				C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */,
 				C13759A029C04BC40072DA77 /* ViewController.swift in Sources */,
+				C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
 				C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */,
