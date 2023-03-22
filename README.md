@@ -6,7 +6,7 @@ Are U Better than Chimpanzee?
 To Do List   
 1. 화면을 너무 빠르게 누르면 초기화시키는 과정을 집어넣었는데   
 몇초뒤에 시작시키려는 DispatchQueue함수가 이미 실행된 상태에서 초기화를 시키면 이미 선입력된 DispatchQueue함수가 자동으로 실행되는 오류   
-2. 게임 전환을 그저 우클릭으로 action segue show로 하였는데 navigation으로 변환시키기   
+2. 게임들의 통계적 자료들⚝
 ***
    
 -- 2023.03.14   
@@ -29,7 +29,7 @@ ReactionGameViewController 여러 경우의수에 따른 함수나 변수 초기
 TableView를 통해 5번의 기록 저장   
 평균 반응속도를 화면에 출력   
    
--- 2023.03.20   
+-- 2023.03.20 ~ 2023.03.22  
 VerbalMemoryViewController & VerbalMemoryScoreViewController Create   
 영단어를 랜덤으로 출력하여 본적 있다면 SEEN 새로 본 단어라면 NEW를 눌러 암기력을 테스트하는 기능 구현   
-결과 페이지에 점수 및 설명글 출력 기능 필요 (다른 화면으로 값 넘기기 기능 추가 필요)   
+결과 페이지에 점수 출력   
