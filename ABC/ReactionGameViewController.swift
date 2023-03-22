@@ -214,6 +214,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     @IBAction func infoRankBtn(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameScoreViewController") as? ReactionGameScoreViewController {
             vc.modalPresentationStyle = .fullScreen
+            vc.data = reactionAvg
             self.present(vc, animated: true)
         }
     }

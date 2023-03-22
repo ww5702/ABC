@@ -19,8 +19,19 @@ class VerbalMemoryScoreViewController: UIViewController {
 
         self.scoreLabel.text = "\(data)점"
         self.explainLabel.text = "인간은 평균적으로\n얼마나 기억하는지 ~~ \n사진과 통계 자료 "
+        
+        self.changeTextColor()
     }
     
+    func changeTextColor() {
+        guard let text = self.scoreLabel.text else {return}
+        let font = UIFont.systemFont(ofSize: 50)
+        let attributeString = NSMutableAttributedString(string: text)
+                
+        attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
+        attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(data)"))
+        self.scoreLabel.attributedText = attributeString
+    }
 
     @IBAction func retryBtn(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryViewController") as? VerbalMemoryViewController {
