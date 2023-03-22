@@ -129,6 +129,7 @@ class VerbalMemoryViewController: UIViewController {
     func gotoResult() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryScoreViewController") as? VerbalMemoryScoreViewController {
             vc.modalPresentationStyle = .fullScreen
+            vc.data = score
             self.present(vc, animated: true)
         }
     }

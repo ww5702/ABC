@@ -26,13 +26,18 @@ class GameSelectViewController: UIViewController {
     */
     
     @IBAction func gotoReaction(_ sender: Any) {
-//        guard let uvc = self.storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController")
-//        else {
-//            return
-//        }
-//        self.navigationController?.pushViewController(uvc, animated: true)
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController") as? ReactionGameViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
     }
     
+    @IBAction func gotoVerbalMemory(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryExplainViewController") as? VerbalMemoryExplainViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
     
     func goToViewController(where: String) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: `where`)

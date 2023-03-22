@@ -10,13 +10,15 @@ import UIKit
 class VerbalMemoryScoreViewController: UIViewController {
     
     
+    @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
-    
+    var data = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.scoreLabel.text = "\(data)점"
+        self.explainLabel.text = "인간은 평균적으로\n얼마나 기억하는지 ~~ \n사진과 통계 자료 "
     }
     
 

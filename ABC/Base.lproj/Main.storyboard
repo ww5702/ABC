@@ -62,7 +62,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Verbal Memory"/>
                                                 <connections>
-                                                    <action selector="gotoVerbalMemory:" destination="4of-xZ-JLa" eventType="touchUpInside" id="Qn5-2c-bv2"/>
+                                                    <action selector="gotoVerbalMemory:" destination="4of-xZ-JLa" eventType="touchUpInside" id="h5n-wN-i8q"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -282,19 +282,28 @@
                                 <rect key="frame" x="10" y="109" width="373" height="659"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-kE-EOt">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="470"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="200"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="470" id="ESj-Ic-sJF"/>
+                                            <constraint firstAttribute="height" constant="200" id="ESj-Ic-sJF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scx-rh-6Ks">
+                                        <rect key="frame" x="0.0" y="220" width="373" height="270"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="270" id="b3p-90-UVe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-nZ-auF">
-                                        <rect key="frame" x="0.0" y="490" width="373" height="169"/>
+                                        <rect key="frame" x="0.0" y="510" width="373" height="149"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lup-NP-0J2">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="169"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="149"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="RETRY">
                                                     <backgroundConfiguration key="background">
@@ -308,7 +317,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQS-R4-Usd">
-                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="169"/>
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="149"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="HOME">
                                                     <backgroundConfiguration key="background">
@@ -337,6 +346,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="explainLabel" destination="scx-rh-6Ks" id="Tmj-4v-XTC"/>
                         <outlet property="scoreLabel" destination="WUe-kE-EOt" id="Se2-iX-5dF"/>
                     </connections>
                 </viewController>
