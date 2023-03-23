@@ -126,7 +126,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="kSb-eq-3Q4">
                                 <rect key="frame" x="10" y="153" width="373" height="615"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerbalMemoryIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="efT-xL-CSY">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VerbalMemoryExplain.png" translatesAutoresizingMaskIntoConstraints="NO" id="efT-xL-CSY">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="RdV-V5-rOg"/>
@@ -278,32 +278,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="hns-yv-cQP">
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="hns-yv-cQP">
                                 <rect key="frame" x="10" y="109" width="373" height="659"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WUe-kE-EOt">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="200"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="ESj-Ic-sJF"/>
+                                            <constraint firstAttribute="height" constant="100" id="ESj-Ic-sJF"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="50"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scx-rh-6Ks">
-                                        <rect key="frame" x="0.0" y="220" width="373" height="270"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="verbalMemoryStatistic.png" translatesAutoresizingMaskIntoConstraints="NO" id="phT-AM-9mD">
+                                        <rect key="frame" x="0.0" y="110" width="373" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="270" id="b3p-90-UVe"/>
+                                            <constraint firstAttribute="height" constant="250" id="j6u-iU-j98"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scx-rh-6Ks">
+                                        <rect key="frame" x="0.0" y="370" width="373" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="b3p-90-UVe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="3s6-nZ-auF">
-                                        <rect key="frame" x="0.0" y="510" width="373" height="149"/>
+                                        <rect key="frame" x="0.0" y="580" width="373" height="79"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lup-NP-0J2">
-                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="149"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="79"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="RETRY">
                                                     <backgroundConfiguration key="background">
@@ -317,7 +323,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HQS-R4-Usd">
-                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="149"/>
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="79"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="HOME">
                                                     <backgroundConfiguration key="background">
@@ -559,8 +565,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="VerbalMemoryIcon.png" width="225" height="225"/>
+        <image name="VerbalMemoryExplain.png" width="225" height="225"/>
         <image name="reactionTestStatistics.png" width="426" height="344"/>
+        <image name="verbalMemoryStatistic.png" width="413" height="339"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -17,9 +17,10 @@
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */; };
+		C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
-		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */; };
+		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */; };
 		C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */; };
 		C1AC6C1329C84A09008A4D58 /* words.txt in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C1229C84A09008A4D58 /* words.txt */; };
 /* End PBXBuildFile section */
@@ -37,9 +38,10 @@
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionTestStatistics.png; sourceTree = "<group>"; };
+		C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verbalMemoryStatistic.png; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
-		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryIcon.png; sourceTree = "<group>"; };
+		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryExplain.png; sourceTree = "<group>"; };
 		C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryViewController.swift; sourceTree = "<group>"; };
 		C1AC6C1229C84A09008A4D58 /* words.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = words.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,7 +99,8 @@
 			isa = PBXGroup;
 			children = (
 				C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */,
-				C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryIcon.png */,
+				C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */,
+				C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -161,8 +164,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */,
-				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryIcon.png in Resources */,
+				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */,
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,
+				C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */,
 				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
 				C13759A329C04BC40072DA77 /* Main.storyboard in Resources */,

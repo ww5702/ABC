@@ -18,7 +18,7 @@ class VerbalMemoryScoreViewController: UIViewController {
         super.viewDidLoad()
 
         self.scoreLabel.text = "\(data)점"
-        self.explainLabel.text = "인간은 평균적으로\n얼마나 기억하는지 ~~ \n사진과 통계 자료 "
+        self.explainLabel.text = "인간은 평균적으로 \n30점을 기록합니다."
         
         self.changeTextColor()
     }
