@@ -6,7 +6,7 @@ Are U Better than Chimpanzee?
 To Do List   
 1. 화면을 너무 빠르게 누르면 초기화시키는 과정을 집어넣었는데   
 몇초뒤에 시작시키려는 DispatchQueue함수가 이미 실행된 상태에서 초기화를 시키면 이미 선입력된 DispatchQueue함수가 자동으로 실행되는 오류   
-2. 테스트들의 평균 통계적 자료들⚝
+2. 테스트들의 평균 통계적 자료들⚝(일단은 타 테스트 페이지의 통계를 캡쳐하여 진행)   
 ***
    
 -- 2023.03.14   
@@ -19,9 +19,7 @@ touchLabel을 만들어 해당 label에 UITapGestureRecognizer()을 통해 label
    
 User Interaction Enabled가 해제되어있어서 그렇다는 사실을 발견   
 label이 안눌려있도록 되어있던거라 체크하여 해제   
-
-
-
+   
 -- 2023.03.15 ~ 2023.03.17   
 GaimMainViewController -> ReactionGameViewController 로 변경   
 GameSelectViewController Create(메인 화면 입장 시, 여러 게임 종류 선택 화면)   
