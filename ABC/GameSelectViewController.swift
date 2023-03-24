@@ -39,6 +39,14 @@ class GameSelectViewController: UIViewController {
         }
     }
     
+    @IBAction func gotoVisualMemory(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "VisualMemoryExplainViewController") as? VisualMemoryExplainViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
+    
+    
     func goToViewController(where: String) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: `where`)
         self.navigationController?.pushViewController(pushVC!, animated: true)
