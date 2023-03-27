@@ -33,5 +33,5 @@ VerbalMemoryViewController & VerbalMemoryScoreViewController Create
 영단어를 랜덤으로 출력하여 본적 있다면 SEEN 새로 본 단어라면 NEW를 눌러 암기력을 테스트하는 기능 구현   
 결과 페이지에 점수 출력   
 
--- 2023.   
+-- 2023.03.37   
 https://42kchoi.tistory.com/383   
