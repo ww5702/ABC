@@ -42,7 +42,6 @@ class VisualMemoryViewController: UIViewController {
         switch segue.identifier {
         case "firstContainer":
             containerVC = segue.destination as? VisualMemoryFirstViewController
-            
             containerVC?.delegate = self
             
         default:

@@ -27,7 +27,8 @@ class VisualMemoryFirstViewController: UIViewController {
     
     let WHITE = UIColor.white
     let BLUE = UIColor.systemBlue
-    let savescore = "1"
+    // 여기에 값 가져오기
+    var savescore = 0
 
     override func viewDidLoad() {
         setblue()
@@ -40,8 +41,8 @@ class VisualMemoryFirstViewController: UIViewController {
     @IBAction func btn1(_ sender: UIButton) {
         btn1Label.backgroundColor = WHITE
         print("1번 눌림")
-        
-        delegate?.didReceivedValueFromContainer(self, value: savescore )
+        savescore += 1
+        delegate?.didReceivedValueFromContainer(self, value: "\(savescore)")
         
     }
     @IBAction func btn2(_ sender: UIButton) {
