@@ -21,6 +21,7 @@
 		C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */; };
 		C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */; };
 		C15A6B4829CD8C6D0002B72E /* VisualMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */; };
+		C15A6B4A29D2B9320002B72E /* VisualMemoryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
 		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */; };
@@ -45,6 +46,7 @@
 		C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VisualMemoryExplain.png; sourceTree = "<group>"; };
 		C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryViewController.swift; sourceTree = "<group>"; };
+		C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFirstViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryExplain.png; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 				C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */,
 				C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */,
 				C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */,
+				C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
@@ -198,6 +201,7 @@
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
 				C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */,
+				C15A6B4A29D2B9320002B72E /* VisualMemoryFirstViewController.swift in Sources */,
 				C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */,
 				C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */,
 				C15A6B4829CD8C6D0002B72E /* VisualMemoryViewController.swift in Sources */,

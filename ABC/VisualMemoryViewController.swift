@@ -11,29 +11,50 @@ class VisualMemoryViewController: UIViewController {
     
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
+    private var containerVC: VisualMemoryFirstViewController?
+    
+    @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    let WHITE = UIColor.white
+    let BLUE = UIColor.blue
+    
+    var score = 0
+    var life = 3
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        lifeLabel.text = "Life | \(life)"
+        scoreLabel.text = "Score | \(score)"
+        
+        firstView.alpha = 1
+        secondView.alpha = 0
 
-        // Do any additional setup after loading the view.
+    }
+
+    @IBAction func gameStart(_ sender: Any) {
         firstView.alpha = 1
         secondView.alpha = 0
     }
-
-    @IBAction func asdf(_ sender: Any) {
-        firstView.alpha = 0
-        secondView.alpha = 1
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "firstContainer":
+            containerVC = segue.destination as? VisualMemoryFirstViewController
+            
+            containerVC?.delegate = self
+            
+        default:
+            break
+        }
     }
     
-    /*
-     
-     // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+extension VisualMemoryViewController: ContainerVCDelegate {
+    func didReceivedValueFromContainer(_ controller: VisualMemoryFirstViewController, value: String) {
+        scoreLabel.text = "Score | \(value)"
     }
-    */
-
 }
