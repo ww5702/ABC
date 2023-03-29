@@ -37,3 +37,5 @@ VerbalMemoryViewController & VerbalMemoryScoreViewController Create
 -- 2023.03.37   
 https://42kchoi.tistory.com/383   
 http://yoonbumtae.com/?p=4786   
+0라이프 되었을 때의 기능 -> 점수페이지 이동   
+3x3 다음 4x4, 5x5 기능   
