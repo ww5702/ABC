@@ -9,8 +9,12 @@ import UIKit
 
 class VisualMemoryViewController: UIViewController {
     
+    
+    @IBOutlet weak var readyView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
+    
+    
     // 컨테이너 뷰 컨트롤러를 참조하는 변수 생성
     // 해당 변수가 있어야 VisualMemoryViewController의 아무곳에서 나중에 보낼 타깃을 가리킬수있다.
     private var containerVC: VisualMemoryFirstViewController?
@@ -25,22 +29,38 @@ class VisualMemoryViewController: UIViewController {
     var score = 0
     var life = 3
     
+    var isGameStart = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         lifeLabel.text = "Life | \(life)"
         scoreLabel.text = "Score | \(score)"
         
-        firstView.alpha = 1
+        readyView.alpha = 1
+        firstView.alpha = 0
         secondView.alpha = 0
 
     }
 
     @IBAction func gameStart(_ sender: Any) {
-        firstView.alpha = 1
-        secondView.alpha = 0
-        // 스코어를 전송
-        containerVC?.setScore(score)
+        if isGameStart == true {
+            let tooEarly = UIAlertController(title: "정보", message: "이미 게임이 실행중입니다.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            tooEarly.addAction(okAction)
+            present(tooEarly,animated: true)
+        } else {
+            readyView.alpha = 0
+            firstView.alpha = 1
+            secondView.alpha = 0
+            // 스코어를 전송
+            containerVC?.setScore(score)
+            // isGamestart를 true로 전송
+            isGameStart = true
+            containerVC?.setisGameStart(isGameStart)
+            
+            containerVC?.setgamego()
+        }
     }
     
     // segue.identifer별 분기 설정
@@ -67,6 +87,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
     func didReceivedValueFromContainer(_ controller: VisualMemoryFirstViewController, value: Int) {
         scoreLabel.text = "Score | \(value)"
         if value >= 3 {
+            readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 1
         }
