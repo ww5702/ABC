@@ -12,6 +12,7 @@ import UIKit
 protocol ContainerVCDelegate: AnyObject {
     // 자식 VC로부터 값을 전달받은뒤 부모 컨테이너에서 그 값을 다루는 내용을 구현
     func didReceivedValueFromContainer(_ controller: VisualMemoryFirstViewController, value: Int)
+    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFirstViewController, value: Int)
 }
 
 class VisualMemoryFirstViewController: UIViewController {
@@ -31,13 +32,18 @@ class VisualMemoryFirstViewController: UIViewController {
     
     let WHITE = UIColor.white
     let BLUE = UIColor.systemBlue
+    let RED = UIColor.systemRed
     let WRONG = UIColor.systemGray
+    
     // 부모VC로부터 받은 값을 savescore에 전달(lblReceivedValueFromRoot)
     // 그리고 savescore를 다시 부모VC로 전달해줄것이다
     var savescore = 0
     
     // 게임이 시작되었는가?
     var isGameStart = false
+    
+    // 한번의 시도당 목숨
+    var gamelife = 3
     
     // 정답에 맞는지 체크
     var count = 0
@@ -47,6 +53,12 @@ class VisualMemoryFirstViewController: UIViewController {
     
     // 버튼에 bool값을 설정해주는 변수
     var btnbool : [Bool] = Array(repeating: false, count: 9)
+    
+    // 같은정답버튼을 여러번 누를 경우를 대비해서
+    var btnbool2 : [Bool] = Array(repeating: false, count: 9)
+    
+    // 같은오답버튼을 여러번 누를 경우를 대비해서
+    var btnbool3 : [Bool] = Array(repeating: false, count: 9)
 
     override func viewDidLoad() {
         
@@ -66,99 +78,159 @@ class VisualMemoryFirstViewController: UIViewController {
     // 정답이 전부 눌려졌으면 다시 파란색으로
 
     @IBAction func btn1(_ sender: UIButton) {
-        
-        print("1번 눌림")
         if btnbool[0] == true {
-            print("정답")
-            btn1Label.backgroundColor = WHITE
-            isGameGoodEnd()
-            
+            if btnbool2[0] == true {
+                print("정답")
+                btn1Label.backgroundColor = WHITE
+                btnbool2[0] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn1Label.backgroundColor = WRONG
+            if btnbool3[0] == false {
+                print("틀림")
+                btn1Label.backgroundColor = WRONG
+                btnbool3[0] = true
+                isGameBadEnd()
+            }
+            
         }
         
         
     }
     @IBAction func btn2(_ sender: UIButton) {
         if btnbool[1] == true {
-            print("정답")
-            btn2Label.backgroundColor = WHITE
-            isGameGoodEnd()
-            
+            if btnbool2[1] == true {
+                print("정답")
+                btn2Label.backgroundColor = WHITE
+                btnbool2[1] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn2Label.backgroundColor = WRONG
+            if btnbool3[1] == false {
+                print("틀림")
+                btn2Label.backgroundColor = WRONG
+                btnbool3[1] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn3(_ sender: UIButton) {
         if btnbool[2] == true {
-            print("정답")
-            btn3Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[2] == true {
+                print("정답")
+                btn3Label.backgroundColor = WHITE
+                btnbool2[2] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn3Label.backgroundColor = WRONG
+            if btnbool3[2] == false {
+                print("틀림")
+                btn3Label.backgroundColor = WRONG
+                btnbool3[2] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn4(_ sender: UIButton) {
         if btnbool[3] == true {
-            print("정답")
-            btn4Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[3] == true {
+                print("정답")
+                btn4Label.backgroundColor = WHITE
+                btnbool2[3] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn4Label.backgroundColor = WRONG
+            if btnbool3[3] == false {
+                print("틀림")
+                btn4Label.backgroundColor = WRONG
+                btnbool3[3] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn5(_ sender: UIButton) {
         if btnbool[4] == true {
-            print("정답")
-            btn5Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[4] == true {
+                print("정답")
+                btn5Label.backgroundColor = WHITE
+                btnbool2[4] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn5Label.backgroundColor = WRONG
+            if btnbool3[4] == false {
+                print("틀림")
+                btn5Label.backgroundColor = WRONG
+                btnbool3[4] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn6(_ sender: UIButton) {
         if btnbool[5] == true {
-            print("정답")
-            btn6Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[5] == true {
+                print("정답")
+                btn6Label.backgroundColor = WHITE
+                btnbool2[5] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn6Label.backgroundColor = WRONG
+            if btnbool3[5] == false {
+                print("틀림")
+                btn6Label.backgroundColor = WRONG
+                btnbool3[5] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn7(_ sender: UIButton) {
         if btnbool[6] == true {
-            print("정답")
-            btn7Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[6] == true {
+                print("정답")
+                btn7Label.backgroundColor = WHITE
+                btnbool2[6] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn7Label.backgroundColor = WRONG
+            if btnbool3[6] == false {
+                print("틀림")
+                btn7Label.backgroundColor = WRONG
+                btnbool3[6] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn8(_ sender: UIButton) {
         if btnbool[7] == true {
-            print("정답")
-            btn8Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[7] == true {
+                print("정답")
+                btn8Label.backgroundColor = WHITE
+                btnbool2[7] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn8Label.backgroundColor = WRONG
+            if btnbool3[7] == false {
+                print("틀림")
+                btn8Label.backgroundColor = WRONG
+                btnbool3[7] = true
+                isGameBadEnd()
+            }
         }
     }
     @IBAction func btn9(_ sender: UIButton) {
         if btnbool[8] == true {
-            print("정답")
-            btn9Label.backgroundColor = WHITE
-            isGameGoodEnd()
+            if btnbool2[8] == true {
+                print("정답")
+                btn9Label.backgroundColor = WHITE
+                btnbool2[8] = false
+                isGameGoodEnd()
+            }
         } else {
-            print("틀림")
-            btn9Label.backgroundColor = WRONG
+            if btnbool3[8] == false {
+                print("틀림")
+                btn9Label.backgroundColor = WRONG
+                btnbool3[8] = true
+                isGameBadEnd()
+            }
         }
     }
     
@@ -182,38 +254,56 @@ class VisualMemoryFirstViewController: UIViewController {
                     case 1:
                         btn1Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 2:
                         btn2Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 3:
                         btn3Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 4:
                         btn4Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 5:
                         btn5Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 6:
                         btn6Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 7:
                         btn7Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 8:
                         btn8Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     case 9:
                         btn9Label.backgroundColor = WHITE
                         btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
                         break
                     default:
                         break
@@ -243,12 +333,16 @@ class VisualMemoryFirstViewController: UIViewController {
         btn9Label.backgroundColor = BLUE
     }
     
+    // 부모VC로 보내는 함수
     func setScore(_ value: Int) {
         savescore = value
+    }
+    func setLife(_ value: Int) {
     }
     func setisGameStart(_ boolvalue : Bool) {
         isGameStart = boolvalue
     }
+    
     func setgamego() {
         gameStart()
     }
@@ -267,6 +361,8 @@ class VisualMemoryFirstViewController: UIViewController {
             
             // set함수 초기화
             btnbool = Array(repeating: false, count: 9)
+            btnbool2 = Array(repeating: false, count: 9)
+            btnbool3 = Array(repeating: false, count: 9)
             // 이제 +1 해준다음 게임 다시 시작
             value += 1
             // count또한 초기화
@@ -274,6 +370,35 @@ class VisualMemoryFirstViewController: UIViewController {
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
                 self.gameStart()
             })
+        }
+    }
+    func isGameBadEnd() {
+        gamelife -= 1
+        // 게임당의 목숨 3개 다 쓸시
+        if gamelife <= 0 {
+            // 변수들 다시 초기화
+            // set함수 초기화
+            btnbool = Array(repeating: false, count: 9)
+            btnbool2 = Array(repeating: false, count: 9)
+            btnbool3 = Array(repeating: false, count: 9)
+            // count또한 초기화
+            count = 0
+            // gamelife 초기화
+            gamelife = 3
+            
+            // 전체 목숨에서 하나 깎고
+            delegate?.didReceivedValueFromContainerLife(self, value: 1)
+            
+            // 화면 잠시 빨간색으로 변경 후 다시 파란색으로
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.setblue()
+            })
+            
+            // 게임 다시 시작
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
+                self.gameStart()
+            })
+            
         }
     }
 
