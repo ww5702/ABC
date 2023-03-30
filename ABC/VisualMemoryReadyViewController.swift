@@ -13,7 +13,7 @@ class VisualMemoryReadyViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        readyLabel.text = "게임이 준비중입니다.\nGame Start버튼을\n눌러주세요."
+        readyLabel.text = "Are you ready?\nPress 'Game Start' Button"
 
         // Do any additional setup after loading the view.
     }

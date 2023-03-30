@@ -737,10 +737,10 @@
             </objects>
             <point key="canvasLocation" x="807" y="1034"/>
         </scene>
-        <!--View Controller-->
+        <!--Visual Memory Second View Controller-->
         <scene sceneID="k5c-7b-uXR">
             <objects>
-                <viewController id="6qE-jY-2is" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="VisualMemorySecondViewController" id="6qE-jY-2is" customClass="VisualMemorySecondViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Dm-F6-09B">
                         <rect key="frame" x="0.0" y="0.0" width="373" height="549"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -755,36 +755,28 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-aL-Cjz">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrC-Bl-GDv">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-Nu-zPH">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -797,36 +789,28 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="130"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJy-tJ-l0r">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="130"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-qO-cmL">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="130"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW9-fB-kRa">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="130"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -839,36 +823,28 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-8T-vxt">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-dB-bkh">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxI-IB-EYF">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
@@ -881,42 +857,35 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="85.666666666666671" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-ai-pq0">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEL-NW-sVB">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNS-9F-2tb">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemBlueColor"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </stackView>
                                 </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="98I-WP-wAx"/>
@@ -928,6 +897,24 @@
                             <constraint firstItem="sTS-xV-3aL" firstAttribute="top" secondItem="1Dm-F6-09B" secondAttribute="top" id="goA-SZ-amj"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn10Label" destination="3jg-8T-vxt" id="kXs-sM-jSk"/>
+                        <outlet property="btn11Label" destination="dmS-dB-bkh" id="tOb-Lw-pVY"/>
+                        <outlet property="btn12Label" destination="OxI-IB-EYF" id="sct-QU-gDy"/>
+                        <outlet property="btn13Label" destination="uC3-hx-Qoo" id="xgH-JJ-Nte"/>
+                        <outlet property="btn14Label" destination="yEo-ai-pq0" id="yoY-dY-fb8"/>
+                        <outlet property="btn15Label" destination="xEL-NW-sVB" id="Tj5-9C-BfH"/>
+                        <outlet property="btn16Label" destination="mNS-9F-2tb" id="HVI-lZ-abb"/>
+                        <outlet property="btn1Label" destination="aUT-xn-iVQ" id="XHu-Cs-yba"/>
+                        <outlet property="btn2Label" destination="MGk-aL-Cjz" id="ppU-qd-bZ5"/>
+                        <outlet property="btn3Label" destination="nrC-Bl-GDv" id="KM1-qr-ZXG"/>
+                        <outlet property="btn4Label" destination="N6U-Nu-zPH" id="T07-lB-Db7"/>
+                        <outlet property="btn5Label" destination="BFG-pa-RLH" id="7Sn-BB-nqv"/>
+                        <outlet property="btn6Label" destination="MJy-tJ-l0r" id="cpf-Ov-PII"/>
+                        <outlet property="btn7Label" destination="iOM-qO-cmL" id="TIn-Qu-mkf"/>
+                        <outlet property="btn8Label" destination="jW9-fB-kRa" id="ems-uZ-nG0"/>
+                        <outlet property="btn9Label" destination="us4-BM-bWu" id="ywE-5j-Cyt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9bs-Nn-ygU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1096,6 +1083,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="h8i-rU-dFt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="54O-g3-ac2" firstAttribute="centerY" secondItem="F9v-Wv-Ebf" secondAttribute="centerY" id="Nd1-sF-Aik"/>

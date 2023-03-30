@@ -42,6 +42,9 @@ class VisualMemoryFirstViewController: UIViewController {
     // 게임이 시작되었는가?
     var isGameStart = false
     
+    // 타일의 색 변경이 끝났는가?
+    var isBtnColorChange = false
+    
     // 한번의 시도당 목숨
     var gamelife = 3
     
@@ -78,158 +81,174 @@ class VisualMemoryFirstViewController: UIViewController {
     // 정답이 전부 눌려졌으면 다시 파란색으로
 
     @IBAction func btn1(_ sender: UIButton) {
-        if btnbool[0] == true {
-            if btnbool2[0] == true {
-                print("정답")
-                btn1Label.backgroundColor = WHITE
-                btnbool2[0] = false
-                isGameGoodEnd()
+        if isBtnColorChange == true {
+            if btnbool[0] == true {
+                if btnbool2[0] == true {
+                    print("정답")
+                    btn1Label.backgroundColor = WHITE
+                    btnbool2[0] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[0] == false {
+                    print("틀림")
+                    btn1Label.backgroundColor = WRONG
+                    btnbool3[0] = true
+                    isGameBadEnd()
+                }
+                
             }
-        } else {
-            if btnbool3[0] == false {
-                print("틀림")
-                btn1Label.backgroundColor = WRONG
-                btnbool3[0] = true
-                isGameBadEnd()
-            }
-            
         }
-        
-        
     }
     @IBAction func btn2(_ sender: UIButton) {
-        if btnbool[1] == true {
-            if btnbool2[1] == true {
-                print("정답")
-                btn2Label.backgroundColor = WHITE
-                btnbool2[1] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[1] == false {
-                print("틀림")
-                btn2Label.backgroundColor = WRONG
-                btnbool3[1] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[1] == true {
+                if btnbool2[1] == true {
+                    print("정답")
+                    btn2Label.backgroundColor = WHITE
+                    btnbool2[1] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[1] == false {
+                    print("틀림")
+                    btn2Label.backgroundColor = WRONG
+                    btnbool3[1] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn3(_ sender: UIButton) {
-        if btnbool[2] == true {
-            if btnbool2[2] == true {
-                print("정답")
-                btn3Label.backgroundColor = WHITE
-                btnbool2[2] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[2] == false {
-                print("틀림")
-                btn3Label.backgroundColor = WRONG
-                btnbool3[2] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[2] == true {
+                if btnbool2[2] == true {
+                    print("정답")
+                    btn3Label.backgroundColor = WHITE
+                    btnbool2[2] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[2] == false {
+                    print("틀림")
+                    btn3Label.backgroundColor = WRONG
+                    btnbool3[2] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn4(_ sender: UIButton) {
-        if btnbool[3] == true {
-            if btnbool2[3] == true {
-                print("정답")
-                btn4Label.backgroundColor = WHITE
-                btnbool2[3] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[3] == false {
-                print("틀림")
-                btn4Label.backgroundColor = WRONG
-                btnbool3[3] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[3] == true {
+                if btnbool2[3] == true {
+                    print("정답")
+                    btn4Label.backgroundColor = WHITE
+                    btnbool2[3] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[3] == false {
+                    print("틀림")
+                    btn4Label.backgroundColor = WRONG
+                    btnbool3[3] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn5(_ sender: UIButton) {
-        if btnbool[4] == true {
-            if btnbool2[4] == true {
-                print("정답")
-                btn5Label.backgroundColor = WHITE
-                btnbool2[4] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[4] == false {
-                print("틀림")
-                btn5Label.backgroundColor = WRONG
-                btnbool3[4] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[4] == true {
+                if btnbool2[4] == true {
+                    print("정답")
+                    btn5Label.backgroundColor = WHITE
+                    btnbool2[4] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[4] == false {
+                    print("틀림")
+                    btn5Label.backgroundColor = WRONG
+                    btnbool3[4] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn6(_ sender: UIButton) {
-        if btnbool[5] == true {
-            if btnbool2[5] == true {
-                print("정답")
-                btn6Label.backgroundColor = WHITE
-                btnbool2[5] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[5] == false {
-                print("틀림")
-                btn6Label.backgroundColor = WRONG
-                btnbool3[5] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[5] == true {
+                if btnbool2[5] == true {
+                    print("정답")
+                    btn6Label.backgroundColor = WHITE
+                    btnbool2[5] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[5] == false {
+                    print("틀림")
+                    btn6Label.backgroundColor = WRONG
+                    btnbool3[5] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn7(_ sender: UIButton) {
-        if btnbool[6] == true {
-            if btnbool2[6] == true {
-                print("정답")
-                btn7Label.backgroundColor = WHITE
-                btnbool2[6] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[6] == false {
-                print("틀림")
-                btn7Label.backgroundColor = WRONG
-                btnbool3[6] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[6] == true {
+                if btnbool2[6] == true {
+                    print("정답")
+                    btn7Label.backgroundColor = WHITE
+                    btnbool2[6] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[6] == false {
+                    print("틀림")
+                    btn7Label.backgroundColor = WRONG
+                    btnbool3[6] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn8(_ sender: UIButton) {
-        if btnbool[7] == true {
-            if btnbool2[7] == true {
-                print("정답")
-                btn8Label.backgroundColor = WHITE
-                btnbool2[7] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[7] == false {
-                print("틀림")
-                btn8Label.backgroundColor = WRONG
-                btnbool3[7] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[7] == true {
+                if btnbool2[7] == true {
+                    print("정답")
+                    btn8Label.backgroundColor = WHITE
+                    btnbool2[7] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[7] == false {
+                    print("틀림")
+                    btn8Label.backgroundColor = WRONG
+                    btnbool3[7] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
     @IBAction func btn9(_ sender: UIButton) {
-        if btnbool[8] == true {
-            if btnbool2[8] == true {
-                print("정답")
-                btn9Label.backgroundColor = WHITE
-                btnbool2[8] = false
-                isGameGoodEnd()
-            }
-        } else {
-            if btnbool3[8] == false {
-                print("틀림")
-                btn9Label.backgroundColor = WRONG
-                btnbool3[8] = true
-                isGameBadEnd()
+        if isBtnColorChange == true {
+            if btnbool[8] == true {
+                if btnbool2[8] == true {
+                    print("정답")
+                    btn9Label.backgroundColor = WHITE
+                    btnbool2[8] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[8] == false {
+                    print("틀림")
+                    btn9Label.backgroundColor = WRONG
+                    btnbool3[8] = true
+                    isGameBadEnd()
+                }
             }
         }
     }
@@ -316,6 +335,7 @@ class VisualMemoryFirstViewController: UIViewController {
                 // 1초 뒤에 파란색으로 다시 돌아가기
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                     self.setblue()
+                    self.isBtnColorChange = true
                 })
             }
         }
@@ -367,6 +387,8 @@ class VisualMemoryFirstViewController: UIViewController {
             value += 1
             // count또한 초기화
             count = 0
+            // 타일의 색 변경되었는지도 초기화
+            isBtnColorChange = false
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
                 self.gameStart()
             })
@@ -385,6 +407,9 @@ class VisualMemoryFirstViewController: UIViewController {
             count = 0
             // gamelife 초기화
             gamelife = 3
+            
+            // 타일의 색 변경되었는지도 초기화
+            isBtnColorChange = false
             
             // 전체 목숨에서 하나 깎고
             delegate?.didReceivedValueFromContainerLife(self, value: 1)
