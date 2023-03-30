@@ -7,6 +7,12 @@
 
 import UIKit
 
+protocol ContainerVCDelegate2: AnyObject {
+    // 자식 VC로부터 값을 전달받은뒤 부모 컨테이너에서 그 값을 다루는 내용을 구현
+    func didReceivedValueFromContainer(_ controller: VisualMemorySecondViewController, value: Int)
+    func didReceivedValueFromContainerLife(_ controller: VisualMemorySecondViewController, value: Int)
+}
+
 class VisualMemorySecondViewController: UIViewController {
     
     @IBOutlet weak var btn1Label: UIButton!
@@ -26,10 +32,15 @@ class VisualMemorySecondViewController: UIViewController {
     @IBOutlet weak var btn15Label: UIButton!
     @IBOutlet weak var btn16Label: UIButton!
     
+    weak var delegate: ContainerVCDelegate2?
+    
     let WHITE = UIColor.white
     let BLUE = UIColor.systemBlue
     let RED = UIColor.systemRed
     let WRONG = UIColor.systemGray
+    
+    // 2단계로 넘어온순간은 무조건 점수가 3점부터 시작이기 떄문에
+    var savescore = 3
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +49,17 @@ class VisualMemorySecondViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    
+    @IBAction func btn1(_ sender: UIButton) {
+        // 전송되는지 테스트
+        savescore += 1
+        delegate?.didReceivedValueFromContainer(self, value: savescore)
+        delegate?.didReceivedValueFromContainerLife(self, value: 1)
+    }
+    
+    
+    
     
 
     func setblue() {
@@ -59,4 +81,13 @@ class VisualMemorySecondViewController: UIViewController {
         btn16Label.backgroundColor = BLUE
     }
 
+    
+    
+    
+    // 부모VC로 보내는 함수
+    func setScore(_ value: Int) {
+        savescore = value
+    }
+    func setLife(_ value: Int) {
+    }
 }

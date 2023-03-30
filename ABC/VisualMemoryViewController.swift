@@ -18,6 +18,7 @@ class VisualMemoryViewController: UIViewController {
     // 컨테이너 뷰 컨트롤러를 참조하는 변수 생성
     // 해당 변수가 있어야 VisualMemoryViewController의 아무곳에서 나중에 보낼 타깃을 가리킬수있다.
     private var containerVC: VisualMemoryFirstViewController?
+    private var containerVC2: VisualMemorySecondViewController?
     
     @IBOutlet weak var lifeLabel: UILabel!
     // 자식VC로 부터 받은 값을 표시할 레이블
@@ -70,9 +71,12 @@ class VisualMemoryViewController: UIViewController {
         case "firstContainer":
             // 컨테이너 뷰 컨트롤러를 containerVC에 지정
             containerVC = segue.destination as? VisualMemoryFirstViewController
-            
             // containerVC의 delegate변수를 RootVC 자신(self)로 지정
             containerVC?.delegate = self
+            
+        case "secondContainer":
+            containerVC2 = segue.destination as? VisualMemorySecondViewController
+            containerVC2?.delegate = self
             
         default:
             break
@@ -93,6 +97,27 @@ extension VisualMemoryViewController: ContainerVCDelegate {
         }
     }
     func didReceivedValueFromContainerLife(_ controller: VisualMemoryFirstViewController, value: Int) {
+        // 잠시 빨간색 후 다시 파란색
+        self.view.backgroundColor = UIColor.systemRed
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.view.backgroundColor = UIColor.systemBackground
+        })
+        
+        life -= value
+        lifeLabel.text = "Life | \(life)"
+    }
+}
+
+extension VisualMemoryViewController: ContainerVCDelegate2 {
+    func didReceivedValueFromContainer(_ controller: VisualMemorySecondViewController, value: Int) {
+        scoreLabel.text = "Score | \(value)"
+        if value >= 5 {
+            readyView.alpha = 1
+            firstView.alpha = 0
+            secondView.alpha = 0
+        }
+    }
+    func didReceivedValueFromContainerLife(_ controller: VisualMemorySecondViewController, value: Int) {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {

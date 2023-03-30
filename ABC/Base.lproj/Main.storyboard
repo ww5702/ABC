@@ -757,6 +757,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn1:" destination="6qE-jY-2is" eventType="touchUpInside" id="QVv-j0-syf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGk-aL-Cjz">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
