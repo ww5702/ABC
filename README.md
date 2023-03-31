@@ -39,8 +39,12 @@ VerbalMemoryViewController & VerbalMemoryScoreViewController Create
 
 -- 2023.03.37   
 https://42kchoi.tistory.com/383   
--> 하나의 뷰에서 세가지 뷰 컨트롤러 스위치하기   
+하나의 뷰에서 세가지 뷰 컨트롤러 스위치하기   
 -> 해당 기능으로 점수에 따른 3x3 4x4 5x5 VC변환   
 http://yoonbumtae.com/?p=4786   
+뷰 컨트롤러와 내부의 컨테이너 뷰 간의 데이터 교환   
+해당 기능으로 정답을 맞췄을때의 score +1 이나   
+정답을 틀렸을때 life -1 의 기능으로 수행   
+   
 0라이프 되었을 때의 기능 -> 점수페이지 이동   
 3x3 다음 4x4, 5x5 기능   
