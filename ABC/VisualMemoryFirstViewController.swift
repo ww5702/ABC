@@ -255,7 +255,6 @@ class VisualMemoryFirstViewController: UIViewController {
     
     func gameStart() {
         if isGameStart == true {
-
             // 이 밑으로는 계속해서 초기화 되야한다.
             if value < 5 {
                 // 랜덤해서 1~9번중 색이 변할 버튼 결정

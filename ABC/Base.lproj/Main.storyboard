@@ -767,6 +767,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn2:" destination="6qE-jY-2is" eventType="touchUpInside" id="6qm-Yk-Col"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nrC-Bl-GDv">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
@@ -774,6 +777,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn3:" destination="6qE-jY-2is" eventType="touchUpInside" id="nI1-ck-ZHE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N6U-Nu-zPH">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
@@ -781,6 +787,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn4:" destination="6qE-jY-2is" eventType="touchUpInside" id="bXW-CW-Joj"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -794,6 +803,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn5:" destination="6qE-jY-2is" eventType="touchUpInside" id="ELo-PR-1vX"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MJy-tJ-l0r">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="130"/>
@@ -801,6 +813,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn6:" destination="6qE-jY-2is" eventType="touchUpInside" id="7P1-MN-FBi"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOM-qO-cmL">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="130"/>
@@ -808,6 +823,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn7:" destination="6qE-jY-2is" eventType="touchUpInside" id="4MA-q2-1gn"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jW9-fB-kRa">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="130"/>
@@ -815,6 +833,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn8:" destination="6qE-jY-2is" eventType="touchUpInside" id="Deg-XI-QRY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -828,6 +849,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn9:" destination="6qE-jY-2is" eventType="touchUpInside" id="a5k-MA-sND"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3jg-8T-vxt">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
@@ -835,6 +859,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn10:" destination="6qE-jY-2is" eventType="touchUpInside" id="Zhr-g4-LcH"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dmS-dB-bkh">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
@@ -842,6 +869,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn11:" destination="6qE-jY-2is" eventType="touchUpInside" id="PzS-0k-IZ2"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OxI-IB-EYF">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
@@ -849,6 +879,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn12:" destination="6qE-jY-2is" eventType="touchUpInside" id="ftf-gq-AnL"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -862,6 +895,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn13:" destination="6qE-jY-2is" eventType="touchUpInside" id="qDy-xJ-QbB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEo-ai-pq0">
                                                 <rect key="frame" x="95.666666666666686" y="0.0" width="86" height="129.66666666666666"/>
@@ -869,6 +905,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn14:" destination="6qE-jY-2is" eventType="touchUpInside" id="gH0-Y6-dY3"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xEL-NW-sVB">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="85.666666666666657" height="129.66666666666666"/>
@@ -876,6 +915,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn15:" destination="6qE-jY-2is" eventType="touchUpInside" id="3b5-u1-88v"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mNS-9F-2tb">
                                                 <rect key="frame" x="287.33333333333331" y="0.0" width="85.666666666666686" height="129.66666666666666"/>
@@ -883,6 +925,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn16:" destination="6qE-jY-2is" eventType="touchUpInside" id="oCq-3l-9DY"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

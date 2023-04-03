@@ -89,11 +89,15 @@ class VisualMemoryViewController: UIViewController {
 // ContainerVCDelegate를 준수하는 확장 구현
 extension VisualMemoryViewController: ContainerVCDelegate {
     func didReceivedValueFromContainer(_ controller: VisualMemoryFirstViewController, value: Int) {
-        scoreLabel.text = "Score | \(value)"
+        score = value
+        scoreLabel.text = "Score | \(score)"
         if value >= 2 {
             readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 1
+            containerVC2?.setisGameStart(isGameStart)
+            containerVC2?.setScore(score)
+            containerVC2?.setgamego()
         }
     }
     func didReceivedValueFromContainerLife(_ controller: VisualMemoryFirstViewController, value: Int) {
@@ -110,7 +114,8 @@ extension VisualMemoryViewController: ContainerVCDelegate {
 
 extension VisualMemoryViewController: ContainerVCDelegate2 {
     func didReceivedValueFromContainer(_ controller: VisualMemorySecondViewController, value: Int) {
-        scoreLabel.text = "Score | \(value)"
+        score = value
+        scoreLabel.text = "Score | \(score)"
         if value >= 5 {
             readyView.alpha = 1
             firstView.alpha = 0

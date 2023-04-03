@@ -102,12 +102,12 @@
 				C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */,
 				C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */,
 				C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */,
+				C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
 				C13759A929C04BC50072DA77 /* Info.plist */,
 				C1AC6C1229C84A09008A4D58 /* words.txt */,
-				C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */,
 			);
 			path = ABC;
 			sourceTree = "<group>";

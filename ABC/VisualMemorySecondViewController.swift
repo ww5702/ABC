@@ -40,14 +40,23 @@ class VisualMemorySecondViewController: UIViewController {
     let WRONG = UIColor.systemGray
     
     // 2단계로 넘어온순간은 무조건 점수가 3점부터 시작이기 떄문에
-    var savescore = 3
+    var savescore : Int = 0
+    var isGameStart = false
+    
+    var isBtnColorChange = false
+    var gamelife = 3
+    var count = 0
+    var value: Int = 5
+    
+    var btnbool : [Bool] = Array(repeating: false, count: 16)
+    var btnbool2 : [Bool] = Array(repeating: false, count: 16)
+    var btnbool3 : [Bool] = Array(repeating: false, count: 16)
 
     override func viewDidLoad() {
+        print("test : \(savescore)")
         super.viewDidLoad()
         
         setblue()
-
-        // Do any additional setup after loading the view.
     }
     
     
@@ -57,7 +66,36 @@ class VisualMemorySecondViewController: UIViewController {
         delegate?.didReceivedValueFromContainer(self, value: savescore)
         delegate?.didReceivedValueFromContainerLife(self, value: 1)
     }
-    
+    @IBAction func btn2(_ sender: UIButton) {
+    }
+    @IBAction func btn3(_ sender: UIButton) {
+    }
+    @IBAction func btn4(_ sender: UIButton) {
+    }
+    @IBAction func btn5(_ sender: UIButton) {
+    }
+    @IBAction func btn6(_ sender: UIButton) {
+    }
+    @IBAction func btn7(_ sender: UIButton) {
+    }
+    @IBAction func btn8(_ sender: UIButton) {
+    }
+    @IBAction func btn9(_ sender: UIButton) {
+    }
+    @IBAction func btn10(_ sender: UIButton) {
+    }
+    @IBAction func btn11(_ sender: UIButton) {
+    }
+    @IBAction func btn12(_ sender: UIButton) {
+    }
+    @IBAction func btn13(_ sender: UIButton) {
+    }
+    @IBAction func btn14(_ sender: UIButton) {
+    }
+    @IBAction func btn15(_ sender: UIButton) {
+    }
+    @IBAction func btn16(_ sender: UIButton) {
+    }
     
     
     
@@ -80,6 +118,133 @@ class VisualMemorySecondViewController: UIViewController {
         btn15Label.backgroundColor = BLUE
         btn16Label.backgroundColor = BLUE
     }
+    
+    func gameStart() {
+        if isGameStart == true {
+            print("test : \(savescore)")
+            if value < 7 {
+                var checkrandom = Set<Int>()
+                while checkrandom.count < value {
+                    let randomNum = Int.random(in: 1...9)
+                    checkrandom.insert(randomNum)
+                    print(checkrandom)
+                }
+                for i in checkrandom {
+                    switch i {
+                        // 색깔을 하얀색으로 바꾸고 bool을 true로 변경
+                    case 1:
+                        btn1Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 2:
+                        btn2Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 3:
+                        btn3Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 4:
+                        btn4Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 5:
+                        btn5Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 6:
+                        btn6Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 7:
+                        btn7Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 8:
+                        btn8Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 9:
+                        btn9Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 10:
+                        btn10Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 11:
+                        btn11Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 12:
+                        btn12Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 13:
+                        btn13Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 14:
+                        btn14Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 15:
+                        btn15Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                    case 16:
+                        btn16Label.backgroundColor = WHITE
+                        btnbool[i-1] = true
+                        btnbool2[i-1] = true
+                        btnbool3[i-1] = true
+                        break
+                        
+                    default:
+                        break
+                    }
+                }
+                print(btnbool)
+                
+                // 몇초뒤에 다시 색을 변경해주어야한다.
+                // 1초 뒤에 파란색으로 다시 돌아가기
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                    self.setblue()
+                    self.isBtnColorChange = true
+                })
+                
+            }
+        }
+    }
 
     
     
@@ -89,5 +254,11 @@ class VisualMemorySecondViewController: UIViewController {
         savescore = value
     }
     func setLife(_ value: Int) {
+    }
+    func setisGameStart(_ boolvalue : Bool) {
+        isGameStart = boolvalue
+    }
+    func setgamego() {
+        gameStart()
     }
 }
