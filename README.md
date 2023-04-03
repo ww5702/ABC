@@ -45,6 +45,13 @@ http://yoonbumtae.com/?p=4786
 뷰 컨트롤러와 내부의 컨테이너 뷰 간의 데이터 교환   
 해당 기능으로 정답을 맞췄을때의 score +1 이나   
 정답을 틀렸을때 life -1 의 기능으로 수행   
-   
+변수 이동 순서   
+gamestart 버튼 누르기 -> score와 isgamestart(bool)을 true로 변경 후 전송   
+containerview에서 isgamestart가 true라면   
+2레벨까지는 3x3게임을 진행하는 value를 가장 큰 조건문으로   
+btnbool1,2,3들을 각각의 버튼에 생성 -> 버튼액션때 이상한 상황떄 누르는 경우를 방지하기 위해   
+버튼이 흰색으로 바뀌면서 외워야 되는 버튼들을 표시해준뒤 1.5초 뒤에 다시 파란색으로 돌아가는데   
+이때 isBtnColorChange = true를 입력해서 다 색이 변한뒤부터 버튼 액션이 눌러질수 있도록 설정   
+
 0라이프 되었을 때의 기능 -> 점수페이지 이동   
 3x3 다음 4x4, 5x5 기능   
