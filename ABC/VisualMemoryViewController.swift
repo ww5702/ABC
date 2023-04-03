@@ -125,7 +125,7 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
     func didReceivedValueFromContainer(_ controller: VisualMemorySecondViewController, value: Int) {
         score = value
         scoreLabel.text = "Score | \(score)"
-        if value >= 5 {
+        if value >= 6 {
             readyView.alpha = 1
             firstView.alpha = 0
             secondView.alpha = 0

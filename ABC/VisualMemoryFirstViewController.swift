@@ -314,7 +314,7 @@ class VisualMemoryFirstViewController: UIViewController {
 
                 // 몇초뒤에 다시 색을 변경해주어야한다.
                 // 1초 뒤에 파란색으로 다시 돌아가기
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                     self.setblue()
                     self.isBtnColorChange = true
                 })
@@ -351,10 +351,8 @@ class VisualMemoryFirstViewController: UIViewController {
     func isGameGoodEnd() {
         count += 1
         if count == value {
-            // 점수를 1점 늘린다음 스코어를 전달
             
-            
-            // 점수 전달 후 정답화면 0.5초 보여준 뒤 파란색으로 변경
+            // 정답화면 0.5초 보여준 뒤 점수 전달 후 파란색으로 변경
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.setblue()
                 self.savescore += 1

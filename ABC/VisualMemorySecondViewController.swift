@@ -359,7 +359,7 @@ class VisualMemorySecondViewController: UIViewController {
     func gameStart() {
         if isGameStart == true {
             print("test : \(savescore)")
-            if value < 7 {
+            if value < 8 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {
                     let randomNum = Int.random(in: 1...9)
@@ -474,7 +474,7 @@ class VisualMemorySecondViewController: UIViewController {
                 
                 // 몇초뒤에 다시 색을 변경해주어야한다.
                 // 1초 뒤에 파란색으로 다시 돌아가기
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
                     self.setblue()
                     self.isBtnColorChange = true
                 })
@@ -484,10 +484,61 @@ class VisualMemorySecondViewController: UIViewController {
     }
     
     func isGameGoodEnd() {
-        print("굳")
+        count += 1
+        if count == value {
+
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.setblue()
+                self.savescore += 1
+                self.delegate?.didReceivedValueFromContainer(self, value: self.savescore)
+            })
+            
+            // set함수 초기화
+            btnbool = Array(repeating: false, count: 16)
+            btnbool2 = Array(repeating: false, count: 16)
+            btnbool3 = Array(repeating: false, count: 16)
+            // 이제 +1 해준다음 게임 다시 시작
+            value += 1
+            // count또한 초기화
+            count = 0
+            // 타일의 색 변경되었는지도 초기화
+            isBtnColorChange = false
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
+                self.gameStart()
+            })
+        }
     }
     func isGameBadEnd() {
-        print("밷")
+        gamelife -= 1
+        // 게임당의 목숨 3개 다 쓸시
+        if gamelife <= 0 {
+            // 변수들 다시 초기화
+            // set함수 초기화
+            btnbool = Array(repeating: false, count: 16)
+            btnbool2 = Array(repeating: false, count: 16)
+            btnbool3 = Array(repeating: false, count: 16)
+            // count또한 초기화
+            count = 0
+            // gamelife 초기화
+            gamelife = 3
+            
+            // 타일의 색 변경되었는지도 초기화
+            isBtnColorChange = false
+            
+            // 전체 목숨에서 하나 깎고
+            delegate?.didReceivedValueFromContainerLife(self, value: 1)
+            
+            // 화면 잠시 빨간색으로 변경 후 다시 파란색으로
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+                self.setblue()
+            })
+            
+            // 게임 다시 시작
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
+                self.gameStart()
+            })
+            
+        }
     }
 
     
