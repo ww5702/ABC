@@ -61,40 +61,277 @@ class VisualMemorySecondViewController: UIViewController {
     
     
     @IBAction func btn1(_ sender: UIButton) {
-        // 전송되는지 테스트
-        savescore += 1
-        delegate?.didReceivedValueFromContainer(self, value: savescore)
-        delegate?.didReceivedValueFromContainerLife(self, value: 1)
+        if isBtnColorChange == true {
+            if btnbool[0] == true {
+                if btnbool2[0] == true {
+                    btn1Label.backgroundColor = WHITE
+                    btnbool2[0] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[0] == false {
+                    btn1Label.backgroundColor = WRONG
+                    btnbool3[0] = true
+                    isGameBadEnd()
+                }
+                
+            }
+        }
     }
     @IBAction func btn2(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[1] == true {
+                if btnbool2[1] == true {
+                    btn2Label.backgroundColor = WHITE
+                    btnbool2[1] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[1] == false {
+                    btn2Label.backgroundColor = WRONG
+                    btnbool3[1] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn3(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[2] == true {
+                if btnbool2[2] == true {
+                    btn3Label.backgroundColor = WHITE
+                    btnbool2[2] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[2] == false {
+                    btn3Label.backgroundColor = WRONG
+                    btnbool3[2] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn4(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[3] == true {
+                if btnbool2[3] == true {
+                    btn4Label.backgroundColor = WHITE
+                    btnbool2[3] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[3] == false {
+                    btn4Label.backgroundColor = WRONG
+                    btnbool3[3] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn5(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[4] == true {
+                if btnbool2[4] == true {
+                    btn5Label.backgroundColor = WHITE
+                    btnbool2[4] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[4] == false {
+                    btn5Label.backgroundColor = WRONG
+                    btnbool3[4] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn6(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[5] == true {
+                if btnbool2[5] == true {
+                    btn6Label.backgroundColor = WHITE
+                    btnbool2[5] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[5] == false {
+                    btn6Label.backgroundColor = WRONG
+                    btnbool3[5] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn7(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[6] == true {
+                if btnbool2[6] == true {
+                    btn7Label.backgroundColor = WHITE
+                    btnbool2[6] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[6] == false {
+                    btn7Label.backgroundColor = WRONG
+                    btnbool3[6] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn8(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[7] == true {
+                if btnbool2[7] == true {
+                    btn8Label.backgroundColor = WHITE
+                    btnbool2[7] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[7] == false {
+                    btn8Label.backgroundColor = WRONG
+                    btnbool3[7] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn9(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[8] == true {
+                if btnbool2[8] == true {
+                    btn9Label.backgroundColor = WHITE
+                    btnbool2[8] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[8] == false {
+                    btn9Label.backgroundColor = WRONG
+                    btnbool3[8] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn10(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[9] == true {
+                if btnbool2[9] == true {
+                    btn10Label.backgroundColor = WHITE
+                    btnbool2[9] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[9] == false {
+                    btn10Label.backgroundColor = WRONG
+                    btnbool3[9] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn11(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[10] == true {
+                if btnbool2[10] == true {
+                    btn11Label.backgroundColor = WHITE
+                    btnbool2[10] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[10] == false {
+                    btn11Label.backgroundColor = WRONG
+                    btnbool3[10] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn12(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[11] == true {
+                if btnbool2[11] == true {
+                    btn12Label.backgroundColor = WHITE
+                    btnbool2[11] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[11] == false {
+                    btn12Label.backgroundColor = WRONG
+                    btnbool3[11] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn13(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[12] == true {
+                if btnbool2[12] == true {
+                    btn13Label.backgroundColor = WHITE
+                    btnbool2[12] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[12] == false {
+                    btn13Label.backgroundColor = WRONG
+                    btnbool3[12] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn14(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[13] == true {
+                if btnbool2[13] == true {
+                    btn14Label.backgroundColor = WHITE
+                    btnbool2[13] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[13] == false {
+                    btn14Label.backgroundColor = WRONG
+                    btnbool3[13] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn15(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[14] == true {
+                if btnbool2[14] == true {
+                    btn15Label.backgroundColor = WHITE
+                    btnbool2[14] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[14] == false {
+                    btn15Label.backgroundColor = WRONG
+                    btnbool3[14] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     @IBAction func btn16(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if btnbool[15] == true {
+                if btnbool2[15] == true {
+                    btn16Label.backgroundColor = WHITE
+                    btnbool2[15] = false
+                    isGameGoodEnd()
+                }
+            } else {
+                if btnbool3[15] == false {
+                    btn16Label.backgroundColor = WRONG
+                    btnbool3[15] = true
+                    isGameBadEnd()
+                }
+            }
+        }
     }
     
     
@@ -244,6 +481,13 @@ class VisualMemorySecondViewController: UIViewController {
                 
             }
         }
+    }
+    
+    func isGameGoodEnd() {
+        print("굳")
+    }
+    func isGameBadEnd() {
+        print("밷")
     }
 
     

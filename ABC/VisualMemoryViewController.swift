@@ -92,6 +92,15 @@ extension VisualMemoryViewController: ContainerVCDelegate {
         score = value
         scoreLabel.text = "Score | \(score)"
         if value >= 2 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                self.readyView.alpha = 0
+                self.firstView.alpha = 0
+                self.secondView.alpha = 1
+                self.containerVC2?.setisGameStart(self.isGameStart)
+                self.containerVC2?.setScore(self.score)
+                self.containerVC2?.setgamego()
+            })
+        } else if value >= 3 {
             readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 1

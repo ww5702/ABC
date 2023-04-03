@@ -84,14 +84,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[0] == true {
                 if btnbool2[0] == true {
-                    print("정답")
                     btn1Label.backgroundColor = WHITE
                     btnbool2[0] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[0] == false {
-                    print("틀림")
                     btn1Label.backgroundColor = WRONG
                     btnbool3[0] = true
                     isGameBadEnd()
@@ -104,14 +102,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[1] == true {
                 if btnbool2[1] == true {
-                    print("정답")
                     btn2Label.backgroundColor = WHITE
                     btnbool2[1] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[1] == false {
-                    print("틀림")
                     btn2Label.backgroundColor = WRONG
                     btnbool3[1] = true
                     isGameBadEnd()
@@ -123,14 +119,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[2] == true {
                 if btnbool2[2] == true {
-                    print("정답")
                     btn3Label.backgroundColor = WHITE
                     btnbool2[2] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[2] == false {
-                    print("틀림")
                     btn3Label.backgroundColor = WRONG
                     btnbool3[2] = true
                     isGameBadEnd()
@@ -142,14 +136,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[3] == true {
                 if btnbool2[3] == true {
-                    print("정답")
                     btn4Label.backgroundColor = WHITE
                     btnbool2[3] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[3] == false {
-                    print("틀림")
                     btn4Label.backgroundColor = WRONG
                     btnbool3[3] = true
                     isGameBadEnd()
@@ -161,14 +153,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[4] == true {
                 if btnbool2[4] == true {
-                    print("정답")
                     btn5Label.backgroundColor = WHITE
                     btnbool2[4] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[4] == false {
-                    print("틀림")
                     btn5Label.backgroundColor = WRONG
                     btnbool3[4] = true
                     isGameBadEnd()
@@ -180,14 +170,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[5] == true {
                 if btnbool2[5] == true {
-                    print("정답")
                     btn6Label.backgroundColor = WHITE
                     btnbool2[5] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[5] == false {
-                    print("틀림")
                     btn6Label.backgroundColor = WRONG
                     btnbool3[5] = true
                     isGameBadEnd()
@@ -199,14 +187,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[6] == true {
                 if btnbool2[6] == true {
-                    print("정답")
                     btn7Label.backgroundColor = WHITE
                     btnbool2[6] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[6] == false {
-                    print("틀림")
                     btn7Label.backgroundColor = WRONG
                     btnbool3[6] = true
                     isGameBadEnd()
@@ -218,14 +204,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[7] == true {
                 if btnbool2[7] == true {
-                    print("정답")
                     btn8Label.backgroundColor = WHITE
                     btnbool2[7] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[7] == false {
-                    print("틀림")
                     btn8Label.backgroundColor = WRONG
                     btnbool3[7] = true
                     isGameBadEnd()
@@ -237,14 +221,12 @@ class VisualMemoryFirstViewController: UIViewController {
         if isBtnColorChange == true {
             if btnbool[8] == true {
                 if btnbool2[8] == true {
-                    print("정답")
                     btn9Label.backgroundColor = WHITE
                     btnbool2[8] = false
                     isGameGoodEnd()
                 }
             } else {
                 if btnbool3[8] == false {
-                    print("틀림")
                     btn9Label.backgroundColor = WRONG
                     btnbool3[8] = true
                     isGameBadEnd()
@@ -370,12 +352,13 @@ class VisualMemoryFirstViewController: UIViewController {
         count += 1
         if count == value {
             // 점수를 1점 늘린다음 스코어를 전달
-            savescore += 1
-            delegate?.didReceivedValueFromContainer(self, value: savescore)
             
-            // 점수 전달 후 0.3초 후 파란색으로 변경
+            
+            // 점수 전달 후 정답화면 0.5초 보여준 뒤 파란색으로 변경
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.setblue()
+                self.savescore += 1
+                self.delegate?.didReceivedValueFromContainer(self, value: self.savescore)
             })
             
             // set함수 초기화
