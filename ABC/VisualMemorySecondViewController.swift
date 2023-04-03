@@ -39,7 +39,6 @@ class VisualMemorySecondViewController: UIViewController {
     let RED = UIColor.systemRed
     let WRONG = UIColor.systemGray
     
-    // 2단계로 넘어온순간은 무조건 점수가 3점부터 시작이기 떄문에
     var savescore : Int = 0
     var isGameStart = false
     
@@ -53,7 +52,6 @@ class VisualMemorySecondViewController: UIViewController {
     var btnbool3 : [Bool] = Array(repeating: false, count: 16)
 
     override func viewDidLoad() {
-        print("test : \(savescore)")
         super.viewDidLoad()
         
         setblue()
@@ -333,9 +331,6 @@ class VisualMemorySecondViewController: UIViewController {
             }
         }
     }
-    
-    
-    
 
     func setblue() {
         btn1Label.backgroundColor = BLUE
@@ -358,7 +353,6 @@ class VisualMemorySecondViewController: UIViewController {
     
     func gameStart() {
         if isGameStart == true {
-            print("test : \(savescore)")
             if value < 8 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {

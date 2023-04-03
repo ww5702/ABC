@@ -1174,7 +1174,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UYS-c1-Jn0">
                                                 <rect key="frame" x="0.0" y="0.0" width="66.666666666666671" height="101.66666666666667"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="test">
+                                                <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
@@ -1380,6 +1380,33 @@
                             <constraint firstItem="fKl-o4-Slq" firstAttribute="leading" secondItem="Ub2-ux-97h" secondAttribute="leading" id="P2p-Wg-NtE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btn10Label" destination="jzv-m0-rba" id="LaI-pH-j4a"/>
+                        <outlet property="btn11Label" destination="9PS-qM-gsG" id="Fjv-E3-Hvq"/>
+                        <outlet property="btn12Label" destination="l2Q-dY-xEo" id="1N8-7D-8In"/>
+                        <outlet property="btn13Label" destination="9F1-Ic-jZf" id="sEn-aP-0Ts"/>
+                        <outlet property="btn14Label" destination="Q6w-QI-4rK" id="qsy-n0-Ish"/>
+                        <outlet property="btn15Label" destination="Kcy-W2-DHd" id="Rr8-V3-1uy"/>
+                        <outlet property="btn16Label" destination="Sdj-lY-yk0" id="KLp-4w-i1v"/>
+                        <outlet property="btn17Label" destination="LPz-I4-UFP" id="Uxg-Yb-JAS"/>
+                        <outlet property="btn18Label" destination="kkr-OW-SIh" id="8Z0-qF-VUf"/>
+                        <outlet property="btn19Label" destination="Gqe-j9-pv9" id="NAr-nq-s9d"/>
+                        <outlet property="btn1Label" destination="UYS-c1-Jn0" id="vPB-5q-gw2"/>
+                        <outlet property="btn20Label" destination="fwL-YV-fP9" id="vL3-Iv-Q1b"/>
+                        <outlet property="btn21Label" destination="Pn7-8Q-mYP" id="gIl-f4-NnT"/>
+                        <outlet property="btn22Label" destination="gAV-4q-K4P" id="U1r-73-MjA"/>
+                        <outlet property="btn23Label" destination="qeh-xL-8c2" id="S7j-Lt-oG4"/>
+                        <outlet property="btn24Label" destination="qvg-qP-qkH" id="VZJ-Bm-KaO"/>
+                        <outlet property="btn25Label" destination="Fa5-Rj-4sG" id="1br-dX-1Ej"/>
+                        <outlet property="btn2Label" destination="2Rp-Q1-Npg" id="91H-Vv-wam"/>
+                        <outlet property="btn3Label" destination="f1E-Sm-GmC" id="7T0-rM-h00"/>
+                        <outlet property="btn4Label" destination="DOt-DU-cne" id="XBZ-XR-CoL"/>
+                        <outlet property="btn5Label" destination="9eg-wa-HoO" id="qAU-BK-Syz"/>
+                        <outlet property="btn6Label" destination="Xbq-E6-0my" id="aGC-hl-1Nz"/>
+                        <outlet property="btn7Label" destination="RII-V5-Ho2" id="XBP-J2-xj1"/>
+                        <outlet property="btn8Label" destination="5Wq-Wp-scK" id="Mtf-G7-N6Z"/>
+                        <outlet property="btn9Label" destination="hgu-ba-fgN" id="03u-C3-5Jy"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ddf-bh-NTP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
