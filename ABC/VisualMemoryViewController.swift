@@ -13,7 +13,7 @@ class VisualMemoryViewController: UIViewController {
     @IBOutlet weak var readyView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
-    
+    @IBOutlet weak var thirdView: UIView!
     
     // 컨테이너 뷰 컨트롤러를 참조하는 변수 생성
     // 해당 변수가 있어야 VisualMemoryViewController의 아무곳에서 나중에 보낼 타깃을 가리킬수있다.
@@ -41,6 +41,7 @@ class VisualMemoryViewController: UIViewController {
         readyView.alpha = 1
         firstView.alpha = 0
         secondView.alpha = 0
+        thirdView.alpha = 0
 
     }
 
@@ -54,6 +55,7 @@ class VisualMemoryViewController: UIViewController {
             readyView.alpha = 0
             firstView.alpha = 1
             secondView.alpha = 0
+            thirdView.alpha = 0
             // 스코어를 전송
             containerVC?.setScore(score)
             // isGamestart를 true로 전송
@@ -96,6 +98,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
                 self.readyView.alpha = 0
                 self.firstView.alpha = 0
                 self.secondView.alpha = 1
+                self.thirdView.alpha = 0
                 self.containerVC2?.setisGameStart(self.isGameStart)
                 self.containerVC2?.setScore(self.score)
                 self.containerVC2?.setgamego()
@@ -104,6 +107,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
             readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 1
+            self.thirdView.alpha = 0
             containerVC2?.setisGameStart(isGameStart)
             containerVC2?.setScore(score)
             containerVC2?.setgamego()
@@ -125,10 +129,11 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
     func didReceivedValueFromContainer(_ controller: VisualMemorySecondViewController, value: Int) {
         score = value
         scoreLabel.text = "Score | \(score)"
-        if value >= 6 {
-            readyView.alpha = 1
+        if value >= 5 {
+            readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 0
+            self.thirdView.alpha = 1
         }
     }
     func didReceivedValueFromContainerLife(_ controller: VisualMemorySecondViewController, value: Int) {
