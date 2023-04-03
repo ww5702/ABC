@@ -356,7 +356,7 @@ class VisualMemorySecondViewController: UIViewController {
             if value < 8 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {
-                    let randomNum = Int.random(in: 1...9)
+                    let randomNum = Int.random(in: 1...16)
                     checkrandom.insert(randomNum)
                     print(checkrandom)
                 }
@@ -495,6 +495,7 @@ class VisualMemorySecondViewController: UIViewController {
             value += 1
             // count또한 초기화
             count = 0
+            gamelife = 3
             // 타일의 색 변경되었는지도 초기화
             isBtnColorChange = false
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {

@@ -367,6 +367,8 @@ class VisualMemoryFirstViewController: UIViewController {
             value += 1
             // count또한 초기화
             count = 0
+            // 맞추더라도 한 게임당 목숨 3개는 초기화
+            gamelife = 3
             // 타일의 색 변경되었는지도 초기화
             isBtnColorChange = false
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {

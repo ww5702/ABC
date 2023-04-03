@@ -138,8 +138,8 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                 self.readyView.alpha = 0
                 self.firstView.alpha = 0
-                self.secondView.alpha = 1
-                self.thirdView.alpha = 0
+                self.secondView.alpha = 0
+                self.thirdView.alpha = 1
                 self.containerVC3?.setisGameStart(self.isGameStart)
                 self.containerVC3?.setScore(self.score)
                 self.containerVC3?.setgamego()
@@ -147,8 +147,8 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
         } else if value >= 6 {
             readyView.alpha = 0
             firstView.alpha = 0
-            secondView.alpha = 1
-            thirdView.alpha = 0
+            secondView.alpha = 0
+            thirdView.alpha = 1
             containerVC3?.setisGameStart(isGameStart)
             containerVC3?.setScore(score)
             containerVC3?.setgamego()
