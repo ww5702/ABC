@@ -497,7 +497,7 @@ class VisualMemoryThirdViewController: UIViewController {
     
     func gameStart() {
         if isGameStart == true {
-            if value < 12 {
+            if value < 11 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {
                     let randomNum = Int.random(in: 1...25)
