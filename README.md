@@ -37,7 +37,7 @@ VerbalMemoryViewController & VerbalMemoryScoreViewController Create
 영단어를 랜덤으로 출력하여 본적 있다면 SEEN 새로 본 단어라면 NEW를 눌러 암기력을 테스트하는 기능 구현   
 결과 페이지에 점수 출력   
 
--- 2023.03.37   
+-- 2023.03.37 ~ 2023.04.04   
 https://42kchoi.tistory.com/383   
 하나의 뷰에서 세가지 뷰 컨트롤러 스위치하기   
 -> 해당 기능으로 점수에 따른 3x3 4x4 5x5 VC변환   
@@ -45,6 +45,7 @@ http://yoonbumtae.com/?p=4786
 뷰 컨트롤러와 내부의 컨테이너 뷰 간의 데이터 교환   
 해당 기능으로 정답을 맞췄을때의 score +1 이나   
 정답을 틀렸을때 life -1 의 기능으로 수행   
+   
 변수 이동 순서   
 gamestart 버튼 누르기 -> score와 isgamestart(bool)을 true로 변경 후 전송   
 containerview에서 isgamestart가 true라면   
@@ -54,4 +55,5 @@ btnbool1,2,3들을 각각의 버튼에 생성 -> 버튼액션때 이상한 상�
 이때 isBtnColorChange = true를 입력해서 다 색이 변한뒤부터 버튼 액션이 눌러질수 있도록 설정   
 
 0라이프 되었을 때의 기능 -> 점수페이지 이동   
-3x3 다음 4x4, 5x5 기능   
+3x3 다음 4x4, 5x5, 6x6 까지 기능    
+일단 15단계까지 구현했으나 15단계이상 해결하게된다면 강제종료 혹은 7x7 까지 준비하진 않았다.   
