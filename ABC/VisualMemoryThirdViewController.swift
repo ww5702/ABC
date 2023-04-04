@@ -64,6 +64,7 @@ class VisualMemoryThirdViewController: UIViewController {
         super.viewDidLoad()
 
         setblue()
+        setradius()
     }
     
     @IBAction func btn1(_ sender: UIButton) {
@@ -762,6 +763,33 @@ class VisualMemoryThirdViewController: UIViewController {
         btn23Label.backgroundColor = BLUE
         btn24Label.backgroundColor = BLUE
         btn25Label.backgroundColor = BLUE
+    }
+    func setradius() {
+        btn1Label.layer.cornerRadius = 10
+        btn2Label.layer.cornerRadius = 10
+        btn3Label.layer.cornerRadius = 10
+        btn4Label.layer.cornerRadius = 10
+        btn5Label.layer.cornerRadius = 10
+        btn6Label.layer.cornerRadius = 10
+        btn7Label.layer.cornerRadius = 10
+        btn8Label.layer.cornerRadius = 10
+        btn9Label.layer.cornerRadius = 10
+        btn10Label.layer.cornerRadius = 10
+        btn11Label.layer.cornerRadius = 10
+        btn12Label.layer.cornerRadius = 10
+        btn13Label.layer.cornerRadius = 10
+        btn14Label.layer.cornerRadius = 10
+        btn15Label.layer.cornerRadius = 10
+        btn16Label.layer.cornerRadius = 10
+        btn17Label.layer.cornerRadius = 10
+        btn18Label.layer.cornerRadius = 10
+        btn19Label.layer.cornerRadius = 10
+        btn20Label.layer.cornerRadius = 10
+        btn21Label.layer.cornerRadius = 10
+        btn22Label.layer.cornerRadius = 10
+        btn23Label.layer.cornerRadius = 10
+        btn24Label.layer.cornerRadius = 10
+        btn25Label.layer.cornerRadius = 10
     }
     
     // 부모VC로 보내는 함수

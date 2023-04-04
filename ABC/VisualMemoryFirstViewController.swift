@@ -70,11 +70,13 @@ class VisualMemoryFirstViewController: UIViewController {
         isGameStart = false
         
         setblue()
+        setradius()
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         // 게임시작
         gameStart()
+        
     }
     
     // 눌렀을때 정답이면 하얀색으로 잠시 바꿔두었다가
@@ -332,6 +334,18 @@ class VisualMemoryFirstViewController: UIViewController {
         btn7Label.backgroundColor = BLUE
         btn8Label.backgroundColor = BLUE
         btn9Label.backgroundColor = BLUE
+    }
+    
+    func setradius() {
+        btn1Label.layer.cornerRadius = 10
+        btn2Label.layer.cornerRadius = 10
+        btn3Label.layer.cornerRadius = 10
+        btn4Label.layer.cornerRadius = 10
+        btn5Label.layer.cornerRadius = 10
+        btn6Label.layer.cornerRadius = 10
+        btn7Label.layer.cornerRadius = 10
+        btn8Label.layer.cornerRadius = 10
+        btn9Label.layer.cornerRadius = 10
     }
     
     // 부모VC로 보내는 함수

@@ -8,10 +8,30 @@
 import UIKit
 
 class GameSelectViewController: UIViewController {
+    
+    
+    @IBOutlet weak var reactionBtn: UIButton!
+    @IBOutlet weak var verbalBtn: UIButton!
+    @IBOutlet weak var visualBtn: UIButton!
+    @IBOutlet weak var numberBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        reactionBtn.layer.borderWidth = 5
+        reactionBtn.layer.cornerRadius = 10
+        reactionBtn.layer.borderColor = UIColor.systemYellow.cgColor
+        
+        verbalBtn.layer.borderWidth = 5
+        verbalBtn.layer.borderColor = UIColor.systemYellow.cgColor
+        
+        visualBtn.layer.borderWidth = 5
+        visualBtn.layer.borderColor = UIColor.systemYellow.cgColor
+        
+        numberBtn.layer.borderWidth = 5
+        numberBtn.layer.borderColor = UIColor.systemYellow.cgColor
     }
     
 
@@ -44,6 +64,12 @@ class GameSelectViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             self.present(vc, animated: true)
         }
+    }
+    
+    
+    @IBAction func gotoNumberMemory(_ sender: UIButton) {
+        
+        
     }
     
     

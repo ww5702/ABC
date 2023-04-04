@@ -55,6 +55,7 @@ class VisualMemorySecondViewController: UIViewController {
         super.viewDidLoad()
         
         setblue()
+        setradius()
     }
     
     
@@ -349,6 +350,25 @@ class VisualMemorySecondViewController: UIViewController {
         btn14Label.backgroundColor = BLUE
         btn15Label.backgroundColor = BLUE
         btn16Label.backgroundColor = BLUE
+    }
+    
+    func setradius() {
+        btn1Label.layer.cornerRadius = 10
+        btn2Label.layer.cornerRadius = 10
+        btn3Label.layer.cornerRadius = 10
+        btn4Label.layer.cornerRadius = 10
+        btn5Label.layer.cornerRadius = 10
+        btn6Label.layer.cornerRadius = 10
+        btn7Label.layer.cornerRadius = 10
+        btn8Label.layer.cornerRadius = 10
+        btn9Label.layer.cornerRadius = 10
+        btn10Label.layer.cornerRadius = 10
+        btn11Label.layer.cornerRadius = 10
+        btn12Label.layer.cornerRadius = 10
+        btn13Label.layer.cornerRadius = 10
+        btn14Label.layer.cornerRadius = 10
+        btn15Label.layer.cornerRadius = 10
+        btn16Label.layer.cornerRadius = 10
     }
     
     func gameStart() {

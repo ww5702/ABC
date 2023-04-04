@@ -81,7 +81,10 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fog-C0-vEY">
                                                 <rect key="frame" x="186.66666666666663" y="0.0" width="166.33333333333337" height="219.66666666666666"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Number Memory"/>
+                                                <connections>
+                                                    <action selector="gotoNumberMemory:" destination="4of-xZ-JLa" eventType="touchUpInside" id="AhG-6e-qWq"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -113,6 +116,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="mYV-WN-RnR"/>
+                    <connections>
+                        <outlet property="numberBtn" destination="fog-C0-vEY" id="FYJ-2G-uxg"/>
+                        <outlet property="reactionBtn" destination="9kn-ng-0gF" id="pcw-a0-YRP"/>
+                        <outlet property="verbalBtn" destination="gjp-vm-L2Z" id="Kre-Ow-sRK"/>
+                        <outlet property="visualBtn" destination="QJo-QA-clq" id="7wS-od-cf8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bci-n2-PEp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -286,9 +295,15 @@
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Z2n-WF-L0u">
-                                <rect key="frame" x="10" y="778" width="373" height="34.333333333333371"/>
+                                <rect key="frame" x="10" y="778" width="373" height="44"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Game Start"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Game Start">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
                                 <connections>
                                     <action selector="gameStart:" destination="nZC-Wh-kCr" eventType="touchUpInside" id="tLC-1S-KoN"/>
                                 </connections>
@@ -333,6 +348,7 @@
                             <constraint firstItem="prz-Pt-cTb" firstAttribute="trailing" secondItem="BBo-Cg-XKe" secondAttribute="trailing" constant="10" id="l5m-Om-4W6"/>
                             <constraint firstItem="Z2n-WF-L0u" firstAttribute="top" secondItem="geI-EN-Uxe" secondAttribute="bottom" constant="10" id="mhu-hs-zZV"/>
                             <constraint firstItem="Z2n-WF-L0u" firstAttribute="top" secondItem="hof-At-BFp" secondAttribute="bottom" constant="10" id="nAS-KW-ZnS"/>
+                            <constraint firstAttribute="bottom" secondItem="Z2n-WF-L0u" secondAttribute="bottom" constant="30" id="rcd-g7-0TE"/>
                             <constraint firstItem="Z2n-WF-L0u" firstAttribute="top" secondItem="vVP-iV-1FT" secondAttribute="bottom" constant="10" id="sJk-sS-sKz"/>
                             <constraint firstItem="bih-f4-XKQ" firstAttribute="leading" secondItem="prz-Pt-cTb" secondAttribute="leading" constant="10" id="sgt-Ho-PDr"/>
                         </constraints>
@@ -1008,7 +1024,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="117.66666666666667" height="176.33333333333334"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain">
-                                                    <backgroundConfiguration key="background"/>
+                                                    <backgroundConfiguration key="background" cornerRadius="0.0"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="btn1:" destination="uEn-Z7-35L" eventType="touchUpInside" id="wh5-wj-9Fm"/>
