@@ -1519,6 +1519,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn1:" destination="OWk-fj-Swg" eventType="touchUpInside" id="Dvo-Im-u5w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLe-Ab-YTI">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1526,6 +1529,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn2:" destination="OWk-fj-Swg" eventType="touchUpInside" id="miD-XV-vxh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SPy-La-jnn">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83.333333333333329"/>
@@ -1533,6 +1539,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn3:" destination="OWk-fj-Swg" eventType="touchUpInside" id="Upi-2r-V9B"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmg-DS-BPU">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1540,6 +1549,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn4:" destination="OWk-fj-Swg" eventType="touchUpInside" id="6cR-VS-uiL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jZf-fj-X68">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83.333333333333329"/>
@@ -1547,6 +1559,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn5:" destination="OWk-fj-Swg" eventType="touchUpInside" id="vmA-VL-FXf"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ISA-zh-dpP">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83.333333333333329"/>
@@ -1554,6 +1569,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn6:" destination="OWk-fj-Swg" eventType="touchUpInside" id="lnI-6A-iR7"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1566,6 +1584,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn7:" destination="OWk-fj-Swg" eventType="touchUpInside" id="b6E-3N-1fK"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uUX-nq-Z1o">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83"/>
@@ -1573,6 +1594,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn8:" destination="OWk-fj-Swg" eventType="touchUpInside" id="OLe-HB-hJe"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lL-c4-VOt">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83"/>
@@ -1580,6 +1604,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn9:" destination="OWk-fj-Swg" eventType="touchUpInside" id="e6r-f2-OlF"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fPO-U4-epn">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83"/>
@@ -1587,6 +1614,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn10:" destination="OWk-fj-Swg" eventType="touchUpInside" id="0m0-Wz-0m8"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUQ-aQ-B95">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83"/>
@@ -1594,6 +1624,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn11:" destination="OWk-fj-Swg" eventType="touchUpInside" id="bPl-q8-1p0"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aaT-zp-gm2">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83"/>
@@ -1601,6 +1634,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn12:" destination="OWk-fj-Swg" eventType="touchUpInside" id="KF2-Ov-uM5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1613,6 +1649,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn13:" destination="OWk-fj-Swg" eventType="touchUpInside" id="UvG-qM-8uL"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4rM-fO-ipx">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1620,6 +1659,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn14:" destination="OWk-fj-Swg" eventType="touchUpInside" id="fhq-2Y-0mD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZm-8k-Mhx">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83.333333333333329"/>
@@ -1627,6 +1669,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn15:" destination="OWk-fj-Swg" eventType="touchUpInside" id="XlU-Ms-3JD"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wm-jK-b0W">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1634,6 +1679,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn16:" destination="OWk-fj-Swg" eventType="touchUpInside" id="tvf-nW-F98"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5x-Qa-c21">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83.333333333333329"/>
@@ -1641,6 +1689,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn17:" destination="OWk-fj-Swg" eventType="touchUpInside" id="sbk-Pe-WPJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2NT-92-J8P">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83.333333333333329"/>
@@ -1648,6 +1699,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn18:" destination="OWk-fj-Swg" eventType="touchUpInside" id="LMZ-Ft-g3j"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1660,6 +1714,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn19:" destination="OWk-fj-Swg" eventType="touchUpInside" id="xxn-Fe-x6s"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWa-51-ycN">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83"/>
@@ -1667,6 +1724,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn20:" destination="OWk-fj-Swg" eventType="touchUpInside" id="N0X-rz-M2h"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0FR-32-evM">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83"/>
@@ -1674,6 +1734,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn21:" destination="OWk-fj-Swg" eventType="touchUpInside" id="l7T-kS-tPE"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yMA-rH-JZk">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83"/>
@@ -1681,6 +1744,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn22:" destination="OWk-fj-Swg" eventType="touchUpInside" id="TeH-4C-yiC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TiV-kb-r7z">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83"/>
@@ -1688,6 +1754,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn23:" destination="OWk-fj-Swg" eventType="touchUpInside" id="XaY-EG-i6h"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xeU-fX-WPX">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83"/>
@@ -1695,6 +1764,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn24:" destination="OWk-fj-Swg" eventType="touchUpInside" id="ktk-01-mlF"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1707,6 +1779,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn25:" destination="OWk-fj-Swg" eventType="touchUpInside" id="oQw-qj-gET"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FX-5a-9rO">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1714,6 +1789,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn26:" destination="OWk-fj-Swg" eventType="touchUpInside" id="1Q0-4H-bRx"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fwv-9W-U2O">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83.333333333333329"/>
@@ -1721,6 +1799,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn27:" destination="OWk-fj-Swg" eventType="touchUpInside" id="0lW-kr-h3w"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyG-1H-1hm">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83.333333333333329"/>
@@ -1728,6 +1809,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn28:" destination="OWk-fj-Swg" eventType="touchUpInside" id="2AE-8z-Kc9"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4k-LR-O1v">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83.333333333333329"/>
@@ -1735,6 +1819,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn29:" destination="OWk-fj-Swg" eventType="touchUpInside" id="Qh9-KE-yvN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fSy-g9-TgB">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83.333333333333329"/>
@@ -1742,6 +1829,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn30:" destination="OWk-fj-Swg" eventType="touchUpInside" id="Ufh-8f-ZFa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -1754,6 +1844,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn31:" destination="OWk-fj-Swg" eventType="touchUpInside" id="DOj-Ew-6Wz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6tA-Le-9DV">
                                                 <rect key="frame" x="64" y="0.0" width="53.666666666666657" height="83"/>
@@ -1761,6 +1854,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn32:" destination="OWk-fj-Swg" eventType="touchUpInside" id="WTX-EW-8na"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8M-4g-r5N">
                                                 <rect key="frame" x="127.66666666666669" y="0.0" width="54" height="83"/>
@@ -1768,6 +1864,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn33:" destination="OWk-fj-Swg" eventType="touchUpInside" id="XxL-uG-CzA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="don-Dd-xzz">
                                                 <rect key="frame" x="191.66666666666666" y="0.0" width="53.666666666666657" height="83"/>
@@ -1775,6 +1874,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn34:" destination="OWk-fj-Swg" eventType="touchUpInside" id="v76-pR-FII"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rrv-21-v1G">
                                                 <rect key="frame" x="255.33333333333337" y="0.0" width="54" height="83"/>
@@ -1782,6 +1884,9 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn35:" destination="OWk-fj-Swg" eventType="touchUpInside" id="BwT-Rt-zKR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rp4-hq-nNF">
                                                 <rect key="frame" x="319.33333333333331" y="0.0" width="53.666666666666686" height="83"/>
@@ -1789,12 +1894,16 @@
                                                 <buttonConfiguration key="configuration" style="plain">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn36:" destination="OWk-fj-Swg" eventType="touchUpInside" id="eP1-Sf-GNb"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="rgu-b4-k3q"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="hsT-SF-8ew" firstAttribute="top" secondItem="r3g-UR-cxn" secondAttribute="top" id="5IP-EZ-3tp"/>
@@ -1845,6 +1954,96 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0XT-Mc-JcI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4188.5496183206105" y="1351.7605633802818"/>
+        </scene>
+        <!--Visual Memory Score View Controller-->
+        <scene sceneID="1yr-h8-f6u">
+            <objects>
+                <viewController storyboardIdentifier="VisualMemoryScoreViewController" id="abj-Jx-17V" customClass="VisualMemoryScoreViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3GO-Ke-Kzr">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="X1S-1F-5XD">
+                                <rect key="frame" x="10" y="109" width="373" height="659"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VisualMemoryExplain.png" translatesAutoresizingMaskIntoConstraints="NO" id="84Q-xo-fhP">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="JTn-8E-Trd"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Koe-NP-XAn">
+                                        <rect key="frame" x="0.0" y="260" width="373" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="QHl-SC-Bp7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="50"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Cf-HJw">
+                                        <rect key="frame" x="0.0" y="420" width="373" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="4lp-W2-9Lj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-mW-mWG">
+                                        <rect key="frame" x="0.0" y="580" width="373" height="79"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeD-4D-6sg">
+                                                <rect key="frame" x="0.0" y="0.0" width="181.66666666666666" height="79"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="RETRY">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="retryBtn:" destination="abj-Jx-17V" eventType="touchUpInside" id="T08-AZ-H3L"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QFH-Sf-jtE">
+                                                <rect key="frame" x="191.66666666666663" y="0.0" width="181.33333333333337" height="79"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="HOME">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="homeBtn:" destination="abj-Jx-17V" eventType="touchUpInside" id="vG1-Da-ELI"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBlueColor"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="siR-wZ-fRM"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="siR-wZ-fRM" firstAttribute="bottom" secondItem="X1S-1F-5XD" secondAttribute="bottom" constant="50" id="OQa-wz-RO2"/>
+                            <constraint firstItem="siR-wZ-fRM" firstAttribute="trailing" secondItem="X1S-1F-5XD" secondAttribute="trailing" constant="10" id="YOD-fB-CFc"/>
+                            <constraint firstItem="X1S-1F-5XD" firstAttribute="leading" secondItem="siR-wZ-fRM" secondAttribute="leading" constant="10" id="mz8-np-Vsz"/>
+                            <constraint firstItem="X1S-1F-5XD" firstAttribute="top" secondItem="siR-wZ-fRM" secondAttribute="top" constant="50" id="neA-aH-RRA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="Eun-Cf-HJw" id="obn-OK-10j"/>
+                        <outlet property="scoreLabel" destination="Koe-NP-XAn" id="JOP-gB-o6c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N7M-wv-H4P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4880" y="1022"/>
         </scene>
     </scenes>
     <resources>

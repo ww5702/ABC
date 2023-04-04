@@ -98,6 +98,14 @@ class VisualMemoryViewController: UIViewController {
         }
     }
     
+    func gotoResult() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "VisualMemoryScoreViewController") as? VisualMemoryScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            vc.data = score
+            self.present(vc, animated: true)
+        }
+    }
+    
 
 }
 
@@ -136,7 +144,12 @@ extension VisualMemoryViewController: ContainerVCDelegate {
         })
         
         life -= value
-        lifeLabel.text = "Life | \(life)"
+        if life > 0 {
+            lifeLabel.text = "Life | \(life)"
+        } else {
+            gotoResult()
+        }
+        
     }
 }
 
@@ -174,7 +187,11 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
         })
         
         life -= value
-        lifeLabel.text = "Life | \(life)"
+        if life > 0 {
+            lifeLabel.text = "Life | \(life)"
+        } else {
+            gotoResult()
+        }
     }
 }
 
@@ -212,7 +229,11 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
         })
         
         life -= value
-        lifeLabel.text = "Life | \(life)"
+        if life > 0 {
+            lifeLabel.text = "Life | \(life)"
+        } else {
+            gotoResult()
+        }
     }
 }
 

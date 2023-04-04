@@ -16,6 +16,7 @@
 		C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */; };
 		C13FFB8B29DABCA100B5704B /* VisualMemoryThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */; };
 		C13FFB8D29DBFD5600B5704B /* VisualMemoryFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */; };
+		C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */; };
@@ -45,6 +46,7 @@
 		C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameViewController.swift; sourceTree = "<group>"; };
 		C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryThirdViewController.swift; sourceTree = "<group>"; };
 		C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFourthViewController.swift; sourceTree = "<group>"; };
+		C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionTestStatistics.png; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */,
 				C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */,
 				C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */,
+				C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
@@ -205,6 +208,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */,
 				C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */,
 				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
 				C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */,
