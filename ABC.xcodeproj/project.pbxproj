@@ -17,6 +17,7 @@
 		C13FFB8B29DABCA100B5704B /* VisualMemoryThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */; };
 		C13FFB8D29DBFD5600B5704B /* VisualMemoryFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */; };
 		C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */; };
+		C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C13FFB9029DC153C00B5704B /* reactionIcon.png */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */; };
@@ -47,6 +48,7 @@
 		C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryThirdViewController.swift; sourceTree = "<group>"; };
 		C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFourthViewController.swift; sourceTree = "<group>"; };
 		C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryScoreViewController.swift; sourceTree = "<group>"; };
+		C13FFB9029DC153C00B5704B /* reactionIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionIcon.png; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionTestStatistics.png; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */,
 				C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */,
 				C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */,
+				C13FFB9029DC153C00B5704B /* reactionIcon.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
 				C13759A329C04BC40072DA77 /* Main.storyboard in Resources */,
+				C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

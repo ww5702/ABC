@@ -20,18 +20,18 @@ class GameSelectViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        reactionBtn.layer.borderWidth = 5
-        reactionBtn.layer.cornerRadius = 10
-        reactionBtn.layer.borderColor = UIColor.systemYellow.cgColor
-        
-        verbalBtn.layer.borderWidth = 5
-        verbalBtn.layer.borderColor = UIColor.systemYellow.cgColor
-        
-        visualBtn.layer.borderWidth = 5
-        visualBtn.layer.borderColor = UIColor.systemYellow.cgColor
-        
-        numberBtn.layer.borderWidth = 5
-        numberBtn.layer.borderColor = UIColor.systemYellow.cgColor
+//        reactionBtn.layer.borderWidth = 5
+//        reactionBtn.layer.cornerRadius = 10
+//        reactionBtn.layer.borderColor = UIColor.systemYellow.cgColor
+//        
+//        verbalBtn.layer.borderWidth = 5
+//        verbalBtn.layer.borderColor = UIColor.systemYellow.cgColor
+//        
+//        visualBtn.layer.borderWidth = 5
+//        visualBtn.layer.borderColor = UIColor.systemYellow.cgColor
+//        
+//        numberBtn.layer.borderWidth = 5
+//        numberBtn.layer.borderColor = UIColor.systemYellow.cgColor
     }
     
 
