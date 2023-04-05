@@ -16,5 +16,7 @@ class NumberMemoryExplainViewController: UIViewController {
         self.navigationItem.title = "zedd"
     }
 
-
+    @IBAction func backBtn(_ sender: UIButton) {
+    }
+    
 }

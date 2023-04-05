@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C12AA36929DD5AE4006B5E41 /* ReactionGameExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA36829DD5AE4006B5E41 /* ReactionGameExplainViewController.swift */; };
+		C12AA36C29DD6942006B5E41 /* NumberMemoryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA36B29DD6942006B5E41 /* NumberMemoryFirstViewController.swift */; };
+		C12AA36E29DD694C006B5E41 /* NumberMemorySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA36D29DD694C006B5E41 /* NumberMemorySecondViewController.swift */; };
 		C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599B29C04BC40072DA77 /* AppDelegate.swift */; };
 		C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599D29C04BC40072DA77 /* SceneDelegate.swift */; };
 		C13759A029C04BC40072DA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599F29C04BC40072DA77 /* ViewController.swift */; };
@@ -40,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		C12AA36829DD5AE4006B5E41 /* ReactionGameExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameExplainViewController.swift; sourceTree = "<group>"; };
+		C12AA36B29DD6942006B5E41 /* NumberMemoryFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryFirstViewController.swift; sourceTree = "<group>"; };
+		C12AA36D29DD694C006B5E41 /* NumberMemorySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemorySecondViewController.swift; sourceTree = "<group>"; };
 		C137599829C04BC40072DA77 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C137599B29C04BC40072DA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C137599D29C04BC40072DA77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +87,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C12AA36A29DD6926006B5E41 /* NumberMemory */ = {
+			isa = PBXGroup;
+			children = (
+				C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */,
+				C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */,
+				C12AA36B29DD6942006B5E41 /* NumberMemoryFirstViewController.swift */,
+				C12AA36D29DD694C006B5E41 /* NumberMemorySecondViewController.swift */,
+			);
+			path = NumberMemory;
+			sourceTree = "<group>";
+		};
 		C137598F29C04BC40072DA77 = {
 			isa = PBXGroup;
 			children = (
@@ -110,13 +125,12 @@
 				C13FFB9229DC194100B5704B /* ReactionGame */,
 				C13FFB9329DC196700B5704B /* VerbalMemory */,
 				C13FFB9429DC196E00B5704B /* VisualMemory */,
+				C12AA36A29DD6926006B5E41 /* NumberMemory */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
 				C13759A929C04BC50072DA77 /* Info.plist */,
 				C1AC6C1229C84A09008A4D58 /* words.txt */,
-				C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */,
-				C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */,
 			);
 			path = ABC;
 			sourceTree = "<group>";
@@ -247,6 +261,7 @@
 			files = (
 				C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */,
 				C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */,
+				C12AA36E29DD694C006B5E41 /* NumberMemorySecondViewController.swift in Sources */,
 				C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */,
 				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
 				C13FFB9C29DC1C5900B5704B /* NumberMemoryViewController.swift in Sources */,
@@ -257,6 +272,7 @@
 				C12AA36929DD5AE4006B5E41 /* ReactionGameExplainViewController.swift in Sources */,
 				C15A6B4E29D52AFA0002B72E /* VisualMemorySecondViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
+				C12AA36C29DD6942006B5E41 /* NumberMemoryFirstViewController.swift in Sources */,
 				C15A6B4C29D41C1E0002B72E /* VisualMemoryReadyViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
 				C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */,
