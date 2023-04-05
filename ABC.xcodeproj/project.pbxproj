@@ -18,6 +18,8 @@
 		C13FFB8D29DBFD5600B5704B /* VisualMemoryFourthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */; };
 		C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */; };
 		C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C13FFB9029DC153C00B5704B /* reactionIcon.png */; };
+		C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */; };
+		C13FFB9C29DC1C5900B5704B /* NumberMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */; };
@@ -49,6 +51,8 @@
 		C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFourthViewController.swift; sourceTree = "<group>"; };
 		C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C13FFB9029DC153C00B5704B /* reactionIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionIcon.png; sourceTree = "<group>"; };
+		C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryExplainViewController.swift; sourceTree = "<group>"; };
+		C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryViewController.swift; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionTestStatistics.png; sourceTree = "<group>"; };
@@ -101,11 +105,42 @@
 				C137599D29C04BC40072DA77 /* SceneDelegate.swift */,
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
+				C13FFB9229DC194100B5704B /* ReactionGame */,
+				C13FFB9329DC196700B5704B /* VerbalMemory */,
+				C13FFB9429DC196E00B5704B /* VisualMemory */,
+				C13759A129C04BC40072DA77 /* Main.storyboard */,
+				C13759A429C04BC50072DA77 /* Assets.xcassets */,
+				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
+				C13759A929C04BC50072DA77 /* Info.plist */,
+				C1AC6C1229C84A09008A4D58 /* words.txt */,
+				C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */,
+				C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */,
+			);
+			path = ABC;
+			sourceTree = "<group>";
+		};
+		C13FFB9229DC194100B5704B /* ReactionGame */ = {
+			isa = PBXGroup;
+			children = (
 				C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */,
 				C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */,
+			);
+			path = ReactionGame;
+			sourceTree = "<group>";
+		};
+		C13FFB9329DC196700B5704B /* VerbalMemory */ = {
+			isa = PBXGroup;
+			children = (
 				C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */,
 				C1AC6C0E29C8428B008A4D58 /* VerbalMemoryViewController.swift */,
 				C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */,
+			);
+			path = VerbalMemory;
+			sourceTree = "<group>";
+		};
+		C13FFB9429DC196E00B5704B /* VisualMemory */ = {
+			isa = PBXGroup;
+			children = (
 				C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */,
 				C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */,
 				C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */,
@@ -114,13 +149,8 @@
 				C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */,
 				C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */,
 				C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */,
-				C13759A129C04BC40072DA77 /* Main.storyboard */,
-				C13759A429C04BC50072DA77 /* Assets.xcassets */,
-				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
-				C13759A929C04BC50072DA77 /* Info.plist */,
-				C1AC6C1229C84A09008A4D58 /* words.txt */,
 			);
-			path = ABC;
+			path = VisualMemory;
 			sourceTree = "<group>";
 		};
 		C1AC6C0B29C83DC9008A4D58 /* Image */ = {
@@ -212,9 +242,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */,
 				C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */,
 				C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */,
 				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
+				C13FFB9C29DC1C5900B5704B /* NumberMemoryViewController.swift in Sources */,
 				C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */,
 				C13759A029C04BC40072DA77 /* ViewController.swift in Sources */,
 				C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */,

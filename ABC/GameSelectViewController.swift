@@ -68,10 +68,12 @@ class GameSelectViewController: UIViewController {
     
     
     @IBAction func gotoNumberMemory(_ sender: UIButton) {
-        
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "NumberMemoryExplainViewController") as? NumberMemoryExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
-    
     
     func goToViewController(where: String) {
         let pushVC = self.storyboard?.instantiateViewController(withIdentifier: `where`)
