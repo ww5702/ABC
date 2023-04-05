@@ -37,10 +37,13 @@ class VerbalMemoryExplainViewController: UIViewController {
     }
     
     // navigation으로 화면 이동
-    @IBAction func gotoGameButton(_ sender: UIButton) {
-        // back 버튼이 없음
-        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "VerbalMemoryViewController") else {return}
-        self.present(nextVC, animated: true)
+//    @IBAction func gotoGameButton(_ sender: UIButton) {
+//        // back 버튼이 없음
+//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "VerbalMemoryViewController") else {return}
+//        self.present(nextVC, animated: true)
+//    }
+    @IBAction func backbtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
     }
-
+    
 }

@@ -34,36 +34,28 @@ class GameSelectViewController: UIViewController {
 //        numberBtn.layer.borderColor = UIColor.systemYellow.cgColor
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     @IBAction func gotoReaction(_ sender: Any) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController") as? ReactionGameViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "ReactionGameExplainViewController") as? ReactionGameExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     @IBAction func gotoVerbalMemory(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryExplainViewController") as? VerbalMemoryExplainViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "VerbalMemoryExplainViewController") as? VerbalMemoryExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     @IBAction func gotoVisualMemory(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "VisualMemoryExplainViewController") as? VisualMemoryExplainViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "VisualMemoryExplainViewController") as? VisualMemoryExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     

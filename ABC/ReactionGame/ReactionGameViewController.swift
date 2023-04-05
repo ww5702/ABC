@@ -30,7 +30,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        touchlabel.text = "반응속도 테스트 입니다. \n준비가 된다면 GameStart버튼을 눌러 시작하십시오. \n테스트는 연속해서 5회 반복됩니다."
+        touchlabel.text = "준비가 됐다면 GameStart버튼을 눌러 시작하십시오. \n테스트는 연속해서 5회 반복됩니다."
         self.touchlabel.backgroundColor = UIColor.gray
         countlabel.text = "Counting Label"
         // Do any additional setup after loading the view.

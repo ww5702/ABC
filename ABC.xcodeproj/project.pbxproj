@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C12AA36929DD5AE4006B5E41 /* ReactionGameExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA36829DD5AE4006B5E41 /* ReactionGameExplainViewController.swift */; };
 		C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599B29C04BC40072DA77 /* AppDelegate.swift */; };
 		C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599D29C04BC40072DA77 /* SceneDelegate.swift */; };
 		C13759A029C04BC40072DA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599F29C04BC40072DA77 /* ViewController.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C12AA36829DD5AE4006B5E41 /* ReactionGameExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameExplainViewController.swift; sourceTree = "<group>"; };
 		C137599829C04BC40072DA77 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C137599B29C04BC40072DA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C137599D29C04BC40072DA77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		C13FFB9229DC194100B5704B /* ReactionGame */ = {
 			isa = PBXGroup;
 			children = (
+				C12AA36829DD5AE4006B5E41 /* ReactionGameExplainViewController.swift */,
 				C13759B529C0529F0072DA77 /* ReactionGameViewController.swift */,
 				C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */,
 			);
@@ -251,6 +254,7 @@
 				C13759A029C04BC40072DA77 /* ViewController.swift in Sources */,
 				C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */,
 				C13FFB8D29DBFD5600B5704B /* VisualMemoryFourthViewController.swift in Sources */,
+				C12AA36929DD5AE4006B5E41 /* ReactionGameExplainViewController.swift in Sources */,
 				C15A6B4E29D52AFA0002B72E /* VisualMemorySecondViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C15A6B4C29D41C1E0002B72E /* VisualMemoryReadyViewController.swift in Sources */,
