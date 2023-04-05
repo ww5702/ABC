@@ -14,6 +14,10 @@ To Do List
 6. 흰색으로 실행했을떄 게임 버튼이 흰색으로 바뀌는 경우의 가독성 저하   
 
 ***
+
+vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
+https://dusanbaek.tistory.com/29   
+
    
 -- 2023.03.14   
 GameMainViewController Create   
