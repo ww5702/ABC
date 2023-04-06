@@ -10,8 +10,10 @@ import UIKit
 class NumberMemoryFirstViewController: UIViewController {
 
     @IBOutlet weak var numberLabel: UILabel!
-    
     @IBOutlet weak var progressView: UIProgressView!
+    var timecount: Float = 2.0
+    var currentTime: Float = 0.0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -20,14 +22,25 @@ class NumberMemoryFirstViewController: UIViewController {
         progressView.progressTintColor = .green
         progressView.trackTintColor = .lightGray
         progressView.progress = 0
-        // Do any additional setup after loading the view.
-        progressView.setProgress(10, animated: true)
-    }
-    
-
-    func setProgress(_ progress: Float, animated: Bool) {
+        play()
         
     }
-    
+
+//    func setProgress(_ progress: Float, animated: Bool) {
+//
+//    }
+    func play() {
+        progressView.setProgress(currentTime, animated: true)
+        perform(#selector(updateProgress), with: nil, afterDelay: 0.01)
+    }
+    @objc func updateProgress() {
+        currentTime += 0.01
+        progressView.progress = currentTime/timecount
+        if currentTime < timecount {
+            perform(#selector(updateProgress), with: nil, afterDelay: 0.01)
+        } else {
+            print("end")
+        }
+    }
 
 }

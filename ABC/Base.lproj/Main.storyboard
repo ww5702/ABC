@@ -2414,13 +2414,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Edz-Hz-csZ">
-                                        <rect key="frame" x="0.0" y="200" width="373" height="15"/>
-                                    </progressView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NC-DW-9es">
-                                        <rect key="frame" x="0.0" y="215" width="373" height="100"/>
+                                        <rect key="frame" x="0.0" y="200" width="373" height="8"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="6ur-rX-46I"/>
+                                            <constraint firstAttribute="height" constant="8" id="CHC-bO-wXh"/>
                                         </constraints>
+                                    </progressView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NC-DW-9es">
+                                        <rect key="frame" x="0.0" y="208" width="373" height="107"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -2453,6 +2453,15 @@
                     <view key="view" contentMode="scaleToFill" id="Iuo-U2-4XJ">
                         <rect key="frame" x="0.0" y="0.0" width="373" height="315"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B75-wG-0EB">
+                                <rect key="frame" x="165" y="147" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="aoQ-sA-jUV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
