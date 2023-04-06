@@ -26,4 +26,7 @@ class NumberMemorySecondViewController: UIViewController {
     }
     */
 
+    @IBAction func testbtn(_ sender: Any) {
+        self.dismiss(animated: true)
+    }
 }

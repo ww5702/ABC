@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import Foundation
+
 protocol ContainerVCDelegatenumber: AnyObject {
     func didReceivedValueFromContainer(_ controller: NumberMemoryFirstViewController, value: Bool)
 }
@@ -15,6 +17,9 @@ class NumberMemoryFirstViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     var timecount: Float = 2.5
     var currentTime: Float = 0.0
+    
+    // game end 된다면 초기화
+    var level = 1.0
     
     weak var delegate: ContainerVCDelegatenumber?
     
@@ -39,6 +44,11 @@ class NumberMemoryFirstViewController: UIViewController {
     func play() {
         progressView.setProgress(currentTime, animated: true)
         perform(#selector(updateProgress), with: nil, afterDelay: 0.01)
+        
+        let max = pow(10, level)
+        let randomnum = Int.random(in: 1...Int(max)-1)
+        print(randomnum)
+        
     }
     @objc func updateProgress() {
         currentTime += 0.01
