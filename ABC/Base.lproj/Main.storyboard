@@ -2409,7 +2409,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="TIw-Te-VWq"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2421,7 +2421,7 @@
                                     </progressView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9NC-DW-9es">
                                         <rect key="frame" x="0.0" y="208" width="373" height="107"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2438,6 +2438,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="explainLabel" destination="9NC-DW-9es" id="WH3-e0-oxa"/>
                         <outlet property="numberLabel" destination="zum-hd-8Vb" id="5eu-Mi-dDW"/>
                         <outlet property="progressView" destination="Edz-Hz-csZ" id="a4q-u6-y3u"/>
                     </connections>
@@ -2467,13 +2468,16 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="testbtn:" destination="Ddv-ib-T5c" eventType="touchUpInside" id="kvW-Fc-O2h"/>
+                                    <action selector="sendAnswer:" destination="Ddv-ib-T5c" eventType="touchUpInside" id="Mdz-Lj-asD"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aoQ-sA-jUV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="answerLabel" destination="B75-wG-0EB" id="Yjz-ic-1Kt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYx-ef-T3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

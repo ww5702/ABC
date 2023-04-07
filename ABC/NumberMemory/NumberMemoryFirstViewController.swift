@@ -10,9 +10,11 @@ import Foundation
 
 protocol ContainerVCDelegatenumber: AnyObject {
     func didReceivedValueFromContainer(_ controller: NumberMemoryFirstViewController, value: Bool)
+    func didReceivedValueFromContainerNum(_ controller: NumberMemoryFirstViewController, value: Int)
 }
 class NumberMemoryFirstViewController: UIViewController {
 
+    @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
     var timecount: Float = 2.5
@@ -20,6 +22,7 @@ class NumberMemoryFirstViewController: UIViewController {
     
     // game end 된다면 초기화
     var level = 1.0
+    var randomnum : Int = 0
     
     weak var delegate: ContainerVCDelegatenumber?
     
@@ -34,6 +37,7 @@ class NumberMemoryFirstViewController: UIViewController {
         progressView.trackTintColor = .lightGray
         progressView.progress = 0
         
+        explainLabel.text = "해당 숫자를 외우세요!"
         play()
         
     }
@@ -46,10 +50,11 @@ class NumberMemoryFirstViewController: UIViewController {
         perform(#selector(updateProgress), with: nil, afterDelay: 0.01)
         
         let max = pow(10, level)
-        let randomnum = Int.random(in: 1...Int(max)-1)
-        print(randomnum)
-        
+        randomnum = Int.random(in: 1...Int(max)-1)
+        //print(randomnum)
+        numberLabel.text = String(randomnum)
     }
+    
     @objc func updateProgress() {
         currentTime += 0.01
         progressView.progress = currentTime/timecount
@@ -58,6 +63,8 @@ class NumberMemoryFirstViewController: UIViewController {
         } else {
             timeEnd = true
             delegate?.didReceivedValueFromContainer(self, value: timeEnd)
+            delegate?.didReceivedValueFromContainerNum(self, value: randomnum)
+            
         }
     }
     
