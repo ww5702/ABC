@@ -67,3 +67,5 @@ btnbool1,2,3들을 각각의 버튼에 생성 -> 버튼액션때 이상한 상�
 -- 2023.04.06 ~   
 progress bar 이용   
 https://velog.io/@sainkr/progress-view   
+progress bar가 끝날때 -> firstContainer이동 -> 정답 맞추기 -> main이동 ->   
+정답이 맞다면 정답페이지 보여주기 -> 다음레벨로 이동 / 틀렸다면 -> 점수페이지   
