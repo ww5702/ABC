@@ -18,7 +18,7 @@ class NumberMemorySecondViewController: UIViewController {
     @IBOutlet weak var myAnswerLabel: UILabel!
     
     var answer : Int = 0
-    var submitAnswer: Int = 100
+    var submitAnswer: Int = 0
     var iscorrectTime = false
     var recordanswer: [String] = []
     var recordanswerstring = ""
@@ -111,6 +111,7 @@ class NumberMemorySecondViewController: UIViewController {
     }
 
     @IBAction func submit(_ sender: UIButton) {
+        submitAnswer = Int(recordanswerstring)!
         delegate?.didReceivedValueFromContainerNum(self, value: submitAnswer)
     }
     
