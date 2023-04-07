@@ -2463,7 +2463,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="mrh-tb-aFC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2472,7 +2472,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="DZw-A5-axQ"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2481,7 +2481,7 @@
                                         <constraints>
                                             <constraint firstAttribute="height" constant="80" id="vsE-0P-akO"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -2590,13 +2590,15 @@
                                                 <buttonConfiguration key="configuration" style="plain" title="ERASE"/>
                                                 <connections>
                                                     <action selector="btnErase:" destination="Ddv-ib-T5c" eventType="touchUpInside" id="7BS-mX-bRl"/>
-                                                    <action selector="sendAnswer:" destination="Ddv-ib-T5c" eventType="touchUpInside" id="Mdz-Lj-asD"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0bA-II-zcy">
                                                 <rect key="frame" x="186.66666666666663" y="0.0" width="186.33333333333337" height="95"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Submit"/>
+                                                <connections>
+                                                    <action selector="submit:" destination="Ddv-ib-T5c" eventType="touchUpInside" id="FFQ-HA-hJa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2613,9 +2615,9 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="answerLabel" destination="B75-wG-0EB" id="Yjz-ic-1Kt"/>
                         <outlet property="explainLabel" destination="NAX-vv-Nxj" id="C5I-jr-tsF"/>
                         <outlet property="myAnswerLabel" destination="KhN-1K-Y0y" id="U9a-WQ-9RS"/>
+                        <outlet property="titleLabel" destination="B75-wG-0EB" id="7ha-Dx-yYR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gYx-ef-T3c" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
