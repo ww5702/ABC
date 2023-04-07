@@ -1,5 +1,5 @@
 //
-//  NumberMemoryCheckViewController.swift
+//  NumberMemoryWrongViewController.swift
 //  ABC
 //
 //  Created by 이재웅 on 2023/04/07.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class NumberMemoryCheckViewController: UIViewController {
+class NumberMemoryWrongViewController: UIViewController {
 
     
     @IBOutlet weak var answerLabel: UILabel!
@@ -21,8 +21,10 @@ class NumberMemoryCheckViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func nextBtn(_ sender: UIButton) {
-        
+    @IBAction func retryBtn(_ sender: UIButton) {
     }
+    @IBAction func gotoHome(_ sender: UIButton) {
+    }
+    
     
 }
