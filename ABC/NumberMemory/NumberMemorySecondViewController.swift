@@ -14,6 +14,9 @@ protocol ContainerVCDelegatenumber2: AnyObject {
 class NumberMemorySecondViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var explainLabel: UILabel!
+    @IBOutlet weak var myAnswerLabel: UILabel!
+    
     var answer : Int = 0
     var submitAnswer: Int = 100
     var iscorrectTime = false
@@ -26,6 +29,34 @@ class NumberMemorySecondViewController: UIViewController {
         answerLabel.text = String(answer)
         play()
     }
+    
+
+    @IBAction func zerobtn(_ sender: UIButton) {
+    }
+    @IBAction func btn1(_ sender: UIButton) {
+    }
+    @IBAction func btn2(_ sender: UIButton) {
+    }
+    @IBAction func btn3(_ sender: UIButton) {
+    }
+    @IBAction func btn4(_ sender: UIButton) {
+    }
+    @IBAction func btn5(_ sender: UIButton) {
+    }
+    @IBAction func btn6(_ sender: UIButton) {
+    }
+    @IBAction func btn7(_ sender: UIButton) {
+    }
+    @IBAction func btn8(_ sender: UIButton) {
+    }
+    @IBAction func btn9(_ sender: UIButton) {
+    }
+    @IBAction func btnErase(_ sender: UIButton) {
+    }
+    
+    
+    
+    
     
     func play() {
         if iscorrectTime == true {
