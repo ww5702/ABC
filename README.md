@@ -14,6 +14,7 @@ To Do List
 6. 흰색으로 실행했을떄 게임 버튼이 흰색으로 바뀌는 경우의 가독성 저하   
 7. vc1 -> modal -> vc2 -> navigation -> v3으로 verbalmemory 게임을 진행하는 도중 뒤로가기 앞으로가기를 여러번 했을떄 오류가 나는 경우   
 8. RETRY를 누를경우 navigation controller로 표기가 안되는고 modal로 표시가 되는 오류   
+9. numbermemory 게임에서 만약 10자리 이상 외울경우 폰트를 작게 or 두줄로 처리   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
