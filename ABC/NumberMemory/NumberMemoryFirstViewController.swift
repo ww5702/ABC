@@ -33,8 +33,8 @@ class NumberMemoryFirstViewController: UIViewController {
 
         progressView.progressViewStyle = .default
         progressView.progressViewStyle = .default
-        progressView.progressTintColor = .green
-        progressView.trackTintColor = .lightGray
+        progressView.progressTintColor = .white
+        progressView.trackTintColor = .systemBlue
         progressView.progress = 0
         
         explainLabel.text = "해당 숫자를 외우세요!"
