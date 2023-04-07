@@ -2280,7 +2280,9 @@
                     <navigationItem key="navigationItem" title="NumberMemory" id="qfe-Ee-Cjz"/>
                     <connections>
                         <outlet property="firstView" destination="a6c-C4-XWQ" id="f6b-fB-bqM"/>
+                        <outlet property="fourthView" destination="IzL-UA-hBQ" id="got-qq-t3x"/>
                         <outlet property="secondView" destination="kBk-Tu-QEX" id="fWS-b7-yr2"/>
+                        <outlet property="thirdView" destination="2yH-fB-IoI" id="41q-Pg-5qT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9qm-PA-OqS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -2812,6 +2814,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="dg7-MY-lZw"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="4H7-e3-Uhr" firstAttribute="leading" secondItem="RA9-nJ-XVZ" secondAttribute="leading" id="1sW-B9-70E"/>
