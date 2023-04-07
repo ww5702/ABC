@@ -26,9 +26,10 @@ class NumberMemorySecondViewController: UIViewController {
     weak var delegate: ContainerVCDelegatenumber2?
 
     override func viewDidLoad() {
+        print("재시작")
         super.viewDidLoad()
         titleLabel.text = "숫자는 무엇이었을까요?"
-        explainLabel.text = "Submit버튼을 눌러주세요"
+        explainLabel.text = "정답 입력 후 Submit버튼을 눌러주세요"
 
     }
     
@@ -94,13 +95,17 @@ class NumberMemorySecondViewController: UIViewController {
         print(Int(recordanswerstring)!)
     }
     @IBAction func btnErase(_ sender: UIButton) {
-        recordanswer.removeLast()
-        recordanswerstring = recordanswer.joined(separator:"")
-        myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
+        if recordanswer.isEmpty == true {
+            let tooEarly = UIAlertController(title: "정보", message: "아무 정답도 적지 않았습니다.", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            tooEarly.addAction(okAction)
+            present(tooEarly,animated: true)
+        } else {
+            recordanswer.removeLast()
+            recordanswerstring = recordanswer.joined(separator:"")
+            myAnswerLabel.text = recordanswerstring
+        }
     }
-    
-    
     
     
     
@@ -122,6 +127,8 @@ class NumberMemorySecondViewController: UIViewController {
         iscorrectTime = value
     }
     func setgamego() {
-        play()
+        recordanswer = []
+        recordanswerstring = ""
+        myAnswerLabel.text = ""
     }
 }

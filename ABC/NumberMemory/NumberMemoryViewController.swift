@@ -18,11 +18,13 @@ class NumberMemoryViewController: UIViewController {
     private var numbercontainerVC: NumberMemoryFirstViewController?
     private var numbercontainerVC2: NumberMemorySecondViewController?
     private var numbercontainerVC3: NumberMemoryRightViewController?
+    private var numbercontainerVC4: NumberMemoryWrongViewController?
     
     var answer: Int = 0
     var myAnswer: Int = 0
     var iscorrectTime = false
     var level: Int = 0
+    var nextLevelOK: Bool = false
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,6 +49,10 @@ class NumberMemoryViewController: UIViewController {
             
         case "thirdContainer":
             numbercontainerVC3 = segue.destination as? NumberMemoryRightViewController
+            numbercontainerVC3?.delegate = self
+            
+        case "fourthContainer":
+            numbercontainerVC4 = segue.destination as? NumberMemoryWrongViewController
 
         default:
             break
@@ -74,7 +80,7 @@ extension NumberMemoryViewController: ContainerVCDelegatenumber {
         iscorrectTime = true
         numbercontainerVC2?.setAnswer(answer)
         numbercontainerVC2?.iscorrectTime(iscorrectTime)
-        //numbercontainerVC2?.setgamego()
+        numbercontainerVC2?.setgamego()
     }
 }
 
@@ -93,10 +99,28 @@ extension NumberMemoryViewController: ContainerVCDelegatenumber2 {
             numbercontainerVC3?.setLevel(level)
             numbercontainerVC3?.play()
         } else {
+            level += 1
             firstView.alpha = 0
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 1
+            numbercontainerVC4?.setAnswer(answer)
+            numbercontainerVC4?.setMyAnswer(myAnswer)
+            numbercontainerVC4?.setLevel(level)
+            numbercontainerVC4?.play()
+        }
+    }
+}
+
+extension NumberMemoryViewController: ContainerVCDelegatenumber3 {
+    func didReceivedValueFromContainerisOK(_ controller: NumberMemoryRightViewController, value: Bool) {
+        nextLevelOK = value
+        if nextLevelOK == true {
+            firstView.alpha = 1
+            secondView.alpha = 0
+            thirdView.alpha = 0
+            fourthView.alpha = 0
+            numbercontainerVC?.setgamego()
         }
     }
 }

@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContainerVCDelegatenumber3: AnyObject {
+    func didReceivedValueFromContainerisOK(_ controller: NumberMemoryRightViewController, value: Bool)
+}
+
 class NumberMemoryRightViewController: UIViewController {
     
     @IBOutlet weak var answerLabel: UILabel!
@@ -16,6 +20,9 @@ class NumberMemoryRightViewController: UIViewController {
     var answer: Int = 0
     var myAnswer: Int = 0
     var level: Int = 0
+    var nextLevelOk = false
+
+    weak var delegate: ContainerVCDelegatenumber3?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +31,8 @@ class NumberMemoryRightViewController: UIViewController {
     }
     
     @IBAction func nextBtn(_ sender: UIButton) {
-        
+        nextLevelOk = true
+        delegate?.didReceivedValueFromContainerisOK(self, value: nextLevelOk)
     }
     
     func setAnswer(_ value: Int) {

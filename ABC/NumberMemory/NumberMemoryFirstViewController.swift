@@ -21,7 +21,7 @@ class NumberMemoryFirstViewController: UIViewController {
     var currentTime: Float = 0.0
     
     // game end 된다면 초기화
-    var level = 1.0
+    var count = 1.0
     var randomnum : Int = 0
     
     weak var delegate: ContainerVCDelegatenumber?
@@ -49,8 +49,10 @@ class NumberMemoryFirstViewController: UIViewController {
         progressView.setProgress(currentTime, animated: true)
         perform(#selector(updateProgress), with: nil, afterDelay: 0.01)
         
-        let max = pow(10, level)
-        randomnum = Int.random(in: 1...Int(max)-1)
+        let max = pow(10, count)
+        let min = pow(10, count-1)
+        print(max,min)
+        randomnum = Int.random(in: Int(min)...Int(max)-1)
         //print(randomnum)
         numberLabel.text = String(randomnum)
     }
@@ -71,6 +73,13 @@ class NumberMemoryFirstViewController: UIViewController {
     
     func setTimeEnd(_ value: Bool) {
         timeEnd = value
+    }
+    func setgamego() {
+        count += 1.0
+        progressView.progress = 0
+        currentTime = 0.0
+        timeEnd = false
+        play()
     }
 
 }
