@@ -16,6 +16,10 @@ class ReactionGameExplainViewController: UIViewController {
         super.viewDidLoad()
         
         explainLabel.text = "총 5번의 테스트가 진행됩니다.\n화면이 초록색으로 변한다면\n반응하여 터치하세요."
+        
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = .white
 
         // Do any additional setup after loading the view.
     }

@@ -17,6 +17,11 @@ class VerbalMemoryExplainViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = .white
+        
         explainLabel.text = "한번에 하나씩 단어가 표시됩니다.\n본적이 있는 단어라면 SEEN\n새로운 단어라면 NEW를 클릭하세요"
         
         self.changeTextColor()
