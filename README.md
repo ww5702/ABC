@@ -65,8 +65,12 @@ btnbool1,2,3들을 각각의 버튼에 생성 -> 버튼액션때 이상한 상�
 3x3 다음 4x4, 5x5, 6x6 까지 기능    
 일단 15단계까지 구현했으나 15단계이상 해결하게된다면 강제종료 혹은 7x7 까지 준비하진 않았다.   
    
--- 2023.04.06 ~   
+-- 2023.04.06 ~ 2023.04.07   
+NumberMemory Create.  
 progress bar 이용   
 https://velog.io/@sainkr/progress-view   
 progress bar가 끝날때 -> firstContainer이동 -> 정답 맞추기 -> main이동 ->   
 정답이 맞다면 정답페이지 보여주기 -> 다음레벨로 이동 / 틀렸다면 -> 점수페이지   
+레벨이 늘어날 수록 외울 시간 0.5초씩 추가   
+   
+background color, button color 결정   
