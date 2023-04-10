@@ -30,10 +30,10 @@ class VisualMemoryFirstViewController: UIViewController {
     // delegate변수 설정, ContainerVCDelegate를 준수한다면 어느 클래스나 구조체도 여기에 할당가능
     weak var delegate: ContainerVCDelegate?
     
-    let WHITE = UIColor.white
-    let BLUE = UIColor.systemBlue
+    let WHITE = UIColor(named: "buttonTouch")
+    let BLUE = UIColor(named: "buttonReady")
     let RED = UIColor.systemRed
-    let WRONG = UIColor.systemGray
+    let WRONG = UIColor(named: "buttonWrong")
     
     // 부모VC로부터 받은 값을 savescore에 전달(lblReceivedValueFromRoot)
     // 그리고 savescore를 다시 부모VC로 전달해줄것이다
@@ -365,7 +365,6 @@ class VisualMemoryFirstViewController: UIViewController {
     func isGameGoodEnd() {
         count += 1
         if count == value {
-            
             // 정답화면 0.5초 보여준 뒤 점수 전달 후 파란색으로 변경
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
                 self.setblue()

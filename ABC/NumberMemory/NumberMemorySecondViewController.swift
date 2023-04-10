@@ -26,7 +26,6 @@ class NumberMemorySecondViewController: UIViewController {
     weak var delegate: ContainerVCDelegatenumber2?
 
     override func viewDidLoad() {
-        print("재시작")
         super.viewDidLoad()
         titleLabel.text = "숫자는 무엇이었을까요?"
         explainLabel.text = "정답 입력 후 Submit버튼을 눌러주세요"
@@ -38,61 +37,51 @@ class NumberMemorySecondViewController: UIViewController {
         recordanswer.append("0")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn1(_ sender: UIButton) {
         recordanswer.append("1")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn2(_ sender: UIButton) {
         recordanswer.append("2")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn3(_ sender: UIButton) {
         recordanswer.append("3")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn4(_ sender: UIButton) {
         recordanswer.append("4")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn5(_ sender: UIButton) {
         recordanswer.append("5")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn6(_ sender: UIButton) {
         recordanswer.append("6")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn7(_ sender: UIButton) {
         recordanswer.append("7")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn8(_ sender: UIButton) {
         recordanswer.append("8")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btn9(_ sender: UIButton) {
         recordanswer.append("9")
         recordanswerstring = recordanswer.joined(separator:"")
         myAnswerLabel.text = recordanswerstring
-        print(Int(recordanswerstring)!)
     }
     @IBAction func btnErase(_ sender: UIButton) {
         if recordanswer.isEmpty == true {

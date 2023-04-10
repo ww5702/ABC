@@ -43,10 +43,10 @@ class VisualMemoryThirdViewController: UIViewController {
     @IBOutlet weak var btn25Label: UIButton!
     
     // 함수들
-    let WHITE = UIColor.white
-    let BLUE = UIColor.systemBlue
+    let WHITE = UIColor(named: "buttonTouch")
+    let BLUE = UIColor(named: "buttonReady")
     let RED = UIColor.systemRed
-    let WRONG = UIColor.systemGray
+    let WRONG = UIColor(named: "buttonWrong")
     
     var savescore : Int = 0
     var isGameStart = false

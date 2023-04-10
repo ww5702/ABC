@@ -17,7 +17,7 @@ class NumberMemoryFirstViewController: UIViewController {
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var numberLabel: UILabel!
     @IBOutlet weak var progressView: UIProgressView!
-    var timecount: Float = 2.5
+    var timecount: Float = 1.5
     var currentTime: Float = 0.0
     
     // game end 된다면 초기화
@@ -51,7 +51,7 @@ class NumberMemoryFirstViewController: UIViewController {
         
         let max = pow(10, count)
         let min = pow(10, count-1)
-        print(max,min)
+        //print(max,min)
         randomnum = Int.random(in: Int(min)...Int(max)-1)
         //print(randomnum)
         numberLabel.text = String(randomnum)
@@ -73,6 +73,11 @@ class NumberMemoryFirstViewController: UIViewController {
     
     func setTimeEnd(_ value: Bool) {
         timeEnd = value
+    }
+    func plutTime(_ value: Float) {
+        // 레벨당 1초씩 증가
+        timecount += value
+        print("현재시간 \(timecount)")
     }
     func setgamego() {
         count += 1.0

@@ -140,7 +140,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.view.backgroundColor = UIColor.systemBackground
+            self.view.backgroundColor = UIColor(named: "background")
         })
         
         life -= value
@@ -183,7 +183,7 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.view.backgroundColor = UIColor.systemBackground
+            self.view.backgroundColor = UIColor(named: "background")
         })
         
         life -= value
@@ -225,7 +225,7 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.view.backgroundColor = UIColor.systemBackground
+            self.view.backgroundColor = UIColor(named: "background")
         })
         
         life -= value
@@ -253,7 +253,7 @@ extension VisualMemoryViewController: ContainerVCDelegate4 {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
-            self.view.backgroundColor = UIColor.systemBackground
+            self.view.backgroundColor = UIColor(named: "background")
         })
         
         life -= value

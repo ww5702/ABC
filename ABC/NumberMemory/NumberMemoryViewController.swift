@@ -120,6 +120,7 @@ extension NumberMemoryViewController: ContainerVCDelegatenumber3 {
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 0
+            numbercontainerVC?.plutTime(0.5)
             numbercontainerVC?.setgamego()
         }
     }
