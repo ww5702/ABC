@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZKd-Dq-tyb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F7W-9t-Xau">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -28,7 +28,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="1" green="0.85630325664039375" blue="0.97975316437595816" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -181,7 +181,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="X3Z-kt-KJe"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.9461102166971741" green="0.86778378679888679" blue="0.99183422327041626" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Vq2-Sm-GMV" firstAttribute="leading" secondItem="X3Z-kt-KJe" secondAttribute="leading" constant="20" id="ASJ-R4-2Wg"/>
                             <constraint firstItem="X3Z-kt-KJe" firstAttribute="bottom" secondItem="Vq2-Sm-GMV" secondAttribute="bottom" constant="40" id="NDh-DK-Gcj"/>
@@ -224,7 +224,7 @@
                                             <constraint firstAttribute="height" constant="100" id="ohI-Yw-6ij"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="LuP-x1-MEc">
@@ -234,7 +234,11 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="95"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="START">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="SKa-wK-cR7" kind="show" id="Z5L-8G-rM9"/>
@@ -244,7 +248,11 @@
                                                 <rect key="frame" x="201.66666666666663" y="0.0" width="171.33333333333337" height="95"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="BACK">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="backbtn:" destination="g6G-4s-l4g" eventType="touchUpInside" id="3di-Wg-AYi"/>
@@ -258,7 +266,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="fc2-Jc-SyD"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="fc2-Jc-SyD" firstAttribute="bottom" secondItem="kSb-eq-3Q4" secondAttribute="bottom" constant="50" id="108-sk-qRz"/>
                             <constraint firstItem="kSb-eq-3Q4" firstAttribute="top" secondItem="fc2-Jc-SyD" secondAttribute="top" constant="50" id="9eI-se-Eiw"/>
@@ -512,6 +520,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="Zrb-WX-oWQ"/>
                                         </constraints>
@@ -533,7 +542,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="SEEN">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -547,7 +556,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="NEW">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -559,11 +568,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y2f-aM-AP1"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="ngN-aB-zM1" firstAttribute="leading" secondItem="Y2f-aM-AP1" secondAttribute="leading" constant="10" id="Qr4-a7-HUi"/>
                             <constraint firstItem="Y2f-aM-AP1" firstAttribute="trailing" secondItem="ngN-aB-zM1" secondAttribute="trailing" constant="10" id="krM-ZO-uhv"/>
@@ -608,7 +616,7 @@
                                             <constraint firstAttribute="height" constant="250" id="j6u-iU-j98"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scx-rh-6Ks">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="scx-rh-6Ks">
                                         <rect key="frame" x="0.0" y="370" width="373" height="200"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="200" id="b3p-90-UVe"/>
@@ -625,7 +633,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="RETRY">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -639,7 +647,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="HOME">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                                     <color key="baseForegroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -651,11 +659,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dM7-wm-4O8"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="dM7-wm-4O8" firstAttribute="trailing" secondItem="hns-yv-cQP" secondAttribute="trailing" constant="10" id="Vxe-Wn-WLw"/>
                             <constraint firstItem="hns-yv-cQP" firstAttribute="top" secondItem="dM7-wm-4O8" secondAttribute="top" constant="50" id="dWg-qz-Mxx"/>
@@ -2140,7 +2147,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Cf-HJw">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eun-Cf-HJw">
                                         <rect key="frame" x="0.0" y="420" width="373" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="4lp-W2-9Lj"/>
@@ -2157,7 +2164,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="RETRY">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2171,7 +2178,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="HOME">
                                                     <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                     </backgroundConfiguration>
                                                     <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="30"/>
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -2183,11 +2190,10 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBlueColor"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="siR-wZ-fRM"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="siR-wZ-fRM" firstAttribute="bottom" secondItem="X1S-1F-5XD" secondAttribute="bottom" constant="50" id="OQa-wz-RO2"/>
                             <constraint firstItem="siR-wZ-fRM" firstAttribute="trailing" secondItem="X1S-1F-5XD" secondAttribute="trailing" constant="10" id="YOD-fB-CFc"/>
@@ -2989,9 +2995,6 @@
         </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="tertiarySystemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
