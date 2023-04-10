@@ -13,6 +13,8 @@
 		C12AA37029E00F12006B5E41 /* NumberMemoryRightViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA36F29E00F12006B5E41 /* NumberMemoryRightViewController.swift */; };
 		C12AA37229E010D3006B5E41 /* NumberMemoryWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37129E010D3006B5E41 /* NumberMemoryWrongViewController.swift */; };
 		C12AA37429E3E12C006B5E41 /* numberMemoryIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C12AA37329E3E12C006B5E41 /* numberMemoryIcon.png */; };
+		C12AA37729E3FF96006B5E41 /* AimTrainerExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */; };
+		C12AA37929E3FFA2006B5E41 /* AimTrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */; };
 		C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599B29C04BC40072DA77 /* AppDelegate.swift */; };
 		C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599D29C04BC40072DA77 /* SceneDelegate.swift */; };
 		C13759A029C04BC40072DA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599F29C04BC40072DA77 /* ViewController.swift */; };
@@ -50,6 +52,8 @@
 		C12AA36F29E00F12006B5E41 /* NumberMemoryRightViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryRightViewController.swift; sourceTree = "<group>"; };
 		C12AA37129E010D3006B5E41 /* NumberMemoryWrongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryWrongViewController.swift; sourceTree = "<group>"; };
 		C12AA37329E3E12C006B5E41 /* numberMemoryIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = numberMemoryIcon.png; sourceTree = "<group>"; };
+		C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerExplainViewController.swift; sourceTree = "<group>"; };
+		C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerViewController.swift; sourceTree = "<group>"; };
 		C137599829C04BC40072DA77 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C137599B29C04BC40072DA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C137599D29C04BC40072DA77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +110,15 @@
 			path = NumberMemory;
 			sourceTree = "<group>";
 		};
+		C12AA37529E3FF7B006B5E41 /* AimTrainer */ = {
+			isa = PBXGroup;
+			children = (
+				C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */,
+				C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */,
+			);
+			path = AimTrainer;
+			sourceTree = "<group>";
+		};
 		C137598F29C04BC40072DA77 = {
 			isa = PBXGroup;
 			children = (
@@ -134,6 +147,7 @@
 				C13FFB9329DC196700B5704B /* VerbalMemory */,
 				C13FFB9429DC196E00B5704B /* VisualMemory */,
 				C12AA36A29DD6926006B5E41 /* NumberMemory */,
+				C12AA37529E3FF7B006B5E41 /* AimTrainer */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
@@ -272,6 +286,7 @@
 				C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */,
 				C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */,
 				C12AA36E29DD694C006B5E41 /* NumberMemorySecondViewController.swift in Sources */,
+				C12AA37729E3FF96006B5E41 /* AimTrainerExplainViewController.swift in Sources */,
 				C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */,
 				C1AC6C0F29C8428B008A4D58 /* VerbalMemoryViewController.swift in Sources */,
 				C13FFB9C29DC1C5900B5704B /* NumberMemoryViewController.swift in Sources */,
@@ -284,6 +299,7 @@
 				C15A6B4E29D52AFA0002B72E /* VisualMemorySecondViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C12AA37229E010D3006B5E41 /* NumberMemoryWrongViewController.swift in Sources */,
+				C12AA37929E3FFA2006B5E41 /* AimTrainerViewController.swift in Sources */,
 				C12AA36C29DD6942006B5E41 /* NumberMemoryFirstViewController.swift in Sources */,
 				C15A6B4C29D41C1E0002B72E /* VisualMemoryReadyViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
