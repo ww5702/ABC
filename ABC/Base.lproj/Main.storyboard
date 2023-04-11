@@ -2433,21 +2433,23 @@
                                     <action selector="startbtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="Qxm-eh-bVi"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-xe-S2G">
-                                <rect key="frame" x="84" y="147" width="75" height="34"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                <connections>
-                                    <action selector="touchBtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="nNl-47-Pzg"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiM-XW-kW3">
                                 <rect key="frame" x="161" y="113" width="71" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-xe-S2G">
+                                <rect key="frame" x="184" y="364" width="24" height="14"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="aimImage.png"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="touchBtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="nNl-47-Pzg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XzA-I9-soE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -3189,6 +3191,7 @@
     <resources>
         <image name="VerbalMemoryExplain.png" width="225" height="225"/>
         <image name="VisualMemoryExplain.png" width="126" height="128"/>
+        <image name="aimImage.png" width="1280" height="1280"/>
         <image name="numberMemoryIcon.png" width="127" height="123"/>
         <image name="reactionIcon.png" width="179" height="195"/>
         <image name="reactionTestStatistics.png" width="426" height="344"/>

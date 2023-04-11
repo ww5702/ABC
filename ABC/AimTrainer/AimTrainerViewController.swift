@@ -27,6 +27,11 @@ class AimTrainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countLabel.text = "Reamining \(count)"
+        touchbtnLabel.layer.cornerRadius = touchbtnLabel.layer.frame.size.width/2
+        touchbtnLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
+        touchbtnLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
+        //touchbtnLabel.layer.cornerRadius = 0.5 * touchbtnLabel.bounds.size.width
+        touchbtnLabel.clipsToBounds = true
         touchbtnLabel.layer.isHidden = true
     }
     
@@ -77,3 +82,17 @@ class AimTrainerViewController: UIViewController {
     }
     
 }
+//
+//extension UIButton {
+//    var circleButton: Bool {
+//            set {
+//                if newValue {
+//                    self.layer.cornerRadius = 0.5 * self.bounds.size.width
+//                } else {
+//                    self.layer.cornerRadius = 0
+//                }
+//            } get {
+//                return false
+//            }
+//        }
+//}
