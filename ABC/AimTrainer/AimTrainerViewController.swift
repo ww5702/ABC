@@ -11,6 +11,8 @@ class AimTrainerViewController: UIViewController {
     
     
     @IBOutlet weak var btn1Label: UIButton!
+
+    @IBOutlet weak var testbtnLabel: UIButton!
     var nextButton = UIButton()
     
     var randomup : Int = 0
@@ -20,56 +22,43 @@ class AimTrainerViewController: UIViewController {
         super.viewDidLoad()
         
         //btn1Label.layer.isHidden = true
-        self.view.addSubview(nextButton)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false    //원하는 constraint잡기 위해 false
-        
-        nextButton.widthAnchor.constraint(equalToConstant: 50).isActive = true //넓이
-        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true //높이
-        
-        // 위치잡기
-        nextButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100).isActive = true
-        nextButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 50).isActive = true
-          
-        nextButton.setTitle("1", for: .normal)
-        nextButton.setTitleColor(.black, for: .normal)
-        nextButton.backgroundColor = .orange
+
         
 
 
         // Do any additional setup after loading the view.
     }
     
-
-    
     @IBAction func btn1(_ sender: UIButton) {
-        randomup = Int.random(in: 0...650)
-        randomleft = Int.random(in: 0...300)
+        
+//        self.view.addSubview(nextButton)
+//        nextButton.translatesAutoresizingMaskIntoConstraints = false    //원하는 constraint잡기 위해 false
+//        nextButton.widthAnchor.constraint(equalToConstant: 50).isActive = true //넓이
+//        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true //높이
+        
+        //randomup = Int.random(in: 0...650)
+        //randomleft = Int.random(in: 0...300)
+        self.view.addSubview(nextButton)
+        
+        
+        randomup += 10
+        randomleft += 10
         print(randomup, randomleft)
         
-        self.view.addSubview(nextButton)
-        nextButton.translatesAutoresizingMaskIntoConstraints = false    //원하는 constraint잡기 위해 false
+        testbtnLabel.translatesAutoresizingMaskIntoConstraints = false
+        testbtnLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
+        testbtnLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        nextButton.widthAnchor.constraint(equalToConstant: 50).isActive = true //넓이
-        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true //높이
-        
-        // 위치잡기
-        nextButton.topAnchor.constraint(equalTo: self.view.topAnchor, constant: CGFloat(randomup)).isActive = true
-        nextButton.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: CGFloat(randomleft)).isActive = true
+        testbtnLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: CGFloat(randomup)).isActive = true
+        testbtnLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: CGFloat(randomleft)).isActive = true
           
-        nextButton.setTitle("2", for: .normal)
-        nextButton.setTitleColor(.black, for: .normal)
-        nextButton.backgroundColor = .orange
+        testbtnLabel.setTitle("다음", for: .normal)
+        testbtnLabel.setTitleColor(.black, for: .normal)
+        testbtnLabel.backgroundColor = .orange
         
     }
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func nextButton(_ sender: UIButton) {
+        
     }
-    */
 
 }
