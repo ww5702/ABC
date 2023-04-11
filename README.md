@@ -76,5 +76,5 @@ progress bar가 끝날때 -> firstContainer이동 -> 정답 맞추기 -> main이
 -- 2023.04.08   
 background color, button color 결정   
    
--- 2023.04.11
+-- 2023.04.11   
 AimTraining View Controller Create   
