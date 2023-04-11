@@ -18,23 +18,20 @@ class AimTrainerViewController: UIViewController {
     var topConstraint: NSLayoutConstraint?
     var bottomConstraint: NSLayoutConstraint?
     
-    var randomup : Int = 100
-    var randomleft : Int = 100
+    var randomup : Int = 0
+    var randomleft : Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        //btn1Label.layer.isHidden = true
+
     }
     
     @IBAction func btn1(_ sender: UIButton) {
-        //randomup = Int.random(in: 0...650)
-        //randomleft = Int.random(in: 0...300)
         let safeArea = view.safeAreaLayoutGuide
         
-        randomup += 10
-        randomleft += 10
-        print(randomup, randomleft)
+        randomup = Int.random(in: 0...700)
+        randomleft = Int.random(in: 0...350)
+        print(randomup,randomleft)
         
         testbtnLabel.backgroundColor = UIColor.orange
         testbtnLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -51,6 +48,9 @@ class AimTrainerViewController: UIViewController {
 
 //        bottomConstraint = testbtnLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor)
 //        bottomConstraint?.isActive = true
+        
+        // 시작 후 버튼 숨기기
+        btn1Label.layer.isHidden = true
         
     }
     
