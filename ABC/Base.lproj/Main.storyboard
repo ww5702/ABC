@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pf3-Ev-dLk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -2425,26 +2425,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-xN-IE0">
-                                <rect key="frame" x="159" y="703" width="75" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ytd-xN-IE0">
+                                <rect key="frame" x="159" y="733" width="75" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
                                     <action selector="btn1:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="pOq-Z2-0Lz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-xe-S2G">
-                                <rect key="frame" x="100" y="203" width="75" height="34"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-xe-S2G">
+                                <rect key="frame" x="84" y="147" width="75" height="34"/>
+                                <autoresizingMask key="autoresizingMask"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="testBtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="KIi-bx-W4k"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XzA-I9-soE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="hAu-xe-S2G" firstAttribute="top" secondItem="XzA-I9-soE" secondAttribute="top" constant="100" id="0G4-Fe-K98"/>
-                            <constraint firstItem="hAu-xe-S2G" firstAttribute="leading" secondItem="XzA-I9-soE" secondAttribute="leading" constant="100" id="LuH-iP-wPd"/>
+                            <constraint firstItem="ytd-xN-IE0" firstAttribute="centerX" secondItem="2rb-sz-1YN" secondAttribute="centerX" id="jej-HT-pu5"/>
+                            <constraint firstItem="XzA-I9-soE" firstAttribute="bottom" secondItem="ytd-xN-IE0" secondAttribute="bottom" constant="50" id="xDI-cO-P5R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Ty-6m-fyQ"/>

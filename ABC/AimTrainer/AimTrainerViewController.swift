@@ -11,54 +11,67 @@ class AimTrainerViewController: UIViewController {
     
     
     @IBOutlet weak var btn1Label: UIButton!
-
     @IBOutlet weak var testbtnLabel: UIButton!
-    var nextButton = UIButton()
     
-    var randomup : Int = 0
-    var randomleft : Int = 0
+    var leftConstraint: NSLayoutConstraint?
+    var trailingConstraint: NSLayoutConstraint?
+    var topConstraint: NSLayoutConstraint?
+    var bottomConstraint: NSLayoutConstraint?
+    
+    var randomup : Int = 100
+    var randomleft : Int = 100
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         //btn1Label.layer.isHidden = true
-
-        
-
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func btn1(_ sender: UIButton) {
-        
-//        self.view.addSubview(nextButton)
-//        nextButton.translatesAutoresizingMaskIntoConstraints = false    //원하는 constraint잡기 위해 false
-//        nextButton.widthAnchor.constraint(equalToConstant: 50).isActive = true //넓이
-//        nextButton.heightAnchor.constraint(equalToConstant: 50).isActive = true //높이
-        
         //randomup = Int.random(in: 0...650)
         //randomleft = Int.random(in: 0...300)
-        self.view.addSubview(nextButton)
-        
+        let safeArea = view.safeAreaLayoutGuide
         
         randomup += 10
         randomleft += 10
         print(randomup, randomleft)
         
+        testbtnLabel.backgroundColor = UIColor.orange
         testbtnLabel.translatesAutoresizingMaskIntoConstraints = false
-        testbtnLabel.widthAnchor.constraint(equalToConstant: 50).isActive = true
-        testbtnLabel.heightAnchor.constraint(equalToConstant: 50).isActive = true
         
-        testbtnLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: CGFloat(randomup)).isActive = true
-        testbtnLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: CGFloat(randomleft)).isActive = true
-          
-        testbtnLabel.setTitle("다음", for: .normal)
-        testbtnLabel.setTitleColor(.black, for: .normal)
-        testbtnLabel.backgroundColor = .orange
+        topConstraint = testbtnLabel.topAnchor.constraint(equalTo: safeArea.topAnchor,constant: CGFloat(randomup))
+        topConstraint?.isActive = true
         
-    }
-    @IBAction func nextButton(_ sender: UIButton) {
+        leftConstraint = testbtnLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor,constant: CGFloat(randomleft))
+        leftConstraint?.isActive = true
         
-    }
+//        trailingConstraint = testbtnLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor)
+//        trailingConstraint?.isActive = true
+        
 
+//        bottomConstraint = testbtnLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor)
+//        bottomConstraint?.isActive = true
+        
+    }
+    
+    
+    @IBAction func testBtn(_ sender: UIButton) {
+        
+        let safeArea = view.safeAreaLayoutGuide
+        
+        randomup = Int.random(in: 0...700)
+        randomleft = Int.random(in: 0...350)
+        print(randomup,randomleft)
+        
+        leftConstraint?.isActive = false
+        topConstraint?.isActive = false
+        //<- 재정의 하기 위해서 isActive를 false로 바꿔주고 다시 32번 줄과 같이 true로 한다.
+        leftConstraint = testbtnLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor,constant: CGFloat(randomleft))
+        topConstraint = testbtnLabel.topAnchor.constraint(equalTo: safeArea.topAnchor,constant: CGFloat(randomup))
+        
+        leftConstraint?.isActive = true
+        topConstraint?.isActive = true
+        print("눌렀다.")
+    }
+    
 }
