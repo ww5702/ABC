@@ -72,5 +72,9 @@ https://velog.io/@sainkr/progress-view
 progress bar가 끝날때 -> firstContainer이동 -> 정답 맞추기 -> main이동 ->   
 정답이 맞다면 정답페이지 보여주기 -> 다음레벨로 이동 / 틀렸다면 -> 점수페이지   
 레벨이 늘어날 수록 외울 시간 0.5초씩 추가   
-   
+
+-- 2023.04.08   
 background color, button color 결정   
+   
+-- 2023.04.11
+AimTraining View Controller Create   
