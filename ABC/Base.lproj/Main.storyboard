@@ -2430,7 +2430,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="btn1:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="pOq-Z2-0Lz"/>
+                                    <action selector="startbtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="Qxm-eh-bVi"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hAu-xe-S2G">
@@ -2439,21 +2439,30 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                 <connections>
-                                    <action selector="testBtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="KIi-bx-W4k"/>
+                                    <action selector="touchBtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="nNl-47-Pzg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OiM-XW-kW3">
+                                <rect key="frame" x="161" y="113" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XzA-I9-soE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OiM-XW-kW3" firstAttribute="centerX" secondItem="2rb-sz-1YN" secondAttribute="centerX" id="aHp-lj-GBg"/>
+                            <constraint firstItem="OiM-XW-kW3" firstAttribute="top" secondItem="XzA-I9-soE" secondAttribute="top" constant="10" id="b9k-JT-lbz"/>
                             <constraint firstItem="ytd-xN-IE0" firstAttribute="centerX" secondItem="2rb-sz-1YN" secondAttribute="centerX" id="jej-HT-pu5"/>
                             <constraint firstItem="XzA-I9-soE" firstAttribute="bottom" secondItem="ytd-xN-IE0" secondAttribute="bottom" constant="50" id="xDI-cO-P5R"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Ty-6m-fyQ"/>
                     <connections>
-                        <outlet property="btn1Label" destination="ytd-xN-IE0" id="LS5-pP-CPp"/>
-                        <outlet property="testbtnLabel" destination="hAu-xe-S2G" id="xHh-P8-hbz"/>
+                        <outlet property="countLabel" destination="OiM-XW-kW3" id="q6i-k3-93A"/>
+                        <outlet property="startLabel" destination="ytd-xN-IE0" id="Wrg-Z4-ifI"/>
+                        <outlet property="touchbtnLabel" destination="hAu-xe-S2G" id="rrs-lY-R6S"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="16b-Of-fys" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
