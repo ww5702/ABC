@@ -24,6 +24,10 @@ class AimTrainerViewController: UIViewController {
     var randomleft : Int = 0
     var count = 30
     
+    var countStart: Double = 0.0
+    var countEnd: Double = 0.0
+    var checkTime = CFAbsoluteTimeGetCurrent()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         countLabel.text = "Reamining \(count)"
@@ -57,6 +61,9 @@ class AimTrainerViewController: UIViewController {
         // 시작 후 버튼 숨기기
         startLabel.layer.isHidden = true
         
+        // 타이머 시작
+        countStart = CFAbsoluteTimeGetCurrent()
+        
     }
     
     
@@ -64,28 +71,34 @@ class AimTrainerViewController: UIViewController {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        randomup = Int.random(in: 100...650)
-        randomleft = Int.random(in: 0...300)
-        print(randomup,randomleft)
+        if count >= 1 {
+            randomup = Int.random(in: 100...650)
+            randomleft = Int.random(in: 0...300)
+            print(randomup,randomleft)
+            
+            count -= 1
+            countLabel.text = "Reamining \(count)"
+            
+            leftConstraint?.isActive = false
+            topConstraint?.isActive = false
+            //<- 재정의 하기 위해서 isActive를 false로 바꿔주고 다시 true로 한다.
+            leftConstraint = touchbtnLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor,constant: CGFloat(randomleft))
+            topConstraint = touchbtnLabel.topAnchor.constraint(equalTo: safeArea.topAnchor,constant: CGFloat(randomup))
+            
+            leftConstraint?.isActive = true
+            topConstraint?.isActive = true
+            print("눌렀다.")
+        } else {
+            countEnd = (CFAbsoluteTimeGetCurrent() - countStart) * 1000
+            gotoResult()
+        }
         
-        count -= 1
-        countLabel.text = "Reamining \(count)"
-        
-        leftConstraint?.isActive = false
-        topConstraint?.isActive = false
-        //<- 재정의 하기 위해서 isActive를 false로 바꿔주고 다시 true로 한다.
-        leftConstraint = touchbtnLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor,constant: CGFloat(randomleft))
-        topConstraint = touchbtnLabel.topAnchor.constraint(equalTo: safeArea.topAnchor,constant: CGFloat(randomup))
-        
-        leftConstraint?.isActive = true
-        topConstraint?.isActive = true
-        print("눌렀다.")
     }
     
     func gotoResult() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "AimTrainerScoreViewController") as? AimTrainerScoreViewController {
             vc.modalPresentationStyle = .fullScreen
-            vc.data = 1
+            vc.data = Int(countEnd)
             self.present(vc, animated: true)
         }
     }
