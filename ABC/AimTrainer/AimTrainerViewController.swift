@@ -27,6 +27,7 @@ class AimTrainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         countLabel.text = "Reamining \(count)"
+
         touchbtnLabel.layer.cornerRadius = touchbtnLabel.layer.frame.size.width/2
         touchbtnLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
         touchbtnLabel.heightAnchor.constraint(equalToConstant: 100).isActive = true
@@ -40,7 +41,7 @@ class AimTrainerViewController: UIViewController {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        randomup = Int.random(in: 100...700)
+        randomup = Int.random(in: 100...650)
         randomleft = Int.random(in: 0...300)
         print(randomup,randomleft)
         
@@ -63,7 +64,7 @@ class AimTrainerViewController: UIViewController {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        randomup = Int.random(in: 100...700)
+        randomup = Int.random(in: 100...650)
         randomleft = Int.random(in: 0...300)
         print(randomup,randomleft)
         
@@ -72,7 +73,7 @@ class AimTrainerViewController: UIViewController {
         
         leftConstraint?.isActive = false
         topConstraint?.isActive = false
-        //<- 재정의 하기 위해서 isActive를 false로 바꿔주고 다시 32번 줄과 같이 true로 한다.
+        //<- 재정의 하기 위해서 isActive를 false로 바꿔주고 다시 true로 한다.
         leftConstraint = touchbtnLabel.leftAnchor.constraint(equalTo: safeArea.leftAnchor,constant: CGFloat(randomleft))
         topConstraint = touchbtnLabel.topAnchor.constraint(equalTo: safeArea.topAnchor,constant: CGFloat(randomup))
         
@@ -81,18 +82,12 @@ class AimTrainerViewController: UIViewController {
         print("눌렀다.")
     }
     
+    func gotoResult() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "AimTrainerScoreViewController") as? AimTrainerScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            vc.data = 1
+            self.present(vc, animated: true)
+        }
+    }
+    
 }
-//
-//extension UIButton {
-//    var circleButton: Bool {
-//            set {
-//                if newValue {
-//                    self.layer.cornerRadius = 0.5 * self.bounds.size.width
-//                } else {
-//                    self.layer.cornerRadius = 0
-//                }
-//            } get {
-//                return false
-//            }
-//        }
-//}

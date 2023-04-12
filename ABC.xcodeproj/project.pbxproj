@@ -16,6 +16,7 @@
 		C12AA37729E3FF96006B5E41 /* AimTrainerExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */; };
 		C12AA37929E3FFA2006B5E41 /* AimTrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */; };
 		C12AA37B29E554B4006B5E41 /* aimImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C12AA37A29E554B4006B5E41 /* aimImage.png */; };
+		C12AA37D29E69820006B5E41 /* AimTrainerScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37C29E69820006B5E41 /* AimTrainerScoreViewController.swift */; };
 		C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599B29C04BC40072DA77 /* AppDelegate.swift */; };
 		C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599D29C04BC40072DA77 /* SceneDelegate.swift */; };
 		C13759A029C04BC40072DA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599F29C04BC40072DA77 /* ViewController.swift */; };
@@ -56,6 +57,7 @@
 		C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerExplainViewController.swift; sourceTree = "<group>"; };
 		C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerViewController.swift; sourceTree = "<group>"; };
 		C12AA37A29E554B4006B5E41 /* aimImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aimImage.png; sourceTree = "<group>"; };
+		C12AA37C29E69820006B5E41 /* AimTrainerScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerScoreViewController.swift; sourceTree = "<group>"; };
 		C137599829C04BC40072DA77 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C137599B29C04BC40072DA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C137599D29C04BC40072DA77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				C12AA37629E3FF96006B5E41 /* AimTrainerExplainViewController.swift */,
 				C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */,
+				C12AA37C29E69820006B5E41 /* AimTrainerScoreViewController.swift */,
 			);
 			path = AimTrainer;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
 				C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */,
 				C13FFB8B29DABCA100B5704B /* VisualMemoryThirdViewController.swift in Sources */,
+				C12AA37D29E69820006B5E41 /* AimTrainerScoreViewController.swift in Sources */,
 				C15A6B4A29D2B9320002B72E /* VisualMemoryFirstViewController.swift in Sources */,
 				C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */,
 				C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */,
