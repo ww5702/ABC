@@ -99,7 +99,7 @@ class AimTrainerViewController: UIViewController {
     @IBAction func touchBtn(_ sender: UIButton) {
         let safeArea = view.safeAreaLayoutGuide
         
-        if count > 1 {
+        if count > 20 {
             randomup = Int.random(in: 100...650)
             randomleft = Int.random(in: 0...300)
             print(randomup,randomleft)

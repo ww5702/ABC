@@ -14,6 +14,7 @@ class AimTrainerScoreViewController: UIViewController {
     
     var seconddata = 0
     var milliseconddata = 0
+    var percentstring = ""
     var miss: Double = 0
     var percent: Double = 0
     
@@ -22,14 +23,29 @@ class AimTrainerScoreViewController: UIViewController {
         
         // Do any additional setup after loading the view.
         self.explainLabel.text = "Aim Trainer\n당신의 반사신경과 손과 눈의 협응력을 테스트합니다.\n당신의 기록을 넘겨보세요"
-        print(miss)
+
         miss = 30-miss
         percent = (miss/30)*100
+        percentstring = String(format: "%.1f", percent)
         
-        self.scoreLabel.text = "\(seconddata)s : \(milliseconddata)ms\n정확도 : \(percent)%"
-        print(percent)
+        if seconddata <= 10 {
+            self.scoreLabel.text = "0\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+        } else {
+            self.scoreLabel.text = "\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+        }
+        
+
+        changeTextColor()
     }
     
+    func changeTextColor() {
+        guard let text = self.scoreLabel.text else {return}
+        let font = UIFont.systemFont(ofSize: 30, weight: .semibold)
+        let attributeString = NSMutableAttributedString(string: text)
+        
+        attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(milliseconddata)"))
+        self.scoreLabel.attributedText = attributeString
+    }
 
    
     @IBAction func retryBtn(_ sender: UIButton) {
