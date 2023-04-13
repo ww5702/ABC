@@ -16,7 +16,9 @@ To Do List
 8. RETRY를 누를경우 navigation controller로 표기가 안되는고 modal로 표시가 되는 오류   
 9. numbermemory 게임에서 만약 10자리 이상 외울경우 폰트를 작게 or 두줄로 처리   
 10. 테스트 결과의 성적에 따른 이미지 출력 변형 처리 (상위 몇프로 -> 웃는사진, 등등)   
-11. AimTrainer 버튼을 잘못눌렀을때 카운팅해서 정확도 측정 (탭 제스처로 시도해봤으나 실패)   
+~~11. AimTrainer 버튼을 잘못눌렀을때 카운팅해서 정확도 측정 (탭 제스처로 시도해봤으나 실패)~~   
+-> view 자체를 탭 제스처로 표현하니까 해결 가능했었다.   
+12. AimTrainer 게임 시작시 시간초 눈에 보이게 표시   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
