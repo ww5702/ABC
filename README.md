@@ -15,6 +15,8 @@ To Do List
 7. vc1 -> modal -> vc2 -> navigation -> v3으로 verbalmemory 게임을 진행하는 도중 뒤로가기 앞으로가기를 여러번 했을떄 오류가 나는 경우   
 8. RETRY를 누를경우 navigation controller로 표기가 안되는고 modal로 표시가 되는 오류   
 9. numbermemory 게임에서 만약 10자리 이상 외울경우 폰트를 작게 or 두줄로 처리   
+10. 테스트 결과의 성적에 따른 이미지 출력 변형 처리 (상위 몇프로 -> 웃는사진, 등등)   
+11. AimTrainer 버튼을 잘못눌렀을때 카운팅해서 정확도 측정 (탭 제스처로 시도해봤으나 실패)   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
@@ -76,5 +78,7 @@ progress bar가 끝날때 -> firstContainer이동 -> 정답 맞추기 -> main이
 -- 2023.04.08   
 background color, button color 결정   
    
--- 2023.04.11   
+-- 2023.04.11 ~ 2023.04.13  
 AimTraining View Controller Create   
+랜덤으로 버튼 위치 생성   
+30번의 테스트동안의 누적 시간 출력   
