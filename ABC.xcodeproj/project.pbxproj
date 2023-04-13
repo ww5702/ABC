@@ -17,6 +17,7 @@
 		C12AA37929E3FFA2006B5E41 /* AimTrainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */; };
 		C12AA37B29E554B4006B5E41 /* aimImage.png in Resources */ = {isa = PBXBuildFile; fileRef = C12AA37A29E554B4006B5E41 /* aimImage.png */; };
 		C12AA37D29E69820006B5E41 /* AimTrainerScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C12AA37C29E69820006B5E41 /* AimTrainerScoreViewController.swift */; };
+		C12AA37F29E7ED70006B5E41 /* aimTrainerIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C12AA37E29E7ED70006B5E41 /* aimTrainerIcon.png */; };
 		C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599B29C04BC40072DA77 /* AppDelegate.swift */; };
 		C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599D29C04BC40072DA77 /* SceneDelegate.swift */; };
 		C13759A029C04BC40072DA77 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C137599F29C04BC40072DA77 /* ViewController.swift */; };
@@ -58,6 +59,7 @@
 		C12AA37829E3FFA2006B5E41 /* AimTrainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerViewController.swift; sourceTree = "<group>"; };
 		C12AA37A29E554B4006B5E41 /* aimImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aimImage.png; sourceTree = "<group>"; };
 		C12AA37C29E69820006B5E41 /* AimTrainerScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimTrainerScoreViewController.swift; sourceTree = "<group>"; };
+		C12AA37E29E7ED70006B5E41 /* aimTrainerIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = aimTrainerIcon.png; sourceTree = "<group>"; };
 		C137599829C04BC40072DA77 /* ABC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ABC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C137599B29C04BC40072DA77 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C137599D29C04BC40072DA77 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 				C12AA37A29E554B4006B5E41 /* aimImage.png */,
 				C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */,
 				C13FFB9029DC153C00B5704B /* reactionIcon.png */,
+				C12AA37E29E7ED70006B5E41 /* aimTrainerIcon.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 			files = (
 				C12AA37429E3E12C006B5E41 /* numberMemoryIcon.png in Resources */,
 				C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */,
+				C12AA37F29E7ED70006B5E41 /* aimTrainerIcon.png in Resources */,
 				C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */,
 				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */,
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,

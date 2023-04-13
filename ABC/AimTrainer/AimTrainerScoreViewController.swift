@@ -12,12 +12,13 @@ class AimTrainerScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     
-    var data = 0
+    var seconddata = 0
+    var milliseconddata = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.scoreLabel.text = "\(data) ms"
+        self.scoreLabel.text = "\(seconddata)s : \(milliseconddata)ms 가 걸렸습니다."
         // Do any additional setup after loading the view.
     }
     

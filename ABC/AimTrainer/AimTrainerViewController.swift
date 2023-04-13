@@ -25,15 +25,12 @@ class AimTrainerViewController: UIViewController {
     var randomleft : Int = 0
     var count = 30
     
-    var countStart: Double = 0.0
-    var countEnd: Double = 0.0
+    var countSecond: Double = 0.0
+    var countMilliSecond: Double = 0.0
     var checkTime = CFAbsoluteTimeGetCurrent()
     
     var timer: Timer!
     var startTime = Date()
-    var bb = false
-    var hour = 0
-    var minute = 0
     var second = 0
     var milliSecond = 0
     
@@ -114,11 +111,8 @@ class AimTrainerViewController: UIViewController {
             print("눌렀다.")
         } else {
             print("기록")
-            let csecond = second
-            let cmilliSecond = milliSecond
-            countEnd = Double(milliSecond)
-            print("\(csecond) : \(cmilliSecond)")
-            //countEnd = (CFAbsoluteTimeGetCurrent() - countStart) * 1000
+            countSecond = Double(second)
+            countMilliSecond = Double(milliSecond)
             gotoResult()
         }
         
@@ -127,7 +121,8 @@ class AimTrainerViewController: UIViewController {
     func gotoResult() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "AimTrainerScoreViewController") as? AimTrainerScoreViewController {
             vc.modalPresentationStyle = .fullScreen
-            vc.data = Int(countEnd)
+            vc.seconddata = Int(countSecond)
+            vc.milliseconddata = Int(countMilliSecond)
             self.present(vc, animated: true)
         }
     }

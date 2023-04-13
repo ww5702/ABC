@@ -164,7 +164,7 @@
                                                         <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="148.33333333333334"/>
                                                         <state key="normal" title="Button"/>
                                                         <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
-                                                            <backgroundConfiguration key="background" image="aimImage.png">
+                                                            <backgroundConfiguration key="background" image="aimTrainerIcon.png">
                                                                 <color key="strokeColor" systemColor="systemMintColor"/>
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
@@ -2357,7 +2357,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wmT-fc-0yP">
                                 <rect key="frame" x="10" y="153" width="373" height="615"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-id-A0c">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aimTrainerIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="kJ2-id-A0c">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="400"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="400" id="eHJ-KZ-Wa4"/>
@@ -2369,7 +2369,7 @@
                                             <constraint firstAttribute="height" constant="100" id="uqX-kY-FHf"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="uRc-a9-dPE">
@@ -2378,7 +2378,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofp-Gx-ufD">
                                                 <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="95"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="START" cornerStyle="small">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <segue destination="yzQ-5t-H3t" kind="show" id="P2N-16-lFD"/>
                                                 </connections>
@@ -2386,7 +2392,13 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nJc-q8-J5H">
                                                 <rect key="frame" x="201.66666666666663" y="0.0" width="171.33333333333337" height="95"/>
                                                 <state key="normal" title="Button"/>
-                                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="BACK" cornerStyle="small">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
                                                 <connections>
                                                     <action selector="backBtn:" destination="Pf3-Ev-dLk" eventType="touchUpInside" id="cmH-iz-BmR"/>
                                                 </connections>
@@ -2397,7 +2409,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zcc-kY-LEq"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="zcc-kY-LEq" firstAttribute="bottom" secondItem="wmT-fc-0yP" secondAttribute="bottom" constant="50" id="Xs2-M9-3Rz"/>
                             <constraint firstItem="wmT-fc-0yP" firstAttribute="leading" secondItem="zcc-kY-LEq" secondAttribute="leading" constant="10" id="u6L-cL-M6u"/>
@@ -3269,6 +3281,7 @@
         <image name="VerbalMemoryExplain.png" width="225" height="225"/>
         <image name="VisualMemoryExplain.png" width="126" height="128"/>
         <image name="aimImage.png" width="1280" height="1280"/>
+        <image name="aimTrainerIcon.png" width="131" height="123"/>
         <image name="numberMemoryIcon.png" width="127" height="123"/>
         <image name="reactionIcon.png" width="179" height="195"/>
         <image name="reactionTestStatistics.png" width="426" height="344"/>
