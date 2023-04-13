@@ -18,8 +18,9 @@ class AimTrainerScoreViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.scoreLabel.text = "\(seconddata)s : \(milliseconddata)ms 가 걸렸습니다."
+        self.scoreLabel.text = "\(seconddata)s : \(milliseconddata)ms"
         // Do any additional setup after loading the view.
+        self.explainLabel.text = "Aim Trainer\n당신의 반사신경과 손과 눈의 협응력을 테스트합니다.\n당신의 기록을 넘겨보세요"
     }
     
 
