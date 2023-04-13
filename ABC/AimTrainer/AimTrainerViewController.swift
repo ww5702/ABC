@@ -13,7 +13,8 @@ class AimTrainerViewController: UIViewController {
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var touchbtnLabel: UIButton!
     @IBOutlet weak var countLabel: UILabel!
-    @IBOutlet weak var touchLabel: UILabel!
+    @IBOutlet var touchView: UIView!
+    
     
     var leftConstraint: NSLayoutConstraint?
     var trailingConstraint: NSLayoutConstraint?
@@ -47,9 +48,7 @@ class AimTrainerViewController: UIViewController {
         touchbtnLabel.clipsToBounds = true
         touchbtnLabel.layer.isHidden = true
         
-//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(misstouch))
-//        touchLabel.isUserInteractionEnabled = true
-//        touchLabel.addGestureRecognizer(tapGestureRecognizer)
+        
         
     }
     
@@ -84,6 +83,10 @@ class AimTrainerViewController: UIViewController {
                                           userInfo: nil,
                                           repeats: true)
 
+        // 잘못터치 (miss) 기능 시작 
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(misstouch))
+        touchView.isUserInteractionEnabled = true
+        touchView.addGestureRecognizer(tapGestureRecognizer)
     
     }
     @objc
@@ -132,6 +135,7 @@ class AimTrainerViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.seconddata = Int(countSecond)
             vc.milliseconddata = Int(countMilliSecond)
+            vc.miss = Double(miss)
             self.present(vc, animated: true)
         }
     }

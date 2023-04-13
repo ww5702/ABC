@@ -2472,31 +2472,21 @@
                                     <action selector="startbtn:" destination="yzQ-5t-H3t" eventType="touchUpInside" id="Qxm-eh-bVi"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWa-wm-LOv">
-                                <rect key="frame" x="0.0" y="103" width="393" height="715"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XzA-I9-soE"/>
                         <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="XzA-I9-soE" firstAttribute="bottom" secondItem="ytd-xN-IE0" secondAttribute="bottom" constant="50" id="A1R-bu-JEl"/>
-                            <constraint firstItem="hWa-wm-LOv" firstAttribute="leading" secondItem="XzA-I9-soE" secondAttribute="leading" id="HUI-g4-1dW"/>
-                            <constraint firstItem="hWa-wm-LOv" firstAttribute="trailing" secondItem="XzA-I9-soE" secondAttribute="trailing" id="KfO-gW-xkZ"/>
                             <constraint firstItem="OiM-XW-kW3" firstAttribute="centerX" secondItem="2rb-sz-1YN" secondAttribute="centerX" id="aHp-lj-GBg"/>
                             <constraint firstItem="OiM-XW-kW3" firstAttribute="top" secondItem="XzA-I9-soE" secondAttribute="top" constant="10" id="b9k-JT-lbz"/>
                             <constraint firstItem="ytd-xN-IE0" firstAttribute="centerX" secondItem="2rb-sz-1YN" secondAttribute="centerX" id="kef-YU-W9X"/>
-                            <constraint firstItem="XzA-I9-soE" firstAttribute="bottom" secondItem="hWa-wm-LOv" secondAttribute="bottom" id="xnk-IB-eNm"/>
-                            <constraint firstItem="hWa-wm-LOv" firstAttribute="top" secondItem="XzA-I9-soE" secondAttribute="top" id="zql-eQ-0Z0"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="4Ty-6m-fyQ"/>
                     <connections>
                         <outlet property="countLabel" destination="OiM-XW-kW3" id="q6i-k3-93A"/>
                         <outlet property="startLabel" destination="ytd-xN-IE0" id="Wrg-Z4-ifI"/>
-                        <outlet property="touchLabel" destination="hWa-wm-LOv" id="rl5-M4-NVg"/>
+                        <outlet property="touchView" destination="2rb-sz-1YN" id="zU0-YV-BLF"/>
                         <outlet property="touchbtnLabel" destination="hAu-xe-S2G" id="rrs-lY-R6S"/>
                     </connections>
                 </viewController>
@@ -2521,12 +2511,12 @@
                                             <constraint firstAttribute="height" constant="250" id="3iY-IO-BeY"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-K0-hKf">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-K0-hKf">
                                         <rect key="frame" x="0.0" y="260" width="373" height="150"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="150" id="g94-dQ-E3B"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="50"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
