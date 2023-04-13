@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class AimTrainerViewController: UIViewController {
     
     
@@ -27,6 +28,16 @@ class AimTrainerViewController: UIViewController {
     var countStart: Double = 0.0
     var countEnd: Double = 0.0
     var checkTime = CFAbsoluteTimeGetCurrent()
+    
+    var timer: Timer!
+    var startTime = Date()
+    var bb = false
+    var hour = 0
+    var minute = 0
+    var second = 0
+    var milliSecond = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,16 +73,29 @@ class AimTrainerViewController: UIViewController {
         startLabel.layer.isHidden = true
         
         // 타이머 시작
-        countStart = CFAbsoluteTimeGetCurrent()
         
-    }
+        print("타이머 시작")
+        self.startTime = Date()
+        self.timer = Timer.scheduledTimer(timeInterval: 0.001,
+                                          target: self,
+                                          selector: #selector(timeUp),
+                                          userInfo: nil,
+                                          repeats: true)
+
     
+    }
+    @objc
+        private func timeUp() {
+            let timeInterval = Date().timeIntervalSince(self.startTime)
+            second = (Int)(fmod(timeInterval, 60)) // 초를 구한다
+            milliSecond = (Int)((timeInterval - floor(timeInterval))*1000)
+        }
     
     @IBAction func touchBtn(_ sender: UIButton) {
         
         let safeArea = view.safeAreaLayoutGuide
         
-        if count >= 1 {
+        if count > 1 {
             randomup = Int.random(in: 100...650)
             randomleft = Int.random(in: 0...300)
             print(randomup,randomleft)
@@ -89,7 +113,12 @@ class AimTrainerViewController: UIViewController {
             topConstraint?.isActive = true
             print("눌렀다.")
         } else {
-            countEnd = (CFAbsoluteTimeGetCurrent() - countStart) * 1000
+            print("기록")
+            let csecond = second
+            let cmilliSecond = milliSecond
+            countEnd = Double(milliSecond)
+            print("\(csecond) : \(cmilliSecond)")
+            //countEnd = (CFAbsoluteTimeGetCurrent() - countStart) * 1000
             gotoResult()
         }
         

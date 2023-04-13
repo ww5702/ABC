@@ -163,8 +163,8 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Fe-Td-uVG">
                                                         <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="148.33333333333334"/>
                                                         <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="small">
-                                                            <backgroundConfiguration key="background">
+                                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
+                                                            <backgroundConfiguration key="background" image="aimImage.png">
                                                                 <color key="strokeColor" systemColor="systemMintColor"/>
                                                             </backgroundConfiguration>
                                                         </buttonConfiguration>
@@ -186,7 +186,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IHe-sO-Dc6">
                                                 <rect key="frame" x="0.0" y="148.33333333333337" width="373" height="50"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atg-hv-r3x">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Aim Trainer" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atg-hv-r3x">
                                                         <rect key="frame" x="0.0" y="0.0" width="176.66666666666666" height="50"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -284,9 +284,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <action selector="backbtn:" destination="g6G-4s-l4g" eventType="touchUpInside" id="3di-Wg-AYi"/>
-                                                    <action selector="backbtn:" destination="F7W-9t-Xau" eventType="touchUpInside" id="XEa-fM-rG0"/>
-                                                    <action selector="gotoGameButton:" destination="F7W-9t-Xau" eventType="touchUpInside" id="gdc-6G-BeU"/>
+                                                    <action selector="backbtn:" destination="F7W-9t-Xau" eventType="touchUpInside" id="ZwH-Kd-9f3"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -310,7 +308,6 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Feq-Xz-VQ0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="g6G-4s-l4g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1483" y="346"/>
         </scene>
