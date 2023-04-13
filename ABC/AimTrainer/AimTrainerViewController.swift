@@ -7,14 +7,13 @@
 
 import UIKit
 
-
 class AimTrainerViewController: UIViewController {
     
     
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var touchbtnLabel: UIButton!
     @IBOutlet weak var countLabel: UILabel!
-    
+    @IBOutlet weak var touchLabel: UILabel!
     
     var leftConstraint: NSLayoutConstraint?
     var trailingConstraint: NSLayoutConstraint?
@@ -24,6 +23,7 @@ class AimTrainerViewController: UIViewController {
     var randomup : Int = 0
     var randomleft : Int = 0
     var count = 30
+    var miss = 0
     
     var countSecond: Double = 0.0
     var countMilliSecond: Double = 0.0
@@ -46,6 +46,11 @@ class AimTrainerViewController: UIViewController {
         //touchbtnLabel.layer.cornerRadius = 0.5 * touchbtnLabel.bounds.size.width
         touchbtnLabel.clipsToBounds = true
         touchbtnLabel.layer.isHidden = true
+        
+//        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(misstouch))
+//        touchLabel.isUserInteractionEnabled = true
+//        touchLabel.addGestureRecognizer(tapGestureRecognizer)
+        
     }
     
     @IBAction func startbtn(_ sender: UIButton) {
@@ -89,7 +94,6 @@ class AimTrainerViewController: UIViewController {
         }
     
     @IBAction func touchBtn(_ sender: UIButton) {
-        
         let safeArea = view.safeAreaLayoutGuide
         
         if count > 1 {
@@ -116,6 +120,11 @@ class AimTrainerViewController: UIViewController {
             gotoResult()
         }
         
+    }
+    
+    @objc func misstouch() {
+        miss += 1
+        print("miss \(miss)")
     }
     
     func gotoResult() {
