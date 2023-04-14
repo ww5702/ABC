@@ -15,28 +15,23 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     @IBOutlet var touchView: UIView!
     @IBOutlet weak var gameStartLabel: UIButton!
     
-    var checkTime = CFAbsoluteTimeGetCurrent()
-    var isGameStart = false
-    var isColorChange = "gray"
-    var countStart: Double = 0.0
-    var countEnd: Double = 0.0
     var count = 1
-    var color = "gray"
+    
     var reactionarr : [Int] = [1,2,3,4,5]
     var reactionAvg = 0
     
-    // time trigger
     var randomTime : Double = 0.0
-    var timeTrigger = true
-    var realTime = Timer()
     
-    
-    
-    
-    
-    // again
+    var isGameStart = false
     var testcolorchange = false
     var testgogameend = false
+    
+    var countSecond: Double = 0.0
+    var countMilliSecond: Double = 0.0
+    var timer: Timer!
+    var startTime = Date()
+    var second = 0
+    var milliSecond = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -88,9 +83,14 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                 self.testcolorchange = true
                 // 색이 바꼈을때부터 시간 측정
                 if self.testcolorchange == true {
-                    self.countStart = CFAbsoluteTimeGetCurrent()
+                    print("타이머 시작")
+                    self.startTime = Date()
+                    self.timer = Timer.scheduledTimer(timeInterval: 0.001,
+                                                      target: self,
+                                                      selector: #selector(self.timeUp),
+                                                      userInfo: nil,
+                                                      repeats: true)
                 }
-                print("함수 실행")
             }
         }
         
@@ -99,13 +99,19 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
         print("눌렸습니다.")
         if isGameStart == true {
             if testcolorchange == true {
-                self.countEnd = (CFAbsoluteTimeGetCurrent() - self.countStart)*1000
-                reactionarr[count-1] = Int(countEnd)
-                reactionAvg += Int(countEnd)
+                countSecond = Double(second)
+                countMilliSecond = Double(milliSecond)
+                
+                print("test결과 \(countMilliSecond)")
+                
+                reactionarr[count-1] = Int(countMilliSecond)
+                reactionAvg += Int(countMilliSecond)
                 tableView.reloadData()
+                
                 
                 //초기화
                 self.touchlabel.backgroundColor = UIColor.red
+                self.timer.invalidate() // 타이머 초기화
                 
                 if count < 5 {
                     count += 1
@@ -131,14 +137,20 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                 self.reactionarr = [1,2,3,4,5]
                 tableView.reloadData()
                 self.count = 1
-                self.countStart = 0.0
-                self.countEnd = 0.0
                 touchlabel.text = "PRESS\nGame Start\nBUTTON"
                 self.touchlabel.backgroundColor = UIColor.gray
                 countlabel.text = "Counting Label"
             }
         }
     }
+    
+    @objc
+        private func timeUp() {
+            let timeInterval = Date().timeIntervalSince(self.startTime)
+            second = (Int)(fmod(timeInterval, 60)) // 초를 구한다
+            milliSecond = (Int)((timeInterval - floor(timeInterval))*1000)
+        }
+    
     func tooEarlytouch() {
         let tooEarly = UIAlertController(title: "오류", message: "너무 빨리 눌렀습니다!\n게임이 중단됩니다.", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)

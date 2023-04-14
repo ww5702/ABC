@@ -78,7 +78,6 @@ class AimTrainerViewController: UIViewController {
         startLabel.layer.isHidden = true
         
         // 타이머 시작
-        
         print("타이머 시작")
         self.startTime = Date()
         self.timer = Timer.scheduledTimer(timeInterval: 0.001,
