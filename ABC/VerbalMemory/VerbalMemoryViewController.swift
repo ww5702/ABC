@@ -26,6 +26,9 @@ class VerbalMemoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // 시작과 동시에 목숨 밑 점수 초기화
+        shuffleArr = []
+        saveArr = []
+        wordcount = 0
         lifeLabel.text = "Life | \(life)"
         scoreLabel.text = "Score | \(score)"
         
@@ -57,34 +60,62 @@ class VerbalMemoryViewController: UIViewController {
     // 본적 있는 단어다
     @IBAction func seenBtn(_ sender: UIButton) {
         let check = saveArr.contains(checka)
-        if check == true {
-            score += 1
-            scoreLabel.text = "Score | \(score)"
-            
-            print("save : \(saveArr)")
-            print("shuffle : \(shuffleArr)")
-            // 새로운 단어를 배열에 추가
-            // 단 txt단어가 전부 들어가기전까지 추가
-            if wordcount < words.count-1 {
-                wordcount += 1
-                print("ss\(wordcount)")
-                shuffleArr.append(words[wordcount])
-            }
-            // 셔플해서 새로운 단어 보여주기
-            showword()
-            
-        } else {
-            if life > 1 {
-                life -= 1
-                lifeLabel.text = "Life | \(life)"
+        if score < 1 {
+            if check == true {
+                score += 1
+                scoreLabel.text = "Score | \(score)"
                 
-                // 셔플해서 중복되더라도 단어 보여주기
+                print("save : \(saveArr)")
+                print("shuffle : \(shuffleArr)")
+                // 새로운 단어를 배열에 추가
+                // 단 txt단어가 전부 들어가기전까지 추가
+                if wordcount < words.count-1 {
+                    wordcount += 1
+                    print("ss\(wordcount)")
+                    shuffleArr.append(words[wordcount])
+                }
+                // 셔플해서 새로운 단어 보여주기
                 showword()
+                
             } else {
-                gotoResult()
+                if life > 1 {
+                    life -= 1
+                    lifeLabel.text = "Life | \(life)"
+                } else {
+                    gotoResult()
+                }
             }
-            
+        } else {
+            if check == true {
+                score += 1
+                scoreLabel.text = "Score | \(score)"
+                
+                print("save : \(saveArr)")
+                print("shuffle : \(shuffleArr)")
+                // 새로운 단어를 배열에 추가
+                // 단 txt단어가 전부 들어가기전까지 추가
+                if wordcount < words.count-1 {
+                    wordcount += 1
+                    print("ss\(wordcount)")
+                    shuffleArr.append(words[wordcount])
+                }
+                // 셔플해서 새로운 단어 보여주기
+                showword()
+                
+            } else {
+                if life > 1 {
+                    life -= 1
+                    lifeLabel.text = "Life | \(life)"
+                    
+                    // 셔플해서 중복되더라도 단어 보여주기
+                    showword()
+                } else {
+                    gotoResult()
+                }
+                
+            }
         }
+        
     }
     
     // 새로운 단어다
