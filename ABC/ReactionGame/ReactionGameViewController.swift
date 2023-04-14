@@ -37,7 +37,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
         super.viewDidLoad()
 
         touchlabel.text = "PRESS\nGame Start\nBUTTON"
-        self.touchlabel.backgroundColor = UIColor.gray
+        self.touchlabel.backgroundColor = UIColor(named: "background")
         countlabel.text = "Counting Label"
         // Do any additional setup after loading the view.
         
@@ -54,6 +54,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         let text:String = String(reactionarr[indexPath.row])
+        cell.textLabel?.textColor = UIColor.white
         if reactionarr[indexPath.row] > 5 {
             cell.textLabel?.text = "\(indexPath.row+1) 번째 시도 : " + text + " ms"
         } else {
@@ -69,7 +70,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
         self.testgogameend = false
         self.countlabel.text = "준비중입니다."
         self.touchlabel.text = "초록화면으로 변하면\n눌러주세요"
-        self.touchlabel.backgroundColor = UIColor.red
+        self.touchlabel.backgroundColor = UIColor(named: "turnRed")
         gamestart()
     }
     func gamestart() {
@@ -79,13 +80,13 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
             print("count : \(count)")
             print("randomTime : \(randomTime)")
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+randomTime) {
-                self.touchlabel.backgroundColor = UIColor.green
+                self.touchlabel.backgroundColor = UIColor(named: "turnGreen")
                 self.testcolorchange = true
                 // 색이 바꼈을때부터 시간 측정
                 if self.testcolorchange == true {
                     print("타이머 시작")
                     self.startTime = Date()
-                    self.timer = Timer.scheduledTimer(timeInterval: 0.001,
+                    self.timer = Timer.scheduledTimer(timeInterval: 0.0000001,
                                                       target: self,
                                                       selector: #selector(self.timeUp),
                                                       userInfo: nil,
@@ -110,7 +111,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                 
                 
                 //초기화
-                self.touchlabel.backgroundColor = UIColor.red
+                self.touchlabel.backgroundColor = UIColor(named: "turnRed")
                 self.timer.invalidate() // 타이머 초기화
                 
                 if count < 5 {
@@ -138,7 +139,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                 tableView.reloadData()
                 self.count = 1
                 touchlabel.text = "PRESS\nGame Start\nBUTTON"
-                self.touchlabel.backgroundColor = UIColor.gray
+                self.touchlabel.backgroundColor = UIColor(named: "background")
                 countlabel.text = "Counting Label"
             }
         }

@@ -14,6 +14,8 @@ class AimTrainerExplainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = .white
 
         explainLabel.text = "최대한 빠르고 정확하게 타겟을 클릭하세요\n총 30개의 타겟을 클릭하면\n누적 시간이 출력됩니다."
         changeTextColor()
