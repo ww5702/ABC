@@ -12,6 +12,7 @@ class AimTrainerScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     
+    var mindata = 0
     var seconddata = 0
     var milliseconddata = 0
     var percentstring = ""
@@ -28,10 +29,18 @@ class AimTrainerScoreViewController: UIViewController {
         percent = (miss/30)*100
         percentstring = String(format: "%.1f", percent)
         
-        if seconddata <= 10 {
-            self.scoreLabel.text = "0\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+        if mindata >= 1 {
+            if seconddata <= 10 {
+                self.scoreLabel.text = "\(mindata):0\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+            } else {
+                self.scoreLabel.text = "\(mindata):\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+            }
         } else {
-            self.scoreLabel.text = "\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+            if seconddata <= 10 {
+                self.scoreLabel.text = "0\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+            } else {
+                self.scoreLabel.text = "\(seconddata):\(milliseconddata)\n정확도 : \(percentstring)%"
+            }
         }
         
 

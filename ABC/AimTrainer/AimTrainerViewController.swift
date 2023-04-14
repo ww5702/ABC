@@ -28,6 +28,7 @@ class AimTrainerViewController: UIViewController {
     var count = 30
     var miss = 0
     
+    var countMin: Double = 0.0
     var countSecond: Double = 0.0
     var countMilliSecond: Double = 0.0
     var checkTime = CFAbsoluteTimeGetCurrent()
@@ -109,7 +110,7 @@ class AimTrainerViewController: UIViewController {
     @IBAction func touchBtn(_ sender: UIButton) {
         let safeArea = view.safeAreaLayoutGuide
         
-        if count > 20 {
+        if count > 1 {
             randomup = Int.random(in: 100...650)
             randomleft = Int.random(in: 0...300)
             print(randomup,randomleft)
@@ -128,6 +129,7 @@ class AimTrainerViewController: UIViewController {
             print("눌렀다.")
         } else {
             print("기록")
+            countMin = Double(min)
             countSecond = Double(second)
             countMilliSecond = Double(milliSecond)
             gotoResult()
@@ -143,6 +145,7 @@ class AimTrainerViewController: UIViewController {
     func gotoResult() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "AimTrainerScoreViewController") as? AimTrainerScoreViewController {
             vc.modalPresentationStyle = .fullScreen
+            vc.mindata = Int(countMin)
             vc.seconddata = Int(countSecond)
             vc.milliseconddata = Int(countMilliSecond)
             vc.miss = Double(miss)

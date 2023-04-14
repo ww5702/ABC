@@ -717,17 +717,17 @@
                                 <rect key="frame" x="0.0" y="113" width="393" height="450"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YoH-w2-YzX">
-                                        <rect key="frame" x="0.0" y="0.0" width="393" height="100"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="70"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="100" id="Uw2-jb-nit"/>
+                                            <constraint firstAttribute="height" constant="70" id="Uw2-jb-nit"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="반응 속도 테스트입니다" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g92-IM-hJm">
-                                        <rect key="frame" x="0.0" y="110" width="393" height="340"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="80" width="393" height="370"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -739,21 +739,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Hxa-Xz-7wR">
                                 <rect key="frame" x="10" y="787.66666666666663" width="373" height="34.333333333333371"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqt-oG-c6M">
-                                        <rect key="frame" x="0.0" y="0.0" width="121" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Reset" cornerStyle="small">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </backgroundConfiguration>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="btnGameReset:" destination="nea-uo-wwy" eventType="touchUpInside" id="yfr-zw-p3R"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RK4-hu-tH1">
-                                        <rect key="frame" x="126" y="0.0" width="121" height="34.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="34.333333333333336"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Game Start" cornerStyle="small">
                                             <backgroundConfiguration key="background">
@@ -763,19 +750,6 @@
                                         </buttonConfiguration>
                                         <connections>
                                             <action selector="btnGameStart:" destination="nea-uo-wwy" eventType="touchUpInside" id="JQ9-3k-Bf8"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o8X-hI-t7B">
-                                        <rect key="frame" x="252" y="0.0" width="121" height="34.333333333333336"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Info &amp; Rank" cornerStyle="small">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                            </backgroundConfiguration>
-                                            <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="infoRankBtn:" destination="nea-uo-wwy" eventType="touchUpInside" id="uAM-uj-ADL"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -806,9 +780,9 @@
                         <color key="backgroundColor" red="0.27843138579999999" green="0.52156865600000002" blue="0.79607844350000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="Hxa-Xz-7wR" firstAttribute="leading" secondItem="bEj-ml-HUU" secondAttribute="leading" constant="10" id="6uV-mR-ioA"/>
+                            <constraint firstItem="Hxa-Xz-7wR" firstAttribute="top" secondItem="56c-Ij-RtM" secondAttribute="bottom" constant="10" id="H3l-9s-RSa"/>
                             <constraint firstItem="kjH-ow-iVr" firstAttribute="leading" secondItem="bEj-ml-HUU" secondAttribute="leading" id="Hha-4Z-t7Y"/>
                             <constraint firstItem="bEj-ml-HUU" firstAttribute="trailing" secondItem="Hxa-Xz-7wR" secondAttribute="trailing" constant="10" id="N7z-a1-Ime"/>
-                            <constraint firstItem="Hxa-Xz-7wR" firstAttribute="top" secondItem="56c-Ij-RtM" secondAttribute="bottom" constant="10" id="R9t-zB-YX8"/>
                             <constraint firstItem="56c-Ij-RtM" firstAttribute="leading" secondItem="bEj-ml-HUU" secondAttribute="leading" constant="10" id="Sxv-9v-TrP"/>
                             <constraint firstItem="bEj-ml-HUU" firstAttribute="trailing" secondItem="kjH-ow-iVr" secondAttribute="trailing" id="bWw-qq-OdT"/>
                             <constraint firstItem="56c-Ij-RtM" firstAttribute="top" secondItem="kjH-ow-iVr" secondAttribute="bottom" constant="10" id="f0r-Eb-Swi"/>
@@ -820,7 +794,9 @@
                     <navigationItem key="navigationItem" title="ReactionTest" id="JMZ-gR-ELY"/>
                     <connections>
                         <outlet property="countlabel" destination="YoH-w2-YzX" id="Zd1-AW-a0x"/>
+                        <outlet property="gameStartLabel" destination="RK4-hu-tH1" id="ZHR-hR-aWZ"/>
                         <outlet property="tableView" destination="56c-Ij-RtM" id="IMV-AR-ljl"/>
+                        <outlet property="touchView" destination="xoq-ON-mJL" id="07b-zi-06k"/>
                         <outlet property="touchlabel" destination="g92-IM-hJm" id="q8o-bi-bij"/>
                         <outlet property="view" destination="xoq-ON-mJL" id="d1g-wA-7oq"/>
                     </connections>
