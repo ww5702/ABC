@@ -13,6 +13,8 @@ class AimTrainerViewController: UIViewController {
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var touchbtnLabel: UIButton!
     @IBOutlet weak var countLabel: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
     @IBOutlet var touchView: UIView!
     
     
@@ -32,6 +34,7 @@ class AimTrainerViewController: UIViewController {
     
     var timer: Timer!
     var startTime = Date()
+    var min = 0
     var second = 0
     var milliSecond = 0
     
@@ -39,7 +42,7 @@ class AimTrainerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        countLabel.text = "Reamining \(count)"
+        countLabel.text = "Target \(count)"
 
         touchbtnLabel.layer.cornerRadius = touchbtnLabel.layer.frame.size.width/2
         touchbtnLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
@@ -92,8 +95,15 @@ class AimTrainerViewController: UIViewController {
     @objc
         private func timeUp() {
             let timeInterval = Date().timeIntervalSince(self.startTime)
+            min = (Int)(fmod((timeInterval/60), 60)) // 초를 60으로 나누어 분을 구한다
             second = (Int)(fmod(timeInterval, 60)) // 초를 구한다
             milliSecond = (Int)((timeInterval - floor(timeInterval))*1000)
+            
+            if min >= 1 {
+                self.timerLabel.text = "\(min):\(second):\(milliSecond)"
+            } else {
+                self.timerLabel.text = "\(second):\(milliSecond)"
+            }
         }
     
     @IBAction func touchBtn(_ sender: UIButton) {
@@ -105,7 +115,7 @@ class AimTrainerViewController: UIViewController {
             print(randomup,randomleft)
             
             count -= 1
-            countLabel.text = "Reamining \(count)"
+            countLabel.text = "Target \(count)"
             
             leftConstraint?.isActive = false
             topConstraint?.isActive = false
