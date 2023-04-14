@@ -84,3 +84,8 @@ background color, button color 결정
 AimTraining View Controller Create   
 랜덤으로 버튼 위치 생성   
 30번의 테스트동안의 누적 시간 출력   
+   
+-- 2023.04.14    
+Reation Test CFAbsoluteTimeGetCurrent에서 TimeInterval로 변경   
+이 방법이 반응속도가 좀더 빠르게 측정됨을 확인   
+RESET버튼과 Info&Rank 버튼 제거 (어플의 조잡함)   
