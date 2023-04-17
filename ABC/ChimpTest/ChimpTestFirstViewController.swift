@@ -8,6 +8,8 @@
 import UIKit
 
 class ChimpTestFirstViewController: UIViewController {
+    
+    var number: Int = 4 // 4개의 숫자부터 시작
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,15 +17,13 @@ class ChimpTestFirstViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func play() {
+        print("시작")
     }
-    */
+    
+
+    func setStart() {
+        play()
+    }
 
 }
