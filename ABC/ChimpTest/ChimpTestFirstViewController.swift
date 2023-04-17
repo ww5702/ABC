@@ -54,21 +54,504 @@ class ChimpTestFirstViewController: UIViewController {
     let SELECT = UIColor(named: "buttonWrong")
     let BLUESTROKE = UIColor(named: "ChimpStroke")
     
+    var checkrandom = Set<Int>()
     var number: Int = 4 // 4개의 숫자부터 시작
+    var count: Int = 1 // 순서 확인용 count
     
     var btnbool : [Bool] = Array(repeating: false, count: 40)
     var btnbool2 : [Bool] = Array(repeating: false, count: 40)
-
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
     }
+    
+    @IBAction func btn1(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[0] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn2(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[1] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn3(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[2] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn4(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[3] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn5(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[4] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn6(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[5] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn7(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[6] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn8(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[7] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn9(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[8] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn10(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[9] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn11(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[10] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn12(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[11] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn13(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[12] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn14(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[13] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn15(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[14] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn16(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[15] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn17(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[16] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn18(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[17] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn19(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[18] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn20(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[19] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn21(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[20] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn22(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[21] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn23(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[22] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn24(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[23] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn25(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[24] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn26(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[25] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn27(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[26] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn28(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[27] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn29(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[28] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn30(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[29] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn31(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[30] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn32(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[31] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn33(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[32] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn34(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[33] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn35(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[34] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn36(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[35] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn37(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[36] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn38(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[37] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn39(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[38] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    @IBAction func btn40(_ sender: UIButton) {
+        guard let numberValue = sender.title(for: .normal) else { return }
+        print(numberValue)
+        if btnbool[39] == true { // true일때만 버튼 기능이 실행
+            if String(count) == numberValue {
+                setWhite()  // 나머지 버튼들 흰색으로 변경
+                count += 1
+            } else {
+                badEnding()
+            }
+        }
+    }
+    
     
     func play() {
         print("시작")
         if number < 40 {
             var minicount = 1
-            var checkrandom = Set<Int>()
             while checkrandom.count < number {
                 let randomNum = Int.random(in: 1...40)
                 checkrandom.insert(randomNum)
@@ -405,8 +888,110 @@ class ChimpTestFirstViewController: UIViewController {
             }
         }
     }
+    func setWhite() {
+        checkrandom.removeFirst()
+        for i in checkrandom {
+            switch i {
+            case 1:
+                btn1Label.backgroundColor = WHITE
+            case 2:
+                btn2Label.backgroundColor = WHITE
+            case 3:
+                btn3Label.backgroundColor = WHITE
+            case 4:
+                btn4Label.backgroundColor = WHITE
+            case 5:
+                btn5Label.backgroundColor = WHITE
+            case 6:
+                btn6Label.backgroundColor = WHITE
+            case 7:
+                btn7Label.backgroundColor = WHITE
+            case 8:
+                btn8Label.backgroundColor = WHITE
+            case 9:
+                btn9Label.backgroundColor = WHITE
+            case 10:
+                btn10Label.backgroundColor = WHITE
+            case 11:
+                btn11Label.backgroundColor = WHITE
+            case 12:
+                btn12Label.backgroundColor = WHITE
+            case 13:
+                btn13Label.backgroundColor = WHITE
+            case 14:
+                btn14Label.backgroundColor = WHITE
+            case 15:
+                btn15Label.backgroundColor = WHITE
+            case 16:
+                btn16Label.backgroundColor = WHITE
+            case 17:
+                btn17Label.backgroundColor = WHITE
+            case 18:
+                btn18Label.backgroundColor = WHITE
+            case 19:
+                btn19Label.backgroundColor = WHITE
+            case 20:
+                btn20Label.backgroundColor = WHITE
+            case 21:
+                btn21Label.backgroundColor = WHITE
+            case 22:
+                btn22Label.backgroundColor = WHITE
+            case 23:
+                btn23Label.backgroundColor = WHITE
+            case 24:
+                btn24Label.backgroundColor = WHITE
+            case 25:
+                btn25Label.backgroundColor = WHITE
+            case 26:
+                btn26Label.backgroundColor = WHITE
+            case 27:
+                btn27Label.backgroundColor = WHITE
+            case 28:
+                btn28Label.backgroundColor = WHITE
+            case 29:
+                btn29Label.backgroundColor = WHITE
+            case 30:
+                btn30Label.backgroundColor = WHITE
+            case 31:
+                btn31Label.backgroundColor = WHITE
+            case 32:
+                btn32Label.backgroundColor = WHITE
+            case 33:
+                btn33Label.backgroundColor = WHITE
+            case 34:
+                btn34Label.backgroundColor = WHITE
+            case 35:
+                btn35Label.backgroundColor = WHITE
+            case 36:
+                btn36Label.backgroundColor = WHITE
+            case 37:
+                btn37Label.backgroundColor = WHITE
+            case 38:
+                btn38Label.backgroundColor = WHITE
+            case 39:
+                btn39Label.backgroundColor = WHITE
+            case 40:
+                btn40Label.backgroundColor = WHITE
+                
+            default:
+                break
+            }
+        }
+    }
+    
+    func badEnding() {
+        // 목숨 체크 후 판단
+        print("배드엔딩")
+    }
+    func gotoResult() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestScoreViewController") as? ChimpTestScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
+    
     func setStart() {
         play()
     }
-
+    
 }
