@@ -30,7 +30,7 @@ class ReactionGameScoreViewController: UIViewController {
         let font = UIFont.systemFont(ofSize: 30)
         let attributeString = NSMutableAttributedString(string: text)
                 
-        attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
+        //attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
         attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(data)"))
         self.reactionExplainLabel.attributedText = attributeString
     }

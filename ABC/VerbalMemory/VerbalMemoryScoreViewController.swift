@@ -28,7 +28,7 @@ class VerbalMemoryScoreViewController: UIViewController {
         let font = UIFont.systemFont(ofSize: 50)
         let attributeString = NSMutableAttributedString(string: text)
                 
-        attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
+        //attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
         attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(data)"))
         self.scoreLabel.attributedText = attributeString
     }

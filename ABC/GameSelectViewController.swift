@@ -65,9 +65,16 @@ class GameSelectViewController: UIViewController {
         present(navigationController, animated: true)
     }
     
-    func goToViewController(where: String) {
-        let pushVC = self.storyboard?.instantiateViewController(withIdentifier: `where`)
-        self.navigationController?.pushViewController(pushVC!, animated: true)
+    @IBAction func gotoChimpTest(_ sender: UIButton) {
+        guard let vc = storyboard?.instantiateViewController(identifier: "ChimpTestExplainViewController") as? ChimpTestExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
+    }
+    
+    
+    func goToViewController(_ where : String) {
         
     }
     
