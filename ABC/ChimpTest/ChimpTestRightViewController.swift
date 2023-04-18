@@ -21,6 +21,7 @@ class ChimpTestRightViewController: UIViewController {
     var num: Int = 3
     var life: Int = 0
     var continueLevel = false
+    var retry = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,12 +32,25 @@ class ChimpTestRightViewController: UIViewController {
     
 
     @IBAction func nextBtn(_ sender: UIButton) {
-        continueLevel = true
-        delegate?.didReceivedValueFromContainerNext(self, value: continueLevel)
+        print(retry)
+        if retry == false {
+            continueLevel = true
+            delegate?.didReceivedValueFromContainerNext(self, value: continueLevel)
+        } else {
+            // 재도전
+            continueLevel = false
+            delegate?.didReceivedValueFromContainerNext(self, value: continueLevel)
+        }
+        
     }
     
     func numCheck(_ value: Int) {
         num += value
+        if value == 0 {
+            retry = true
+        } else {
+            retry = false
+        }
     }
     func lifeCheck(_ value: Int) {
         life = value

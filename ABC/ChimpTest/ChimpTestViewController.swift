@@ -67,6 +67,7 @@ extension ChimpTestViewController: ContainerVCDelegateChimp {
         life += value
         firstView.alpha = 0
         secondView.alpha = 1
+        chimpcontainerVC2?.numCheck(0) // 정답이 아니라면 +0
         chimpcontainerVC2?.lifeCheck(life)
         chimpcontainerVC2?.settingAgain()
     }
@@ -74,6 +75,16 @@ extension ChimpTestViewController: ContainerVCDelegateChimp {
 
 extension ChimpTestViewController: ContainerVCDelegateChimp2 {
     func didReceivedValueFromContainerNext(_ controller: ChimpTestRightViewController, value: Bool) {
-        
+        continueLevel = value
+        if continueLevel == true {
+            firstView.alpha = 1
+            secondView.alpha = 0
+            chimpcontainerVC?.numCheck(1)
+            chimpcontainerVC?.play()
+        } else {
+            firstView.alpha = 1
+            secondView.alpha = 0
+            chimpcontainerVC?.play()
+        }
     }
 }

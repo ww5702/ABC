@@ -57,13 +57,15 @@ class ChimpTestFirstViewController: UIViewController {
     weak var delegate: ContainerVCDelegateChimp?
     
     let WHITE = UIColor(named: "buttonTouch")
-    let BLUE = UIColor(named: "buttonReady")
+    let BLUE = UIColor(named: "background")
     let SELECT = UIColor(named: "buttonWrong")
     let BLUESTROKE = UIColor(named: "ChimpStroke")
     
     var checkrandom = Set<Int>()
+    var rememberRandom = Set<Int>()
     var number: Int = 4 // 4개의 숫자부터 시작
     var count: Int = 1 // 순서 확인용 count
+    var minicount: Int = 1 // 버튼 title전용 count
     var goNextLevel: Bool = false
     
     var btnbool : [Bool] = Array(repeating: false, count: 40)
@@ -599,14 +601,16 @@ class ChimpTestFirstViewController: UIViewController {
     func play() {
         print("시작")
         if number < 40 {
-            var minicount = 1
             while checkrandom.count < number {
                 let randomNum = Int.random(in: 1...40)
                 checkrandom.insert(randomNum)
                 print(checkrandom)
             }
-            
+            rememberRandom = checkrandom
+            print("최종 random \(checkrandom)")
+            print("rememberRnadom = \(rememberRandom)")
             for i in checkrandom {
+                print("i = \(i)")
                 switch i {
                 case 1:
                     btn1Label.layer.borderColor = BLUESTROKE?.cgColor
@@ -614,6 +618,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn1Label.layer.cornerRadius = 10
                     btn1Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 2:
@@ -622,6 +627,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn2Label.layer.cornerRadius = 10
                     btn2Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 3:
@@ -630,6 +636,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn3Label.layer.cornerRadius = 10
                     btn3Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 4:
@@ -638,6 +645,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn4Label.layer.cornerRadius = 10
                     btn4Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 5:
@@ -647,6 +655,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn5Label.setTitle(String(minicount), for: .normal)
                     btn5Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 6:
@@ -655,6 +664,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn6Label.layer.cornerRadius = 10
                     btn6Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 7:
@@ -663,6 +673,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn7Label.layer.cornerRadius = 10
                     btn7Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 8:
@@ -671,6 +682,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn8Label.layer.cornerRadius = 10
                     btn8Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 9:
@@ -679,6 +691,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn9Label.layer.cornerRadius = 10
                     btn9Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 10:
@@ -687,6 +700,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn10Label.layer.cornerRadius = 10
                     btn10Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 11:
@@ -695,6 +709,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn11Label.layer.cornerRadius = 10
                     btn11Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 12:
@@ -703,6 +718,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn12Label.layer.cornerRadius = 10
                     btn12Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 13:
@@ -711,6 +727,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn13Label.layer.cornerRadius = 10
                     btn13Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 14:
@@ -719,6 +736,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn14Label.layer.cornerRadius = 10
                     btn14Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 15:
@@ -727,6 +745,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn15Label.layer.cornerRadius = 10
                     btn15Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 16:
@@ -735,6 +754,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn16Label.layer.cornerRadius = 10
                     btn16Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 17:
@@ -743,6 +763,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn17Label.layer.cornerRadius = 10
                     btn17Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 18:
@@ -751,6 +772,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn18Label.layer.cornerRadius = 10
                     btn18Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 19:
@@ -759,6 +781,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn19Label.layer.cornerRadius = 10
                     btn19Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 20:
@@ -767,6 +790,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn20Label.layer.cornerRadius = 10
                     btn20Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 21:
@@ -775,6 +799,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn21Label.layer.cornerRadius = 10
                     btn21Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 22:
@@ -783,6 +808,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn22Label.layer.cornerRadius = 10
                     btn22Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 23:
@@ -791,6 +817,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn23Label.layer.cornerRadius = 10
                     btn23Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 24:
@@ -799,6 +826,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn24Label.layer.cornerRadius = 10
                     btn24Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 25:
@@ -807,6 +835,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn25Label.layer.cornerRadius = 10
                     btn25Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 26:
@@ -815,6 +844,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn26Label.layer.cornerRadius = 10
                     btn26Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 27:
@@ -823,6 +853,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn27Label.layer.cornerRadius = 10
                     btn27Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 28:
@@ -831,6 +862,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn28Label.layer.cornerRadius = 10
                     btn28Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 29:
@@ -839,6 +871,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn29Label.layer.cornerRadius = 10
                     btn29Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 30:
@@ -847,6 +880,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn30Label.layer.cornerRadius = 10
                     btn30Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 31:
@@ -855,6 +889,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn31Label.layer.cornerRadius = 10
                     btn31Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 32:
@@ -863,6 +898,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn32Label.layer.cornerRadius = 10
                     btn32Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 33:
@@ -871,6 +907,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn33Label.layer.cornerRadius = 10
                     btn33Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 34:
@@ -879,6 +916,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn34Label.layer.cornerRadius = 10
                     btn34Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 35:
@@ -887,6 +925,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn35Label.layer.cornerRadius = 10
                     btn35Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 36:
@@ -895,6 +934,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn36Label.layer.cornerRadius = 10
                     btn36Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 37:
@@ -903,6 +943,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn37Label.layer.cornerRadius = 10
                     btn37Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 38:
@@ -911,6 +952,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn38Label.layer.cornerRadius = 10
                     btn38Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 39:
@@ -919,6 +961,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn39Label.layer.cornerRadius = 10
                     btn39Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 40:
@@ -927,6 +970,7 @@ class ChimpTestFirstViewController: UIViewController {
                     btn40Label.layer.cornerRadius = 10
                     btn40Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
+                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                     
@@ -934,8 +978,52 @@ class ChimpTestFirstViewController: UIViewController {
                     break
                 }
             }
+            print("변경된 btnbool \(btnbool)")
         }
     }
+
+    
+    func goodEnding() {
+        count += 1
+        // 4개 다 맞췄다면 화면 전환
+        if count > number {
+            goNextLevel = true
+            print("다 맞춤")
+            // 변수들 초기화
+            btnbool = Array(repeating: false, count: 40)
+            btnbool2 = Array(repeating: false, count: 40)
+            count = 1
+            minicount = 1
+            goReset()
+            
+            delegate?.didReceivedValueFromContainerBool(self, value: goNextLevel)
+        }
+    }
+    
+    func badEnding() {
+        // 목숨 체크 후 판단
+        print("배드엔딩")
+        // 변수 초기화
+        btnbool = Array(repeating: false, count: 40)
+        btnbool2 = Array(repeating: false, count: 40)
+        checkrandom.removeAll()
+        count = 1
+        minicount = 1
+        goReset()
+        
+        
+        delegate?.didReceivedValueFromContainerLife(self, value: 1)
+    }
+    
+    func numCheck(_ value: Int) {
+        number += value
+    }
+    
+    func setStart() {
+        play()
+    }
+    
+    
     func setWhite() {
         checkrandom.removeFirst()
         for i in checkrandom {
@@ -1026,24 +1114,215 @@ class ChimpTestFirstViewController: UIViewController {
             }
         }
     }
-    func goodEnding() {
-        count += 1
-        // 4개 다 맞췄다면 화면 전환
-        if count > number {
-            goNextLevel = true
-            print("다 맞춤")
-            delegate?.didReceivedValueFromContainerBool(self, value: goNextLevel)
+    
+    func goReset() {
+        for i in rememberRandom {
+            switch i {
+            case 1:
+                btn1Label.layer.isHidden = false
+                btn1Label.backgroundColor = BLUE
+                btn1Label.setTitle("", for: .normal)
+                btn1Label.layer.borderWidth = 0
+            case 2:
+                btn2Label.layer.isHidden = false
+                btn2Label.backgroundColor = BLUE
+                btn2Label.setTitle("", for: .normal)
+                btn2Label.layer.borderWidth = 0
+            case 3:
+                btn3Label.layer.isHidden = false
+                btn3Label.backgroundColor = BLUE
+                btn3Label.setTitle("", for: .normal)
+                btn3Label.layer.borderWidth = 0
+            case 4:
+                btn4Label.layer.isHidden = false
+                btn4Label.backgroundColor = BLUE
+                btn4Label.setTitle("", for: .normal)
+                btn4Label.layer.borderWidth = 0
+            case 5:
+                btn5Label.layer.isHidden = false
+                btn5Label.backgroundColor = BLUE
+                btn5Label.setTitle("", for: .normal)
+                btn5Label.layer.borderWidth = 0
+            case 6:
+                btn6Label.layer.isHidden = false
+                btn6Label.backgroundColor = BLUE
+                btn6Label.setTitle("", for: .normal)
+                btn6Label.layer.borderWidth = 0
+            case 7:
+                btn7Label.layer.isHidden = false
+                btn7Label.backgroundColor = BLUE
+                btn7Label.setTitle("", for: .normal)
+                btn7Label.layer.borderWidth = 0
+            case 8:
+                btn8Label.layer.isHidden = false
+                btn8Label.backgroundColor = BLUE
+                btn8Label.setTitle("", for: .normal)
+                btn8Label.layer.borderWidth = 0
+            case 9:
+                btn9Label.layer.isHidden = false
+                btn9Label.backgroundColor = BLUE
+                btn9Label.setTitle("", for: .normal)
+                btn9Label.layer.borderWidth = 0
+            case 10:
+                btn10Label.layer.isHidden = false
+                btn10Label.backgroundColor = BLUE
+                btn10Label.setTitle("", for: .normal)
+                btn10Label.layer.borderWidth = 0
+            case 11:
+                btn11Label.layer.isHidden = false
+                btn11Label.backgroundColor = BLUE
+                btn11Label.setTitle("", for: .normal)
+                btn11Label.layer.borderWidth = 0
+            case 12:
+                btn12Label.layer.isHidden = false
+                btn12Label.backgroundColor = BLUE
+                btn12Label.setTitle("", for: .normal)
+                btn12Label.layer.borderWidth = 0
+            case 13:
+                btn13Label.layer.isHidden = false
+                btn13Label.backgroundColor = BLUE
+                btn13Label.setTitle("", for: .normal)
+                btn13Label.layer.borderWidth = 0
+            case 14:
+                btn14Label.layer.isHidden = false
+                btn14Label.backgroundColor = BLUE
+                btn14Label.setTitle("", for: .normal)
+                btn14Label.layer.borderWidth = 0
+            case 15:
+                btn15Label.layer.isHidden = false
+                btn15Label.backgroundColor = BLUE
+                btn15Label.setTitle("", for: .normal)
+                btn15Label.layer.borderWidth = 0
+            case 16:
+                btn16Label.layer.isHidden = false
+                btn16Label.backgroundColor = BLUE
+                btn16Label.setTitle("", for: .normal)
+                btn16Label.layer.borderWidth = 0
+            case 17:
+                btn17Label.layer.isHidden = false
+                btn17Label.backgroundColor = BLUE
+                btn17Label.setTitle("", for: .normal)
+                btn17Label.layer.borderWidth = 0
+            case 18:
+                btn18Label.layer.isHidden = false
+                btn18Label.backgroundColor = BLUE
+                btn18Label.setTitle("", for: .normal)
+                btn18Label.layer.borderWidth = 0
+            case 19:
+                btn19Label.layer.isHidden = false
+                btn19Label.backgroundColor = BLUE
+                btn19Label.setTitle("", for: .normal)
+                btn19Label.layer.borderWidth = 0
+            case 20:
+                btn20Label.layer.isHidden = false
+                btn20Label.backgroundColor = BLUE
+                btn20Label.setTitle("", for: .normal)
+                btn20Label.layer.borderWidth = 0
+            case 21:
+                btn21Label.layer.isHidden = false
+                btn21Label.backgroundColor = BLUE
+                btn21Label.setTitle("", for: .normal)
+                btn21Label.layer.borderWidth = 0
+            case 22:
+                btn22Label.layer.isHidden = false
+                btn22Label.backgroundColor = BLUE
+                btn22Label.setTitle("", for: .normal)
+                btn22Label.layer.borderWidth = 0
+            case 23:
+                btn23Label.layer.isHidden = false
+                btn23Label.backgroundColor = BLUE
+                btn23Label.setTitle("", for: .normal)
+                btn23Label.layer.borderWidth = 0
+            case 24:
+                btn24Label.layer.isHidden = false
+                btn24Label.backgroundColor = BLUE
+                btn24Label.setTitle("", for: .normal)
+                btn24Label.layer.borderWidth = 0
+            case 25:
+                btn25Label.layer.isHidden = false
+                btn25Label.backgroundColor = BLUE
+                btn25Label.setTitle("", for: .normal)
+                btn25Label.layer.borderWidth = 0
+            case 26:
+                btn26Label.layer.isHidden = false
+                btn26Label.backgroundColor = BLUE
+                btn26Label.setTitle("", for: .normal)
+                btn26Label.layer.borderWidth = 0
+            case 27:
+                btn27Label.layer.isHidden = false
+                btn27Label.backgroundColor = BLUE
+                btn27Label.setTitle("", for: .normal)
+                btn27Label.layer.borderWidth = 0
+            case 28:
+                btn28Label.layer.isHidden = false
+                btn28Label.backgroundColor = BLUE
+                btn28Label.setTitle("", for: .normal)
+                btn28Label.layer.borderWidth = 0
+            case 29:
+                btn29Label.layer.isHidden = false
+                btn29Label.backgroundColor = BLUE
+                btn29Label.setTitle("", for: .normal)
+                btn29Label.layer.borderWidth = 0
+            case 30:
+                btn30Label.layer.isHidden = false
+                btn30Label.backgroundColor = BLUE
+                btn30Label.setTitle("", for: .normal)
+                btn30Label.layer.borderWidth = 0
+            case 31:
+                btn31Label.layer.isHidden = false
+                btn31Label.backgroundColor = BLUE
+                btn31Label.setTitle("", for: .normal)
+                btn31Label.layer.borderWidth = 0
+            case 32:
+                btn32Label.layer.isHidden = false
+                btn32Label.backgroundColor = BLUE
+                btn32Label.setTitle("", for: .normal)
+                btn32Label.layer.borderWidth = 0
+            case 33:
+                btn33Label.layer.isHidden = false
+                btn33Label.backgroundColor = BLUE
+                btn33Label.setTitle("", for: .normal)
+                btn33Label.layer.borderWidth = 0
+            case 34:
+                btn34Label.layer.isHidden = false
+                btn34Label.backgroundColor = BLUE
+                btn34Label.setTitle("", for: .normal)
+                btn34Label.layer.borderWidth = 0
+            case 35:
+                btn35Label.layer.isHidden = false
+                btn35Label.backgroundColor = BLUE
+                btn35Label.setTitle("", for: .normal)
+                btn35Label.layer.borderWidth = 0
+            case 36:
+                btn36Label.layer.isHidden = false
+                btn36Label.backgroundColor = BLUE
+                btn36Label.setTitle("", for: .normal)
+                btn36Label.layer.borderWidth = 0
+            case 37:
+                btn37Label.layer.isHidden = false
+                btn37Label.backgroundColor = BLUE
+                btn37Label.setTitle("", for: .normal)
+                btn37Label.layer.borderWidth = 0
+            case 38:
+                btn38Label.layer.isHidden = false
+                btn38Label.backgroundColor = BLUE
+                btn38Label.setTitle("", for: .normal)
+                btn38Label.layer.borderWidth = 0
+            case 39:
+                btn39Label.layer.isHidden = false
+                btn39Label.backgroundColor = BLUE
+                btn39Label.setTitle("", for: .normal)
+                btn39Label.layer.borderWidth = 0
+            case 40:
+                btn40Label.layer.isHidden = false
+                btn40Label.backgroundColor = BLUE
+                btn40Label.setTitle("", for: .normal)
+                btn40Label.layer.borderWidth = 0
+                
+            default:
+                break
+            }
         }
-    }
-    
-    func badEnding() {
-        // 목숨 체크 후 판단
-        print("배드엔딩")
-        delegate?.didReceivedValueFromContainerLife(self, value: 1)
-    }
-    
-    func setStart() {
-        play()
     }
     
 }
