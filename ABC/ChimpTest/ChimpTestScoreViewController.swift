@@ -8,10 +8,14 @@
 import UIKit
 
 class ChimpTestScoreViewController: UIViewController {
+    
+    var data = 0
 
+    @IBOutlet weak var test: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        test.text = "\(data)"
         // Do any additional setup after loading the view.
     }
     

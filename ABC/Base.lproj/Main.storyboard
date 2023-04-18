@@ -3480,6 +3480,9 @@
                         <viewLayoutGuide key="safeArea" id="dRm-gB-JP4"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="test" destination="tA9-4d-y6S" id="pUc-As-SAL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkH-Nz-Jpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -4111,6 +4114,7 @@
                     </view>
                     <connections>
                         <outlet property="lifeLabel" destination="ktf-CH-lMU" id="nkj-bK-KIH"/>
+                        <outlet property="nextBtnLabel" destination="qDp-iu-gwk" id="i3g-uX-v9j"/>
                         <outlet property="numLabel" destination="blq-f6-J2b" id="kID-Ap-H5f"/>
                     </connections>
                 </viewController>

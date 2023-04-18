@@ -15,6 +15,7 @@ class ChimpTestRightViewController: UIViewController {
     
     @IBOutlet weak var numLabel: UILabel!
     @IBOutlet weak var lifeLabel: UILabel!
+    @IBOutlet weak var nextBtnLabel: UIButton!
     
     weak var delegate: ContainerVCDelegateChimp2?
     
@@ -58,6 +59,10 @@ class ChimpTestRightViewController: UIViewController {
     func settingAgain() {
         numLabel.text = String(num)
         lifeLabel.text = "\(life) of 3"
+        if retry == true {
+            nextBtnLabel.setTitle("RETRY", for: .normal)
+        }
+        
     }
 
     

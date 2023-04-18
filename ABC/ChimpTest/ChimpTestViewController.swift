@@ -19,6 +19,7 @@ class ChimpTestViewController: UIViewController {
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var explainLabel: UILabel!
     var life: Int = 0
+    var score: Int = 3 // 마지막 점수페이지에 표현시킬 변수
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,6 +52,14 @@ class ChimpTestViewController: UIViewController {
         secondView.alpha = 0
     }
     
+    func gotoResult() {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestScoreViewController") as? ChimpTestScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            vc.data = score
+            self.present(vc, animated: true)
+        }
+    }
+    
 }
 
 extension ChimpTestViewController: ContainerVCDelegateChimp {
@@ -60,16 +69,22 @@ extension ChimpTestViewController: ContainerVCDelegateChimp {
             firstView.alpha = 0
             secondView.alpha = 1
             chimpcontainerVC2?.numCheck(1) // 정답페이지 넘어갈때마다 num 갯수 체크
+            score += 1
             chimpcontainerVC2?.settingAgain() // text 재정렬
         }
     }
     func didReceivedValueFromContainerLife(_ controller: ChimpTestFirstViewController, value: Int) {
         life += value
-        firstView.alpha = 0
-        secondView.alpha = 1
-        chimpcontainerVC2?.numCheck(0) // 정답이 아니라면 +0
-        chimpcontainerVC2?.lifeCheck(life)
-        chimpcontainerVC2?.settingAgain()
+        if life < 3 {
+            firstView.alpha = 0
+            secondView.alpha = 1
+            chimpcontainerVC2?.numCheck(0) // 정답이 아니라면 +0
+            chimpcontainerVC2?.lifeCheck(life)
+            chimpcontainerVC2?.settingAgain()
+        } else {
+            gotoResult()
+        }
+        
     }
 }
 
