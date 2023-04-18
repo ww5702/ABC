@@ -78,7 +78,6 @@ class ChimpTestFirstViewController: UIViewController {
     
     @IBAction func btn1(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[0] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn1Label.layer.isHidden = true
@@ -91,7 +90,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn2(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[1] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn2Label.layer.isHidden = true
@@ -104,7 +102,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn3(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[2] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn3Label.layer.isHidden = true
@@ -117,7 +114,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn4(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[3] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn4Label.layer.isHidden = true
@@ -130,7 +126,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn5(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[4] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn5Label.layer.isHidden = true
@@ -143,7 +138,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn6(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[5] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn6Label.layer.isHidden = true
@@ -156,7 +150,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn7(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[6] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn7Label.layer.isHidden = true
@@ -169,7 +162,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn8(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[7] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn8Label.layer.isHidden = true
@@ -182,7 +174,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn9(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[8] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn9Label.layer.isHidden = true
@@ -195,7 +186,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn10(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[9] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn10Label.layer.isHidden = true
@@ -208,7 +198,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn11(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[10] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn11Label.layer.isHidden = true
@@ -221,7 +210,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn12(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[11] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn12Label.layer.isHidden = true
@@ -234,7 +222,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn13(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[12] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn13Label.layer.isHidden = true
@@ -247,7 +234,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn14(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[13] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn14Label.layer.isHidden = true
@@ -260,7 +246,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn15(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[14] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn15Label.layer.isHidden = true
@@ -273,7 +258,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn16(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[15] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn16Label.layer.isHidden = true
@@ -286,7 +270,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn17(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[16] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn17Label.layer.isHidden = true
@@ -299,7 +282,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn18(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[17] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn18Label.layer.isHidden = true
@@ -312,7 +294,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn19(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[18] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn19Label.layer.isHidden = true
@@ -325,7 +306,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn20(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[19] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn20Label.layer.isHidden = true
@@ -338,7 +318,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn21(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[20] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn21Label.layer.isHidden = true
@@ -351,7 +330,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn22(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[21] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn22Label.layer.isHidden = true
@@ -364,7 +342,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn23(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[22] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn23Label.layer.isHidden = true
@@ -377,7 +354,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn24(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[23] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn24Label.layer.isHidden = true
@@ -390,7 +366,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn25(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[24] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn25Label.layer.isHidden = true
@@ -403,7 +378,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn26(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[25] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn26Label.layer.isHidden = true
@@ -416,7 +390,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn27(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[26] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn27Label.layer.isHidden = true
@@ -429,7 +402,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn28(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[27] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn28Label.layer.isHidden = true
@@ -442,7 +414,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn29(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[28] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn29Label.layer.isHidden = true
@@ -455,7 +426,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn30(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[29] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn30Label.layer.isHidden = true
@@ -468,7 +438,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn31(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[30] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn31Label.layer.isHidden = true
@@ -481,7 +450,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn32(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[31] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn32Label.layer.isHidden = true
@@ -494,7 +462,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn33(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[32] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn33Label.layer.isHidden = true
@@ -507,7 +474,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn34(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[33] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn34Label.layer.isHidden = true
@@ -520,7 +486,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn35(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[34] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn35Label.layer.isHidden = true
@@ -533,7 +498,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn36(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[35] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn36Label.layer.isHidden = true
@@ -546,7 +510,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn37(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[36] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn37Label.layer.isHidden = true
@@ -559,7 +522,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn38(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[37] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn38Label.layer.isHidden = true
@@ -572,7 +534,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn39(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[38] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn39Label.layer.isHidden = true
@@ -585,7 +546,6 @@ class ChimpTestFirstViewController: UIViewController {
     }
     @IBAction func btn40(_ sender: UIButton) {
         guard let numberValue = sender.title(for: .normal) else { return }
-        print(numberValue)
         if btnbool[39] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
                 btn40Label.layer.isHidden = true
@@ -599,7 +559,6 @@ class ChimpTestFirstViewController: UIViewController {
     
     
     func play() {
-        print("시작")
         if number < 40 {
             while checkrandom.count < number {
                 let randomNum = Int.random(in: 1...40)
@@ -607,18 +566,14 @@ class ChimpTestFirstViewController: UIViewController {
                 print(checkrandom)
             }
             rememberRandom = checkrandom
-            print("최종 random \(checkrandom)")
-            print("rememberRnadom = \(rememberRandom)")
             for i in checkrandom {
-                print("i = \(i)")
                 switch i {
                 case 1:
                     btn1Label.layer.borderColor = BLUESTROKE?.cgColor
                     btn1Label.layer.borderWidth = 5
                     btn1Label.layer.cornerRadius = 10
                     btn1Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
-                    print("\(i) 색칠 완료")
+                    minicount += 1                    
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 2:
@@ -627,7 +582,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn2Label.layer.cornerRadius = 10
                     btn2Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 3:
@@ -636,7 +590,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn3Label.layer.cornerRadius = 10
                     btn3Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 4:
@@ -645,7 +598,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn4Label.layer.cornerRadius = 10
                     btn4Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 5:
@@ -655,7 +607,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn5Label.setTitle(String(minicount), for: .normal)
                     btn5Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 6:
@@ -664,7 +615,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn6Label.layer.cornerRadius = 10
                     btn6Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 7:
@@ -673,7 +623,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn7Label.layer.cornerRadius = 10
                     btn7Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 8:
@@ -682,7 +631,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn8Label.layer.cornerRadius = 10
                     btn8Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 9:
@@ -691,7 +639,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn9Label.layer.cornerRadius = 10
                     btn9Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 10:
@@ -700,7 +647,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn10Label.layer.cornerRadius = 10
                     btn10Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 11:
@@ -709,7 +655,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn11Label.layer.cornerRadius = 10
                     btn11Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 12:
@@ -718,7 +663,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn12Label.layer.cornerRadius = 10
                     btn12Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 13:
@@ -727,7 +671,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn13Label.layer.cornerRadius = 10
                     btn13Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 14:
@@ -736,7 +679,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn14Label.layer.cornerRadius = 10
                     btn14Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 15:
@@ -745,7 +687,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn15Label.layer.cornerRadius = 10
                     btn15Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 16:
@@ -754,7 +695,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn16Label.layer.cornerRadius = 10
                     btn16Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 17:
@@ -763,7 +703,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn17Label.layer.cornerRadius = 10
                     btn17Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 18:
@@ -772,7 +711,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn18Label.layer.cornerRadius = 10
                     btn18Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 19:
@@ -781,7 +719,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn19Label.layer.cornerRadius = 10
                     btn19Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 20:
@@ -790,7 +727,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn20Label.layer.cornerRadius = 10
                     btn20Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 21:
@@ -799,7 +735,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn21Label.layer.cornerRadius = 10
                     btn21Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 22:
@@ -808,7 +743,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn22Label.layer.cornerRadius = 10
                     btn22Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 23:
@@ -817,7 +751,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn23Label.layer.cornerRadius = 10
                     btn23Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 24:
@@ -826,7 +759,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn24Label.layer.cornerRadius = 10
                     btn24Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 25:
@@ -835,7 +767,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn25Label.layer.cornerRadius = 10
                     btn25Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 26:
@@ -844,7 +775,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn26Label.layer.cornerRadius = 10
                     btn26Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 27:
@@ -853,7 +783,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn27Label.layer.cornerRadius = 10
                     btn27Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 28:
@@ -862,7 +791,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn28Label.layer.cornerRadius = 10
                     btn28Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 29:
@@ -871,7 +799,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn29Label.layer.cornerRadius = 10
                     btn29Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 30:
@@ -880,7 +807,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn30Label.layer.cornerRadius = 10
                     btn30Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 31:
@@ -889,7 +815,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn31Label.layer.cornerRadius = 10
                     btn31Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 32:
@@ -898,7 +823,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn32Label.layer.cornerRadius = 10
                     btn32Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 33:
@@ -907,7 +831,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn33Label.layer.cornerRadius = 10
                     btn33Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 34:
@@ -916,7 +839,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn34Label.layer.cornerRadius = 10
                     btn34Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 35:
@@ -925,7 +847,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn35Label.layer.cornerRadius = 10
                     btn35Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 36:
@@ -934,7 +855,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn36Label.layer.cornerRadius = 10
                     btn36Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 37:
@@ -943,7 +863,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn37Label.layer.cornerRadius = 10
                     btn37Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 38:
@@ -952,7 +871,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn38Label.layer.cornerRadius = 10
                     btn38Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 39:
@@ -961,7 +879,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn39Label.layer.cornerRadius = 10
                     btn39Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 40:
@@ -970,7 +887,6 @@ class ChimpTestFirstViewController: UIViewController {
                     btn40Label.layer.cornerRadius = 10
                     btn40Label.setTitle(String(minicount), for: .normal)
                     minicount += 1
-                    print("\(i) 색칠 완료")
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                     
@@ -978,7 +894,6 @@ class ChimpTestFirstViewController: UIViewController {
                     break
                 }
             }
-            print("변경된 btnbool \(btnbool)")
         }
     }
 
