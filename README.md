@@ -20,6 +20,7 @@ To Do List
 ~~11. AimTrainer 버튼을 잘못눌렀을때 카운팅해서 정확도 측정 (탭 제스처로 시도해봤으나 실패)~~   
 -> view 자체를 탭 제스처로 표현하니까 해결 가능했었다.   
 12. AimTrainer 게임 시작시 시간초 눈에 보이게 표시   
+13. ChimpTest 초기화 과정 정교화   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
@@ -90,3 +91,8 @@ AimTraining View Controller Create
 Reation Test CFAbsoluteTimeGetCurrent에서 TimeInterval로 변경   
 이 방법이 반응속도가 좀더 빠르게 측정됨을 확인   
 RESET버튼과 Info&Rank 버튼 제거 (어플의 조잡함)   
+
+~~ 2023.04.17   
+ChimpTest   
+40개의 버튼 중 4개의 레벨부터 시작하여 레벨당 갯수를 +1 하며 순서를 기억하여 테스트 진행   
+초기화 하는 과정에서 다음 단계로 이동이 초기화보다 빠르게 진행되는 오류   
