@@ -144,8 +144,8 @@
 				C12AA38129E945A6006B5E41 /* ChimpTestExplainViewController.swift */,
 				C12AA38329E945B3006B5E41 /* ChimpTestViewController.swift */,
 				C129457D29ED22390097D761 /* ChimpTestFirstViewController.swift */,
-				C12AA38529E945BE006B5E41 /* ChimpTestScoreViewController.swift */,
 				C129457F29ED22FC0097D761 /* ChimpTestRightViewController.swift */,
+				C12AA38529E945BE006B5E41 /* ChimpTestScoreViewController.swift */,
 			);
 			path = ChimpTest;
 			sourceTree = "<group>";

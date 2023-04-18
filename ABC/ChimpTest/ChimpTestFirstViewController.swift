@@ -9,6 +9,7 @@ import UIKit
 
 protocol ContainerVCDelegateChimp: AnyObject {
     func didReceivedValueFromContainerBool(_ controller: ChimpTestFirstViewController, value: Bool)
+    func didReceivedValueFromContainerLife(_ controller: ChimpTestFirstViewController, value: Int)
 }
 
 class ChimpTestFirstViewController: UIViewController {
@@ -1038,12 +1039,7 @@ class ChimpTestFirstViewController: UIViewController {
     func badEnding() {
         // 목숨 체크 후 판단
         print("배드엔딩")
-    }
-    func gotoResult() {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestScoreViewController") as? ChimpTestScoreViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        delegate?.didReceivedValueFromContainerLife(self, value: 1)
     }
     
     func setStart() {
