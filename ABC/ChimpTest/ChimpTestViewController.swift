@@ -12,10 +12,9 @@ class ChimpTestViewController: UIViewController {
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
     private var chimpcontainerVC: ChimpTestFirstViewController?
+    var goNextLevel: Bool = false   // 다음레벨로 넘어가야하는 변수
     
     @IBOutlet weak var startLabel: UIButton!
-    
-    
     @IBOutlet weak var explainLabel: UILabel!
     
     override func viewDidLoad() {
@@ -31,6 +30,7 @@ class ChimpTestViewController: UIViewController {
         switch segue.identifier {
         case "firstContainer":
             chimpcontainerVC = segue.destination as? ChimpTestFirstViewController
+            chimpcontainerVC?.delegate = self
         default:
             break
         }
@@ -45,4 +45,14 @@ class ChimpTestViewController: UIViewController {
         secondView.alpha = 0
     }
     
+}
+
+extension ChimpTestViewController: ContainerVCDelegateChimp {
+    func didReceivedValueFromContainerBool(_ controller: ChimpTestFirstViewController, value: Bool) {
+        goNextLevel = value
+        if goNextLevel == true {
+            firstView.alpha = 0
+            secondView.alpha = 1
+        }
+    }
 }

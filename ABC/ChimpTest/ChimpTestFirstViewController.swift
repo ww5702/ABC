@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol ContainerVCDelegateChimp: AnyObject {
+    func didReceivedValueFromContainerBool(_ controller: ChimpTestFirstViewController, value: Bool)
+}
+
 class ChimpTestFirstViewController: UIViewController {
     @IBOutlet weak var btn1Label: UIButton!
     @IBOutlet weak var btn2Label: UIButton!
@@ -49,6 +53,8 @@ class ChimpTestFirstViewController: UIViewController {
     @IBOutlet weak var btn39Label: UIButton!
     @IBOutlet weak var btn40Label: UIButton!
     
+    weak var delegate: ContainerVCDelegateChimp?
+    
     let WHITE = UIColor(named: "buttonTouch")
     let BLUE = UIColor(named: "buttonReady")
     let SELECT = UIColor(named: "buttonWrong")
@@ -57,6 +63,7 @@ class ChimpTestFirstViewController: UIViewController {
     var checkrandom = Set<Int>()
     var number: Int = 4 // 4개의 숫자부터 시작
     var count: Int = 1 // 순서 확인용 count
+    var goNextLevel: Bool = false
     
     var btnbool : [Bool] = Array(repeating: false, count: 40)
     var btnbool2 : [Bool] = Array(repeating: false, count: 40)
@@ -71,8 +78,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[0] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn1Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -83,8 +91,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[1] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn2Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -95,8 +104,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[2] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn3Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -107,8 +117,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[3] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn4Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -119,8 +130,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[4] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn5Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -131,8 +143,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[5] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn6Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -143,8 +156,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[6] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn7Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -155,8 +169,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[7] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn8Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -167,8 +182,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[8] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn9Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -179,8 +195,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[9] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn10Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -191,8 +208,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[10] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn11Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -203,8 +221,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[11] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn12Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -215,8 +234,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[12] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn13Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -227,8 +247,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[13] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn14Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -239,8 +260,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[14] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn15Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -251,8 +273,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[15] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn16Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -263,8 +286,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[16] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn17Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -275,8 +299,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[17] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn18Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -287,8 +312,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[18] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn19Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -299,8 +325,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[19] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn20Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -311,8 +338,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[20] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn21Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -323,8 +351,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[21] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn22Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -335,8 +364,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[22] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn23Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -347,8 +377,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[23] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn24Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -359,8 +390,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[24] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn25Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -371,8 +403,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[25] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn26Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -383,8 +416,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[26] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn27Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -395,8 +429,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[27] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn28Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -407,8 +442,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[28] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn29Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -419,8 +455,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[29] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn30Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -431,8 +468,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[30] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn31Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -443,8 +481,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[31] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn32Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -455,8 +494,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[32] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn33Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -467,8 +507,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[33] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn34Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -479,8 +520,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[34] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn35Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -491,8 +533,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[35] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn36Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -503,8 +546,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[36] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn37Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -515,8 +559,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[37] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn38Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -527,8 +572,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[38] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn39Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -539,8 +585,9 @@ class ChimpTestFirstViewController: UIViewController {
         print(numberValue)
         if btnbool[39] == true { // true일때만 버튼 기능이 실행
             if String(count) == numberValue {
+                btn40Label.layer.isHidden = true
                 setWhite()  // 나머지 버튼들 흰색으로 변경
-                count += 1
+                goodEnding()
             } else {
                 badEnding()
             }
@@ -976,6 +1023,15 @@ class ChimpTestFirstViewController: UIViewController {
             default:
                 break
             }
+        }
+    }
+    func goodEnding() {
+        count += 1
+        // 4개 다 맞췄다면 화면 전환
+        if count > number {
+            goNextLevel = true
+            print("다 맞춤")
+            delegate?.didReceivedValueFromContainerBool(self, value: goNextLevel)
         }
     }
     

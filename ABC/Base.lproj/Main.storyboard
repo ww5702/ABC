@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="AZA-Ar-lSe">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -3517,6 +3517,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn2:" destination="CDI-MU-M94" eventType="touchUpInside" id="4Xf-fc-MQw"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGh-FI-CfX">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68"/>
@@ -3525,6 +3528,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn3:" destination="CDI-MU-M94" eventType="touchUpInside" id="07t-1H-VhI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OiH-Y2-zUs">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -3533,6 +3539,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn4:" destination="CDI-MU-M94" eventType="touchUpInside" id="cVj-aU-DUT"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sno-2i-e5D">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -3541,6 +3550,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn5:" destination="CDI-MU-M94" eventType="touchUpInside" id="lQf-Iq-HPs"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3554,6 +3566,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn6:" destination="CDI-MU-M94" eventType="touchUpInside" id="7q9-hb-1yb"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lfj-Pb-I3K">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3562,6 +3577,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn7:" destination="CDI-MU-M94" eventType="touchUpInside" id="6UD-AO-BKt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="376-rD-5hh">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68.333333333333329"/>
@@ -3570,6 +3588,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn8:" destination="CDI-MU-M94" eventType="touchUpInside" id="bCp-YS-9sS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xv8-9M-t7c">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3578,6 +3599,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn9:" destination="CDI-MU-M94" eventType="touchUpInside" id="XCQ-bY-Z8C"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Hn-EB-SZB">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68.333333333333329"/>
@@ -3586,6 +3610,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn10:" destination="CDI-MU-M94" eventType="touchUpInside" id="9he-9D-Wef"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3599,6 +3626,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn11:" destination="CDI-MU-M94" eventType="touchUpInside" id="lsv-X6-T1H"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-tx-ucn">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68"/>
@@ -3607,6 +3637,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn12:" destination="CDI-MU-M94" eventType="touchUpInside" id="pCt-Ik-Vpy"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFu-nl-w28">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68"/>
@@ -3615,6 +3648,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn13:" destination="CDI-MU-M94" eventType="touchUpInside" id="uv0-gJ-Ulh"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-Fe-ejU">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -3623,6 +3659,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn14:" destination="CDI-MU-M94" eventType="touchUpInside" id="qCM-By-Ubv"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b5S-Ig-c2h">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -3631,6 +3670,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn15:" destination="CDI-MU-M94" eventType="touchUpInside" id="7XR-8j-vyW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3644,6 +3686,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn16:" destination="CDI-MU-M94" eventType="touchUpInside" id="S9z-Bj-Ki7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1g-Wy-gJq">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3652,6 +3697,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn17:" destination="CDI-MU-M94" eventType="touchUpInside" id="wwV-EX-cSJ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFF-nr-Zpp">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68.333333333333329"/>
@@ -3660,6 +3708,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn18:" destination="CDI-MU-M94" eventType="touchUpInside" id="aS2-Qq-88T"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Iq-Es-6of">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3668,6 +3719,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn19:" destination="CDI-MU-M94" eventType="touchUpInside" id="1qp-5b-WXA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Lm-3U-N95">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68.333333333333329"/>
@@ -3676,6 +3730,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn20:" destination="CDI-MU-M94" eventType="touchUpInside" id="cfE-67-HI5"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3689,6 +3746,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn21:" destination="CDI-MU-M94" eventType="touchUpInside" id="CS7-bi-Rg7"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C13-aw-FCx">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68"/>
@@ -3697,6 +3757,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn22:" destination="CDI-MU-M94" eventType="touchUpInside" id="2Cf-ng-taC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jma-j8-flf">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68"/>
@@ -3705,6 +3768,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn23:" destination="CDI-MU-M94" eventType="touchUpInside" id="4uz-CA-NZp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="363-uD-r21">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -3713,6 +3779,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn24:" destination="CDI-MU-M94" eventType="touchUpInside" id="spE-V6-mfZ"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ccb-cO-Gmd">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -3721,6 +3790,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn25:" destination="CDI-MU-M94" eventType="touchUpInside" id="Yx5-Lb-pWu"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3734,6 +3806,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn26:" destination="CDI-MU-M94" eventType="touchUpInside" id="jYd-bj-QTY"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0V2-SS-11y">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68"/>
@@ -3742,6 +3817,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn27:" destination="CDI-MU-M94" eventType="touchUpInside" id="5Wq-he-MoV"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IyH-c8-uxR">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68"/>
@@ -3750,6 +3828,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn28:" destination="CDI-MU-M94" eventType="touchUpInside" id="eAp-FD-jvI"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J80-r3-hia">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -3758,6 +3839,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn29:" destination="CDI-MU-M94" eventType="touchUpInside" id="PIx-Zt-nvS"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQJ-fu-TQc">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -3766,6 +3850,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn30:" destination="CDI-MU-M94" eventType="touchUpInside" id="uUs-5O-8k0"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3779,6 +3866,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn31:" destination="CDI-MU-M94" eventType="touchUpInside" id="H9S-1V-9xr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsC-Sr-smd">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3787,6 +3877,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn32:" destination="CDI-MU-M94" eventType="touchUpInside" id="C3V-aW-N8C"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tP-H4-KYF">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68.333333333333329"/>
@@ -3795,6 +3888,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn33:" destination="CDI-MU-M94" eventType="touchUpInside" id="5bs-6I-XXB"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m6T-zv-adF">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68.333333333333329"/>
@@ -3803,6 +3899,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn34:" destination="CDI-MU-M94" eventType="touchUpInside" id="VXc-qF-cJd"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gVZ-7G-IOO">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68.333333333333329"/>
@@ -3811,6 +3910,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn35:" destination="CDI-MU-M94" eventType="touchUpInside" id="j9c-mk-92w"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -3824,6 +3926,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn36:" destination="CDI-MU-M94" eventType="touchUpInside" id="kk0-7q-xQP"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yM6-O2-uDO">
                                                 <rect key="frame" x="76.666666666666657" y="0.0" width="66.666666666666657" height="68"/>
@@ -3832,6 +3937,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn37:" destination="CDI-MU-M94" eventType="touchUpInside" id="bqn-gG-40k"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pLp-VG-HcF">
                                                 <rect key="frame" x="153.33333333333334" y="0.0" width="66.333333333333343" height="68"/>
@@ -3840,6 +3948,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn38:" destination="CDI-MU-M94" eventType="touchUpInside" id="fvm-SU-5HA"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UDh-8c-FuH">
                                                 <rect key="frame" x="229.66666666666666" y="0.0" width="66.666666666666657" height="68"/>
@@ -3848,6 +3959,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn39:" destination="CDI-MU-M94" eventType="touchUpInside" id="MNJ-NO-bVz"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Kx-d4-cPT">
                                                 <rect key="frame" x="306.33333333333331" y="0.0" width="66.666666666666686" height="68"/>
@@ -3856,6 +3970,9 @@
                                                 <state key="normal">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
+                                                <connections>
+                                                    <action selector="btn40:" destination="CDI-MU-M94" eventType="touchUpInside" id="9Zc-rQ-CnX"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
