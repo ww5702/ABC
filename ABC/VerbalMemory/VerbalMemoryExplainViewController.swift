@@ -22,7 +22,15 @@ class VerbalMemoryExplainViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
         
-        explainLabel.text = "한번에 하나씩 단어가 표시됩니다.\n본적이 있는 단어라면 SEEN\n새로운 단어라면 NEW를 클릭하세요"
+        explainLabel.text = ""
+        let explainText = "한번에 하나씩 단어가 표시됩니다.\n본적이 있는 단어라면 SEEN\n새로운 단어라면 NEW를 클릭하세요"
+        var charIndex = 0.0
+        for letter in explainText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
+                Timer in self.explainLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
         
         self.changeTextColor()
 
@@ -41,12 +49,6 @@ class VerbalMemoryExplainViewController: UIViewController {
         self.explainLabel.attributedText = attributeString
     }
     
-    // navigation으로 화면 이동
-//    @IBAction func gotoGameButton(_ sender: UIButton) {
-//        // back 버튼이 없음
-//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "VerbalMemoryViewController") else {return}
-//        self.present(nextVC, animated: true)
-//    }
     @IBAction func backbtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }

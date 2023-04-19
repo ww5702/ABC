@@ -15,9 +15,15 @@ class ReactionGameExplainViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        explainLabel.text = "총 5번의 테스트가 진행됩니다.\n화면이 초록색으로 변한다면\n반응하여 터치하세요."
-        
-        super.viewDidLoad()
+        explainLabel.text = ""
+        let explainText = "총 5번의 테스트가 진행됩니다.\n화면이 초록색으로 변한다면\n반응하여 터치하세요."
+        var charIndex = 0.0
+        for letter in explainText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
+                Timer in self.explainLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
 

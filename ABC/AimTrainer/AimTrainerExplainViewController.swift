@@ -17,7 +17,15 @@ class AimTrainerExplainViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
 
-        explainLabel.text = "최대한 빠르고 정확하게 타겟을 클릭하세요\n총 30개의 타겟을 클릭하면\n누적 시간이 출력됩니다."
+        explainLabel.text = ""
+        let explainText = "최대한 빠르고 정확하게 타겟을 클릭하세요\n총 30개의 타겟을 클릭하면\n누적 시간이 출력됩니다."
+        var charIndex = 0.0
+        for letter in explainText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
+                Timer in self.explainLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
         changeTextColor()
     }
     

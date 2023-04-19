@@ -16,7 +16,15 @@ class NumberMemoryExplainViewController: UIViewController {
         self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
         self.navigationController?.navigationBar.tintColor = .white
         
-        explainLabel.text = "보통 사람은 한번에 7개의 숫자를 기억할 수 있습니다.\n당신은 더 외울 수 있습니까?"
+        explainLabel.text = ""
+        let explainText = "보통 사람은 한번에 7개의 숫자를 기억할 수 있습니다.\n당신은 더 외울 수 있습니까?"
+        var charIndex = 0.0
+        for letter in explainText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
+                Timer in self.explainLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
         
     }
 

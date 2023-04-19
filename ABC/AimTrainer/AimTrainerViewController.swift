@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AimTrainerViewController: UIViewController {
     
@@ -38,12 +39,13 @@ class AimTrainerViewController: UIViewController {
     var min = 0
     var second = 0
     var milliSecond = 0
-    
+
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         countLabel.text = "Target \(count)"
+        timerLabel.text = "TIME 00:00"
 
         touchbtnLabel.layer.cornerRadius = touchbtnLabel.layer.frame.size.width/2
         touchbtnLabel.widthAnchor.constraint(equalToConstant: 100).isActive = true
