@@ -33,7 +33,6 @@ class ChimpTestRightViewController: UIViewController {
     
 
     @IBAction func nextBtn(_ sender: UIButton) {
-        print(retry)
         if retry == false {
             continueLevel = true
             delegate?.didReceivedValueFromContainerNext(self, value: continueLevel)

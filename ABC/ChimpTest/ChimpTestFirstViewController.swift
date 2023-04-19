@@ -1030,209 +1030,96 @@ class ChimpTestFirstViewController: UIViewController {
         }
     }
     
+    func goResetFunction(x: UIButton) {
+        x.layer.isHidden = false
+        x.backgroundColor = BLUE
+        x.setTitle("", for: .normal)
+        x.layer.borderWidth = 0
+    }
+    
     func goReset() {
         for i in rememberRandom {
             switch i {
             case 1:
-                btn1Label.layer.isHidden = false
-                btn1Label.backgroundColor = BLUE
-                btn1Label.setTitle("", for: .normal)
-                btn1Label.layer.borderWidth = 0
+                goResetFunction(x: btn1Label)
             case 2:
-                btn2Label.layer.isHidden = false
-                btn2Label.backgroundColor = BLUE
-                btn2Label.setTitle("", for: .normal)
-                btn2Label.layer.borderWidth = 0
+                goResetFunction(x: btn2Label)
             case 3:
-                btn3Label.layer.isHidden = false
-                btn3Label.backgroundColor = BLUE
-                btn3Label.setTitle("", for: .normal)
-                btn3Label.layer.borderWidth = 0
+                goResetFunction(x: btn3Label)
             case 4:
-                btn4Label.layer.isHidden = false
-                btn4Label.backgroundColor = BLUE
-                btn4Label.setTitle("", for: .normal)
-                btn4Label.layer.borderWidth = 0
+                goResetFunction(x: btn4Label)
             case 5:
-                btn5Label.layer.isHidden = false
-                btn5Label.backgroundColor = BLUE
-                btn5Label.setTitle("", for: .normal)
-                btn5Label.layer.borderWidth = 0
+                goResetFunction(x: btn5Label)
             case 6:
-                btn6Label.layer.isHidden = false
-                btn6Label.backgroundColor = BLUE
-                btn6Label.setTitle("", for: .normal)
-                btn6Label.layer.borderWidth = 0
+                goResetFunction(x: btn6Label)
             case 7:
-                btn7Label.layer.isHidden = false
-                btn7Label.backgroundColor = BLUE
-                btn7Label.setTitle("", for: .normal)
-                btn7Label.layer.borderWidth = 0
+                goResetFunction(x: btn7Label)
             case 8:
-                btn8Label.layer.isHidden = false
-                btn8Label.backgroundColor = BLUE
-                btn8Label.setTitle("", for: .normal)
-                btn8Label.layer.borderWidth = 0
+                goResetFunction(x: btn8Label)
             case 9:
-                btn9Label.layer.isHidden = false
-                btn9Label.backgroundColor = BLUE
-                btn9Label.setTitle("", for: .normal)
-                btn9Label.layer.borderWidth = 0
+                goResetFunction(x: btn9Label)
             case 10:
-                btn10Label.layer.isHidden = false
-                btn10Label.backgroundColor = BLUE
-                btn10Label.setTitle("", for: .normal)
-                btn10Label.layer.borderWidth = 0
+                goResetFunction(x: btn10Label)
             case 11:
-                btn11Label.layer.isHidden = false
-                btn11Label.backgroundColor = BLUE
-                btn11Label.setTitle("", for: .normal)
-                btn11Label.layer.borderWidth = 0
+                goResetFunction(x: btn11Label)
             case 12:
-                btn12Label.layer.isHidden = false
-                btn12Label.backgroundColor = BLUE
-                btn12Label.setTitle("", for: .normal)
-                btn12Label.layer.borderWidth = 0
+                goResetFunction(x: btn12Label)
             case 13:
-                btn13Label.layer.isHidden = false
-                btn13Label.backgroundColor = BLUE
-                btn13Label.setTitle("", for: .normal)
-                btn13Label.layer.borderWidth = 0
+                goResetFunction(x: btn13Label)
             case 14:
-                btn14Label.layer.isHidden = false
-                btn14Label.backgroundColor = BLUE
-                btn14Label.setTitle("", for: .normal)
-                btn14Label.layer.borderWidth = 0
+                goResetFunction(x: btn14Label)
             case 15:
-                btn15Label.layer.isHidden = false
-                btn15Label.backgroundColor = BLUE
-                btn15Label.setTitle("", for: .normal)
-                btn15Label.layer.borderWidth = 0
+                goResetFunction(x: btn15Label)
             case 16:
-                btn16Label.layer.isHidden = false
-                btn16Label.backgroundColor = BLUE
-                btn16Label.setTitle("", for: .normal)
-                btn16Label.layer.borderWidth = 0
+                goResetFunction(x: btn16Label)
             case 17:
-                btn17Label.layer.isHidden = false
-                btn17Label.backgroundColor = BLUE
-                btn17Label.setTitle("", for: .normal)
-                btn17Label.layer.borderWidth = 0
+                goResetFunction(x: btn17Label)
             case 18:
-                btn18Label.layer.isHidden = false
-                btn18Label.backgroundColor = BLUE
-                btn18Label.setTitle("", for: .normal)
-                btn18Label.layer.borderWidth = 0
+                goResetFunction(x: btn18Label)
             case 19:
-                btn19Label.layer.isHidden = false
-                btn19Label.backgroundColor = BLUE
-                btn19Label.setTitle("", for: .normal)
-                btn19Label.layer.borderWidth = 0
+                goResetFunction(x: btn19Label)
             case 20:
-                btn20Label.layer.isHidden = false
-                btn20Label.backgroundColor = BLUE
-                btn20Label.setTitle("", for: .normal)
-                btn20Label.layer.borderWidth = 0
+                goResetFunction(x: btn20Label)
             case 21:
-                btn21Label.layer.isHidden = false
-                btn21Label.backgroundColor = BLUE
-                btn21Label.setTitle("", for: .normal)
-                btn21Label.layer.borderWidth = 0
+                goResetFunction(x: btn21Label)
             case 22:
-                btn22Label.layer.isHidden = false
-                btn22Label.backgroundColor = BLUE
-                btn22Label.setTitle("", for: .normal)
-                btn22Label.layer.borderWidth = 0
+                goResetFunction(x: btn22Label)
             case 23:
-                btn23Label.layer.isHidden = false
-                btn23Label.backgroundColor = BLUE
-                btn23Label.setTitle("", for: .normal)
-                btn23Label.layer.borderWidth = 0
+                goResetFunction(x: btn23Label)
             case 24:
-                btn24Label.layer.isHidden = false
-                btn24Label.backgroundColor = BLUE
-                btn24Label.setTitle("", for: .normal)
-                btn24Label.layer.borderWidth = 0
+                goResetFunction(x: btn24Label)
             case 25:
-                btn25Label.layer.isHidden = false
-                btn25Label.backgroundColor = BLUE
-                btn25Label.setTitle("", for: .normal)
-                btn25Label.layer.borderWidth = 0
+                goResetFunction(x: btn25Label)
             case 26:
-                btn26Label.layer.isHidden = false
-                btn26Label.backgroundColor = BLUE
-                btn26Label.setTitle("", for: .normal)
-                btn26Label.layer.borderWidth = 0
+                goResetFunction(x: btn26Label)
             case 27:
-                btn27Label.layer.isHidden = false
-                btn27Label.backgroundColor = BLUE
-                btn27Label.setTitle("", for: .normal)
-                btn27Label.layer.borderWidth = 0
+                goResetFunction(x: btn27Label)
             case 28:
-                btn28Label.layer.isHidden = false
-                btn28Label.backgroundColor = BLUE
-                btn28Label.setTitle("", for: .normal)
-                btn28Label.layer.borderWidth = 0
+                goResetFunction(x: btn28Label)
             case 29:
-                btn29Label.layer.isHidden = false
-                btn29Label.backgroundColor = BLUE
-                btn29Label.setTitle("", for: .normal)
-                btn29Label.layer.borderWidth = 0
+                goResetFunction(x: btn29Label)
             case 30:
-                btn30Label.layer.isHidden = false
-                btn30Label.backgroundColor = BLUE
-                btn30Label.setTitle("", for: .normal)
-                btn30Label.layer.borderWidth = 0
+                goResetFunction(x: btn30Label)
             case 31:
-                btn31Label.layer.isHidden = false
-                btn31Label.backgroundColor = BLUE
-                btn31Label.setTitle("", for: .normal)
-                btn31Label.layer.borderWidth = 0
+                goResetFunction(x: btn31Label)
             case 32:
-                btn32Label.layer.isHidden = false
-                btn32Label.backgroundColor = BLUE
-                btn32Label.setTitle("", for: .normal)
-                btn32Label.layer.borderWidth = 0
+                goResetFunction(x: btn32Label)
             case 33:
-                btn33Label.layer.isHidden = false
-                btn33Label.backgroundColor = BLUE
-                btn33Label.setTitle("", for: .normal)
-                btn33Label.layer.borderWidth = 0
+                goResetFunction(x: btn33Label)
             case 34:
-                btn34Label.layer.isHidden = false
-                btn34Label.backgroundColor = BLUE
-                btn34Label.setTitle("", for: .normal)
-                btn34Label.layer.borderWidth = 0
+                goResetFunction(x: btn34Label)
             case 35:
-                btn35Label.layer.isHidden = false
-                btn35Label.backgroundColor = BLUE
-                btn35Label.setTitle("", for: .normal)
-                btn35Label.layer.borderWidth = 0
+                goResetFunction(x: btn35Label)
             case 36:
-                btn36Label.layer.isHidden = false
-                btn36Label.backgroundColor = BLUE
-                btn36Label.setTitle("", for: .normal)
-                btn36Label.layer.borderWidth = 0
+                goResetFunction(x: btn36Label)
             case 37:
-                btn37Label.layer.isHidden = false
-                btn37Label.backgroundColor = BLUE
-                btn37Label.setTitle("", for: .normal)
-                btn37Label.layer.borderWidth = 0
+                goResetFunction(x: btn37Label)
             case 38:
-                btn38Label.layer.isHidden = false
-                btn38Label.backgroundColor = BLUE
-                btn38Label.setTitle("", for: .normal)
-                btn38Label.layer.borderWidth = 0
+                goResetFunction(x: btn38Label)
             case 39:
-                btn39Label.layer.isHidden = false
-                btn39Label.backgroundColor = BLUE
-                btn39Label.setTitle("", for: .normal)
-                btn39Label.layer.borderWidth = 0
+                goResetFunction(x: btn39Label)
             case 40:
-                btn40Label.layer.isHidden = false
-                btn40Label.backgroundColor = BLUE
-                btn40Label.setTitle("", for: .normal)
-                btn40Label.layer.borderWidth = 0
+                goResetFunction(x: btn40Label)
                 
             default:
                 break
