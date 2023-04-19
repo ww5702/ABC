@@ -557,6 +557,14 @@ class ChimpTestFirstViewController: UIViewController {
         }
     }
     
+    func settingPlayBtn(_ x: UIButton) {
+        x.layer.borderColor = BLUESTROKE?.cgColor
+        x.layer.borderWidth = 5
+        x.layer.cornerRadius = 10
+        x.setTitle(String(minicount), for: .normal)
+        minicount += 1
+    }
+    
     
     func play() {
         if number < 40 {
@@ -569,324 +577,163 @@ class ChimpTestFirstViewController: UIViewController {
             for i in checkrandom {
                 switch i {
                 case 1:
-                    btn1Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn1Label.layer.borderWidth = 5
-                    btn1Label.layer.cornerRadius = 10
-                    btn1Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1                    
+                    settingPlayBtn(btn1Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 2:
-                    btn2Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn2Label.layer.borderWidth = 5
-                    btn2Label.layer.cornerRadius = 10
-                    btn2Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn2Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 3:
-                    btn3Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn3Label.layer.borderWidth = 5
-                    btn3Label.layer.cornerRadius = 10
-                    btn3Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn3Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 4:
-                    btn4Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn4Label.layer.borderWidth = 5
-                    btn4Label.layer.cornerRadius = 10
-                    btn4Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn4Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 5:
-                    btn5Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn5Label.layer.borderWidth = 5
-                    btn5Label.layer.cornerRadius = 10
-                    btn5Label.setTitle(String(minicount), for: .normal)
-                    btn5Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn5Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 6:
-                    btn6Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn6Label.layer.borderWidth = 5
-                    btn6Label.layer.cornerRadius = 10
-                    btn6Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn6Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 7:
-                    btn7Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn7Label.layer.borderWidth = 5
-                    btn7Label.layer.cornerRadius = 10
-                    btn7Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn7Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 8:
-                    btn8Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn8Label.layer.borderWidth = 5
-                    btn8Label.layer.cornerRadius = 10
-                    btn8Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn8Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 9:
-                    btn9Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn9Label.layer.borderWidth = 5
-                    btn9Label.layer.cornerRadius = 10
-                    btn9Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn9Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 10:
-                    btn10Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn10Label.layer.borderWidth = 5
-                    btn10Label.layer.cornerRadius = 10
-                    btn10Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn10Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 11:
-                    btn11Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn11Label.layer.borderWidth = 5
-                    btn11Label.layer.cornerRadius = 10
-                    btn11Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn11Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 12:
-                    btn12Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn12Label.layer.borderWidth = 5
-                    btn12Label.layer.cornerRadius = 10
-                    btn12Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn12Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 13:
-                    btn13Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn13Label.layer.borderWidth = 5
-                    btn13Label.layer.cornerRadius = 10
-                    btn13Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn13Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 14:
-                    btn14Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn14Label.layer.borderWidth = 5
-                    btn14Label.layer.cornerRadius = 10
-                    btn14Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn14Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 15:
-                    btn15Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn15Label.layer.borderWidth = 5
-                    btn15Label.layer.cornerRadius = 10
-                    btn15Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn15Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 16:
-                    btn16Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn16Label.layer.borderWidth = 5
-                    btn16Label.layer.cornerRadius = 10
-                    btn16Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn16Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 17:
-                    btn17Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn17Label.layer.borderWidth = 5
-                    btn17Label.layer.cornerRadius = 10
-                    btn17Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn17Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 18:
-                    btn18Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn18Label.layer.borderWidth = 5
-                    btn18Label.layer.cornerRadius = 10
-                    btn18Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn18Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 19:
-                    btn19Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn19Label.layer.borderWidth = 5
-                    btn19Label.layer.cornerRadius = 10
-                    btn19Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn19Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 20:
-                    btn20Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn20Label.layer.borderWidth = 5
-                    btn20Label.layer.cornerRadius = 10
-                    btn20Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn20Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 21:
-                    btn21Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn21Label.layer.borderWidth = 5
-                    btn21Label.layer.cornerRadius = 10
-                    btn21Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn21Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 22:
-                    btn22Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn22Label.layer.borderWidth = 5
-                    btn22Label.layer.cornerRadius = 10
-                    btn22Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn22Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 23:
-                    btn23Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn23Label.layer.borderWidth = 5
-                    btn23Label.layer.cornerRadius = 10
-                    btn23Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn23Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 24:
-                    btn24Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn24Label.layer.borderWidth = 5
-                    btn24Label.layer.cornerRadius = 10
-                    btn24Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn24Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 25:
-                    btn25Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn25Label.layer.borderWidth = 5
-                    btn25Label.layer.cornerRadius = 10
-                    btn25Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn25Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 26:
-                    btn26Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn26Label.layer.borderWidth = 5
-                    btn26Label.layer.cornerRadius = 10
-                    btn26Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn26Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 27:
-                    btn27Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn27Label.layer.borderWidth = 5
-                    btn27Label.layer.cornerRadius = 10
-                    btn27Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn27Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 28:
-                    btn28Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn28Label.layer.borderWidth = 5
-                    btn28Label.layer.cornerRadius = 10
-                    btn28Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn28Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 29:
-                    btn29Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn29Label.layer.borderWidth = 5
-                    btn29Label.layer.cornerRadius = 10
-                    btn29Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn29Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 30:
-                    btn30Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn30Label.layer.borderWidth = 5
-                    btn30Label.layer.cornerRadius = 10
-                    btn30Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn30Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 31:
-                    btn31Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn31Label.layer.borderWidth = 5
-                    btn31Label.layer.cornerRadius = 10
-                    btn31Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn31Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 32:
-                    btn32Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn32Label.layer.borderWidth = 5
-                    btn32Label.layer.cornerRadius = 10
-                    btn32Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn32Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 33:
-                    btn33Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn33Label.layer.borderWidth = 5
-                    btn33Label.layer.cornerRadius = 10
-                    btn33Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn33Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 34:
-                    btn34Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn34Label.layer.borderWidth = 5
-                    btn34Label.layer.cornerRadius = 10
-                    btn34Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn34Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 35:
-                    btn35Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn35Label.layer.borderWidth = 5
-                    btn35Label.layer.cornerRadius = 10
-                    btn35Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn35Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 36:
-                    btn36Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn36Label.layer.borderWidth = 5
-                    btn36Label.layer.cornerRadius = 10
-                    btn36Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn36Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 37:
-                    btn37Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn37Label.layer.borderWidth = 5
-                    btn37Label.layer.cornerRadius = 10
-                    btn37Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn37Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 38:
-                    btn38Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn38Label.layer.borderWidth = 5
-                    btn38Label.layer.cornerRadius = 10
-                    btn38Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn38Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 39:
-                    btn39Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn39Label.layer.borderWidth = 5
-                    btn39Label.layer.cornerRadius = 10
-                    btn39Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn39Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                 case 40:
-                    btn40Label.layer.borderColor = BLUESTROKE?.cgColor
-                    btn40Label.layer.borderWidth = 5
-                    btn40Label.layer.cornerRadius = 10
-                    btn40Label.setTitle(String(minicount), for: .normal)
-                    minicount += 1
+                    settingPlayBtn(btn40Label)
                     btnbool[i-1] = true
                     btnbool2[i-1] = true
                     
