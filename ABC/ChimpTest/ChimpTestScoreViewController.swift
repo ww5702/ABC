@@ -9,25 +9,43 @@ import UIKit
 
 class ChimpTestScoreViewController: UIViewController {
     
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var scoreLabel: UILabel!
+    
+    
+    let RED = UIColor(named: "turnRed")
+    
     var data = 0
 
-    @IBOutlet weak var test: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        test.text = "\(data)"
-        // Do any additional setup after loading the view.
+        scoreLabel.text = "\(data) 점"
+        
+        changeTextColor()
+    }
+    func changeTextColor() {
+        guard let text = self.scoreLabel.text else {return}
+        let font = UIFont.systemFont(ofSize: 70, weight: .semibold)
+        let attributeString = NSMutableAttributedString(string: text)
+        
+        attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(data)"))
+        self.scoreLabel.attributedText = attributeString
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func retryBtn(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestViewController") as? ChimpTestViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
     }
-    */
+    
+    @IBAction func gohomeBtn(_ sender: UIButton) {
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
+    }
+    
 
 }

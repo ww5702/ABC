@@ -55,7 +55,7 @@ class ChimpTestViewController: UIViewController {
     func gotoResult() {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestScoreViewController") as? ChimpTestScoreViewController {
             vc.modalPresentationStyle = .fullScreen
-            vc.data = score
+            vc.data = score-3
             self.present(vc, animated: true)
         }
     }

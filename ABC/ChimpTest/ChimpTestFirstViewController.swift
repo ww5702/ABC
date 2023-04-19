@@ -558,10 +558,10 @@ class ChimpTestFirstViewController: UIViewController {
     }
     
     func settingPlayBtn(_ x: UIButton) {
+        x.setTitle(String(minicount), for: .normal)
         x.layer.borderColor = BLUESTROKE?.cgColor
         x.layer.borderWidth = 5
         x.layer.cornerRadius = 10
-        x.setTitle(String(minicount), for: .normal)
         minicount += 1
     }
     
