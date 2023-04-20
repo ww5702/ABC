@@ -3476,26 +3476,26 @@
                                 <rect key="frame" x="10" y="159" width="373" height="559"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9B-jb-8qY">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="300"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="300" id="cj1-TO-kUd"/>
+                                            <constraint firstAttribute="height" constant="250" id="cj1-TO-kUd"/>
                                         </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-8O-Adb">
-                                        <rect key="frame" x="0.0" y="300" width="373" height="70"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-3P-A2G">
+                                        <rect key="frame" x="0.0" y="250" width="373" height="100"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="70" id="J7R-dT-hIr"/>
+                                            <constraint firstAttribute="height" constant="100" id="kkT-4O-X2n"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-3P-A2G">
-                                        <rect key="frame" x="0.0" y="370" width="373" height="130"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-8O-Adb">
+                                        <rect key="frame" x="0.0" y="350" width="373" height="150"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="130" id="kkT-4O-X2n"/>
+                                            <constraint firstAttribute="height" constant="150" id="J7R-dT-hIr"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -3549,6 +3549,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="explainLabel" destination="0rb-8O-Adb" id="lmS-Lj-rya"/>
                         <outlet property="imageView" destination="E9B-jb-8qY" id="cZT-h0-BJX"/>
                         <outlet property="scoreLabel" destination="ZjE-3P-A2G" id="VP4-hs-lTa"/>
                         <outlet property="stackView" destination="n14-32-XcW" id="aK7-Tz-Z5W"/>
