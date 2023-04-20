@@ -54,6 +54,8 @@
 		C17AD1C629F1143200C3877F /* gold_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1C129F1143200C3877F /* gold_trophy.json */; };
 		C17AD1D429F12B0100C3877F /* silver_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1D329F12B0100C3877F /* silver_trophy.json */; };
 		C17AD1D629F1326300C3877F /* walkingToy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1D529F1326300C3877F /* walkingToy.json */; };
+		C17AD1DA29F133FE00C3877F /* t3.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1D729F133FE00C3877F /* t3.json */; };
+		C17AD1DC29F133FE00C3877F /* t2.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1D929F133FE00C3877F /* t2.json */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
 		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */; };
@@ -110,6 +112,8 @@
 		C17AD1C129F1143200C3877F /* gold_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gold_trophy.json; sourceTree = "<group>"; };
 		C17AD1D329F12B0100C3877F /* silver_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = silver_trophy.json; path = ../../../../../Downloads/silver_trophy.json; sourceTree = "<group>"; };
 		C17AD1D529F1326300C3877F /* walkingToy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = walkingToy.json; sourceTree = "<group>"; };
+		C17AD1D729F133FE00C3877F /* t3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t3.json; sourceTree = "<group>"; };
+		C17AD1D929F133FE00C3877F /* t2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = t2.json; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryExplain.png; sourceTree = "<group>"; };
@@ -248,6 +252,8 @@
 				C17AD1BD29F1143200C3877F /* champion_trophy.json */,
 				C17AD1D329F12B0100C3877F /* silver_trophy.json */,
 				C17AD1D529F1326300C3877F /* walkingToy.json */,
+				C17AD1D929F133FE00C3877F /* t2.json */,
+				C17AD1D729F133FE00C3877F /* t3.json */,
 			);
 			path = Trophy;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 				C12AA37429E3E12C006B5E41 /* numberMemoryIcon.png in Resources */,
 				C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */,
 				C17AD1C429F1143200C3877F /* bronze_trophy2.json in Resources */,
+				C17AD1DC29F133FE00C3877F /* t2.json in Resources */,
 				C17AD1C229F1143200C3877F /* champion_trophy.json in Resources */,
 				C12AA37F29E7ED70006B5E41 /* aimTrainerIcon.png in Resources */,
 				C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */,
@@ -350,6 +357,7 @@
 				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
 				C13759A329C04BC40072DA77 /* Main.storyboard in Resources */,
+				C17AD1DA29F133FE00C3877F /* t3.json in Resources */,
 				C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

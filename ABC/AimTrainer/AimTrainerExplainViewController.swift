@@ -6,11 +6,12 @@
 //
 
 import UIKit
+import Lottie
 
 class AimTrainerExplainViewController: UIViewController {
 
     @IBOutlet weak var explainLabel: UILabel!
-    
+    private var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +28,16 @@ class AimTrainerExplainViewController: UIViewController {
             charIndex += 1
         }
         changeTextColor()
+        
+        animationView = .init(name: "t2")
+        animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 300)
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play()
+        
     }
     
 
