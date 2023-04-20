@@ -13,9 +13,9 @@ class ChimpTestScoreViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     
-    @IBOutlet weak var lottieView: UIView!
     
-    private var animationView: LottieAnimationView?
+    @IBOutlet weak var stackView: UIStackView!
+    private weak var animationView: LottieAnimationView?
     
     let RED = UIColor(named: "turnRed")
     
@@ -23,14 +23,21 @@ class ChimpTestScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        4
+        
         animationView = .init(name: "gold_trophy")
-        animationView!.frame = view.bounds
+        animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 250)
         animationView!.contentMode = .scaleAspectFit
         animationView!.loopMode = .loop
         animationView!.animationSpeed = 0.5
         view.addSubview(animationView!)
         animationView!.play()
+        
+//        lottieView.contentMode = .scaleAspectFit
+//        lottieView.loopMode = .loop
+//        lottieView.animationSpeed = 0.5
+//        lottieView.play()
+        
 
         scoreLabel.text = "\(data) 점"
         

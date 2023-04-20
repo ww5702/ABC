@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="YQc-mC-RGC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -3476,17 +3476,13 @@
                                 <rect key="frame" x="10" y="159" width="373" height="559"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9B-jb-8qY">
-                                        <rect key="frame" x="0.0" y="0.0" width="373" height="150"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="300"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="150" id="cj1-TO-kUd"/>
+                                            <constraint firstAttribute="height" constant="300" id="cj1-TO-kUd"/>
                                         </constraints>
                                     </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MY1-jq-OQF">
-                                        <rect key="frame" x="0.0" y="150" width="373" height="159"/>
-                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0rb-8O-Adb">
-                                        <rect key="frame" x="0.0" y="309" width="373" height="70"/>
+                                        <rect key="frame" x="0.0" y="300" width="373" height="70"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="70" id="J7R-dT-hIr"/>
                                         </constraints>
@@ -3495,7 +3491,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-3P-A2G">
-                                        <rect key="frame" x="0.0" y="379" width="373" height="130"/>
+                                        <rect key="frame" x="0.0" y="370" width="373" height="130"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="130" id="kkT-4O-X2n"/>
                                         </constraints>
@@ -3504,10 +3500,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="ML3-Iy-Wd7">
-                                        <rect key="frame" x="0.0" y="509" width="373" height="50"/>
+                                        <rect key="frame" x="0.0" y="500" width="373" height="59"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0P-RO-nzf">
-                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="59"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="RETRY" cornerStyle="dynamic">
                                                     <backgroundConfiguration key="background">
@@ -3523,7 +3519,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xv0-cK-H1g">
-                                                <rect key="frame" x="201.66666666666663" y="0.0" width="171.33333333333337" height="50"/>
+                                                <rect key="frame" x="201.66666666666663" y="0.0" width="171.33333333333337" height="59"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="HOME" cornerStyle="dynamic">
                                                     <backgroundConfiguration key="background">
@@ -3554,8 +3550,8 @@
                     </view>
                     <connections>
                         <outlet property="imageView" destination="E9B-jb-8qY" id="cZT-h0-BJX"/>
-                        <outlet property="lottieView" destination="MY1-jq-OQF" id="yXg-9p-uXA"/>
                         <outlet property="scoreLabel" destination="ZjE-3P-A2G" id="VP4-hs-lTa"/>
+                        <outlet property="stackView" destination="n14-32-XcW" id="aK7-Tz-Z5W"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IkH-Nz-Jpp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
