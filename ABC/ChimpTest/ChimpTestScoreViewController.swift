@@ -10,7 +10,6 @@ import Lottie
 
 class ChimpTestScoreViewController: UIViewController {
     
-    @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     
@@ -19,7 +18,7 @@ class ChimpTestScoreViewController: UIViewController {
     
     let RED = UIColor(named: "turnRed")
     
-    var data = 4
+    var data = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
