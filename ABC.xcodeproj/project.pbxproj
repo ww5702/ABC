@@ -47,6 +47,12 @@
 		C15A6B4A29D2B9320002B72E /* VisualMemoryFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */; };
 		C15A6B4C29D41C1E0002B72E /* VisualMemoryReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */; };
 		C15A6B4E29D52AFA0002B72E /* VisualMemorySecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */; };
+		C17AD1BB29F113E000C3877F /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = C17AD1BA29F113E000C3877F /* Lottie */; };
+		C17AD1C229F1143200C3877F /* gold_trophy2.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1BD29F1143200C3877F /* gold_trophy2.json */; };
+		C17AD1C329F1143200C3877F /* silver_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1BE29F1143200C3877F /* silver_trophy.json */; };
+		C17AD1C429F1143200C3877F /* bronze_trophy2.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1BF29F1143200C3877F /* bronze_trophy2.json */; };
+		C17AD1C529F1143200C3877F /* bronze_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1C029F1143200C3877F /* bronze_trophy.json */; };
+		C17AD1C629F1143200C3877F /* gold_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1C129F1143200C3877F /* gold_trophy.json */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
 		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */; };
@@ -97,6 +103,11 @@
 		C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFirstViewController.swift; sourceTree = "<group>"; };
 		C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryReadyViewController.swift; sourceTree = "<group>"; };
 		C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemorySecondViewController.swift; sourceTree = "<group>"; };
+		C17AD1BD29F1143200C3877F /* gold_trophy2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gold_trophy2.json; sourceTree = "<group>"; };
+		C17AD1BE29F1143200C3877F /* silver_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = silver_trophy.json; sourceTree = "<group>"; };
+		C17AD1BF29F1143200C3877F /* bronze_trophy2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bronze_trophy2.json; sourceTree = "<group>"; };
+		C17AD1C029F1143200C3877F /* bronze_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bronze_trophy.json; sourceTree = "<group>"; };
+		C17AD1C129F1143200C3877F /* gold_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gold_trophy.json; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryExplain.png; sourceTree = "<group>"; };
@@ -109,6 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C17AD1BB29F113E000C3877F /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +181,7 @@
 		C137599A29C04BC40072DA77 /* ABC */ = {
 			isa = PBXGroup;
 			children = (
+				C17AD1BC29F1140D00C3877F /* Trophy */,
 				C1AC6C0B29C83DC9008A4D58 /* Image */,
 				C137599B29C04BC40072DA77 /* AppDelegate.swift */,
 				C137599D29C04BC40072DA77 /* SceneDelegate.swift */,
@@ -224,6 +237,18 @@
 			path = VisualMemory;
 			sourceTree = "<group>";
 		};
+		C17AD1BC29F1140D00C3877F /* Trophy */ = {
+			isa = PBXGroup;
+			children = (
+				C17AD1C029F1143200C3877F /* bronze_trophy.json */,
+				C17AD1BF29F1143200C3877F /* bronze_trophy2.json */,
+				C17AD1C129F1143200C3877F /* gold_trophy.json */,
+				C17AD1BD29F1143200C3877F /* gold_trophy2.json */,
+				C17AD1BE29F1143200C3877F /* silver_trophy.json */,
+			);
+			path = Trophy;
+			sourceTree = "<group>";
+		};
 		C1AC6C0B29C83DC9008A4D58 /* Image */ = {
 			isa = PBXGroup;
 			children = (
@@ -256,6 +281,9 @@
 			dependencies = (
 			);
 			name = ABC;
+			packageProductDependencies = (
+				C17AD1BA29F113E000C3877F /* Lottie */,
+			);
 			productName = ABC;
 			productReference = C137599829C04BC40072DA77 /* ABC.app */;
 			productType = "com.apple.product-type.application";
@@ -284,6 +312,9 @@
 				Base,
 			);
 			mainGroup = C137598F29C04BC40072DA77;
+			packageReferences = (
+				C17AD1B929F113E000C3877F /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = C137599929C04BC40072DA77 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -300,15 +331,20 @@
 			files = (
 				C12AA37429E3E12C006B5E41 /* numberMemoryIcon.png in Resources */,
 				C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */,
+				C17AD1C429F1143200C3877F /* bronze_trophy2.json in Resources */,
+				C17AD1C229F1143200C3877F /* gold_trophy2.json in Resources */,
 				C12AA37F29E7ED70006B5E41 /* aimTrainerIcon.png in Resources */,
 				C13759A829C04BC50072DA77 /* LaunchScreen.storyboard in Resources */,
 				C14F052F29E948210065DFA2 /* ChimpTestIcon.jpeg in Resources */,
+				C17AD1C629F1143200C3877F /* gold_trophy.json in Resources */,
+				C17AD1C529F1143200C3877F /* bronze_trophy.json in Resources */,
 				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */,
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,
 				C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */,
 				C12AA37B29E554B4006B5E41 /* aimImage.png in Resources */,
 				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
+				C17AD1C329F1143200C3877F /* silver_trophy.json in Resources */,
 				C13759A329C04BC40072DA77 /* Main.storyboard in Resources */,
 				C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */,
 			);
@@ -570,6 +606,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C17AD1B929F113E000C3877F /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C17AD1BA29F113E000C3877F /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C17AD1B929F113E000C3877F /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C137599029C04BC40072DA77 /* Project object */;
 }

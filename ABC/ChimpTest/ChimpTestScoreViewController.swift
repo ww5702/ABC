@@ -6,12 +6,16 @@
 //
 
 import UIKit
+import Lottie
 
 class ChimpTestScoreViewController: UIViewController {
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var scoreLabel: UILabel!
     
+    @IBOutlet weak var lottieView: UIView!
+    
+    private var animationView: LottieAnimationView?
     
     let RED = UIColor(named: "turnRed")
     
@@ -19,6 +23,14 @@ class ChimpTestScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        4
+        animationView = .init(name: "gold_trophy")
+        animationView!.frame = view.bounds
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play()
 
         scoreLabel.text = "\(data) 점"
         
