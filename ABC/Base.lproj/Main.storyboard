@@ -3475,12 +3475,12 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="n14-32-XcW">
                                 <rect key="frame" x="10" y="159" width="373" height="559"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="E9B-jb-8qY">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKA-XI-9Wb">
                                         <rect key="frame" x="0.0" y="0.0" width="373" height="250"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="250" id="cj1-TO-kUd"/>
+                                            <constraint firstAttribute="height" constant="250" id="HP6-Rv-aq7"/>
                                         </constraints>
-                                    </imageView>
+                                    </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZjE-3P-A2G">
                                         <rect key="frame" x="0.0" y="250" width="373" height="100"/>
                                         <constraints>
@@ -3550,7 +3550,6 @@
                     </view>
                     <connections>
                         <outlet property="explainLabel" destination="0rb-8O-Adb" id="lmS-Lj-rya"/>
-                        <outlet property="imageView" destination="E9B-jb-8qY" id="cZT-h0-BJX"/>
                         <outlet property="scoreLabel" destination="ZjE-3P-A2G" id="VP4-hs-lTa"/>
                         <outlet property="stackView" destination="n14-32-XcW" id="aK7-Tz-Z5W"/>
                     </connections>
