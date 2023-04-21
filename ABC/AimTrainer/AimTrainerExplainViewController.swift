@@ -29,7 +29,7 @@ class AimTrainerExplainViewController: UIViewController {
         }
         changeTextColor()
         
-        animationView = .init(name: "t2")
+        animationView = .init(name: "aimTarget")
         animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
         animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 300)
         animationView!.contentMode = .scaleAspectFit
