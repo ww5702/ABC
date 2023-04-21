@@ -96,3 +96,7 @@ RESET버튼과 Info&Rank 버튼 제거 (어플의 조잡함)
 ChimpTest   
 40개의 버튼 중 4개의 레벨부터 시작하여 레벨당 갯수를 +1 하며 순서를 기억하여 테스트 진행   
 초기화 하는 과정에서 다음 단계로 이동이 초기화보다 빠르게 진행되는 오류   
+   
+~~ 2023.04.20 ~ 2023.04.21   
+LottieFiles를 이용해 .json애니메이션 추가   
+ViusalMemory, Aim Trainer, Chimp Test / Score ViewController에 차등 점수에 따른 결과 애니메이션 변경   
