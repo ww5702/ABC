@@ -2714,9 +2714,7 @@
                                                 <rect key="frame" x="127.66666666666666" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
-                                                    <backgroundConfiguration key="background">
-                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    </backgroundConfiguration>
+                                                    <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paa-QB-muZ">
@@ -2799,6 +2797,15 @@
                     </view>
                     <navigationItem key="navigationItem" id="u8L-32-jye"/>
                     <connections>
+                        <outlet property="btn1Label" destination="4HT-Su-KMe" id="vgk-Vv-SFu"/>
+                        <outlet property="btn2Label" destination="pJV-iW-EdJ" id="5du-vn-5bU"/>
+                        <outlet property="btn3Label" destination="Paa-QB-muZ" id="O7H-W1-o18"/>
+                        <outlet property="btn4Label" destination="wZ9-qT-kt3" id="hyV-MM-75Q"/>
+                        <outlet property="btn5Label" destination="WxL-qj-q66" id="rjv-MF-SOB"/>
+                        <outlet property="btn6Label" destination="GzE-tj-eGP" id="ebo-QL-zqo"/>
+                        <outlet property="btn7Label" destination="q9t-Nn-cze" id="UlD-HQ-dOx"/>
+                        <outlet property="btn8Label" destination="TnT-Dr-Bd6" id="QJz-hZ-Y6T"/>
+                        <outlet property="btn9Label" destination="j4Q-X7-wqg" id="sOD-eN-giB"/>
                         <outlet property="buttonStack" destination="SD9-gW-fIh" id="OPj-wn-zV3"/>
                         <outlet property="explainLabel" destination="Dc4-aM-h3y" id="gHM-kI-Uz1"/>
                         <outlet property="levelStack" destination="4so-yD-FC5" id="4fp-p2-8dM"/>
