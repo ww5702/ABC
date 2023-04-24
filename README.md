@@ -100,3 +100,9 @@ ChimpTest
 ~~ 2023.04.20 ~ 2023.04.21   
 LottieFiles를 이용해 .json애니메이션 추가   
 ViusalMemory, Aim Trainer, Chimp Test / Score ViewController에 차등 점수에 따른 결과 애니메이션 변경   
+   
+~~ 2023.04.24 ~   
+Sequence Memory Create   
+추가되는 
+Sequence Memory Create   ㄹㅐㄴ
+Sequence Memory Create   
