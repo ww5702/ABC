@@ -103,6 +103,5 @@ ViusalMemory, Aim Trainer, Chimp Test / Score ViewController에 차등 점수에
    
 ~~ 2023.04.24 ~   
 Sequence Memory Create   
-추가되는 
-Sequence Memory Create   ㄹㅐㄴ
-Sequence Memory Create   
+추가되는 랜덤 변수들을 순차적으로 출력해야하는 단계   
+현재는 동시에 버튼의 색이 변경됨   
