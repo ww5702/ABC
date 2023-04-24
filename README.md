@@ -21,6 +21,7 @@ To Do List
 -> view 자체를 탭 제스처로 표현하니까 해결 가능했었다.   
 ~~12. AimTrainer 게임 시작시 시간초 눈에 보이게 표시~~   
 13. ChimpTest 초기화 과정 정교화   
+14. GameSelect VC에서 버튼 비율 정밀화(정사각형)   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
