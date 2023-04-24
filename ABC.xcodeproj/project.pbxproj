@@ -36,6 +36,8 @@
 		C13FFB9129DC153C00B5704B /* reactionIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = C13FFB9029DC153C00B5704B /* reactionIcon.png */; };
 		C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */; };
 		C13FFB9C29DC1C5900B5704B /* NumberMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */; };
+		C148131929F6621B00C9CF67 /* SequenceMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C148131829F6621B00C9CF67 /* SequenceMemoryExplainViewController.swift */; };
+		C148131B29F6622700C9CF67 /* SequenceMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C148131A29F6622700C9CF67 /* SequenceMemoryViewController.swift */; };
 		C14F052F29E948210065DFA2 /* ChimpTestIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
@@ -95,6 +97,8 @@
 		C13FFB9029DC153C00B5704B /* reactionIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionIcon.png; sourceTree = "<group>"; };
 		C13FFB9929DC1C4500B5704B /* NumberMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C13FFB9B29DC1C5900B5704B /* NumberMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberMemoryViewController.swift; sourceTree = "<group>"; };
+		C148131829F6621B00C9CF67 /* SequenceMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceMemoryExplainViewController.swift; sourceTree = "<group>"; };
+		C148131A29F6622700C9CF67 /* SequenceMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SequenceMemoryViewController.swift; sourceTree = "<group>"; };
 		C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChimpTestIcon.jpeg; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
@@ -199,6 +203,7 @@
 				C12AA36A29DD6926006B5E41 /* NumberMemory */,
 				C12AA37529E3FF7B006B5E41 /* AimTrainer */,
 				C12AA38029E94518006B5E41 /* ChimpTest */,
+				C148131729F661F800C9CF67 /* SequenceMemory */,
 				C13759A129C04BC40072DA77 /* Main.storyboard */,
 				C13759A429C04BC50072DA77 /* Assets.xcassets */,
 				C13759A629C04BC50072DA77 /* LaunchScreen.storyboard */,
@@ -241,6 +246,15 @@
 				C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */,
 			);
 			path = VisualMemory;
+			sourceTree = "<group>";
+		};
+		C148131729F661F800C9CF67 /* SequenceMemory */ = {
+			isa = PBXGroup;
+			children = (
+				C148131829F6621B00C9CF67 /* SequenceMemoryExplainViewController.swift */,
+				C148131A29F6622700C9CF67 /* SequenceMemoryViewController.swift */,
+			);
+			path = SequenceMemory;
 			sourceTree = "<group>";
 		};
 		C17AD1BC29F1140D00C3877F /* Trophy */ = {
@@ -384,6 +398,7 @@
 				C12AA37029E00F12006B5E41 /* NumberMemoryRightViewController.swift in Sources */,
 				C12AA36929DD5AE4006B5E41 /* ReactionGameExplainViewController.swift in Sources */,
 				C12AA38429E945B3006B5E41 /* ChimpTestViewController.swift in Sources */,
+				C148131929F6621B00C9CF67 /* SequenceMemoryExplainViewController.swift in Sources */,
 				C15A6B4E29D52AFA0002B72E /* VisualMemorySecondViewController.swift in Sources */,
 				C13759B629C0529F0072DA77 /* ReactionGameViewController.swift in Sources */,
 				C12AA37229E010D3006B5E41 /* NumberMemoryWrongViewController.swift in Sources */,
@@ -398,6 +413,7 @@
 				C15A6B4A29D2B9320002B72E /* VisualMemoryFirstViewController.swift in Sources */,
 				C12AA38229E945A6006B5E41 /* ChimpTestExplainViewController.swift in Sources */,
 				C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */,
+				C148131B29F6622700C9CF67 /* SequenceMemoryViewController.swift in Sources */,
 				C12AA38629E945BE006B5E41 /* ChimpTestScoreViewController.swift in Sources */,
 				C137599E29C04BC40072DA77 /* SceneDelegate.swift in Sources */,
 				C15A6B4829CD8C6D0002B72E /* VisualMemoryViewController.swift in Sources */,

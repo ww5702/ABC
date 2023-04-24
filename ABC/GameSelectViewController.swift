@@ -75,11 +75,11 @@ class GameSelectViewController: UIViewController {
     
     
     @IBAction func gotoSequenceMemory(_ sender: UIButton) {
-    }
-    
-    
-    func goToViewController(_ where : String) {
-        
+        guard let vc = storyboard?.instantiateViewController(identifier: "SequenceMemoryExplainViewController") as? SequenceMemoryExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     
