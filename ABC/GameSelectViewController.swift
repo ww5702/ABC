@@ -74,6 +74,10 @@ class GameSelectViewController: UIViewController {
     }
     
     
+    @IBAction func gotoSequenceMemory(_ sender: UIButton) {
+    }
+    
+    
     func goToViewController(_ where : String) {
         
     }
