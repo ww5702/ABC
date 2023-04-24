@@ -2709,6 +2709,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn1:" destination="eBo-N7-781" eventType="touchUpInside" id="Jm5-cg-Bgr"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJV-iW-EdJ">
                                                 <rect key="frame" x="127.66666666666666" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2716,6 +2719,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn2:" destination="eBo-N7-781" eventType="touchUpInside" id="13p-07-6Rl"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Paa-QB-muZ">
                                                 <rect key="frame" x="255.33333333333329" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2723,6 +2729,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn3:" destination="eBo-N7-781" eventType="touchUpInside" id="9Sf-T6-6yT"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2735,6 +2744,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn4:" destination="eBo-N7-781" eventType="touchUpInside" id="es1-3v-hMp"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WxL-qj-q66">
                                                 <rect key="frame" x="127.66666666666666" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2742,6 +2754,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn5:" destination="eBo-N7-781" eventType="touchUpInside" id="UlA-G6-3F5"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GzE-tj-eGP">
                                                 <rect key="frame" x="255.33333333333329" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2749,6 +2764,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn6:" destination="eBo-N7-781" eventType="touchUpInside" id="Aoj-eB-u38"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -2761,6 +2779,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn7:" destination="eBo-N7-781" eventType="touchUpInside" id="5DM-pE-ckN"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TnT-Dr-Bd6">
                                                 <rect key="frame" x="127.66666666666666" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2768,6 +2789,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn8:" destination="eBo-N7-781" eventType="touchUpInside" id="Lhs-1e-ToW"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j4Q-X7-wqg">
                                                 <rect key="frame" x="255.33333333333329" y="0.0" width="117.66666666666666" height="161.66666666666666"/>
@@ -2775,6 +2799,9 @@
                                                 <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
                                                     <backgroundConfiguration key="background"/>
                                                 </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="btn9:" destination="eBo-N7-781" eventType="touchUpInside" id="9Ev-2F-u42"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>

@@ -34,7 +34,13 @@ class SequenceMemoryViewController: UIViewController {
     
     var playOnce = false
     var isGameEnd = false
+    var isBtnColorChange = false    // 버튼 색 변경 끝났는가 (라운드 진행 끝?)
     var sequenceArr : [Int] = []
+    var sequenceCount = 0   // 대조해보기 위한 변수
+    // 버튼에 bool값을 설정해주는 변수
+    var btnbool : [Bool] = Array(repeating: false, count: 9)
+    // 같은정답버튼을 여러번 누를 경우를 대비해서
+    var btnbool2 : [Bool] = Array(repeating: false, count: 9)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,17 +53,119 @@ class SequenceMemoryViewController: UIViewController {
         touchView.isUserInteractionEnabled = true
         touchView.addGestureRecognizer(tapGestureRecognizer)
     }
+    
+    @IBAction func btn1(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 1 {
+                btnColorChange2(x: btn1Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+    }
+    @IBAction func btn2(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 2 {
+                btnColorChange2(x: btn2Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn3(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 3 {
+                btnColorChange2(x: btn3Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn4(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 4 {
+                btnColorChange2(x: btn4Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn5(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 5 {
+                btnColorChange2(x: btn5Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn6(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 6 {
+                btnColorChange2(x: btn6Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn7(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 7 {
+                btnColorChange2(x: btn7Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn8(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 8 {
+                btnColorChange2(x: btn8Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
+    @IBAction func btn9(_ sender: UIButton) {
+        if isBtnColorChange == true {
+            if sequenceArr[sequenceCount] == 9 {
+                btnColorChange2(x: btn9Label) // 잠시 표시 낸 다음 돌아가기
+                goodEnd()
+            } else {
+                badEnd()
+            }
+        }
+
+    }
 
     
     func gameStart() {
         let randomNum = Int.random(in: 1...9)
         sequenceArr.append(randomNum)
+        print("현재 저장되어있는 랜덤수 : \(sequenceArr)")
         // 라운드 진행마다 1초 후에 버튼들 표시
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.0, execute: {
             for i in self.sequenceArr {
                 switch i {
                 case 1:
                     self.btnColorChange(x: self.btn1Label)
+                    self.btnbool[i-1] = true
+                    self.btnbool2[i-1] = true
                     break
                 case 2:
                     self.btnColorChange(x: self.btn2Label)
@@ -88,6 +196,8 @@ class SequenceMemoryViewController: UIViewController {
                 }
             }
         })
+        isBtnColorChange = true
+        
     }
     
     func btnColorChange(x: UIButton) {
@@ -95,6 +205,32 @@ class SequenceMemoryViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
             x.backgroundColor = self.BLUE
         })
+    }
+    
+    func btnColorChange2(x: UIButton) {
+        x.backgroundColor = self.WHITE
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2, execute: {
+            x.backgroundColor = self.BLUE
+        })
+    }
+    
+    // 순서가 맞았다면
+    func goodEnd() {
+        // 레벨이 끝났을 경우
+        if sequenceArr.count-1 == sequenceCount {
+            // count 초기화 & 게임 시작
+            sequenceCount = 0
+            isBtnColorChange = false
+            
+            gameStart()
+        } else {
+            // 계속해서 게임 진행
+            sequenceCount += 1
+        }
+        
+    }
+    func badEnd() {
+        
     }
     
     
