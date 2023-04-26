@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="b15-zq-Npu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4of-xZ-JLa">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -2835,6 +2835,7 @@
                         <outlet property="btn9Label" destination="j4Q-X7-wqg" id="sOD-eN-giB"/>
                         <outlet property="buttonStack" destination="SD9-gW-fIh" id="OPj-wn-zV3"/>
                         <outlet property="explainLabel" destination="Dc4-aM-h3y" id="gHM-kI-Uz1"/>
+                        <outlet property="levelLabel" destination="nnM-Fz-aGo" id="vwX-hT-lLF"/>
                         <outlet property="levelStack" destination="4so-yD-FC5" id="4fp-p2-8dM"/>
                         <outlet property="touchView" destination="8Kq-lX-9hP" id="RbM-RT-poq"/>
                     </connections>
@@ -2842,6 +2843,101 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2pj-ET-TnL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2165.6488549618321" y="4200.7042253521131"/>
+        </scene>
+        <!--Sequence Memory Score View Controller-->
+        <scene sceneID="72h-Za-vip">
+            <objects>
+                <viewController storyboardIdentifier="SequenceMemoryScoreViewController" id="wzC-a0-vSH" customClass="SequenceMemoryScoreViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m4S-5Q-QMP">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="OpH-Qb-dag">
+                                <rect key="frame" x="10" y="159" width="373" height="559"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d6M-Ag-8cf">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="250" id="N1A-aY-SJy"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VU-QO-oV6">
+                                        <rect key="frame" x="0.0" y="250" width="373" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="1Iz-rg-bth"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXK-ch-nRQ">
+                                        <rect key="frame" x="0.0" y="350" width="373" height="149"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="g8u-gS-4kL">
+                                        <rect key="frame" x="0.0" y="499" width="373" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m7c-3g-X8V">
+                                                <rect key="frame" x="0.0" y="0.0" width="171.66666666666666" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="RETRY" cornerStyle="dynamic">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="nextBtn:" destination="zHd-M9-gIz" eventType="touchUpInside" id="xrs-rb-0eM"/>
+                                                    <action selector="retryBtn:" destination="YQc-mC-RGC" eventType="touchUpInside" id="M2J-E2-rAV"/>
+                                                    <action selector="retryBtn:" destination="DV7-Hx-x3T" eventType="touchUpInside" id="TCS-Gm-scu"/>
+                                                    <action selector="retryBtn:" destination="wzC-a0-vSH" eventType="touchUpInside" id="hdQ-Xx-v9Y"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dzm-lU-zJY">
+                                                <rect key="frame" x="201.66666666666663" y="0.0" width="171.33333333333337" height="60"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="HOME" cornerStyle="dynamic">
+                                                    <backgroundConfiguration key="background">
+                                                        <color key="backgroundColor" red="0.97254908080000002" green="0.82745099070000006" blue="0.41568624970000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </backgroundConfiguration>
+                                                    <fontDescription key="titleFontDescription" type="system" pointSize="30"/>
+                                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="gohomeBtn:" destination="YQc-mC-RGC" eventType="touchUpInside" id="TMt-y1-76f"/>
+                                                    <action selector="gotoHome:" destination="DV7-Hx-x3T" eventType="touchUpInside" id="IBw-jK-IFe"/>
+                                                    <action selector="gotoHome:" destination="wzC-a0-vSH" eventType="touchUpInside" id="fvB-tN-Ijk"/>
+                                                    <action selector="nextBtn:" destination="zHd-M9-gIz" eventType="touchUpInside" id="vKT-cn-0ez"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="dla-we-ssc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="F46-Ej-fAv"/>
+                        <color key="backgroundColor" name="background"/>
+                        <constraints>
+                            <constraint firstItem="OpH-Qb-dag" firstAttribute="top" secondItem="F46-Ej-fAv" secondAttribute="top" constant="100" id="CFB-IY-vVg"/>
+                            <constraint firstItem="F46-Ej-fAv" firstAttribute="trailing" secondItem="OpH-Qb-dag" secondAttribute="trailing" constant="10" id="Txd-eD-bNU"/>
+                            <constraint firstItem="OpH-Qb-dag" firstAttribute="leading" secondItem="F46-Ej-fAv" secondAttribute="leading" constant="10" id="krS-jH-FSp"/>
+                            <constraint firstItem="F46-Ej-fAv" firstAttribute="bottom" secondItem="OpH-Qb-dag" secondAttribute="bottom" constant="100" id="s9S-LN-SgY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="explainLabel" destination="QXK-ch-nRQ" id="VVI-LX-SHl"/>
+                        <outlet property="scoreLabel" destination="7VU-QO-oV6" id="Jfq-vg-4PN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jPB-1c-De7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="4201"/>
         </scene>
         <!--Aim Trainer View Controller-->
         <scene sceneID="fTw-vD-w4r">

@@ -32,7 +32,9 @@ class SequenceMemoryViewController: UIViewController {
     
     let WHITE = UIColor(named: "buttonTouch")
     let BLUE = UIColor(named: "buttonReady")
-    let WRONG = UIColor(named: "buttonWrong")
+    let WRONG = UIColor(named: "turnRed")
+    let BACKGROUND = UIColor(named: "background")
+    let RIGHT = UIColor(named: "LevelUp")
     
     var playOnce = false
     var isGameEnd = false
@@ -180,10 +182,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn2Label)
                         print("2 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 3:
@@ -191,10 +189,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn3Label)
                         print("3 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 4:
@@ -202,10 +196,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn4Label)
                         print("4 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 5:
@@ -213,10 +203,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn5Label)
                         print("5 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 6:
@@ -224,10 +210,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn6Label)
                         print("6 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 7:
@@ -235,10 +217,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn7Label)
                         print("7 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 8:
@@ -246,10 +224,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn8Label)
                         print("8 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 case 9:
@@ -257,10 +231,6 @@ class SequenceMemoryViewController: UIViewController {
                     DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
                         self.btnColorChange(x: self.btn9Label)
                         print("9 실행")
-                        if i == self.sequenceArr.last {
-                            print("마지막 버튼 색 변경")
-                            self.isBtnColorChange = true
-                        }
                     })
                     break
                 default:
@@ -278,6 +248,7 @@ class SequenceMemoryViewController: UIViewController {
             x.backgroundColor = self.BLUE
         })
         if isBtnColorChangeCount == level {
+            print("마지막 버튼 색 변경")
             isBtnColorChange = true
         }
         
@@ -297,10 +268,17 @@ class SequenceMemoryViewController: UIViewController {
             // count 초기화 & 게임 시작
             sequenceCount = 0
             isBtnColorChange = false
+            isBtnColorChangeCount = 0
             btnCount = -1.0
             level += 1
+            levelLabel.text = "Level : \(level)"
+            view.backgroundColor = RIGHT
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3, execute: {
+                self.view.backgroundColor = self.BACKGROUND
+                self.gameStart()
+            })
             
-            gameStart()
+            
         } else {
             // 계속해서 게임 진행
             sequenceCount += 1
@@ -308,6 +286,15 @@ class SequenceMemoryViewController: UIViewController {
         
     }
     func badEnd() {
+//        view.backgroundColor = WRONG
+//        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.3, execute: {
+//            self.view.backgroundColor = self.BACKGROUND
+//        })
+        if let vc = storyboard?.instantiateViewController(withIdentifier: "SequenceMemoryScoreViewController") as? SequenceMemoryScoreViewController {
+            vc.modalPresentationStyle = .fullScreen
+            vc.data = level
+            self.present(vc, animated: true)
+        }
         
     }
     
@@ -332,7 +319,7 @@ class SequenceMemoryViewController: UIViewController {
     func readyStartAnimation(x : String) {
         animationView = .init(name: x)
         animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
-        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 350)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 300)
         animationView!.contentMode = .scaleAspectFit
         animationView!.loopMode = .playOnce
         animationView!.animationSpeed = 2.0
