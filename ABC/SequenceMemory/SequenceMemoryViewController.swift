@@ -37,6 +37,7 @@ class SequenceMemoryViewController: UIViewController {
     var isBtnColorChange = false    // 버튼 색 변경 끝났는가 (라운드 진행 끝?)
     var sequenceArr : [Int] = []
     var sequenceCount = 0   // 대조해보기 위한 변수
+    var btnCount = -1.0
     // 버튼에 bool값을 설정해주는 변수
     var btnbool : [Bool] = Array(repeating: false, count: 9)
     // 같은정답버튼을 여러번 누를 경우를 대비해서
@@ -155,6 +156,7 @@ class SequenceMemoryViewController: UIViewController {
 
     
     func gameStart() {
+        
         let randomNum = Int.random(in: 1...9)
         sequenceArr.append(randomNum)
         print("현재 저장되어있는 랜덤수 : \(sequenceArr)")
@@ -163,33 +165,69 @@ class SequenceMemoryViewController: UIViewController {
             for i in self.sequenceArr {
                 switch i {
                 case 1:
-                    self.btnColorChange(x: self.btn1Label)
-                    self.btnbool[i-1] = true
-                    self.btnbool2[i-1] = true
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.0 + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn1Label)
+                        self.btnbool[i-1] = true
+                        self.btnbool2[i-1] = true
+                        print("1 실행")
+                    })
                     break
                 case 2:
-                    self.btnColorChange(x: self.btn2Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn2Label)
+                        print("2 실행")
+                    })
                     break
                 case 3:
-                    self.btnColorChange(x: self.btn3Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn3Label)
+                        print("3 실행")
+                    })
                     break
                 case 4:
-                    self.btnColorChange(x: self.btn4Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn4Label)
+                        print("4 실행")
+                    })
                     break
                 case 5:
-                    self.btnColorChange(x: self.btn5Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn5Label)
+                        print("5 실행")
+                    })
                     break
                 case 6:
-                    self.btnColorChange(x: self.btn6Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn6Label)
+                        print("6 실행")
+                    })
                     break
                 case 7:
-                    self.btnColorChange(x: self.btn7Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn7Label)
+                        print("7 실행")
+                    })
                     break
                 case 8:
-                    self.btnColorChange(x: self.btn8Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn8Label)
+                        print("8 실행")
+                    })
                     break
                 case 9:
-                    self.btnColorChange(x: self.btn9Label)
+                    self.btnCount += 1.0
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.6*self.btnCount, execute: {
+                        self.btnColorChange(x: self.btn9Label)
+                        print("9 실행")
+                    })
                     break
                 default:
                     break
@@ -197,6 +235,7 @@ class SequenceMemoryViewController: UIViewController {
             }
         })
         isBtnColorChange = true
+        print(isBtnColorChange)
         
     }
     
@@ -205,6 +244,7 @@ class SequenceMemoryViewController: UIViewController {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5, execute: {
             x.backgroundColor = self.BLUE
         })
+        
     }
     
     func btnColorChange2(x: UIButton) {
