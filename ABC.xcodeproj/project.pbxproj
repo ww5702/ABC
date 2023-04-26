@@ -47,6 +47,7 @@
 		C148132D29F90F7F00C9CF67 /* NumberMemoryExplain.json in Resources */ = {isa = PBXBuildFile; fileRef = C148132B29F90F7F00C9CF67 /* NumberMemoryExplain.json */; };
 		C148132F29F911ED00C9CF67 /* VisualMemoryExplain.json in Resources */ = {isa = PBXBuildFile; fileRef = C148132E29F911ED00C9CF67 /* VisualMemoryExplain.json */; };
 		C148133129F9131A00C9CF67 /* VerbalMemoryExplain.json in Resources */ = {isa = PBXBuildFile; fileRef = C148133029F9131A00C9CF67 /* VerbalMemoryExplain.json */; };
+		C148133529F9152500C9CF67 /* ReactionTestExplain.json in Resources */ = {isa = PBXBuildFile; fileRef = C148133429F9152500C9CF67 /* ReactionTestExplain.json */; };
 		C14F052F29E948210065DFA2 /* ChimpTestIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
@@ -114,6 +115,7 @@
 		C148132B29F90F7F00C9CF67 /* NumberMemoryExplain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = NumberMemoryExplain.json; path = json/NumberMemoryExplain.json; sourceTree = SOURCE_ROOT; };
 		C148132E29F911ED00C9CF67 /* VisualMemoryExplain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VisualMemoryExplain.json; path = json/VisualMemoryExplain.json; sourceTree = SOURCE_ROOT; };
 		C148133029F9131A00C9CF67 /* VerbalMemoryExplain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = VerbalMemoryExplain.json; path = json/VerbalMemoryExplain.json; sourceTree = SOURCE_ROOT; };
+		C148133429F9152500C9CF67 /* ReactionTestExplain.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = ReactionTestExplain.json; path = json/ReactionTestExplain.json; sourceTree = SOURCE_ROOT; };
 		C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChimpTestIcon.jpeg; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
@@ -278,6 +280,7 @@
 				C17AD1BD29F1143200C3877F /* champion_trophy.json */,
 				C148132E29F911ED00C9CF67 /* VisualMemoryExplain.json */,
 				C148132229F90C7F00C9CF67 /* ChimpTestExplain.json */,
+				C148133429F9152500C9CF67 /* ReactionTestExplain.json */,
 				C17AD1E329F2A71300C3877F /* bronze_trophy.json */,
 				C148132429F90C9300C9CF67 /* silver_trophy.json */,
 				C17AD1D529F1326300C3877F /* walkingToy.json */,
@@ -388,6 +391,7 @@
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,
 				C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */,
 				C12AA37B29E554B4006B5E41 /* aimImage.png in Resources */,
+				C148133529F9152500C9CF67 /* ReactionTestExplain.json in Resources */,
 				C17AD1D629F1326300C3877F /* walkingToy.json in Resources */,
 				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
