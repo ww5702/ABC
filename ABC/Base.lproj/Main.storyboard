@@ -2600,8 +2600,17 @@
                                             <constraint firstAttribute="height" constant="350" id="QMW-ni-4gN"/>
                                         </constraints>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toO-O0-uIJ">
+                                        <rect key="frame" x="0.0" y="360" width="373" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="4wk-I0-Zcg"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y67-Kx-kgN">
-                                        <rect key="frame" x="0.0" y="360" width="373" height="195"/>
+                                        <rect key="frame" x="0.0" y="440" width="373" height="115"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -2635,6 +2644,7 @@
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="backBtn:" destination="AZA-Ar-lSe" eventType="touchUpInside" id="3Y3-4U-sgG"/>
+                                                    <action selector="backBtn:" destination="b15-zq-Npu" eventType="touchUpInside" id="NFJ-4U-9bg"/>
                                                     <action selector="backBtn:" destination="Pf3-Ev-dLk" eventType="touchUpInside" id="YgF-2Q-zNd"/>
                                                 </connections>
                                             </button>
@@ -2656,6 +2666,10 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="RX5-Cv-tfs"/>
+                    <connections>
+                        <outlet property="explainLabel" destination="y67-Kx-kgN" id="sfw-42-MMX"/>
+                        <outlet property="titleLabel" destination="toO-O0-uIJ" id="oPG-W7-G0X"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Aga-z9-x6g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
