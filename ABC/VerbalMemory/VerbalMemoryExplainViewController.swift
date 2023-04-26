@@ -5,6 +5,7 @@
 //  Created by 이재웅 on 2023/03/20.
 //
 
+import Lottie
 import UIKit
 
 class VerbalMemoryExplainViewController: UIViewController {
@@ -13,6 +14,7 @@ class VerbalMemoryExplainViewController: UIViewController {
     
     @IBOutlet weak var explainImage: UIImageView!
     @IBOutlet weak var explainLabel: UILabel!
+    private var animationView: LottieAnimationView?
     
 
     override func viewDidLoad() {
@@ -33,6 +35,14 @@ class VerbalMemoryExplainViewController: UIViewController {
         }
         
         self.changeTextColor()
+        animationView = .init(name: "VerbalMemoryExplain")
+        animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 300)
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .playOnce
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play(fromFrame: 0, toFrame: 90)
 
         // Do any additional setup after loading the view.
     }
