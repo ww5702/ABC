@@ -5,6 +5,7 @@
 //  Created by 이재웅 on 2023/03/21.
 //
 
+import Lottie
 import UIKit
 
 class ReactionGameScoreViewController: UIViewController {
@@ -13,26 +14,53 @@ class ReactionGameScoreViewController: UIViewController {
     @IBOutlet weak var reactionImgView: UIImageView!
     @IBOutlet weak var reactionExplainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+    private var animationView: LottieAnimationView?
     
     var data = 0
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.titleLabel.text = "결과 페이지"
-        self.reactionExplainLabel.text = "당신의 평균 속도는 \(data)ms입니다.\n사람들의 평균 반응속도 : 273ms\n프로게이머의 평균 반응속도 : 150ms\n 기기에 따라 30ms의 \n오차범위가 있을 수 있습니다."
-        self.changeTextColor()
         // Do any additional setup after loading the view.
+        
+        if data < 280 {
+            trophyAnimation(x: "champion_trophy")
+            titleLabel.text = "\(data) ms"
+            textAnimation(x: "말도안돼!!\n혹시 프로게이머이신가요??\n만약 아니라면 프로게이머에 도전해보시는건 어떠신가요")
+        } else if data <= 300 {
+            trophyAnimation(x: "gold_trophy")
+            titleLabel.text = "\(data) ms"
+            textAnimation(x: "오호\n이정도면 어디가서 반응속도 빠르다고\n말할정도는 되겠는데요")
+        } else if data <= 330 {
+            trophyAnimation(x: "silver_trophy")
+            titleLabel.text = "\(data) ms"
+            textAnimation(x: "흐음..\n느리지도 빠르지도 않은 사람다운 반응속도랄까요")
+        } else {
+            trophyAnimation(x: "bronze_trophy")
+            titleLabel.text = "\(data) 점"
+            textAnimation(x: "괜찮아요\n나이가 들수록 반응속도가 느려지는건\n당연한 결과라고 하니까요ㅎㅎ")
+        }
     }
-    
-    func changeTextColor() {
-        guard let text = self.reactionExplainLabel.text else {return}
-        let font = UIFont.systemFont(ofSize: 30)
-        let attributeString = NSMutableAttributedString(string: text)
-                
-        //attributeString.addAttribute(.foregroundColor, value: UIColor.red, range: (text as NSString).range(of: "\(data)"))
-        attributeString.addAttribute(.font, value: font, range: (text as NSString).range(of: "\(data)"))
-        self.reactionExplainLabel.attributedText = attributeString
+    func trophyAnimation(x : String) {
+        animationView = .init(name: x)
+        animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 250)
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play()
+    }
+    func textAnimation(x : String) {
+        let explainText = x
+        reactionExplainLabel.text = ""
+        var charIndex = 0.0
+        for letter in explainText {
+            Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
+                Timer in self.reactionExplainLabel.text?.append(letter)
+            }
+            charIndex += 1
+        }
     }
     
 

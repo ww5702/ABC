@@ -51,8 +51,6 @@
 		C14F052F29E948210065DFA2 /* ChimpTestIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
-		C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */; };
-		C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */; };
 		C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */; };
 		C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */; };
 		C15A6B4829CD8C6D0002B72E /* VisualMemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */; };
@@ -119,8 +117,6 @@
 		C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChimpTestIcon.jpeg; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
-		C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = reactionTestStatistics.png; sourceTree = "<group>"; };
-		C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = verbalMemoryStatistic.png; sourceTree = "<group>"; };
 		C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VisualMemoryExplain.png; sourceTree = "<group>"; };
 		C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryViewController.swift; sourceTree = "<group>"; };
@@ -297,9 +293,7 @@
 			isa = PBXGroup;
 			children = (
 				C12AA37329E3E12C006B5E41 /* numberMemoryIcon.png */,
-				C15A6B3E29CAF04D0002B72E /* reactionTestStatistics.png */,
 				C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */,
-				C15A6B4029CC27240002B72E /* verbalMemoryStatistic.png */,
 				C12AA37A29E554B4006B5E41 /* aimImage.png */,
 				C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */,
 				C13FFB9029DC153C00B5704B /* reactionIcon.png */,
@@ -389,11 +383,9 @@
 				C17AD1C629F1143200C3877F /* gold_trophy.json in Resources */,
 				C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */,
 				C13759A529C04BC50072DA77 /* Assets.xcassets in Resources */,
-				C15A6B4129CC27240002B72E /* verbalMemoryStatistic.png in Resources */,
 				C12AA37B29E554B4006B5E41 /* aimImage.png in Resources */,
 				C148133529F9152500C9CF67 /* ReactionTestExplain.json in Resources */,
 				C17AD1D629F1326300C3877F /* walkingToy.json in Resources */,
-				C15A6B3F29CAF04D0002B72E /* reactionTestStatistics.png in Resources */,
 				C1AC6C1329C84A09008A4D58 /* words.txt in Resources */,
 				C148132D29F90F7F00C9CF67 /* NumberMemoryExplain.json in Resources */,
 				C148132C29F90F7F00C9CF67 /* NumbermemoryIcon.json in Resources */,
