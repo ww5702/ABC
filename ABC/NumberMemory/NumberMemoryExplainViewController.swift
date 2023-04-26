@@ -5,11 +5,13 @@
 //  Created by 이재웅 on 2023/04/04.
 //
 
+import Lottie
 import UIKit
 
 class NumberMemoryExplainViewController: UIViewController {
     
     @IBOutlet weak var explainLabel: UILabel!
+    private var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +19,7 @@ class NumberMemoryExplainViewController: UIViewController {
         self.navigationController?.navigationBar.tintColor = .white
         
         explainLabel.text = ""
-        let explainText = "보통 사람은 한번에 7개의 숫자를 기억할 수 있습니다.\n당신은 더 외울 수 있습니까?"
+        let explainText = "보통 사람은 한번에 7개의 숫자를 기억할 수 있습니다.\n당신은 얼마나 더 외울 수 있습니까?"
         var charIndex = 0.0
         for letter in explainText {
             Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
@@ -25,6 +27,15 @@ class NumberMemoryExplainViewController: UIViewController {
             }
             charIndex += 1
         }
+        
+        animationView = .init(name: "NumberMemoryExplain")
+        animationView!.frame = CGRect(x: 0, y: 0, width: 400, height: 400)
+        animationView!.center = CGPoint(x: self.view.frame.size.width/2, y: 300)
+        animationView!.contentMode = .scaleAspectFit
+        animationView!.loopMode = .loop
+        animationView!.animationSpeed = 0.5
+        view.addSubview(animationView!)
+        animationView!.play()
         
     }
 
