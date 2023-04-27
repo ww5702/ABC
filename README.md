@@ -116,3 +116,5 @@ Sequence Memory Create
    
 ~~ 2023.04.27   
 xcode 14.3 update   
+Main 화면 애니메이션 추가   
+Icon 이미지 임시로 변경   
