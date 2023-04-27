@@ -113,3 +113,6 @@ Sequence Memory Create
 위 문제들 전부 해결   
    
 ++ 각 테스트들 결과페이지&설명페이지 애니메이션 추가   
+   
+~~ 2023.04.27   
+xcode 14.3 update   
