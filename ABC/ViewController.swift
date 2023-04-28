@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     private var animationView: LottieAnimationView?
     @IBOutlet weak var nameTextField: UITextField!
     
+    var db:OpaquePointer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.isHidden = true
@@ -28,26 +30,34 @@ class ViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play()
         
-//        let fileMgr = FileManager()
-//        let docPathURL = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first!
-//        let dbPath = docPathURL.appendingPathComponent("ABC").path
+        /*
+        let fileMgr = FileManager()
+        let docPathURL = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first!
+        let dbPath = docPathURL.appendingPathComponent("ABC").path
         
+        if fileMgr.fileExists(atPath: dbPath) == false {
+            let dbSource = Bundle.main.path(forResource: "ABC", ofType: "sqlite")
+            fileMgr.copyItem(at: dbSource!, to: dbPath)
+        }
         
-        let dbPath = self.getDBPath()
+        //let dbPath = self.getDBPath()
         dbExecute(dbPath: dbPath)
         print("dir=\n\(dbPath)")
+         */
+        createTable()
+        insertData(name: "test")
     }
     
-    
+    /*
     /// 기존 DB가 없다면 템플릿의 주소 반환
     func getDBPath() -> String {
         let fileMgr = FileManager()
                 let docPathURL = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let dbPath = docPathURL.appendingPathComponent("ABC").path
+                let dbPath = docPathURL.appendingPathComponent("ABC.sqlite").path
                 
                 /// 파일이 없다면 앱 번들에 만들어 놓은 db.sqlite가져와서 사용
                 if fileMgr.fileExists(atPath: dbPath) == false {
-                    let dbSource = Bundle.main.path(forResource: "db", ofType: "sqlite")
+                    let dbSource = Bundle.main.path(forResource: "ABC", ofType: "sqlite")
                     try! fileMgr.copyItem(atPath: dbSource!, toPath: dbPath)
                 }
                 
@@ -65,8 +75,13 @@ class ViewController: UIViewController {
         }
         
         var stmt: OpaquePointer? = nil
-        let sql = "INSERT INTO user (name) VALUES ('123')"
-        guard sqlite3_prepare(db, sql, -1, &stmt, nil) == SQLITE_OK else {return}
+        let sql = "CREATE TABLE IF NOT EXISTS sequence (num INTEGER)"
+        if sqlite3_prepare(db, sql, -1, &stmt, nil) != SQLITE_OK {
+            let errMsg = String(cString: sqlite3_errmsg(db)!)
+            print("error preparing iser : v1 \(errMsg)")
+            return
+            
+        }
         
         defer {
             print("Finalize Statement")
@@ -75,6 +90,7 @@ class ViewController: UIViewController {
         
         if sqlite3_step(stmt) == SQLITE_DONE {print("Success insert")}
     }
+     */
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
         let vcName = self.storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController")
