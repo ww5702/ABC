@@ -22,7 +22,7 @@ class ChimpTestExplainViewController: UIViewController {
         
 
         explainLabel.text = ""
-        let explainText = "숫자에 따라 순서대로 사각형을 클릭하십시오.\n테스트는 점점 더 어려워질 것입니다."
+        let explainText = "숫자에 따라 순서대로 사각형을 클릭하세요.\n테스트는 점점 더 어려워질거에요."
         var charIndex = 0.0
         for letter in explainText {
             Timer.scheduledTimer(withTimeInterval: 0.05 * charIndex, repeats: false) {
