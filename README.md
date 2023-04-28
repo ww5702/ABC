@@ -118,3 +118,9 @@ Sequence Memory Create
 xcode 14.3 update   
 Main 화면 애니메이션 추가   
 Icon 이미지 임시로 변경   
+   
+~~ 2023.04.28   
+DB연결   
+참고 사이트   
+https://ios-development.tistory.com/86   
+https://hururuek-chapchap.tistory.com/39   
