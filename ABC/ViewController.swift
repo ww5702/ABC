@@ -30,67 +30,10 @@ class ViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play()
         
-        /*
-        let fileMgr = FileManager()
-        let docPathURL = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first!
-        let dbPath = docPathURL.appendingPathComponent("ABC").path
-        
-        if fileMgr.fileExists(atPath: dbPath) == false {
-            let dbSource = Bundle.main.path(forResource: "ABC", ofType: "sqlite")
-            fileMgr.copyItem(at: dbSource!, to: dbPath)
-        }
-        
-        //let dbPath = self.getDBPath()
-        dbExecute(dbPath: dbPath)
-        print("dir=\n\(dbPath)")
-         */
-        createTable()
-        insertData(name: "test")
+
+        //createTable()
+        insertData(name: "두번째", age: 20)
     }
-    
-    /*
-    /// 기존 DB가 없다면 템플릿의 주소 반환
-    func getDBPath() -> String {
-        let fileMgr = FileManager()
-                let docPathURL = fileMgr.urls(for: .documentDirectory, in: .userDomainMask).first!
-                let dbPath = docPathURL.appendingPathComponent("ABC.sqlite").path
-                
-                /// 파일이 없다면 앱 번들에 만들어 놓은 db.sqlite가져와서 사용
-                if fileMgr.fileExists(atPath: dbPath) == false {
-                    let dbSource = Bundle.main.path(forResource: "ABC", ofType: "sqlite")
-                    try! fileMgr.copyItem(atPath: dbSource!, toPath: dbPath)
-                }
-                
-                return dbPath
-    }
-    /// DB연결 ~ SQL실행 ~ DB연결종료
-    func dbExecute(dbPath: String) {
-        /// 필수로 필요한 객체 : 각각 DB와 연결할 객체와, 컴파일 된 SQL문을 담을 객체
-        var db: OpaquePointer? = nil /// SQLite 연결 정보를 담을 객체
-        guard sqlite3_open(dbPath, &db) == SQLITE_OK else {return}
-        
-        defer {
-            print("Close DB Connection")
-            sqlite3_close(db)
-        }
-        
-        var stmt: OpaquePointer? = nil
-        let sql = "CREATE TABLE IF NOT EXISTS sequence (num INTEGER)"
-        if sqlite3_prepare(db, sql, -1, &stmt, nil) != SQLITE_OK {
-            let errMsg = String(cString: sqlite3_errmsg(db)!)
-            print("error preparing iser : v1 \(errMsg)")
-            return
-            
-        }
-        
-        defer {
-            print("Finalize Statement")
-            sqlite3_finalize(stmt)
-        }
-        
-        if sqlite3_step(stmt) == SQLITE_DONE {print("Success insert")}
-    }
-     */
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
         let vcName = self.storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController")
