@@ -624,6 +624,7 @@
                         <outlet property="readyView" destination="geI-EN-Uxe" id="T0L-E1-lhX"/>
                         <outlet property="scoreLabel" destination="cis-Tp-EY1" id="qJk-ks-vPi"/>
                         <outlet property="secondView" destination="kSY-3W-TIr" id="0t2-bs-EC1"/>
+                        <outlet property="startBtn" destination="Z2n-WF-L0u" id="olj-gQ-1Q1"/>
                         <outlet property="thirdView" destination="hof-At-BFp" id="dL8-cD-ePa"/>
                     </connections>
                 </viewController>

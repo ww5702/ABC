@@ -10,6 +10,7 @@ import UIKit
 class VisualMemoryViewController: UIViewController {
     
     
+    @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var readyView: UIView!
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
@@ -37,6 +38,7 @@ class VisualMemoryViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        startBtn.isHidden = false
         
         lifeLabel.text = "Life | \(life)"
         scoreLabel.text = "Score | \(score)"
@@ -61,6 +63,8 @@ class VisualMemoryViewController: UIViewController {
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 0
+            
+            startBtn.isHidden = true
             // 스코어를 전송
             containerVC?.setScore(score)
             // isGamestart를 true로 전송
@@ -257,6 +261,10 @@ extension VisualMemoryViewController: ContainerVCDelegate4 {
         })
         
         life -= value
-        lifeLabel.text = "Life | \(life)"
+        if life > 0 {
+            lifeLabel.text = "Life | \(life)"
+        } else {
+            gotoResult()
+        }
     }
 }
