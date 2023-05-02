@@ -97,16 +97,16 @@ Reation Test CFAbsoluteTimeGetCurrent에서 TimeInterval로 변경
 이 방법이 반응속도가 좀더 빠르게 측정됨을 확인   
 RESET버튼과 Info&Rank 버튼 제거 (어플의 조잡함)   
 
-~~ 2023.04.17 ~ 2023.04.19   
+-- 2023.04.17 ~ 2023.04.19   
 ChimpTest   
 40개의 버튼 중 4개의 레벨부터 시작하여 레벨당 갯수를 +1 하며 순서를 기억하여 테스트 진행   
 초기화 하는 과정에서 다음 단계로 이동이 초기화보다 빠르게 진행되는 오류   
    
-~~ 2023.04.20 ~ 2023.04.21   
+-- 2023.04.20 ~ 2023.04.21   
 LottieFiles를 이용해 .json애니메이션 추가   
 ViusalMemory, Aim Trainer, Chimp Test / Score ViewController에 차등 점수에 따른 결과 애니메이션 변경   
    
-~~ 2023.04.24 ~ 2023.04.26   
+-- 2023.04.24 ~ 2023.04.26   
 Sequence Memory Create   
 추가되는 랜덤 변수들을 순차적으로 출력해야하는 단계   
 현재는 동시에 버튼의 색이 변경됨   
@@ -114,14 +114,17 @@ Sequence Memory Create
    
 ++ 각 테스트들 결과페이지&설명페이지 애니메이션 추가   
    
-~~ 2023.04.27   
+-- 2023.04.27   
 xcode 14.3 update   
 Main 화면 애니메이션 추가   
 Icon 이미지 임시로 변경   
    
-~~ 2023.04.28   
+-- 2023.04.28   
 DB연결   
 참고 사이트   
 https://ios-development.tistory.com/86   
 https://hururuek-chapchap.tistory.com/39   
 https://42kchoi.tistory.com/387   
+   
+-- 2023.05.02 ~   
+RankVC , RankTableVC Create   
