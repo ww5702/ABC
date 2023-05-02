@@ -51,10 +51,16 @@ class DBHelper {
     func createTable(){
         //AUTOINCREMENT를 사용하기 위해서는 INT 가 아니라 INTEGER을 사용해야 한다.
         let query = """
-               CREATE TABLE IF NOT EXISTS myTable(
+               CREATE TABLE IF NOT EXISTS test2(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
-               my_name TEXT NOT NULL,
-               my_age INT
+               name TEXt NOT NULL,
+               reaction INT DEFAULT 'no value',
+               verbal INT DEFAULT 'no value',
+               visual INT DEFAULT 'no value',
+               number INT DEFAULT 'no value',
+               aim INT DEFAULT 'no value',
+               chimp INT DEFAULT 'no value',
+               sequence INT DEFAULT 'no value'
                );
                """
         
@@ -78,11 +84,11 @@ class DBHelper {
         sqlite3_finalize(statement)
     }
     
-    func insertData(name : String, age: Int){
+    func insertData(name : String, value: Int, section: String){
         
         //autocrement일 경우에는 입력 부분에서는 컬럼을 추가 안해줘도 자동으로 추가가 되지만
         //쿼리 문에서는 이렇게 추가 해줘야합니다.
-        let query = "insert into myTable (id, my_name, my_age) values (?, ?, ?);"
+        let query = "insert into test2 (id, name, reaction) values (?, ?, ?);"
         
         var statement : OpaquePointer? = nil
         
@@ -91,7 +97,7 @@ class DBHelper {
             //insert는 read와 다르게 컬럼의 순서의 시작을 1 부터 한다.
             //따라서 id가 없기 때문에 2로 시작한다.
             sqlite3_bind_text(statement, 2, name , -1, nil)
-            sqlite3_bind_int(statement, 3, Int32(age))
+            sqlite3_bind_int(statement, 3, Int32(value))
             
             if sqlite3_step(statement) == SQLITE_DONE {
                 print("Insert data SuccessFully : \(String(describing: databasePointer))")

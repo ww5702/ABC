@@ -270,6 +270,7 @@
                                                                         </buttonConfiguration>
                                                                         <connections>
                                                                             <action selector="gotoRank:" destination="4of-xZ-JLa" eventType="touchUpInside" id="yD1-vH-53d"/>
+                                                                            <segue destination="csw-un-Q4F" kind="show" id="UAV-s4-YYD"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -4808,27 +4809,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hE-4P-KGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-150.38167938931298" y="1036.6197183098593"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="1rn-FO-D4n">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="neP-4f-W3x" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rgw-Js-pJo">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7Vg-rX-Rlb">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </toolbar>
-                    <connections>
-                        <segue destination="csw-un-Q4F" kind="relationship" relationship="rootViewController" id="Tqt-9m-IzK"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="UxD-SR-bO3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-944" y="1037"/>
         </scene>
     </scenes>
     <resources>

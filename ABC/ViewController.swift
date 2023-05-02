@@ -45,9 +45,9 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
 
-        //createTable()
-        //insertData(name: "세번째", age: 30)
-        dbHelper.updateDate(id: 1, name: "수정첫번째", age: 11)
+        //dbHelper.createTable()
+        dbHelper.insertData(name: "테스터", value: 11, section: "asdf")
+        //dbHelper.updateDate(id: 1, name: "수정첫번째", age: 11)
     }
     
     // 키보드 내리기

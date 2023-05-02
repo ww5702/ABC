@@ -84,11 +84,11 @@ class GameSelectViewController: UIViewController {
     
     
     @IBAction func gotoRank(_ sender: UIButton) {
-        guard let vc = storyboard?.instantiateViewController(identifier: "RankViewController") as? RankViewController else {return}
-        let navigationController = UINavigationController(rootViewController: vc)
-        navigationController.modalPresentationStyle = .fullScreen
-        navigationController.isNavigationBarHidden = false
-        present(navigationController, animated: true)
+//        guard let vc = storyboard?.instantiateViewController(identifier: "RankViewController") as? RankViewController else {return}
+//        let navigationController = UINavigationController(rootViewController: vc)
+//        navigationController.modalPresentationStyle = .fullScreen
+//        navigationController.isNavigationBarHidden = false
+//        present(navigationController, animated: true)
     }
     
 
