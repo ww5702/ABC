@@ -218,8 +218,7 @@
 				C137599D29C04BC40072DA77 /* SceneDelegate.swift */,
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
-				C18BABF52A00E926000B473F /* RankViewController.swift */,
-				C18BABF72A00F681000B473F /* RankTableViewCell.swift */,
+				C18BABF92A00FC43000B473F /* Ranking */,
 				C13FFB9229DC194100B5704B /* ReactionGame */,
 				C13FFB9329DC196700B5704B /* VerbalMemory */,
 				C13FFB9429DC196E00B5704B /* VisualMemory */,
@@ -301,6 +300,15 @@
 				C148131C29F66E8C00C9CF67 /* ready_start.json */,
 			);
 			path = json;
+			sourceTree = "<group>";
+		};
+		C18BABF92A00FC43000B473F /* Ranking */ = {
+			isa = PBXGroup;
+			children = (
+				C18BABF52A00E926000B473F /* RankViewController.swift */,
+				C18BABF72A00F681000B473F /* RankTableViewCell.swift */,
+			);
+			path = Ranking;
 			sourceTree = "<group>";
 		};
 		C1AC6C0B29C83DC9008A4D58 /* Image */ = {

@@ -14,7 +14,7 @@ class ViewController: UIViewController {
     private var animationView: LottieAnimationView?
     @IBOutlet weak var nameTextField: UITextField!
     
-    var db:OpaquePointer?
+    let dbHelper = DBHelper.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,7 +47,7 @@ class ViewController: UIViewController {
 
         //createTable()
         //insertData(name: "세번째", age: 30)
-        //updateDate(id: 1, name: "수정첫번쨰", age: 11)
+        dbHelper.updateDate(id: 1, name: "수정첫번째", age: 11)
     }
     
     // 키보드 내리기
