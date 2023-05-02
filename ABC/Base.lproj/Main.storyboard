@@ -268,6 +268,9 @@
                                                                         <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="small">
                                                                             <backgroundConfiguration key="background"/>
                                                                         </buttonConfiguration>
+                                                                        <connections>
+                                                                            <action selector="gotoRank:" destination="4of-xZ-JLa" eventType="touchUpInside" id="yD1-vH-53d"/>
+                                                                        </connections>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -280,7 +283,7 @@
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-N4-SiJ">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rank" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Aux-N4-SiJ">
                                                                         <rect key="frame" x="206.66666666666663" y="0.0" width="186.33333333333337" height="50"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -4688,6 +4691,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyd-Z6-5Ik" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="734" y="4201"/>
+        </scene>
+        <!--Rank View Controller-->
+        <scene sceneID="596-Dc-9AL">
+            <objects>
+                <viewController storyboardIdentifier="RankViewController" id="csw-un-Q4F" customClass="RankViewController" customModule="ABC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="WOh-ut-zOX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="WX0-3F-Fjo"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4hE-4P-KGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-944" y="1037"/>
         </scene>
     </scenes>
     <resources>
