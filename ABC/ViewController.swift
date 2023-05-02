@@ -32,7 +32,8 @@ class ViewController: UIViewController {
         
 
         //createTable()
-        insertData(name: "두번째", age: 20)
+        //insertData(name: "두번째", age: 20)
+        updateDate(id: 1, name: "수정첫번쨰", age: 11)
     }
 
     @IBAction func btnPlayGame(_ sender: UIButton) {

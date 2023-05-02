@@ -102,3 +102,28 @@ func insertData(name : String, age: Int){
     
 }
 
+// 오류메시지 출력
+private func onSQLErrorPrintErrorMessage(_ db: OpaquePointer?) {
+    let errorMessage = String(cString: sqlite3_errmsg(db))
+    print("Error preparing update: \(errorMessage)")
+    return
+}
+
+func updateDate(id: Int, name: String, age: Int) {
+    var statement: OpaquePointer?
+    let queryString = "UPDATE myTable SET my_name = '\(name)', my_age = \(age) WHERE id == \(id)"
+    
+    // 쿼리 준비.
+    if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+        onSQLErrorPrintErrorMessage(databasePointer)
+        return
+    }
+    // 쿼리 실행.
+    if sqlite3_step(statement) != SQLITE_DONE {
+        onSQLErrorPrintErrorMessage(databasePointer)
+        return
+    }
+    
+    print("Update has been successfully done")
+    sqlite3_finalize(statement)
+}
