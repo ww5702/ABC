@@ -26,6 +26,7 @@ To Do List
 ~~12. AimTrainer 게임 시작시 시간초 눈에 보이게 표시~~   
 13. ChimpTest 초기화 과정 정교화   
 14. GameSelect VC에서 버튼 비율 정밀화(정사각형)   
+15. 기록 1등 탈환시 이팩트(애니메이션 추가)   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
