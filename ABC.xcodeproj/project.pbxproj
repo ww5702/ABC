@@ -65,6 +65,7 @@
 		C17AD1E429F2A71300C3877F /* bronze_trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = C17AD1E329F2A71300C3877F /* bronze_trophy.json */; };
 		C187CC9829FA656D00A4802B /* main.json in Resources */ = {isa = PBXBuildFile; fileRef = C187CC9729FA656D00A4802B /* main.json */; };
 		C18BABF62A00E926000B473F /* RankViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18BABF52A00E926000B473F /* RankViewController.swift */; };
+		C18BABF82A00F681000B473F /* RankTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C18BABF72A00F681000B473F /* RankTableViewCell.swift */; };
 		C1AC6C0829C453E7008A4D58 /* GameSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */; };
 		C1AC6C0A29C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */; };
 		C1AC6C0D29C83DE8008A4D58 /* VerbalMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */; };
@@ -134,6 +135,7 @@
 		C17AD1E329F2A71300C3877F /* bronze_trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bronze_trophy.json; sourceTree = "<group>"; };
 		C187CC9729FA656D00A4802B /* main.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = main.json; path = json/main.json; sourceTree = SOURCE_ROOT; };
 		C18BABF52A00E926000B473F /* RankViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankViewController.swift; sourceTree = "<group>"; };
+		C18BABF72A00F681000B473F /* RankTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankTableViewCell.swift; sourceTree = "<group>"; };
 		C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0929C83BA6008A4D58 /* VerbalMemoryExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryExplainViewController.swift; sourceTree = "<group>"; };
 		C1AC6C0C29C83DE8008A4D58 /* VerbalMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VerbalMemoryExplain.png; sourceTree = "<group>"; };
@@ -217,6 +219,7 @@
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
 				C18BABF52A00E926000B473F /* RankViewController.swift */,
+				C18BABF72A00F681000B473F /* RankTableViewCell.swift */,
 				C13FFB9229DC194100B5704B /* ReactionGame */,
 				C13FFB9329DC196700B5704B /* VerbalMemory */,
 				C13FFB9429DC196E00B5704B /* VisualMemory */,
@@ -425,6 +428,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C13FFB9A29DC1C4500B5704B /* NumberMemoryExplainViewController.swift in Sources */,
+				C18BABF82A00F681000B473F /* RankTableViewCell.swift in Sources */,
 				C13FFB8F29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift in Sources */,
 				C12AA36E29DD694C006B5E41 /* NumberMemorySecondViewController.swift in Sources */,
 				C12AA37729E3FF96006B5E41 /* AimTrainerExplainViewController.swift in Sources */,

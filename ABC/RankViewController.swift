@@ -7,26 +7,32 @@
 
 import UIKit
 
-var name = ["1","2"]
 
-class RankViewController: UIViewController,UITableViewDelegate, UITableViewDataSource {
+
+class RankViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var tableView: UITableView!
+    var name = ["1","2"]
+    var record = ["123","456"]
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return name.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        cell.textLabel?.text = name[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
+        
+        cell.nameLabel.text = name[indexPath.row]
+        cell.recordLabel.text = record[indexPath.row]
+        
+        
         return cell
     }
-    
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
 
 }
