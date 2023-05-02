@@ -18,7 +18,15 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameTextField.isHidden = true
+        
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(done))
+        
+        toolbar.setItems([doneButton], animated: false)
+        
+        nameTextField.inputAccessoryView = toolbar
+
         // Do any additional setup after loading the view.
         
         animationView = .init(name: "main")
@@ -30,10 +38,21 @@ class ViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play()
         
+        // 키보드 내리기
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+
 
         //createTable()
-        insertData(name: "세번째", age: 30)
+        //insertData(name: "세번째", age: 30)
         //updateDate(id: 1, name: "수정첫번쨰", age: 11)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    @objc func done() {
+        self.view.endEditing(true)
     }
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
