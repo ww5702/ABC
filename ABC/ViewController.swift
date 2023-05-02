@@ -22,8 +22,10 @@ class ViewController: UIViewController {
         let toolbar = UIToolbar()
         toolbar.sizeToFit()
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(done))
+        // done 버튼을 오른쪽으로 보내기 위한 더미 버튼
+        let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        toolbar.setItems([doneButton], animated: false)
+        toolbar.setItems([flexBarButton, doneButton], animated: false)
         
         nameTextField.inputAccessoryView = toolbar
 
@@ -48,6 +50,7 @@ class ViewController: UIViewController {
         //updateDate(id: 1, name: "수정첫번쨰", age: 11)
     }
     
+    // 키보드 내리기
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
