@@ -135,3 +135,5 @@ RankVC , RankTableVC Create
 name TextField 제작   
 글자수 제한   
 https://velog.io/@sso0022/iOS-TextField-%EA%B8%80%EC%9E%90%EC%88%98-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0-%ED%95%9C%EA%B8%80
+navigation controller로 show하여 페이지 이동시 데이터 값들 전달   
+https://0urtrees.tistory.com/45   
