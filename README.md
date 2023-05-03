@@ -129,5 +129,9 @@ https://ios-development.tistory.com/86
 https://hururuek-chapchap.tistory.com/39   
 https://42kchoi.tistory.com/387   
    
--- 2023.05.02 ~   
+-- 2023.05.02   
 RankVC , RankTableVC Create   
+-- 2023.05.03 ~   
+name TextField 제작   
+글자수 제한   
+https://velog.io/@sso0022/iOS-TextField-%EA%B8%80%EC%9E%90%EC%88%98-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0-%ED%95%9C%EA%B8%80
