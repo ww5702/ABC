@@ -51,9 +51,9 @@ class DBHelper {
     func createTable(){
         //AUTOINCREMENT를 사용하기 위해서는 INT 가 아니라 INTEGER을 사용해야 한다.
         let query = """
-               CREATE TABLE IF NOT EXISTS test2(
+               CREATE TABLE IF NOT EXISTS test3(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
-               name TEXt NOT NULL,
+               name TEXT DEFAULT 'no value',
                reaction INT DEFAULT 'no value',
                verbal INT DEFAULT 'no value',
                visual INT DEFAULT 'no value',
@@ -88,7 +88,7 @@ class DBHelper {
         
         //autocrement일 경우에는 입력 부분에서는 컬럼을 추가 안해줘도 자동으로 추가가 되지만
         //쿼리 문에서는 이렇게 추가 해줘야합니다.
-        let query = "insert into test2 (id, name, reaction) values (?, ?, ?);"
+        let query = "insert into test3 (id, name, reaction) values (?, ?, ?);"
         
         var statement : OpaquePointer? = nil
         
@@ -96,7 +96,7 @@ class DBHelper {
         if sqlite3_prepare_v2(databasePointer, query, -1, &statement, nil) == SQLITE_OK {
             //insert는 read와 다르게 컬럼의 순서의 시작을 1 부터 한다.
             //따라서 id가 없기 때문에 2로 시작한다.
-            sqlite3_bind_text(statement, 2, name , -1, nil)
+            sqlite3_bind_text(statement, 2, NSString(string: name).utf8String , -1, nil)
             sqlite3_bind_int(statement, 3, Int32(value))
             
             if sqlite3_step(statement) == SQLITE_DONE {
@@ -125,7 +125,7 @@ class DBHelper {
 
     func updateDate(id: Int, name: String, age: Int) {
         var statement: OpaquePointer?
-        let queryString = "UPDATE myTable SET my_name = '\(name)', my_age = \(age) WHERE id == \(id)"
+        let queryString = "UPDATE test2 SET name = '\(name)', reaction = \(age) WHERE id == \(id)"
         
         // 쿼리 준비.
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
