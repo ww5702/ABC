@@ -9,6 +9,7 @@ import Lottie
 import UIKit
 
 class ReactionGameScoreViewController: UIViewController {
+    let dbHelper = DBHelper.shared
     var userName: String?
     
     
@@ -16,7 +17,6 @@ class ReactionGameScoreViewController: UIViewController {
     @IBOutlet weak var reactionExplainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     private var animationView: LottieAnimationView?
-    
     var data = 0
     
 
@@ -42,6 +42,7 @@ class ReactionGameScoreViewController: UIViewController {
             titleLabel.text = "\(data) 점"
             textAnimation(x: "괜찮아요\n나이가 들수록 반응속도가 느려지는건\n당연한 결과라고 하니까요ㅎㅎ")
         }
+        dbHelper.insertData(name: "2번", value: 20, section: "asdf")
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)

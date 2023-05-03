@@ -88,8 +88,8 @@ class DBHelper {
         
         //autocrement일 경우에는 입력 부분에서는 컬럼을 추가 안해줘도 자동으로 추가가 되지만
         //쿼리 문에서는 이렇게 추가 해줘야합니다.
-        let query = "insert into test3 (id, name, reaction) values (?, ?, ?);"
-        
+        let query = "insert into test3 (id, name, \(section)) values (?, ?, ?);"
+        print(query)
         var statement : OpaquePointer? = nil
         
         
