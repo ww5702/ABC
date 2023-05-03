@@ -9,6 +9,7 @@ import UIKit
 
 class GameSelectViewController: UIViewController {
     
+    @IBOutlet weak var userNameLabel: UILabel!
     
     @IBOutlet weak var reactionBtn: UIButton!
     @IBOutlet weak var verbalBtn: UIButton!
@@ -16,10 +17,12 @@ class GameSelectViewController: UIViewController {
     @IBOutlet weak var numberBtn: UIButton!
     @IBOutlet weak var aimBtn: UIButton!
     
+    var userName: String?
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        userNameLabel.text = "⭐️Choose the Test⭐️\n『\(userName!)』"
         // Do any additional setup after loading the view.
     }
     

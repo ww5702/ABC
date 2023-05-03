@@ -11,8 +11,10 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     private var animationView: LottieAnimationView?
     @IBOutlet weak var nameTextField: UITextField!
+    var keyHeight: CGFloat?
     
     let dbHelper = DBHelper.shared
     
@@ -25,9 +27,13 @@ class ViewController: UIViewController {
         // done 버튼을 오른쪽으로 보내기 위한 더미 버튼
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
         
-        toolbar.setItems([flexBarButton, doneButton], animated: false)
         
+        toolbar.setItems([flexBarButton, doneButton], animated: false)
         nameTextField.inputAccessoryView = toolbar
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
 
         // Do any additional setup after loading the view.
         
@@ -45,8 +51,8 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tap)
 
 
-        dbHelper.createTable()
-        dbHelper.insertData(name: "2번", value: 20, section: "asdf")
+        //dbHelper.createTable()
+        //dbHelper.insertData(name: "2번", value: 20, section: "asdf")
         //dbHelper.updateDate(id: 1, name: "수정 테스터", age: 10)
     }
     
@@ -59,13 +65,34 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
-        let vcName = self.storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController")
-        // 전체 화면
-        vcName?.modalPresentationStyle = .fullScreen
-        // 전환 애니메이션
-        vcName?.modalTransitionStyle = .crossDissolve
-        self.present(vcName!, animated: true, completion: nil)
+        if nameTextField.text?.count == 0 {
+            let tooEarly = UIAlertController(title: "정보", message: "당신의 이름을 적어주세요!", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+            tooEarly.addAction(okAction)
+            present(tooEarly,animated: true)
+        } else {
+            guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+            vc.userName = nameTextField.text
+            let navigationController = UINavigationController(rootViewController: vc)
+            navigationController.modalPresentationStyle = .fullScreen
+            navigationController.isNavigationBarHidden = false
+            present(navigationController, animated: true)
+        }
+        
     }
+    @objc func keyboardWillShow(_ sender: Notification) {
+            let userInfo:NSDictionary = sender.userInfo! as NSDictionary
+            let keyboardFrame:NSValue = userInfo.value(forKey: UIResponder.keyboardFrameEndUserInfoKey) as! NSValue
+            let keyboardRectangle = keyboardFrame.cgRectValue
+            let keyboardHeight = keyboardRectangle.height
+            keyHeight = keyboardHeight
+
+            self.view.frame.size.height -= keyboardHeight
+        }
+    @objc func keyboardWillHide(_ sender: Notification) {
+            
+            self.view.frame.size.height += keyHeight!
+        }
     
 }
 
