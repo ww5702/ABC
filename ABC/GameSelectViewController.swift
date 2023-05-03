@@ -29,6 +29,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoReaction(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(identifier: "ReactionGameExplainViewController") as? ReactionGameExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

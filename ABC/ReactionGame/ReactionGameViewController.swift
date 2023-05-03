@@ -8,6 +8,7 @@
 import UIKit
 
 class ReactionGameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    var userName: String?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var countlabel: UILabel!
@@ -35,7 +36,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("2\(userName!)")
         touchlabel.text = "PRESS\nGame Start\nBUTTON"
         self.touchlabel.backgroundColor = UIColor(named: "background")
         countlabel.text = "Counting Label"
@@ -124,6 +125,7 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                     if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameScoreViewController") as? ReactionGameScoreViewController {
                         vc.modalPresentationStyle = .fullScreen
                         vc.data = reactionAvg
+                        vc.userName = userName
                         self.present(vc, animated: true)
                     }
                 }

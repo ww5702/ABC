@@ -9,13 +9,14 @@ import Lottie
 import UIKit
 
 class ReactionGameExplainViewController: UIViewController {
-
+    var userName: String?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("1\(userName!)")
         
         explainLabel.text = ""
         let explainText = "총 5번의 테스트가 진행됩니다.\n화면이 초록색으로 변한다면\n반응하여 터치하세요."
@@ -43,11 +44,18 @@ class ReactionGameExplainViewController: UIViewController {
     
 
 //    @IBAction func startbtn(_ sender: UIButton) {
-//        guard let nextVC = self.storyboard?.instantiateViewController(identifier: "ReactionGameViewController") else {return}
-//        self.present(nextVC, animated: true)
+//        guard let vc = storyboard?.instantiateViewController(identifier: "ReactionGameViewController") as? ReactionGameViewController else {return}
+//        vc.userName = userName
+//        self.navigationController?.pushViewController(vc, animated: true)
 //    }
 
     @IBAction func backbtn(_ sender: UIButton) {
         self.dismiss(animated: true,completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let ReactionGameViewController = segue.destination as? ReactionGameViewController else { return }
+        
+        ReactionGameViewController.userName = self.userName
     }
 }

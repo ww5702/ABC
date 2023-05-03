@@ -3310,7 +3310,7 @@
                                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </buttonConfiguration>
                                                 <connections>
-                                                    <segue destination="nea-uo-wwy" kind="show" id="LOw-Xe-EBi"/>
+                                                    <segue destination="nea-uo-wwy" kind="show" identifier="sendToGame" id="LOw-Xe-EBi"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abV-Ow-ffS">

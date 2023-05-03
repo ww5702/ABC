@@ -9,6 +9,7 @@ import Lottie
 import UIKit
 
 class ReactionGameScoreViewController: UIViewController {
+    var userName: String?
     
     
     @IBOutlet weak var reactionImgView: UIImageView!
@@ -21,6 +22,7 @@ class ReactionGameScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("3\(userName!)")
         // Do any additional setup after loading the view.
         
         if data < 280 {
