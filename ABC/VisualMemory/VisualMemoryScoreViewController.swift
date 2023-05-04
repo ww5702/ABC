@@ -26,7 +26,7 @@ class VisualMemoryScoreViewController: UIViewController {
         if data < 9 {
             trophyAnimation(x: "bronze_trophy")
             scoreLabel.text = "\(data) 점"
-            textAnimation(x: "안타까워요..설마 주변에 누구 있는거 아니죠?\n살짝 부끄러운 실력인데..")
+            textAnimation(x: "안타까워요..설마 주변에 누가 보고있는거 아니죠?\n살짝 부끄러운 실력인데..")
         } else if data <= 12 {
             trophyAnimation(x: "silver_trophy")
             scoreLabel.text = "\(data) 점"
@@ -41,6 +41,8 @@ class VisualMemoryScoreViewController: UIViewController {
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
         versusData = dbHelper.readRecordData(name: userName!, section: "visual")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(data)")
         if versusData == 0 {
             dbHelper.insertData(name: "\(userName!)", value: data, section: "visual")
             print("새 기록 추가")
@@ -86,16 +88,20 @@ class VisualMemoryScoreViewController: UIViewController {
     
 
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "VisualMemoryViewController") as? VisualMemoryViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "VisualMemoryViewController") as? VisualMemoryViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     @IBAction func homeBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
 }

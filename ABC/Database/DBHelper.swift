@@ -125,7 +125,7 @@ class DBHelper {
 
     func updateDate(name: String, value: Int, section: String) {
         var statement: OpaquePointer?
-        let queryString = "UPDATE test3 SET \(section) = \(Int32(value)) WHERE name == \(name)"
+        let queryString = "UPDATE test3 SET \(section) = \(Int32(value)) WHERE name == '\(name)'"
         print(queryString)
         
         // 쿼리 준비.
