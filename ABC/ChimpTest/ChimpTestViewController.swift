@@ -28,8 +28,6 @@ class ChimpTestViewController: UIViewController {
 
         firstView.alpha = 0
         secondView.alpha = 0
-        // Do any additional setup after loading the view.
-        print(userName)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

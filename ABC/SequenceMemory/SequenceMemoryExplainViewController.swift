@@ -49,4 +49,11 @@ class SequenceMemoryExplainViewController: UIViewController {
         self.dismiss(animated: true,completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let SequenceMemoryViewController = segue.destination as? SequenceMemoryViewController else { return }
+        
+        SequenceMemoryViewController.userName = self.userName
+        
+    }
+    
 }

@@ -9,8 +9,11 @@ import Lottie
 import UIKit
 
 class SequenceMemoryScoreViewController: UIViewController {
+    let dbHelper = DBHelper.shared
+    var userName: String?
     
     var data = 0
+    var versusData: Int = 0
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -37,8 +40,7 @@ class SequenceMemoryScoreViewController: UIViewController {
             scoreLabel.text = "Level \(data)"
             textAnimation(x: "!!CHAMPION!!\n멘사 회원이시면 말씀을 하시지..\n이보다 좋은 결과는 없을거에요")
         }
-
-        // Do any additional setup after loading the view.
+        inputRecord()
     }
     
     func trophyAnimation(x : String) {
@@ -64,15 +66,33 @@ class SequenceMemoryScoreViewController: UIViewController {
     }
     
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "SequenceMemoryViewController") as? SequenceMemoryViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "SequenceMemoryViewController") as? SequenceMemoryViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     @IBAction func gotoHome(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
+    }
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "sequence")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(data)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "sequence")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "sequence")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
         }
     }
 }

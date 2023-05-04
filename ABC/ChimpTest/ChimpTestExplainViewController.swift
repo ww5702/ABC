@@ -40,7 +40,6 @@ class ChimpTestExplainViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play()
         
-        print(userName)
     }
     
     @IBAction func backBtn(_ sender: UIButton) {

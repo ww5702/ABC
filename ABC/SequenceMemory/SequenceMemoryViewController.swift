@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 class SequenceMemoryViewController: UIViewController {
-    
+    var userName: String?
     
     @IBOutlet var touchView: UIView!
     @IBOutlet weak var explainLabel: UILabel!
@@ -293,6 +293,7 @@ class SequenceMemoryViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "SequenceMemoryScoreViewController") as? SequenceMemoryScoreViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = level
+            vc.userName = userName
             self.present(vc, animated: true)
         }
         
