@@ -142,3 +142,16 @@ navigation controller로 show하여 페이지 이동시 데이터 값들 전달
 https://0urtrees.tistory.com/45   
 -- 2023.05.03 ~ 
 DB 기능 구현 및 점수 기록 VC에서 DB에 insert   
+```
+CREATE TABLE IF NOT EXISTS test3(
+               id INTEGER PRIMARY KEY AUTOINCREMENT,
+               name TEXT UNIQUE DEFAULT 'no value',
+               reaction INT DEFAULT 0,
+               verbal INT DEFAULT 0,
+               visual INT DEFAULT 0,
+               number INT DEFAULT 0,
+               aim REAL DEFAULT 0.0,
+               chimp INT DEFAULT 0,
+               sequence INT DEFAULT 0);
+```
+위의 구조로 DB table 구성   
