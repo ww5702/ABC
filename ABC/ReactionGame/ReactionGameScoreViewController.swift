@@ -41,8 +41,7 @@ class ReactionGameScoreViewController: UIViewController {
             titleLabel.text = "\(data) 점"
             textAnimation(x: "괜찮아요\n나이가 들수록 반응속도가 느려지는건\n당연한 결과라고 하니까요ㅎㅎ")
         }
-        dbHelper.insertData(name: "\(userName!)", value: data, section: "reaction")
-        print("기록 완료!")
+        inputRecord()
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)
@@ -81,5 +80,18 @@ class ReactionGameScoreViewController: UIViewController {
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
+    }
+    
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "reaction")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "reaction")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
     }
 }

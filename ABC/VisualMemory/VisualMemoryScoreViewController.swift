@@ -40,18 +40,7 @@ class VisualMemoryScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
-        versusData = dbHelper.readRecordData(name: userName!, section: "visual")
-        print("기존 = \(versusData)")
-        print("내 기록 = \(data)")
-        if versusData == 0 {
-            dbHelper.insertData(name: "\(userName!)", value: data, section: "visual")
-            print("새 기록 추가")
-        } else if data > versusData{
-            dbHelper.updateDate(name: "\(userName!)", value: data, section: "visual")
-            print("기록 갱신")
-        } else {
-            print("기록 갱신 실패!")
-        }
+        inputRecord()
         
     }
     func trophyAnimation(x : String) {
@@ -104,4 +93,18 @@ class VisualMemoryScoreViewController: UIViewController {
         present(navigationController, animated: true)
     }
     
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "visual")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(data)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "visual")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "visual")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
+    }
 }
