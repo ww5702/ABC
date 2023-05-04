@@ -9,7 +9,7 @@ import Lottie
 import UIKit
 
 class VerbalMemoryExplainViewController: UIViewController {
-    
+    var userName: String?
     
     
     @IBOutlet weak var explainImage: UIImageView!
@@ -61,6 +61,12 @@ class VerbalMemoryExplainViewController: UIViewController {
     
     @IBAction func backbtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let VerbalMemoryViewController = segue.destination as? VerbalMemoryViewController else { return }
+        
+        VerbalMemoryViewController.userName = self.userName
     }
     
 }

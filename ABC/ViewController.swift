@@ -52,7 +52,7 @@ class ViewController: UIViewController {
 
 
         //dbHelper.createTable()
-        dbHelper.insertData(name: "2번", value: 20, section: "aim")
+        //dbHelper.insertData(name: "2번", value: 20, section: "aim")
         //dbHelper.updateDate(id: 1, name: "수정 테스터", age: 10)
     }
     

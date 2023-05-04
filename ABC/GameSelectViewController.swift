@@ -19,7 +19,6 @@ class GameSelectViewController: UIViewController {
     
     var userName: String?
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "⭐️Choose the Test⭐️\n『\(userName!)』"
@@ -38,6 +37,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoVerbalMemory(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "VerbalMemoryExplainViewController") as? VerbalMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -46,6 +46,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoVisualMemory(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "VisualMemoryExplainViewController") as? VisualMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -55,6 +56,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoNumberMemory(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "NumberMemoryExplainViewController") as? NumberMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -64,6 +66,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoAimTrainer(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "AimTrainerExplainViewController") as? AimTrainerExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -72,6 +75,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoChimpTest(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "ChimpTestExplainViewController") as? ChimpTestExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -81,6 +85,7 @@ class GameSelectViewController: UIViewController {
     @IBAction func gotoSequenceMemory(_ sender: UIButton) {
         guard let vc = storyboard?.instantiateViewController(identifier: "SequenceMemoryExplainViewController") as? SequenceMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

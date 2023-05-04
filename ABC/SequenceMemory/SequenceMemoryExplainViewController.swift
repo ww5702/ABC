@@ -9,6 +9,7 @@ import Lottie
 import UIKit
 
 class SequenceMemoryExplainViewController: UIViewController {
+    var userName: String?
     
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!

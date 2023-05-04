@@ -9,7 +9,7 @@ import UIKit
 import Lottie
 
 class ChimpTestExplainViewController: UIViewController {
-
+    var userName: String?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?

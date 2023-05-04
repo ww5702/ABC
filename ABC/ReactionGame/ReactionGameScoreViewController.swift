@@ -22,7 +22,6 @@ class ReactionGameScoreViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("3\(userName!)")
         // Do any additional setup after loading the view.
         
         if data < 280 {
@@ -42,7 +41,8 @@ class ReactionGameScoreViewController: UIViewController {
             titleLabel.text = "\(data) 점"
             textAnimation(x: "괜찮아요\n나이가 들수록 반응속도가 느려지는건\n당연한 결과라고 하니까요ㅎㅎ")
         }
-        dbHelper.insertData(name: "2번", value: 20, section: "asdf")
+        dbHelper.insertData(name: "\(userName!)", value: data, section: "reaction")
+        print("기록 완료!")
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)
@@ -75,9 +75,11 @@ class ReactionGameScoreViewController: UIViewController {
     }
 
     @IBAction func homeBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
 }

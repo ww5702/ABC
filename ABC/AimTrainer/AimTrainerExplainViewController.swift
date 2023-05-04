@@ -9,6 +9,7 @@ import UIKit
 import Lottie
 
 class AimTrainerExplainViewController: UIViewController {
+    var userName: String?
 
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?

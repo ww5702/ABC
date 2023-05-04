@@ -9,7 +9,8 @@ import Lottie
 import UIKit
 
 class VisualMemoryExplainViewController: UIViewController {
-
+    var userName: String?
+    
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
     

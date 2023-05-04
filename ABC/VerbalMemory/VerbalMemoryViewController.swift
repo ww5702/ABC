@@ -8,7 +8,7 @@
 import UIKit
 
 class VerbalMemoryViewController: UIViewController {
-    
+    var userName: String?
     
     @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -161,6 +161,7 @@ class VerbalMemoryViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryScoreViewController") as? VerbalMemoryScoreViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score
+            vc.userName = userName
             self.present(vc, animated: true)
         }
     }

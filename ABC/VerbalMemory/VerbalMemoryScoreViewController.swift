@@ -9,7 +9,8 @@ import Lottie
 import UIKit
 
 class VerbalMemoryScoreViewController: UIViewController {
-    
+    let dbHelper = DBHelper.shared
+    var userName: String?
     
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -39,6 +40,8 @@ class VerbalMemoryScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
+        dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
+        print("기록 완료!")
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)
@@ -79,10 +82,17 @@ class VerbalMemoryScoreViewController: UIViewController {
     }
     
     @IBAction func homeBton(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+//        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
+//            vc.modalPresentationStyle = .fullScreen
+//            self.present(vc, animated: true)
+//            vc.userName = userName
+//        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
 
 

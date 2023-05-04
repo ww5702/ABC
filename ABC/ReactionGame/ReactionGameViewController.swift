@@ -36,7 +36,6 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("2\(userName!)")
         touchlabel.text = "PRESS\nGame Start\nBUTTON"
         self.touchlabel.backgroundColor = UIColor(named: "background")
         countlabel.text = "Counting Label"
