@@ -16,6 +16,7 @@ class VerbalMemoryScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     private var animationView: LottieAnimationView?
     var data = 60
+    var versusData: Int = 4
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +41,19 @@ class VerbalMemoryScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
-        dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
-        print("기록 완료!")
+        print(userName!)
+        //versusData = dbHelper.readRecordData(name: userName!, section: "verbal")
+        print("versus = \(versusData)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "verbal")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
+        
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)
@@ -75,10 +87,12 @@ class VerbalMemoryScoreViewController: UIViewController {
     }
 
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "VerbalMemoryViewController") as? VerbalMemoryViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "VerbalMemoryViewController") as? VerbalMemoryViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     @IBAction func homeBton(_ sender: UIButton) {

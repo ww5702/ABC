@@ -13,8 +13,6 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var tableView: UITableView!
     var dbHelper = DBHelper.shared
-    var name = ["1","2","3"]
-    var record = ["123","456"]
     var dataArray: [MyModel] = []
     
     override func viewDidLoad() {
@@ -38,8 +36,8 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
 //        cell.recordLabel.text = record[indexPath.row]
         cell.nameLabel.text = String(dataArray[indexPath.row].myName)
         cell.recordLabel.text = String(dataArray[indexPath.row].myName)
-        if let age = dataArray[indexPath.row].myAge {
-            cell.recordLabel.text = String(age)
+        if let reaction = dataArray[indexPath.row].reaction {
+            cell.recordLabel.text = String(reaction)
         }
         
         

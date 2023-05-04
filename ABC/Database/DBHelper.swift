@@ -11,7 +11,7 @@ import SQLite3
 struct MyModel:Codable {
     var id: Int
     var myName: String
-    var myAge: Int?
+    var reaction: Int?
 }
 
 class DBHelper {
@@ -123,9 +123,10 @@ class DBHelper {
         return
     }
 
-    func updateDate(id: Int, name: String, age: Int) {
+    func updateDate(name: String, value: Int, section: String) {
         var statement: OpaquePointer?
-        let queryString = "UPDATE test2 SET name = '\(name)', reaction = \(age) WHERE id == \(id)"
+        let queryString = "UPDATE test3 SET \(section) = \(Int32(value)) WHERE name == \(name)"
+        print(queryString)
         
         // 쿼리 준비.
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -144,7 +145,7 @@ class DBHelper {
 
     func readData() -> [MyModel] {
         var statement: OpaquePointer?
-        let queryString = "select * from myTable;"
+        let queryString = "select * from test3;"
         
         var result: [MyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -156,9 +157,30 @@ class DBHelper {
             
             let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
             let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
-            let age = sqlite3_column_int(statement, 2) // 결과의 2번째 테이블 값.
+            let reaction = sqlite3_column_int(statement, 2) // 결과의 2번째 테이블 값.
             
-            result.append(MyModel(id: Int(id), myName: String(name), myAge: Int(age)))
+            result.append(MyModel(id: Int(id), myName: String(name), reaction: Int(reaction)))
+        }
+        sqlite3_finalize(statement)
+        
+        return result
+    }
+    
+    func readRecordData(name: String, section : String) -> Int {
+        var statement: OpaquePointer?
+        let queryString = "SELECT \(section) FROM test3 WHERE name == '\(name)';"
+        print(queryString)
+        var result: Int = 0
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let value = sqlite3_column_int(statement, 3) // 결과의 3번째 테이블 값.
+            print("verbal == \(value)")
+            result = Int(value)
         }
         sqlite3_finalize(statement)
         
