@@ -57,4 +57,9 @@ class AimTrainerExplainViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let VisualMemoryViewController = segue.destination as? AimTrainerViewController else { return }
+        
+        AimTrainerViewController.userName = self.userName
+    }
 }

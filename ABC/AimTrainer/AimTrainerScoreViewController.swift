@@ -9,6 +9,8 @@ import UIKit
 import Lottie
 
 class AimTrainerScoreViewController: UIViewController {
+    let dbHelper = DBHelper.shared
+    var userName: String?
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -21,6 +23,9 @@ class AimTrainerScoreViewController: UIViewController {
     var percentstring = ""
     var miss: Double = 0
     var percent: Double = 0
+    
+    var inputdata: Int = 0
+    var versusData: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -117,5 +122,18 @@ class AimTrainerScoreViewController: UIViewController {
         }
     }
     
-
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "aim")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(seconddata).\(milliseconddata)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: milliseconddata, section: "aim")
+            print("새 기록 추가")
+        } else if milliseconddata > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: milliseconddata, section: "aim")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
+    }
 }

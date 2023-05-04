@@ -9,7 +9,7 @@ import UIKit
 import AVFoundation
 
 class AimTrainerViewController: UIViewController {
-    
+    var userName: String?
     
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var touchbtnLabel: UIButton!
@@ -150,6 +150,7 @@ class AimTrainerViewController: UIViewController {
             vc.seconddata = Int(countSecond)
             vc.milliseconddata = Int(countMilliSecond)
             vc.miss = Double(miss)
+            vc.userName = userName
             self.present(vc, animated: true)
         }
     }
