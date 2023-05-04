@@ -16,7 +16,7 @@ class VerbalMemoryScoreViewController: UIViewController {
     @IBOutlet weak var scoreLabel: UILabel!
     private var animationView: LottieAnimationView?
     var data = 60
-    var versusData: Int = 4
+    var versusData: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,9 +41,8 @@ class VerbalMemoryScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
-        print(userName!)
-        //versusData = dbHelper.readRecordData(name: userName!, section: "verbal")
-        print("versus = \(versusData)")
+        
+        versusData = dbHelper.readRecordData(name: userName!, section: "verbal")
         if versusData == 0 {
             dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
             print("새 기록 추가")

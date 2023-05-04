@@ -8,7 +8,7 @@
 import UIKit
 
 class VisualMemoryViewController: UIViewController {
-    
+    var userName: String?
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var readyView: UIView!
@@ -106,6 +106,7 @@ class VisualMemoryViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "VisualMemoryScoreViewController") as? VisualMemoryScoreViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score
+            vc.userName = userName
             self.present(vc, animated: true)
         }
     }

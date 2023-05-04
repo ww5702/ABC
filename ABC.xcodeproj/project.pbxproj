@@ -259,8 +259,8 @@
 			isa = PBXGroup;
 			children = (
 				C15A6B4529CD89130002B72E /* VisualMemoryExplainViewController.swift */,
-				C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */,
 				C15A6B4729CD8C6D0002B72E /* VisualMemoryViewController.swift */,
+				C15A6B4B29D41C1E0002B72E /* VisualMemoryReadyViewController.swift */,
 				C15A6B4929D2B9320002B72E /* VisualMemoryFirstViewController.swift */,
 				C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */,
 				C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */,

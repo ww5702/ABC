@@ -9,12 +9,14 @@ import UIKit
 import Lottie
 
 class VisualMemoryScoreViewController: UIViewController {
-
+    let dbHelper = DBHelper.shared
+    var userName: String?
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
-    var data = 19
+    var data = 0
+    var versusData: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +40,16 @@ class VisualMemoryScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
         }
-        
+        versusData = dbHelper.readRecordData(name: userName!, section: "visual")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "visual")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "visual")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
         
     }
     func trophyAnimation(x : String) {

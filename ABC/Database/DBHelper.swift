@@ -178,8 +178,7 @@ class DBHelper {
             return result
         }
         while sqlite3_step(statement) == SQLITE_ROW {
-            let value = sqlite3_column_int(statement, 3) // 결과의 3번째 테이블 값.
-            print("verbal == \(value)")
+            let value = sqlite3_column_int(statement, 0) // 결과의 0번째 값을 출력
             result = Int(value)
         }
         sqlite3_finalize(statement)

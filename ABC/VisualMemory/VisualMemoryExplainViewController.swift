@@ -48,4 +48,10 @@ class VisualMemoryExplainViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let VisualMemoryViewController = segue.destination as? VisualMemoryViewController else { return }
+        
+        VisualMemoryViewController.userName = self.userName
+    }
+    
 }
