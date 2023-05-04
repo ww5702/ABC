@@ -44,4 +44,10 @@ class NumberMemoryExplainViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let NumberMemoryViewController = segue.destination as? NumberMemoryViewController else { return }
+        
+        NumberMemoryViewController.userName = self.userName
+    }
+    
 }

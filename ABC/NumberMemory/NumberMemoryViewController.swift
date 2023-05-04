@@ -8,6 +8,7 @@
 import UIKit
 
 class NumberMemoryViewController: UIViewController {
+    var userName: String?
 
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
@@ -104,6 +105,7 @@ extension NumberMemoryViewController: ContainerVCDelegatenumber2 {
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 1
+            numbercontainerVC4?.setUserName(userName!)
             numbercontainerVC4?.setAnswer(answer)
             numbercontainerVC4?.setMyAnswer(myAnswer)
             numbercontainerVC4?.setLevel(level)

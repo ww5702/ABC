@@ -8,7 +8,8 @@
 import UIKit
 
 class NumberMemoryWrongViewController: UIViewController {
-
+    let dbHelper = DBHelper.shared
+    var userName: String?
     
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var myAnswerLabel: UILabel!
@@ -17,25 +18,31 @@ class NumberMemoryWrongViewController: UIViewController {
     var answer: Int = 0
     var myAnswer: Int = 0
     var level: Int = 0
+    var versusData: Int = 0
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "NumberMemoryExplainViewController") as? NumberMemoryExplainViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "NumberMemoryViewController") as? NumberMemoryViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     @IBAction func gotoHome(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     
@@ -48,10 +55,29 @@ class NumberMemoryWrongViewController: UIViewController {
     func setLevel(_ value: Int) {
         level = value
     }
+    func setUserName(_ value: String) {
+        userName = value
+    }
     func play() {
         answerLabel.text = String(answer)
         myAnswerLabel.text = String(myAnswer)
         levelLabel.text = "\(level) LEVEL FAIL"
+        inputRecord()
+    }
+    
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "number")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(level)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: level, section: "number")
+            print("새 기록 추가")
+        } else if level > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: level, section: "number")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
+        }
     }
     
 }
