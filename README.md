@@ -134,9 +134,11 @@ https://42kchoi.tistory.com/387
    
 -- 2023.05.02   
 RankVC , RankTableVC Create   
--- 2023.05.03 ~   
+-- 2023.05.03   
 name TextField 제작   
 글자수 제한   
 https://velog.io/@sso0022/iOS-TextField-%EA%B8%80%EC%9E%90%EC%88%98-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0-%ED%95%9C%EA%B8%80   
 navigation controller로 show하여 페이지 이동시 데이터 값들 전달   
 https://0urtrees.tistory.com/45   
+-- 2023.05.03 ~ 
+DB 기능 구현 및 점수 기록 VC에서 DB에 insert   
