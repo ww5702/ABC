@@ -40,11 +40,18 @@ class ChimpTestExplainViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play()
         
+        print(userName)
     }
     
-
     @IBAction func backBtn(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let ChimpTestViewController = segue.destination as? ChimpTestViewController else { return }
+        
+        ChimpTestViewController.userName = self.userName
+    }
+    
 
 }

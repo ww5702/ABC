@@ -70,9 +70,9 @@ class AimTrainerScoreViewController: UIViewController {
             trophyAnimation(x: "walkingToy")
             textAnimation(x: "일단 기록이 이렇긴 한데...\n정확도가 영...")
         }
-        
-
+    
         changeTextColor()
+        inputRecord()
     }
     
     func trophyAnimation(x : String) {
@@ -108,19 +108,23 @@ class AimTrainerScoreViewController: UIViewController {
 
    
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "AimTrainerViewController") as? AimTrainerViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "AimTrainerExplainViewController") as? AimTrainerExplainViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     
     @IBAction func gohomeBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
         }
-    }
     
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "aim")

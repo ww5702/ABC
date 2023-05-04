@@ -17,8 +17,9 @@ class ReactionGameScoreViewController: UIViewController {
     @IBOutlet weak var reactionExplainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     private var animationView: LottieAnimationView?
-    var data = 0
     
+    var data = 0
+    var versusData: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

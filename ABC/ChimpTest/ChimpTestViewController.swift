@@ -8,6 +8,7 @@
 import UIKit
 
 class ChimpTestViewController: UIViewController {
+    var userName: String?
     
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
@@ -28,6 +29,7 @@ class ChimpTestViewController: UIViewController {
         firstView.alpha = 0
         secondView.alpha = 0
         // Do any additional setup after loading the view.
+        print(userName)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -56,6 +58,7 @@ class ChimpTestViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestScoreViewController") as? ChimpTestScoreViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score-3
+            vc.userName = userName
             self.present(vc, animated: true)
         }
     }

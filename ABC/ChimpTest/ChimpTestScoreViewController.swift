@@ -9,6 +9,8 @@ import UIKit
 import Lottie
 
 class ChimpTestScoreViewController: UIViewController {
+    let dbHelper = DBHelper.shared
+    var userName: String?
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -19,13 +21,11 @@ class ChimpTestScoreViewController: UIViewController {
     let RED = UIColor(named: "turnRed")
     
     var data = 0
+    var versusData: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-//        lottieView.contentMode = .scaleAspectFit
-//        lottieView.loopMode = .loop
-//        lottieView.animationSpeed = 0.5
-//        lottieView.play()
+        print(userName!)
         
         if data < 5 {
             trophyAnimation(x: "bronze_trophy")
@@ -44,6 +44,7 @@ class ChimpTestScoreViewController: UIViewController {
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n이보다 좋은 결과는 없을거에요")
         }
+        inputRecord()
         changeTextColor()
     }
     func trophyAnimation(x : String) {
@@ -77,18 +78,35 @@ class ChimpTestScoreViewController: UIViewController {
     }
     
     @IBAction func retryBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "ChimpTestViewController") as? ChimpTestViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
-        }
+        guard let vc = storyboard?.instantiateViewController(identifier: "ChimpTestViewController") as? ChimpTestViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
     }
     
     @IBAction func gohomeBtn(_ sender: UIButton) {
-        if let vc = storyboard?.instantiateViewController(withIdentifier: "GameSelectViewController") as? GameSelectViewController {
-            vc.modalPresentationStyle = .fullScreen
-            self.present(vc, animated: true)
+        guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+        let navigationController = UINavigationController(rootViewController: vc)
+        vc.userName = userName
+        navigationController.modalPresentationStyle = .fullScreen
+        navigationController.isNavigationBarHidden = false
+        present(navigationController, animated: true)
+    }
+    func inputRecord() {
+        versusData = dbHelper.readRecordData(name: userName!, section: "chimp")
+        print("기존 = \(versusData)")
+        print("내 기록 = \(data)")
+        if versusData == 0 {
+            dbHelper.insertData(name: "\(userName!)", value: data, section: "chimp")
+            print("새 기록 추가")
+        } else if data > versusData{
+            dbHelper.updateDate(name: "\(userName!)", value: data, section: "chimp")
+            print("기록 갱신")
+        } else {
+            print("기록 갱신 실패!")
         }
     }
-    
 
 }
