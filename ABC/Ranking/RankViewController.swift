@@ -22,6 +22,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        titleLabel.text = "Reaction Ranking"
         tableView.delegate = self
         tableView.dataSource = self
         
@@ -63,27 +64,27 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             dataArray = dbHelper.readData(section: "reaction")
             break
         case 2:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Verbal Ranking"
             dataArray = dbHelper.readData(section: "verbal")
             break
         case 3:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Visual Ranking"
             dataArray = dbHelper.readData(section: "visual")
             break
         case 4:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Number Ranking"
             dataArray = dbHelper.readData(section: "number")
             break
         case 5:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Aim Ranking"
             dataArray = dbHelper.readData(section: "aim")
             break
         case 6:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Chimp Ranking"
             dataArray = dbHelper.readData(section: "chimp")
             break
         case 7:
-            titleLabel.text = "Reaction Ranking"
+            titleLabel.text = "Sequence Ranking"
             dataArray = dbHelper.readData(section: "sequence")
             break
         default:
@@ -111,24 +112,31 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         switch columnCount {
         case 1:
+            titleLabel.text = "Reaction Ranking"
             dataArray = dbHelper.readData(section: "reaction")
             break
         case 2:
+            titleLabel.text = "Verbal Ranking"
             dataArray = dbHelper.readData(section: "verbal")
             break
         case 3:
+            titleLabel.text = "Visual Ranking"
             dataArray = dbHelper.readData(section: "visual")
             break
         case 4:
+            titleLabel.text = "Number Ranking"
             dataArray = dbHelper.readData(section: "number")
             break
         case 5:
+            titleLabel.text = "Aim Ranking"
             dataArray = dbHelper.readData(section: "aim")
             break
         case 6:
+            titleLabel.text = "Chimp Ranking"
             dataArray = dbHelper.readData(section: "chimp")
             break
         case 7:
+            titleLabel.text = "Sequence Ranking"
             dataArray = dbHelper.readData(section: "sequence")
             break
         default:
