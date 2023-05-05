@@ -11,7 +11,7 @@ import SQLite3
 struct MyModel:Codable {
     var id: Int
     var myName: String
-    var reaction: Int?
+    var section: Int?
 }
 
 class DBHelper {
@@ -143,9 +143,10 @@ class DBHelper {
         sqlite3_finalize(statement)
     }
 
-    func readData() -> [MyModel] {
+    func readData(section: String) -> [MyModel] {
         var statement: OpaquePointer?
-        let queryString = "select * from test3 ORDER BY verbal DESC;"
+        // 반응속도일때만 오름차순으로
+        let queryString = "select * from test3 ORDER BY \(section) DESC;"
         
         var result: [MyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -157,9 +158,38 @@ class DBHelper {
             
             let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
             let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
-            let reaction = sqlite3_column_int(statement, 3) // 결과의 2번째 테이블 값.
-            
-            result.append(MyModel(id: Int(id), myName: String(name), reaction: Int(reaction)))
+            let reaction = sqlite3_column_int(statement, 2)
+            let verbal = sqlite3_column_int(statement, 3)
+            let visual = sqlite3_column_int(statement, 4)
+            let number = sqlite3_column_int(statement, 5)
+            let aim = sqlite3_column_int(statement, 6)
+            let chimp = sqlite3_column_int(statement, 7)
+            let sequence = sqlite3_column_int(statement, 8)
+            switch section {
+            case "reaction":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(reaction)))
+                break
+            case "verbal":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(verbal)))
+                break
+            case "visual":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(visual)))
+                break
+            case "number":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(number)))
+                break
+            case "aim":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(aim)))
+                break
+            case "chimp":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(chimp)))
+                break
+            case "sequence":
+                result.append(MyModel(id: Int(id), myName: String(name), section: Int(sequence)))
+                break
+            default:
+                break
+            }
         }
         sqlite3_finalize(statement)
         

@@ -4799,19 +4799,17 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="3Hz-nd-BoF">
                                 <rect key="frame" x="0.0" y="778" width="393" height="44"/>
                                 <items>
-                                    <barButtonItem title="React" id="z5Z-bV-YPo"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="9Ze-5o-GEM"/>
-                                    <barButtonItem title="Verbal" id="0Yo-F8-QUU"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="8aO-Ou-2p8"/>
-                                    <barButtonItem title="Visual" id="k0V-dR-c9C"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="dFd-wY-qJT"/>
-                                    <barButtonItem title="Num" id="v98-57-91q"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="riU-3E-f8N"/>
-                                    <barButtonItem title="Aim" id="wn4-eb-nHH"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="bjx-Hc-78h"/>
-                                    <barButtonItem title="Chimp" id="70T-hL-2OQ"/>
-                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="h4C-9H-Udi"/>
-                                    <barButtonItem title="Sequence" id="Jd6-m6-JZx"/>
+                                    <barButtonItem systemItem="rewind" id="uaV-L6-1dp">
+                                        <connections>
+                                            <action selector="backTableBtn:" destination="csw-un-Q4F" id="E2k-7r-E22"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="6hR-qQ-0EZ"/>
+                                    <barButtonItem systemItem="fastForward" id="Jd6-m6-JZx">
+                                        <connections>
+                                            <action selector="nextTableBtn:" destination="csw-un-Q4F" id="lbD-UP-YZO"/>
+                                        </connections>
+                                    </barButtonItem>
                                 </items>
                             </toolbar>
                         </subviews>
@@ -4832,6 +4830,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="2NV-li-jF6" id="jSz-Se-ttY"/>
+                        <outlet property="titleLabel" destination="WHQ-g6-joh" id="AKK-Za-Oez"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4hE-4P-KGh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
