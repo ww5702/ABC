@@ -145,7 +145,7 @@ class DBHelper {
 
     func readData() -> [MyModel] {
         var statement: OpaquePointer?
-        let queryString = "select * from test3;"
+        let queryString = "select * from test3 ORDER BY verbal DESC;"
         
         var result: [MyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -157,7 +157,7 @@ class DBHelper {
             
             let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
             let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
-            let reaction = sqlite3_column_int(statement, 2) // 결과의 2번째 테이블 값.
+            let reaction = sqlite3_column_int(statement, 3) // 결과의 2번째 테이블 값.
             
             result.append(MyModel(id: Int(id), myName: String(name), reaction: Int(reaction)))
         }
