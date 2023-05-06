@@ -4868,6 +4868,7 @@
                     <navigationItem key="navigationItem" id="gvv-y5-6gK"/>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myTableView" destination="5lA-Z2-iGa" id="vyw-An-Weq"/>
                         <outlet property="tableView" destination="2NV-li-jF6" id="jSz-Se-ttY"/>
                         <outlet property="titleLabel" destination="WHQ-g6-joh" id="AKK-Za-Oez"/>
                     </connections>

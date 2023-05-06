@@ -13,6 +13,8 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var myTableView: UITableView!
+    
     var dbHelper = DBHelper.shared
     var dataArray: [MyModel] = []
     var columnCount: Int = 1
@@ -25,9 +27,13 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         titleLabel.text = "Reaction Ranking"
         tableView.delegate = self
         tableView.dataSource = self
+        // 개인 랭킹
+        myTableView.delegate = self
+        myTableView.dataSource = self
         
         dataArray = dbHelper.readData(section: "reaction")
         tableView.reloadData()
+        myTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
