@@ -12,7 +12,7 @@ import SQLite3
 class RankViewController: UIViewController, UITableViewDelegate, UITableViewDataSource{
     
     @IBOutlet weak var titleLabel: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var totalTableView: UITableView!
     @IBOutlet weak var myTableView: UITableView!
     
     var dbHelper = DBHelper.shared
@@ -25,15 +25,12 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         titleLabel.text = "Reaction Ranking"
-        tableView.delegate = self
-        tableView.dataSource = self
+        totalTableView.delegate = self
+        totalTableView.dataSource = self
         // 개인 랭킹
-        myTableView.delegate = self
-        myTableView.dataSource = self
         
         dataArray = dbHelper.readData(section: "reaction")
-        tableView.reloadData()
-        myTableView.reloadData()
+        totalTableView.reloadData()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -55,7 +52,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         return cell
     }
     func reload() {
-        tableView.reloadData()
+        totalTableView.reloadData()
     }
     
     
