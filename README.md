@@ -140,7 +140,8 @@ name TextField 제작
 https://velog.io/@sso0022/iOS-TextField-%EA%B8%80%EC%9E%90%EC%88%98-%EC%A0%9C%ED%95%9C%ED%95%98%EA%B8%B0-%ED%95%9C%EA%B8%80   
 navigation controller로 show하여 페이지 이동시 데이터 값들 전달   
 https://0urtrees.tistory.com/45   
--- 2023.05.03 ~ 
+   
+-- 2023.05.03 ~ 05.05   
 DB 기능 구현 및 점수 기록 VC에서 DB에 insert   
 ```
 CREATE TABLE IF NOT EXISTS test3(
@@ -155,3 +156,8 @@ CREATE TABLE IF NOT EXISTS test3(
                sequence INT DEFAULT 0);
 ```
 위의 구조로 DB table 구성   
+   
+-- 2023.05.06 ~   
+한 VC안에 두 tableView를 구성   
+두 셀의 identifier을 "cell"로 통일시켜 호출하고,   
+각 cell안의 label은 TableViewCell 을 따로 만들어 관리한다.   
