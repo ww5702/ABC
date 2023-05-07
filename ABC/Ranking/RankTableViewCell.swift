@@ -12,5 +12,8 @@ class RankTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var recordLabel: UILabel!
 
+    @IBOutlet weak var mynameLabel: UILabel!
+    @IBOutlet weak var myrecordLabel: UILabel!
 
+    
 }
