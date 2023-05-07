@@ -13,6 +13,11 @@ struct MyModel:Codable {
     var myName: String
     var section: Int?
 }
+struct MymyModel:Codable {
+    var id: Int
+    var myName: String
+    var section: Int?
+}
 
 class DBHelper {
     static let shared = DBHelper()
@@ -186,6 +191,58 @@ class DBHelper {
                 break
             case "sequence":
                 result.append(MyModel(id: Int(id), myName: String(name), section: Int(sequence)))
+                break
+            default:
+                break
+            }
+        }
+        sqlite3_finalize(statement)
+        
+        return result
+    }
+    func readMyData(name: String, section: String) -> [MymyModel] {
+        var statement: OpaquePointer?
+        // 반응속도일때만 오름차순으로
+        let queryString = "SELECT \(section) FROM test3 WHERE name == '\(name)';"
+        
+        var result: [MymyModel] = []
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            
+            let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
+            let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
+            let reaction = sqlite3_column_int(statement, 2)
+            let verbal = sqlite3_column_int(statement, 3)
+            let visual = sqlite3_column_int(statement, 4)
+            let number = sqlite3_column_int(statement, 5)
+            let aim = sqlite3_column_int(statement, 6)
+            let chimp = sqlite3_column_int(statement, 7)
+            let sequence = sqlite3_column_int(statement, 8)
+            switch section {
+            case "reaction":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(reaction)))
+                break
+            case "verbal":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(verbal)))
+                break
+            case "visual":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(visual)))
+                break
+            case "number":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(number)))
+                break
+            case "aim":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(aim)))
+                break
+            case "chimp":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(chimp)))
+                break
+            case "sequence":
+                result.append(MymyModel(id: Int(id), myName: String(name), section: Int(sequence)))
                 break
             default:
                 break

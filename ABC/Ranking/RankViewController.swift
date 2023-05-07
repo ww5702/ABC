@@ -17,6 +17,8 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var dbHelper = DBHelper.shared
     var dataArray: [MyModel] = []
+    var mydataArray: [MymyModel] = []
+    
     var columnCount: Int = 1
     
     @IBOutlet weak var backTableBtn: UIBarButtonItem!
@@ -27,9 +29,12 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         titleLabel.text = "Reaction Ranking"
         totalTableView.delegate = self
         totalTableView.dataSource = self
+        myTableView.delegate = self
+        myTableView.dataSource = self
         // 개인 랭킹
         
         dataArray = dbHelper.readData(section: "reaction")
+        
         totalTableView.reloadData()
     }
     
