@@ -63,6 +63,11 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
             return cell
         } else if tableView == myTableView {
+            cell.mynameLabel.text = String(mydataArray[0].myName)
+            cell.myrecordLabel.text = String(mydataArray[0].myName)
+            if let reaction = mydataArray[0].section {
+                cell.myrecordLabel.text = String(reaction)
+            }
             return cell
         }
         return cell
@@ -76,12 +81,6 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
          
          */
         
-        
-//        cell.mynameLabel.text = String(mydataArray[0].myName)
-//        cell.myrecordLabel.text = String(mydataArray[0].myName)
-//        if let reaction = mydataArray[0].section {
-//            cell.myrecordLabel.text = String(reaction)
-//        }
     }
     func reload() {
         totalTableView.reloadData()
