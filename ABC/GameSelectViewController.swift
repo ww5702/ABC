@@ -99,6 +99,9 @@ class GameSelectViewController: UIViewController {
 //        navigationController.isNavigationBarHidden = false
 //        present(navigationController, animated: true)
     }
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let RankViewController = segue.destination as? RankViewController else { return }
+        RankViewController.userName = self.userName
+    }
 
 }

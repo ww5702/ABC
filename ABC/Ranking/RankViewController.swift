@@ -17,7 +17,8 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     var dbHelper = DBHelper.shared
     var dataArray: [MyModel] = []
-    var mydataArray: [MymyModel] = []
+    //var mydataArray: [MymyModel] = []
+    var userName: String?
     
     var columnCount: Int = 1
     
@@ -29,13 +30,17 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         titleLabel.text = "Reaction Ranking"
         totalTableView.delegate = self
         totalTableView.dataSource = self
-        myTableView.delegate = self
-        myTableView.dataSource = self
+//        myTableView.delegate = self
+//        myTableView.dataSource = self
         // 개인 랭킹
         
+        print(userName!)
         dataArray = dbHelper.readData(section: "reaction")
+        //mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
         
         totalTableView.reloadData()
+        print(dataArray)
+        print(dataArray[0].myName)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -51,16 +56,33 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
         
-//        cell.nameLabel.text = name[indexPath.row]
-//        cell.recordLabel.text = record[indexPath.row]
-        cell.nameLabel.text = String(dataArray[indexPath.row].myName)
-        cell.recordLabel.text = String(dataArray[indexPath.row].myName)
-        if let reaction = dataArray[indexPath.row].section {
-            cell.recordLabel.text = String(reaction)
+        if tableView == totalTableView {
+            cell.nameLabel.text = String(dataArray[indexPath.row].myName)
+            cell.recordLabel.text = String(dataArray[indexPath.row].myName)
+            if let reaction = dataArray[indexPath.row].section {
+                cell.recordLabel.text = String(reaction)
+            }
+            return cell
+        } else if tableView == myTableView {
+            return cell
         }
-        
-        
         return cell
+        
+        /*
+         cell.nameLabel.text = String(dataArray[indexPath.row].myName)
+         cell.recordLabel.text = String(dataArray[indexPath.row].myName)
+         if let reaction = dataArray[indexPath.row].section {
+             cell.recordLabel.text = String(reaction)
+         }
+         
+         */
+        
+        
+//        cell.mynameLabel.text = String(mydataArray[0].myName)
+//        cell.myrecordLabel.text = String(mydataArray[0].myName)
+//        if let reaction = mydataArray[0].section {
+//            cell.myrecordLabel.text = String(reaction)
+//        }
     }
     func reload() {
         totalTableView.reloadData()
