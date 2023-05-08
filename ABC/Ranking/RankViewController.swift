@@ -39,6 +39,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
         
         totalTableView.reloadData()
+        myTableView.reloadData()
         //print(dataArray)
     }
     
@@ -72,18 +73,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         }
         return cell
         
-        /*
-         cell.nameLabel.text = String(dataArray[indexPath.row].myName)
-         cell.recordLabel.text = String(dataArray[indexPath.row].myName)
-         if let reaction = dataArray[indexPath.row].section {
-             cell.recordLabel.text = String(reaction)
-         }
-         
-         */
-        
     }
     func reload() {
         totalTableView.reloadData()
+        myTableView.reloadSections(IndexSet(0...mydataArray.count-1), with: UITableView.RowAnimation.automatic)
     }
     
     
@@ -96,46 +89,65 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 1:
             titleLabel.text = "Reaction Ranking"
             dataArray = dbHelper.readData(section: "reaction")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
             break
         case 2:
             titleLabel.text = "Verbal Ranking"
             dataArray = dbHelper.readData(section: "verbal")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "verbal")
             break
         case 3:
             titleLabel.text = "Visual Ranking"
             dataArray = dbHelper.readData(section: "visual")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "visual")
             break
         case 4:
             titleLabel.text = "Number Ranking"
             dataArray = dbHelper.readData(section: "number")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "number")
             break
         case 5:
             titleLabel.text = "Aim Ranking"
             dataArray = dbHelper.readData(section: "aim")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "aim")
             break
         case 6:
             titleLabel.text = "Chimp Ranking"
             dataArray = dbHelper.readData(section: "chimp")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "chimp")
             break
         case 7:
             titleLabel.text = "Sequence Ranking"
             dataArray = dbHelper.readData(section: "sequence")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "sequence")
             break
         default:
             break
         }
-       
+       print(mydataArray)
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
-            
-            cell.nameLabel.text = String(dataArray[indexPath.row].myName)
-            cell.recordLabel.text = String(dataArray[indexPath.row].myName)
-            if let section = dataArray[indexPath.row].section {
-                cell.recordLabel.text = String(section)
+
+            if tableView == totalTableView {
+                cell.nameLabel.text = String(dataArray[indexPath.row].myName)
+                cell.recordLabel.text = String(dataArray[indexPath.row].myName)
+                if let section = dataArray[indexPath.row].section {
+                    cell.recordLabel.text = String(section)
+                }
+                return cell
+            } else if tableView == myTableView {
+                cell.mynameLabel.text = String(mydataArray[0].myName)
+                cell.myrecordLabel.text = String(mydataArray[0].myName)
+                if let section = mydataArray[0].section {
+                    cell.myrecordLabel.text = String(section)
+                }
+                return cell
             }
             return cell
         }
+        
+        
         reload()
     }
     @IBAction func nextTableBtn(_ sender: UIBarButtonItem) {
@@ -148,45 +160,64 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         case 1:
             titleLabel.text = "Reaction Ranking"
             dataArray = dbHelper.readData(section: "reaction")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
             break
         case 2:
             titleLabel.text = "Verbal Ranking"
             dataArray = dbHelper.readData(section: "verbal")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "verbal")
             break
         case 3:
             titleLabel.text = "Visual Ranking"
             dataArray = dbHelper.readData(section: "visual")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "visual")
             break
         case 4:
             titleLabel.text = "Number Ranking"
             dataArray = dbHelper.readData(section: "number")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "number")
             break
         case 5:
             titleLabel.text = "Aim Ranking"
             dataArray = dbHelper.readData(section: "aim")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "aim")
             break
         case 6:
             titleLabel.text = "Chimp Ranking"
             dataArray = dbHelper.readData(section: "chimp")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "chimp")
             break
         case 7:
             titleLabel.text = "Sequence Ranking"
             dataArray = dbHelper.readData(section: "sequence")
+            mydataArray = dbHelper.readMyData(name: userName!, section: "sequence")
             break
         default:
             break
         }
+        print(mydataArray)
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
-            
-            cell.nameLabel.text = String(dataArray[indexPath.row].myName)
-            cell.recordLabel.text = String(dataArray[indexPath.row].myName)
-            if let section = dataArray[indexPath.row].section {
-                cell.recordLabel.text = String(section)
+
+            if tableView == totalTableView {
+                cell.nameLabel.text = String(dataArray[indexPath.row].myName)
+                cell.recordLabel.text = String(dataArray[indexPath.row].myName)
+                if let section = dataArray[indexPath.row].section {
+                    cell.recordLabel.text = String(section)
+                }
+                return cell
+            } else if tableView == myTableView {
+                cell.mynameLabel.text = String(mydataArray[0].myName)
+                cell.myrecordLabel.text = String(mydataArray[0].myName)
+                if let section = mydataArray[0].section {
+                    cell.myrecordLabel.text = String(section)
+                }
+                return cell
             }
             return cell
         }
+        
         reload()
     }
     

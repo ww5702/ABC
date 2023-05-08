@@ -15,7 +15,6 @@ struct MyModel:Codable {
 }
 
 struct MymyModel:Codable {
-    var id: Int
     var myName: String
     var section: Int?
 }
@@ -213,9 +212,8 @@ class DBHelper {
             return result
         }
         while sqlite3_step(statement) == SQLITE_ROW {
-            let id = sqlite3_column_int(statement, 0)
-            let value = sqlite3_column_int(statement, 1) // 결과의 0번째 값을 출력
-            result.append(MymyModel(id: Int(id), myName: String(name), section: Int(value)))
+            let value = sqlite3_column_int(statement, 0) // 결과의 0번째 값을 출력
+            result.append(MymyModel(myName: String(name), section: Int(value)))
         }
         sqlite3_finalize(statement)
         
