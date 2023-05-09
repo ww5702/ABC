@@ -56,16 +56,16 @@ class DBHelper {
     func createTable(){
         //AUTOINCREMENT를 사용하기 위해서는 INT 가 아니라 INTEGER을 사용해야 한다.
         let query = """
-               CREATE TABLE IF NOT EXISTS test3(
+               CREATE TABLE IF NOT EXISTS ABC_user(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
-               name TEXT DEFAULT 'no value',
-               reaction INT DEFAULT 'no value',
-               verbal INT DEFAULT 'no value',
-               visual INT DEFAULT 'no value',
-               number INT DEFAULT 'no value',
-               aim INT DEFAULT 'no value',
-               chimp INT DEFAULT 'no value',
-               sequence INT DEFAULT 'no value'
+               name TEXT UNIQUE DEFAULT 'no value',
+               reaction INT DEFAULT '0',
+               verbal INT DEFAULT '0',
+               visual INT DEFAULT '0',
+               number INT DEFAULT '0',
+               aim REAL DEFAULT '0.0',
+               chimp INT DEFAULT '0',
+               sequence INT DEFAULT '0'
                );
                """
         

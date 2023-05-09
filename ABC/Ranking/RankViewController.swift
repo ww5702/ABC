@@ -38,8 +38,6 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         dataArray = dbHelper.readData(section: "reaction")
         mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
         
-        totalTableView.reloadData()
-        myTableView.reloadData()
         //print(dataArray)
     }
     
@@ -48,7 +46,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             return dataArray.count
         }
         if tableView == myTableView {
-            return 1
+            return mydataArray.count
         }
         return 0
     }
@@ -75,7 +73,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     func reload() {
-        totalTableView.reloadData()
+        totalTableView.reloadSections(IndexSet(0...dataArray.count-1), with: UITableView.RowAnimation.automatic)
         myTableView.reloadSections(IndexSet(0...mydataArray.count-1), with: UITableView.RowAnimation.automatic)
     }
     
