@@ -10,6 +10,7 @@ import UIKit
 
 class NumberMemoryExplainViewController: UIViewController {
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
@@ -48,6 +49,7 @@ class NumberMemoryExplainViewController: UIViewController {
         guard let NumberMemoryViewController = segue.destination as? NumberMemoryViewController else { return }
         
         NumberMemoryViewController.userName = self.userName
+        NumberMemoryViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
     
 }

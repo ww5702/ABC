@@ -9,6 +9,7 @@ import UIKit
 
 class VisualMemoryViewController: UIViewController {
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var readyView: UIView!
@@ -107,6 +108,7 @@ class VisualMemoryViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score
             vc.userName = userName
+            vc.isFirstTimeRecord = isFirstTimeRecord
             self.present(vc, animated: true)
         }
     }
