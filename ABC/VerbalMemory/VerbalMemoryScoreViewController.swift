@@ -11,6 +11,7 @@ import UIKit
 class VerbalMemoryScoreViewController: UIViewController {
     let dbHelper = DBHelper.shared
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -94,6 +95,7 @@ class VerbalMemoryScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -102,7 +104,13 @@ class VerbalMemoryScoreViewController: UIViewController {
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "verbal")
         if versusData == 0 {
-            dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
+            if isFirstTimeRecord == true {
+                dbHelper.insertData(name: "\(userName!)", value: data, section: "verbal")
+                isFirstTimeRecord = false
+                print("첫 db 기록!")
+            } else {
+                dbHelper.updateDate(name: "\(userName!)", value: data, section: "verbal")
+            }
             print("새 기록 추가")
         } else if data > versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "verbal")

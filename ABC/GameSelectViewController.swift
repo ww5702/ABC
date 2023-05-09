@@ -18,17 +18,20 @@ class GameSelectViewController: UIViewController {
     @IBOutlet weak var aimBtn: UIButton!
     
     var userName: String?
+    var isFirstTimeRecord: Bool = true
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "⭐️Choose the Test⭐️\n『\(userName!)』"
         // Do any additional setup after loading the view.
+        print("지금 isFirstTimeRecodr = \(isFirstTimeRecord)")
     }
     
     @IBAction func gotoReaction(_ sender: Any) {
         guard let vc = storyboard?.instantiateViewController(identifier: "ReactionGameExplainViewController") as? ReactionGameExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -38,6 +41,7 @@ class GameSelectViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "VerbalMemoryExplainViewController") as? VerbalMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

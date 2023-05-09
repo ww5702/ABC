@@ -10,6 +10,7 @@ import UIKit
 
 class ReactionGameExplainViewController: UIViewController {
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
@@ -56,5 +57,6 @@ class ReactionGameExplainViewController: UIViewController {
         guard let ReactionGameViewController = segue.destination as? ReactionGameViewController else { return }
         
         ReactionGameViewController.userName = self.userName
+        ReactionGameViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
 }

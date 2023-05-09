@@ -58,7 +58,7 @@ class DBHelper {
         let query = """
                CREATE TABLE IF NOT EXISTS ABC_user(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
-               name TEXT UNIQUE DEFAULT 'no value',
+               name TEXT DEFAULT 'no value',
                reaction INT DEFAULT '0',
                verbal INT DEFAULT '0',
                visual INT DEFAULT '0',
@@ -93,7 +93,7 @@ class DBHelper {
         
         //autocrement일 경우에는 입력 부분에서는 컬럼을 추가 안해줘도 자동으로 추가가 되지만
         //쿼리 문에서는 이렇게 추가 해줘야합니다.
-        let query = "insert into test3 (id, name, \(section)) values (?, ?, ?);"
+        let query = "insert into ABC_user (id, name, \(section)) values (?, ?, ?);"
         print(query)
         var statement : OpaquePointer? = nil
         
@@ -130,7 +130,7 @@ class DBHelper {
 
     func updateDate(name: String, value: Int, section: String) {
         var statement: OpaquePointer?
-        let queryString = "UPDATE test3 SET \(section) = \(Int32(value)) WHERE name == '\(name)'"
+        let queryString = "UPDATE ABC_user SET \(section) = \(Int32(value)) WHERE name == '\(name)'"
         print(queryString)
         
         // 쿼리 준비.
@@ -151,7 +151,7 @@ class DBHelper {
     func readData(section: String) -> [MyModel] {
         var statement: OpaquePointer?
         // 반응속도일때만 오름차순으로
-        let queryString = "select * from test3 ORDER BY \(section) DESC;"
+        let queryString = "select * from ABC_user ORDER BY \(section) DESC;"
         
         var result: [MyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -203,7 +203,7 @@ class DBHelper {
     func readMyData(name: String, section: String) -> [MymyModel] {
         var statement: OpaquePointer?
         // 반응속도일때만 오름차순으로
-        let queryString = "SELECT \(section) FROM test3 WHERE name == '\(name)';"
+        let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
         
         var result: [MymyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -222,7 +222,7 @@ class DBHelper {
     
     func readRecordData(name: String, section : String) -> Int {
         var statement: OpaquePointer?
-        let queryString = "SELECT \(section) FROM test3 WHERE name == '\(name)';"
+        let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
         print(queryString)
         var result: Int = 0
         
@@ -238,6 +238,24 @@ class DBHelper {
         sqlite3_finalize(statement)
         
         return result
+    }
+    
+    func deleteTable(tableName: String) {
+        let queryString = "DROP TABLE \(tableName)"
+        var statement: OpaquePointer?
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            onSQLErrorPrintErrorMessage(databasePointer)
+            return
+        }
+        
+        // 쿼리 실행.
+        if sqlite3_step(statement) != SQLITE_DONE {
+            onSQLErrorPrintErrorMessage(databasePointer)
+            return
+        }
+        
+        print("drop table has been successfully done")
     }
 
     
