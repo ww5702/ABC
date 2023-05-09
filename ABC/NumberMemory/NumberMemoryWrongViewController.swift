@@ -33,6 +33,7 @@ class NumberMemoryWrongViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "NumberMemoryViewController") as? NumberMemoryViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

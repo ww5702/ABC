@@ -81,6 +81,7 @@ class VisualMemoryScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "VisualMemoryViewController") as? VisualMemoryViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

@@ -113,6 +113,7 @@ class AimTrainerScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "AimTrainerExplainViewController") as? AimTrainerExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

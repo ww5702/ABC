@@ -70,6 +70,8 @@ class ReactionGameScoreViewController: UIViewController {
     @IBAction func retryBtn(_ sender: UIButton) {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController") as? ReactionGameViewController {
             vc.modalPresentationStyle = .fullScreen
+            vc.userName = userName
+            vc.isFirstTimeRecord = isFirstTimeRecord!
             self.present(vc, animated: true)
         }
     }
@@ -95,7 +97,7 @@ class ReactionGameScoreViewController: UIViewController {
                 dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
             }
             print("새 기록 추가")
-        } else if data > versusData{
+        } else if data < versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
             print("기록 갱신")
         } else {
