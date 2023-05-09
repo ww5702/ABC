@@ -11,6 +11,7 @@ import Lottie
 class ChimpTestScoreViewController: UIViewController {
     let dbHelper = DBHelper.shared
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -81,6 +82,7 @@ class ChimpTestScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "ChimpTestViewController") as? ChimpTestViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -90,16 +92,21 @@ class ChimpTestScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
     }
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "chimp")
-        print("기존 = \(versusData)")
-        print("내 기록 = \(data)")
         if versusData == 0 {
-            dbHelper.insertData(name: "\(userName!)", value: data, section: "chimp")
+            if isFirstTimeRecord == true {
+                dbHelper.insertData(name: "\(userName!)", value: data, section: "chimp")
+                print("첫 db 기록!")
+                isFirstTimeRecord = false
+            } else {
+                dbHelper.updateDate(name: "\(userName!)", value: data, section: "chimp")
+            }
             print("새 기록 추가")
         } else if data > versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "chimp")

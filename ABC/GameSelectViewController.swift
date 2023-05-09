@@ -83,6 +83,7 @@ class GameSelectViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "ChimpTestExplainViewController") as? ChimpTestExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -93,6 +94,7 @@ class GameSelectViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "SequenceMemoryExplainViewController") as? SequenceMemoryExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)

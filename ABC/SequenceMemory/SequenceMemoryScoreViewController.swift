@@ -11,6 +11,7 @@ import UIKit
 class SequenceMemoryScoreViewController: UIViewController {
     let dbHelper = DBHelper.shared
     var userName: String?
+    var isFirstTimeRecord: Bool?
     
     var data = 0
     var versusData: Int = 0
@@ -69,6 +70,7 @@ class SequenceMemoryScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "SequenceMemoryViewController") as? SequenceMemoryViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -77,16 +79,21 @@ class SequenceMemoryScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
+        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
     }
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "sequence")
-        print("기존 = \(versusData)")
-        print("내 기록 = \(data)")
         if versusData == 0 {
-            dbHelper.insertData(name: "\(userName!)", value: data, section: "sequence")
+            if isFirstTimeRecord == true {
+                dbHelper.insertData(name: "\(userName!)", value: data, section: "sequence")
+                print("첫 db 기록!")
+                isFirstTimeRecord = false
+            } else {
+                dbHelper.updateDate(name: "\(userName!)", value: data, section: "sequence")
+            }
             print("새 기록 추가")
         } else if data > versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "sequence")
