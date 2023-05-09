@@ -120,6 +120,45 @@ class DBHelper {
         sqlite3_finalize(statement)
         
     }
+    func insertDataForAim(name : String, value: Double, section: String){
+        let query = "insert into ABC_user (id, name, \(section)) values (?, ?, ?);"
+        print(query)
+        var statement : OpaquePointer? = nil
+        
+        
+        if sqlite3_prepare_v2(databasePointer, query, -1, &statement, nil) == SQLITE_OK {
+            sqlite3_bind_text(statement, 2, NSString(string: name).utf8String , -1, nil)
+            sqlite3_bind_double(statement, 3, value)
+            
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Insert data SuccessFully : \(String(describing: databasePointer))")
+            }
+            else{
+                let errorMessage = String(cString: sqlite3_errmsg(databasePointer))
+                print("\n insert Data sqlite3 step fail! : \(errorMessage)")
+            }
+        }
+        else{
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer))
+            print("\n insert Data prepare fail! : \(errorMessage)")
+        }
+        
+        sqlite3_finalize(statement)
+    }
+    func updateDateForAim(name: String, value: Double, section: String) {
+        var statement: OpaquePointer?
+        let queryString = "UPDATE ABC_user SET \(section) = \(value) WHERE name == '\(name)'"
+        print(queryString)
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            return
+        }
+        if sqlite3_step(statement) != SQLITE_DONE {
+            return
+        }
+        print("Update has been successfully done")
+        sqlite3_finalize(statement)
+    }
 
     // 오류메시지 출력
     private func onSQLErrorPrintErrorMessage(_ db: OpaquePointer?) {
@@ -167,7 +206,7 @@ class DBHelper {
             let verbal = sqlite3_column_int(statement, 3)
             let visual = sqlite3_column_int(statement, 4)
             let number = sqlite3_column_int(statement, 5)
-            let aim = sqlite3_column_int(statement, 6)
+            let aim = sqlite3_column_double(statement, 6)
             let chimp = sqlite3_column_int(statement, 7)
             let sequence = sqlite3_column_int(statement, 8)
             switch section {
@@ -234,6 +273,25 @@ class DBHelper {
         while sqlite3_step(statement) == SQLITE_ROW {
             let value = sqlite3_column_int(statement, 0) // 결과의 0번째 값을 출력
             result = Int(value)
+        }
+        sqlite3_finalize(statement)
+        
+        return result
+    }
+    func readRecordDataForAim(name: String, section : String) -> Double {
+        var statement: OpaquePointer?
+        let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
+        print(queryString)
+        var result: Double = 0
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let value = sqlite3_column_double(statement, 0)
+            result = value
         }
         sqlite3_finalize(statement)
         
