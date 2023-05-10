@@ -297,6 +297,24 @@ class DBHelper {
         
         return result
     }
+    func checkName(name: String) -> Int {
+        var statement: OpaquePointer?
+        let queryString = "SELECT id FROM ABC_user WHERE name == '\(name)';"
+        var result: Int = 0
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let value = sqlite3_column_int(statement, 0)
+            result = Int(value)
+        }
+        sqlite3_finalize(statement)
+        
+        return result
+    }
     
     func deleteTable(tableName: String) {
         let queryString = "DROP TABLE \(tableName)"

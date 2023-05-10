@@ -10,13 +10,12 @@ import Lottie
 import UIKit
 
 class ViewController: UIViewController {
-    
+    var nameCheck: Int = 0
+    let dbHelper = DBHelper.shared
     
     private var animationView: LottieAnimationView?
     @IBOutlet weak var nameTextField: UITextField!
     var keyHeight: CGFloat?
-    
-    let dbHelper = DBHelper.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,12 +70,20 @@ class ViewController: UIViewController {
             tooEarly.addAction(okAction)
             present(tooEarly,animated: true)
         } else {
-            guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
-            vc.userName = nameTextField.text
-            let navigationController = UINavigationController(rootViewController: vc)
-            navigationController.modalPresentationStyle = .fullScreen
-            navigationController.isNavigationBarHidden = false
-            present(navigationController, animated: true)
+            if dbHelper.checkName(name: nameTextField.text!) != 0 {
+                let tooEarly = UIAlertController(title: "정보", message: "이미 존재하는 이름입니다!", preferredStyle: .alert)
+                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+                tooEarly.addAction(okAction)
+                present(tooEarly,animated: true)
+            } else {
+                guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+                vc.userName = nameTextField.text
+                let navigationController = UINavigationController(rootViewController: vc)
+                navigationController.modalPresentationStyle = .fullScreen
+                navigationController.isNavigationBarHidden = false
+                present(navigationController, animated: true)
+            }
+            
         }
         
     }

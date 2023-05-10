@@ -73,8 +73,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         
     }
     func reload() {
-        totalTableView.reloadSections(IndexSet(0...dataArray.count-1), with: UITableView.RowAnimation.automatic)
-        myTableView.reloadSections(IndexSet(0...mydataArray.count-1), with: UITableView.RowAnimation.automatic)
+//        totalTableView.reloadSections(IndexSet(0...dataArray.count-1), with: UITableView.RowAnimation.automatic)
+//        myTableView.reloadSections(IndexSet(0...mydataArray.count-1), with: UITableView.RowAnimation.automatic)
+        totalTableView.reloadData()
+        myTableView.reloadData()
     }
     
     
