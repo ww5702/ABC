@@ -147,17 +147,20 @@ DB 기능 구현 및 점수 기록 VC에서 DB에 insert
 CREATE TABLE IF NOT EXISTS test3(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
                name TEXT UNIQUE DEFAULT 'no value',
-               reaction INT DEFAULT 0,
+               reaction INT DEFAULT 9999,
                verbal INT DEFAULT 0,
                visual INT DEFAULT 0,
                number INT DEFAULT 0,
-               aim REAL DEFAULT 0.0,
+               aim REAL DEFAULT 9999.0,
                chimp INT DEFAULT 0,
                sequence INT DEFAULT 0);
 ```
 위의 구조로 DB table 구성   
    
--- 2023.05.06 ~   
+-- 2023.05.06 ~ 05.10   
 한 VC안에 두 tableView를 구성   
 두 셀의 identifier을 "cell"로 통일시켜 호출하고,   
 각 cell안의 label은 TableViewCell 을 따로 만들어 관리한다.   
+각 게임 별로 계정별 첫 게임저장과 그 후 기록갱신에 대한 오류 해결   
+첫 화면에서 닉네임 입력시 중복형태의 닉네임 생성 불가
+닉네임 입력 키보드 출력시 키보드 크기만큼 화면 올리고 내리기   
