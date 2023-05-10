@@ -219,7 +219,6 @@
 				C137599F29C04BC40072DA77 /* ViewController.swift */,
 				C1AC6C0729C453E7008A4D58 /* GameSelectViewController.swift */,
 				C18BABF92A00FC43000B473F /* Ranking */,
-				C143BD902A06380A00595B87 /* MyRanking */,
 				C13FFB9229DC194100B5704B /* ReactionGame */,
 				C13FFB9329DC196700B5704B /* VerbalMemory */,
 				C13FFB9429DC196E00B5704B /* VisualMemory */,
@@ -269,13 +268,6 @@
 				C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */,
 			);
 			path = VisualMemory;
-			sourceTree = "<group>";
-		};
-		C143BD902A06380A00595B87 /* MyRanking */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = MyRanking;
 			sourceTree = "<group>";
 		};
 		C148131729F661F800C9CF67 /* SequenceMemory */ = {

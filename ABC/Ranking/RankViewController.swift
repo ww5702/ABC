@@ -27,6 +27,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.titleTextAttributes = [.foregroundColor: UIColor.white]
+        self.navigationController?.navigationBar.tintColor = .white
+        
         titleLabel.text = "Reaction Ranking"
         totalTableView.delegate = self
         totalTableView.dataSource = self

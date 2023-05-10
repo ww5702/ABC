@@ -25,8 +25,8 @@ class ViewController: UIViewController {
         let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(done))
         // done 버튼을 오른쪽으로 보내기 위한 더미 버튼
         let flexBarButton = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
-        
-        
+
+
         toolbar.setItems([flexBarButton, doneButton], animated: false)
         nameTextField.inputAccessoryView = toolbar
 

@@ -235,6 +235,9 @@ class DBHelper {
                 break
             }
         }
+        if section == "aim" || section == "reaction" {
+            result.reverse()
+        }
         sqlite3_finalize(statement)
         //print(result)
         return result
