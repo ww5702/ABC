@@ -58,6 +58,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
         
         if tableView == totalTableView {
+            cell.rankLabel.text = String(dataArray[indexPath.row].myName)
+            if let rank = dataArray[indexPath.row].rank {
+                cell.rankLabel.text = String(rank)
+            }
             cell.nameLabel.text = String(dataArray[indexPath.row].myName)
             cell.recordLabel.text = String(dataArray[indexPath.row].myName)
             if let reaction = dataArray[indexPath.row].section {
@@ -133,6 +137,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
 
             if tableView == totalTableView {
+                cell.rankLabel.text = String(dataArray[indexPath.row].myName)
+                if let rank = dataArray[indexPath.row].rank {
+                    cell.rankLabel.text = String(rank)
+                }
                 cell.nameLabel.text = String(dataArray[indexPath.row].myName)
                 cell.recordLabel.text = String(dataArray[indexPath.row].myName)
                 if let section = dataArray[indexPath.row].section {
@@ -204,6 +212,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! RankTableViewCell
 
             if tableView == totalTableView {
+                cell.rankLabel.text = String(dataArray[indexPath.row].myName)
+                if let rank = dataArray[indexPath.row].rank {
+                    cell.rankLabel.text = String(rank)
+                }
                 cell.nameLabel.text = String(dataArray[indexPath.row].myName)
                 cell.recordLabel.text = String(dataArray[indexPath.row].myName)
                 if let section = dataArray[indexPath.row].section {

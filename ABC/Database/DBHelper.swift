@@ -9,6 +9,7 @@ import Foundation
 import SQLite3
 
 struct MyModel:Codable {
+    var rank: Int?
     var id: Int
     var myName: String
     var section: Int?
@@ -191,6 +192,7 @@ class DBHelper {
         var statement: OpaquePointer?
         // 반응속도일때만 오름차순으로
         let queryString = "select * from ABC_user ORDER BY \(section) DESC;"
+        var totalRank = 1
         
         var result: [MyModel] = []
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -199,7 +201,6 @@ class DBHelper {
             return result
         }
         while sqlite3_step(statement) == SQLITE_ROW {
-            
             let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
             let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
             let reaction = sqlite3_column_int(statement, 2)
@@ -211,29 +212,30 @@ class DBHelper {
             let sequence = sqlite3_column_int(statement, 8)
             switch section {
             case "reaction":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(reaction)))
+                result.append(MyModel(rank: Int(totalRank), id: Int(id), myName: String(name), section: Int(reaction)))
                 break
             case "verbal":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(verbal)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(verbal)))
                 break
             case "visual":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(visual)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(visual)))
                 break
             case "number":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(number)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(number)))
                 break
             case "aim":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(aim)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(aim)))
                 break
             case "chimp":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(chimp)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(chimp)))
                 break
             case "sequence":
-                result.append(MyModel(id: Int(id), myName: String(name), section: Int(sequence)))
+                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(sequence)))
                 break
             default:
                 break
             }
+            totalRank += 1
         }
         if section == "aim" || section == "reaction" {
             result.reverse()
