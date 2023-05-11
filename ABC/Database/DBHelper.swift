@@ -377,10 +377,10 @@ class DBHelper {
         
         return result
     }
-    func checkName(name: String) -> Int {
+    func checkName(name: String) -> String {
         var statement: OpaquePointer?
-        let queryString = "SELECT id FROM ABC_user WHERE name == '\(name)';"
-        var result: Int = 0
+        let queryString = "SELECT password FROM ABC_user WHERE name == '\(name)';"
+        var result: String = ""
         
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
             let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
@@ -389,11 +389,12 @@ class DBHelper {
         }
         while sqlite3_step(statement) == SQLITE_ROW {
             let value = sqlite3_column_int(statement, 0)
-            result = Int(value)
+            result = String(value)
         }
         sqlite3_finalize(statement)
         
         return result
+        print("result = \(result)")
     }
     
     func deleteTable(tableName: String) {

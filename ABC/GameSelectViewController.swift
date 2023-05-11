@@ -19,12 +19,20 @@ class GameSelectViewController: UIViewController {
     
     var userName: String?
     var isFirstTimeRecord: Bool = true
+    var welcomeMessage: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         userNameLabel.text = "⭐️Choose the Test⭐️\n『\(userName!)』"
         // Do any additional setup after loading the view.
         print("지금 isFirstTimeRecodr = \(isFirstTimeRecord)")
+        if welcomeMessage == 1 {
+            noticeMessage(x: "새 계정 생성 완료!")
+            welcomeMessage = 0
+        } else if welcomeMessage == 2 {
+            noticeMessage(x: "Welcome Back \(userName!)")
+            welcomeMessage = 0
+        }
     }
     
     @IBAction func gotoReaction(_ sender: Any) {
@@ -111,6 +119,13 @@ class GameSelectViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let RankViewController = segue.destination as? RankViewController else { return }
         RankViewController.userName = self.userName
+    }
+    
+    func noticeMessage(x : String) {
+        let tooEarly = UIAlertController(title: "정보", message: "\(x)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        tooEarly.addAction(okAction)
+        present(tooEarly,animated: true)
     }
 
 }

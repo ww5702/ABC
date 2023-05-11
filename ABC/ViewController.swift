@@ -59,20 +59,24 @@ class ViewController: UIViewController {
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
         if nameTextField.text?.count == 0 || passTextField.text?.count == 0 {
-            let tooEarly = UIAlertController(title: "정보", message: "ID/PASS를 적어주세요!", preferredStyle: .alert)
-            let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-            tooEarly.addAction(okAction)
-            present(tooEarly,animated: true)
+            noticeMessage(x: "ID/PASS를 적어주세요!")
         } else {
-            if dbHelper.checkName(name: nameTextField.text!) != 0 {
-                let tooEarly = UIAlertController(title: "정보", message: "이미 존재하는 이름입니다!", preferredStyle: .alert)
-                let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
-                tooEarly.addAction(okAction)
-                present(tooEarly,animated: true)
-            } else {
+            if dbHelper.checkName(name: nameTextField.text!) == "" {
                 dbHelper.signUp(name: nameTextField.text!, password: passTextField.text!)
                 guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
                 vc.userName = nameTextField.text
+                vc.welcomeMessage = 1
+                let navigationController = UINavigationController(rootViewController: vc)
+                navigationController.modalPresentationStyle = .fullScreen
+                navigationController.isNavigationBarHidden = false
+                present(navigationController, animated: true)
+                
+            } else if dbHelper.checkName(name: nameTextField.text!) != passTextField.text! {
+                noticeMessage(x: "비밀번호가 다릅니다!")
+            } else if dbHelper.checkName(name: nameTextField.text!) == passTextField.text!{
+                guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
+                vc.userName = nameTextField.text
+                vc.welcomeMessage = 2
                 let navigationController = UINavigationController(rootViewController: vc)
                 navigationController.modalPresentationStyle = .fullScreen
                 navigationController.isNavigationBarHidden = false
@@ -116,6 +120,13 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification , object: nil)
         // 키보드가 사라질 때 앱에게 알리는 메서드 제거
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func noticeMessage(x : String) {
+        let tooEarly = UIAlertController(title: "정보", message: "\(x)", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
+        tooEarly.addAction(okAction)
+        present(tooEarly,animated: true)
     }
 }
 
