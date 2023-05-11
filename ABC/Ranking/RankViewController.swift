@@ -38,7 +38,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         myTableView.dataSource = self
         
         print(userName!)
-        dataArray = dbHelper.readData(section: "reaction")
+        dataArray = dbHelper.readDataForAimReaction(section: "reaction")
         mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
         
         //print(dataArray)
@@ -95,7 +95,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         switch columnCount {
         case 1:
             titleLabel.text = "Reaction Ranking"
-            dataArray = dbHelper.readData(section: "reaction")
+            dataArray = dbHelper.readDataForAimReaction(section: "reaction")
             mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
             break
         case 2:
@@ -115,7 +115,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             break
         case 5:
             titleLabel.text = "Aim Ranking"
-            dataArray = dbHelper.readData(section: "aim")
+            dataArray = dbHelper.readDataForAimReaction(section: "aim")
             mydataArray = dbHelper.readMyData(name: userName!, section: "aim")
             break
         case 6:
@@ -170,7 +170,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         switch columnCount {
         case 1:
             titleLabel.text = "Reaction Ranking"
-            dataArray = dbHelper.readData(section: "reaction")
+            dataArray = dbHelper.readDataForAimReaction(section: "reaction")
             mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
             break
         case 2:
@@ -190,7 +190,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             break
         case 5:
             titleLabel.text = "Aim Ranking"
-            dataArray = dbHelper.readData(section: "aim")
+            dataArray = dbHelper.readDataForAimReaction(section: "aim")
             mydataArray = dbHelper.readMyData(name: userName!, section: "aim")
             break
         case 6:
