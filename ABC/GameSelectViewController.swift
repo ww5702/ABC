@@ -116,6 +116,11 @@ class GameSelectViewController: UIViewController {
 //        navigationController.isNavigationBarHidden = false
 //        present(navigationController, animated: true)
     }
+    
+    @IBAction func logoutBtn(_ sender: UIButton) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let RankViewController = segue.destination as? RankViewController else { return }
         RankViewController.userName = self.userName
