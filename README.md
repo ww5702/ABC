@@ -32,6 +32,7 @@ To Do List
 ~~17. Navigation Controller를 통해 화면 전환시 기존의 데이터전달이 불가능했던 문제~~   
 -> segue로 VC간의 데이터 전달로 해결 (prepare)   
 18. Aim Trainer에 기록 넣는 column을 Int 에서 Double로 변경하여 기록을 초.밀리초 로 넣을것(추후 기록 비교를위해)   
+19. visual Test 7x7 게임 추가   
 ***
 
 vc1 -> (modal) -> vc2 -> (navigation) -> vc3   
