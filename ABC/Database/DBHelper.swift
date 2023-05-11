@@ -89,6 +89,32 @@ class DBHelper {
         
         sqlite3_finalize(statement)
     }
+    func signUp(name : String, password: String) {
+        let query = "insert into ABC_user (id, name, password) values (?, ?, ?);"
+        print(query)
+        var statement : OpaquePointer? = nil
+        if sqlite3_prepare_v2(databasePointer, query, -1, &statement, nil) == SQLITE_OK {
+            //insert는 read와 다르게 컬럼의 순서의 시작을 1 부터 한다.
+            //따라서 id가 없기 때문에 2로 시작한다.
+            sqlite3_bind_text(statement, 2, NSString(string: name).utf8String , -1, nil)
+            sqlite3_bind_text(statement, 3, NSString(string: password).utf8String, -1, nil)
+            
+            if sqlite3_step(statement) == SQLITE_DONE {
+                print("Insert data SuccessFully : \(String(describing: databasePointer))")
+                print("회원가입 성공")
+            }
+            else{
+                let errorMessage = String(cString: sqlite3_errmsg(databasePointer))
+                print("\n insert Data sqlite3 step fail! : \(errorMessage)")
+            }
+        }
+        else{
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer))
+            print("\n insert Data prepare fail! : \(errorMessage)")
+        }
+        
+        sqlite3_finalize(statement)
+    }
     
     func insertData(name : String, value: Int, section: String){
         
@@ -97,7 +123,6 @@ class DBHelper {
         let query = "insert into ABC_user (id, name, \(section)) values (?, ?, ?);"
         print(query)
         var statement : OpaquePointer? = nil
-        
         
         if sqlite3_prepare_v2(databasePointer, query, -1, &statement, nil) == SQLITE_OK {
             //insert는 read와 다르게 컬럼의 순서의 시작을 1 부터 한다.

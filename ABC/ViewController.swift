@@ -15,6 +15,8 @@ class ViewController: UIViewController {
     
     private var animationView: LottieAnimationView?
     @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var passTextField: UITextField!
+    
     var keyHeight: CGFloat?
     
     override func viewDidLoad() {
@@ -56,8 +58,8 @@ class ViewController: UIViewController {
     }
 
     @IBAction func btnPlayGame(_ sender: UIButton) {
-        if nameTextField.text?.count == 0 {
-            let tooEarly = UIAlertController(title: "정보", message: "당신의 이름을 적어주세요!", preferredStyle: .alert)
+        if nameTextField.text?.count == 0 || passTextField.text?.count == 0 {
+            let tooEarly = UIAlertController(title: "정보", message: "ID/PASS를 적어주세요!", preferredStyle: .alert)
             let okAction = UIAlertAction(title: "확인", style: .default, handler: nil)
             tooEarly.addAction(okAction)
             present(tooEarly,animated: true)
@@ -68,6 +70,7 @@ class ViewController: UIViewController {
                 tooEarly.addAction(okAction)
                 present(tooEarly,animated: true)
             } else {
+                dbHelper.signUp(name: nameTextField.text!, password: passTextField.text!)
                 guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
                 vc.userName = nameTextField.text
                 let navigationController = UINavigationController(rootViewController: vc)
