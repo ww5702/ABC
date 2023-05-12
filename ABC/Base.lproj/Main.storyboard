@@ -317,8 +317,8 @@
                                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MXo-VI-dXc">
                                                                         <rect key="frame" x="206.66666666666663" y="0.0" width="186.33333333333337" height="182"/>
                                                                         <state key="normal" title="Button"/>
-                                                                        <buttonConfiguration key="configuration" style="plain" title="Button" cornerStyle="small">
-                                                                            <backgroundConfiguration key="background"/>
+                                                                        <buttonConfiguration key="configuration" style="plain" cornerStyle="small">
+                                                                            <backgroundConfiguration key="background" image="ranking_image.jpg"/>
                                                                         </buttonConfiguration>
                                                                         <connections>
                                                                             <action selector="gotoRank:" destination="4of-xZ-JLa" eventType="touchUpInside" id="yD1-vH-53d"/>
@@ -4920,10 +4920,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="393" height="20.666666030883789"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Nc-zJe">
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qes-Nc-zJe">
                                                     <rect key="frame" x="20" y="0.0" width="353" height="20.666666666666668"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-El-CCf">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmg-El-CCf">
                                                             <rect key="frame" x="0.0" y="0.0" width="300" height="20.666666666666668"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="300" id="k4a-Nx-Dro"/>
@@ -4932,7 +4932,7 @@
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkW-wz-ZSF">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fkW-wz-ZSF">
                                                             <rect key="frame" x="300" y="0.0" width="53" height="20.666666666666668"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
@@ -4994,6 +4994,7 @@
         <image name="aimImage.png" width="1280" height="1280"/>
         <image name="aimTrainerIcon.png" width="131" height="123"/>
         <image name="numberMemoryIcon.png" width="127" height="123"/>
+        <image name="ranking_image.jpg" width="1920" height="1920"/>
         <image name="reactionIcon.png" width="179" height="195"/>
         <namedColor name="background">
             <color red="0.27799999713897705" green="0.5220000147819519" blue="0.79600000381469727" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

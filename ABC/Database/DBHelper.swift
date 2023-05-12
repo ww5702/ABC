@@ -13,6 +13,7 @@ struct MyModel:Codable {
     var id: Int
     var myName: String
     var section: Int?
+    var forAim: Double?
 }
 
 struct MymyModel:Codable {
@@ -395,7 +396,6 @@ class DBHelper {
         sqlite3_finalize(statement)
         
         return result
-        print("result = \(result)")
     }
     
     func deleteTable(tableName: String) {
