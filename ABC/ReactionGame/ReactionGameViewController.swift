@@ -9,7 +9,6 @@ import UIKit
 
 class ReactionGameViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet var countlabel: UILabel!
@@ -126,7 +125,6 @@ class ReactionGameViewController: UIViewController, UITableViewDelegate, UITable
                         vc.modalPresentationStyle = .fullScreen
                         vc.data = reactionAvg
                         vc.userName = userName
-                        vc.isFirstTimeRecord = isFirstTimeRecord
                         self.present(vc, animated: true)
                     }
                 }

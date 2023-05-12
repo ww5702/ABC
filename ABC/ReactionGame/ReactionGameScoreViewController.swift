@@ -11,7 +11,6 @@ import UIKit
 class ReactionGameScoreViewController: UIViewController {
     let dbHelper = DBHelper.shared
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var reactionImgView: UIImageView!
     @IBOutlet weak var reactionExplainLabel: UILabel!
@@ -71,7 +70,6 @@ class ReactionGameScoreViewController: UIViewController {
         if let vc = storyboard?.instantiateViewController(withIdentifier: "ReactionGameViewController") as? ReactionGameViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.userName = userName
-            vc.isFirstTimeRecord = isFirstTimeRecord!
             self.present(vc, animated: true)
         }
     }
@@ -80,7 +78,6 @@ class ReactionGameScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
-        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -88,20 +85,9 @@ class ReactionGameScoreViewController: UIViewController {
     
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "reaction")
-        if versusData == 0 {
-            if isFirstTimeRecord == true {
-                dbHelper.insertData(name: "\(userName!)", value: data, section: "reaction")
-                isFirstTimeRecord = false
-                print("첫 db 기록!")
-            } else {
-                dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
-            }
-            print("새 기록 추가")
-        } else if data < versusData{
+        if data < versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
             print("기록 갱신")
-        } else {
-            print("기록 갱신 실패!")
         }
     }
 }

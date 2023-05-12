@@ -10,7 +10,6 @@ import Lottie
 
 class ChimpTestExplainViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
@@ -51,7 +50,6 @@ class ChimpTestExplainViewController: UIViewController {
         guard let ChimpTestViewController = segue.destination as? ChimpTestViewController else { return }
         
         ChimpTestViewController.userName = self.userName
-        ChimpTestViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
     
 

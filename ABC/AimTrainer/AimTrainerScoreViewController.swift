@@ -11,7 +11,6 @@ import Lottie
 class AimTrainerScoreViewController: UIViewController {
     let dbHelper = DBHelper.shared
     var userName: String?
-    var isFirstTimeRecord: Bool?
 
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var explainLabel: UILabel!
@@ -113,7 +112,6 @@ class AimTrainerScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "AimTrainerExplainViewController") as? AimTrainerExplainViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
-        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -124,7 +122,6 @@ class AimTrainerScoreViewController: UIViewController {
         guard let vc = storyboard?.instantiateViewController(identifier: "GameSelectViewController") as? GameSelectViewController else {return}
         let navigationController = UINavigationController(rootViewController: vc)
         vc.userName = userName
-        vc.isFirstTimeRecord = isFirstTimeRecord!
         navigationController.modalPresentationStyle = .fullScreen
         navigationController.isNavigationBarHidden = false
         present(navigationController, animated: true)
@@ -135,18 +132,9 @@ class AimTrainerScoreViewController: UIViewController {
         print(temp)
         addData = Double(temp)!
         print(addData)
-        
         versusData = dbHelper.readRecordDataForAim(name: userName!, section: "aim")
-        if versusData == 0 {
-            if isFirstTimeRecord == true {
-                dbHelper.insertDataForAim(name: "\(userName!)", value: addData, section: "aim")
-                print("첫 db 기록!")
-                isFirstTimeRecord = false
-            } else {
-                dbHelper.updateDateForAim(name: "\(userName!)", value: addData, section: "aim")
-            }
-            print("새 기록 추가")
-        } else if addData < Double(versusData){
+        
+        if addData < Double(versusData){
             dbHelper.updateDateForAim(name: "\(userName!)", value: addData, section: "aim")
             print("기록 갱신")
         } else {

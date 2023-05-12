@@ -10,7 +10,6 @@ import AVFoundation
 
 class AimTrainerViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var startLabel: UIButton!
     @IBOutlet weak var touchbtnLabel: UIButton!
@@ -152,7 +151,6 @@ class AimTrainerViewController: UIViewController {
             vc.milliseconddata = Int(countMilliSecond)
             vc.miss = Double(miss)
             vc.userName = userName
-            vc.isFirstTimeRecord = isFirstTimeRecord
             self.present(vc, animated: true)
         }
     }

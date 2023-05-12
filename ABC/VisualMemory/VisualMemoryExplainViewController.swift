@@ -10,7 +10,6 @@ import UIKit
 
 class VisualMemoryExplainViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
@@ -53,7 +52,6 @@ class VisualMemoryExplainViewController: UIViewController {
         guard let VisualMemoryViewController = segue.destination as? VisualMemoryViewController else { return }
         
         VisualMemoryViewController.userName = self.userName
-        VisualMemoryViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
     
 }

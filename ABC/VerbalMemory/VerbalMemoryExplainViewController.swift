@@ -10,7 +10,6 @@ import UIKit
 
 class VerbalMemoryExplainViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainImage: UIImageView!
     @IBOutlet weak var explainLabel: UILabel!
@@ -65,9 +64,7 @@ class VerbalMemoryExplainViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let VerbalMemoryViewController = segue.destination as? VerbalMemoryViewController else { return }
-        
         VerbalMemoryViewController.userName = self.userName
-        VerbalMemoryViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
     
 }

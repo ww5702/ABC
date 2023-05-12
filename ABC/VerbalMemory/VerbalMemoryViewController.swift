@@ -9,7 +9,6 @@ import UIKit
 
 class VerbalMemoryViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -163,7 +162,6 @@ class VerbalMemoryViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score
             vc.userName = userName
-            vc.isFirstTimeRecord = isFirstTimeRecord
             self.present(vc, animated: true)
         }
     }

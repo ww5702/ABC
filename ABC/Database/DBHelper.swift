@@ -60,13 +60,14 @@ class DBHelper {
                CREATE TABLE IF NOT EXISTS ABC_user(
                id INTEGER PRIMARY KEY AUTOINCREMENT,
                name TEXT DEFAULT 'no value',
-               reaction INT DEFAULT '0',
+               reaction INT DEFAULT '9999',
                verbal INT DEFAULT '0',
                visual INT DEFAULT '0',
                number INT DEFAULT '0',
-               aim REAL DEFAULT '0.0',
+               aim REAL DEFAULT '9999.0',
                chimp INT DEFAULT '0',
-               sequence INT DEFAULT '0'
+               sequence INT DEFAULT '0',
+               password TEXT DEFAULT 'no value'
                );
                """
         

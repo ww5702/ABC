@@ -10,7 +10,6 @@ import Lottie
 
 class AimTrainerExplainViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
 
     @IBOutlet weak var explainLabel: UILabel!
     private var animationView: LottieAnimationView?
@@ -61,6 +60,5 @@ class AimTrainerExplainViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let AimTrainerViewController = segue.destination as? AimTrainerViewController else { return }
         AimTrainerViewController.userName = self.userName
-        AimTrainerViewController.isFirstTimeRecord = self.isFirstTimeRecord
     }
 }

@@ -10,7 +10,6 @@ import Lottie
 
 class SequenceMemoryViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet var touchView: UIView!
     @IBOutlet weak var explainLabel: UILabel!
@@ -295,7 +294,6 @@ class SequenceMemoryViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = level
             vc.userName = userName
-            vc.isFirstTimeRecord = isFirstTimeRecord
             self.present(vc, animated: true)
         }
         

@@ -9,7 +9,6 @@ import UIKit
 
 class ChimpTestViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var firstView: UIView!
     @IBOutlet weak var secondView: UIView!
@@ -58,7 +57,6 @@ class ChimpTestViewController: UIViewController {
             vc.modalPresentationStyle = .fullScreen
             vc.data = score-3
             vc.userName = userName
-            vc.isFirstTimeRecord = isFirstTimeRecord
             self.present(vc, animated: true)
         }
     }

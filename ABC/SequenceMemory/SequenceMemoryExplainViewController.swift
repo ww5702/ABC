@@ -10,7 +10,6 @@ import UIKit
 
 class SequenceMemoryExplainViewController: UIViewController {
     var userName: String?
-    var isFirstTimeRecord: Bool?
     
     @IBOutlet weak var explainLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
@@ -54,7 +53,6 @@ class SequenceMemoryExplainViewController: UIViewController {
         guard let SequenceMemoryViewController = segue.destination as? SequenceMemoryViewController else { return }
         
         SequenceMemoryViewController.userName = self.userName
-        SequenceMemoryViewController.isFirstTimeRecord = self.isFirstTimeRecord
         
     }
     
