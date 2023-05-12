@@ -154,7 +154,8 @@ CREATE TABLE IF NOT EXISTS test3(
                number INT DEFAULT 0,
                aim REAL DEFAULT 9999.0,
                chimp INT DEFAULT 0,
-               sequence INT DEFAULT 0);
+               sequence INT DEFAULT 0),
+               password TEXT DEFAULT 'no value';
 ```
 위의 구조로 DB table 구성   
    
