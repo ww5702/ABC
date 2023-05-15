@@ -21,6 +21,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
     var userName: String?
     
     var columnCount: Int = 1
+    var myRank = 0
     
     @IBOutlet weak var backTableBtn: UIBarButtonItem!
     @IBOutlet weak var nextTableBtn: UIBarButtonItem!
@@ -36,6 +37,8 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
         // 개인 랭킹
         myTableView.delegate = self
         myTableView.dataSource = self
+        
+        myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "reaction")
         
         print(userName!)
         dataArray = dbHelper.readDataForAimReaction(section: "reaction")
@@ -74,6 +77,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let reaction = mydataArray[0].section {
                 cell.myrecordLabel.text = String(reaction)
             }
+            cell.myrankingLabel.text = String(myRank)
             return cell
         }
         return cell
@@ -97,36 +101,43 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             titleLabel.text = "Reaction Ranking"
             dataArray = dbHelper.readDataForAimReaction(section: "reaction")
             mydataArray = dbHelper.readMyData(name: userName!, section: "reaction")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "reaction")
             break
         case 2:
             titleLabel.text = "Verbal Ranking"
             dataArray = dbHelper.readData(section: "verbal")
             mydataArray = dbHelper.readMyData(name: userName!, section: "verbal")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "verbal")
             break
         case 3:
             titleLabel.text = "Visual Ranking"
             dataArray = dbHelper.readData(section: "visual")
             mydataArray = dbHelper.readMyData(name: userName!, section: "visual")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "visual")
             break
         case 4:
             titleLabel.text = "Number Ranking"
             dataArray = dbHelper.readData(section: "number")
             mydataArray = dbHelper.readMyData(name: userName!, section: "number")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "number")
             break
         case 5:
             titleLabel.text = "Aim Ranking"
             dataArray = dbHelper.readDataForAimReaction(section: "aim")
             mydataArray = dbHelper.readMyData(name: userName!, section: "aim")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "aim")
             break
         case 6:
             titleLabel.text = "Chimp Ranking"
             dataArray = dbHelper.readData(section: "chimp")
             mydataArray = dbHelper.readMyData(name: userName!, section: "chimp")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "chimp")
             break
         case 7:
             titleLabel.text = "Sequence Ranking"
             dataArray = dbHelper.readData(section: "sequence")
             mydataArray = dbHelper.readMyData(name: userName!, section: "sequence")
+            myRank = dbHelper.checkMyRanking(checkname: "\(userName!)", section: "sequence")
             break
         default:
             break
@@ -153,6 +164,7 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let section = mydataArray[0].section {
                     cell.myrecordLabel.text = String(section)
                 }
+                cell.myrankingLabel.text = String(myRank)
                 return cell
             }
             return cell

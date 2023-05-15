@@ -17,6 +17,7 @@ struct MyModel:Codable {
 }
 
 struct MymyModel:Codable {
+    var myRank: Int?
     var myName: String
     var section: Int?
 }
@@ -341,6 +342,7 @@ class DBHelper {
         return result
     }
     
+    
     func readRecordData(name: String, section : String) -> Int {
         var statement: OpaquePointer?
         let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
@@ -397,6 +399,54 @@ class DBHelper {
         
         return result
     }
+    
+    func checkMyRanking(checkname: String, section: String) -> Int {
+        var statement: OpaquePointer?
+        // 반응속도일때만 오름차순으로
+        let queryString = "select * from ABC_user ORDER BY \(section) DESC;"
+        var totalRank = 1
+        
+        var result: Int = 0
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.)
+            switch section {
+            case "reaction":
+                result = Int(totalRank)
+                break
+            case "verbal":
+                result = Int(totalRank)
+                break
+            case "visual":
+                result = Int(totalRank)
+                break
+            case "number":
+                result = Int(totalRank)
+                break
+            case "aim":
+                result = Int(totalRank)
+                break
+            case "chimp":
+                result = Int(totalRank)
+                break
+            case "sequence":
+                result = Int(totalRank)
+                break
+            default:
+                break
+            }
+            if name == checkname { break }
+            totalRank += 1
+        }
+        sqlite3_finalize(statement)
+        //print(result)
+        return result
+    }
+    
     
     func deleteTable(tableName: String) {
         let queryString = "DROP TABLE \(tableName)"
