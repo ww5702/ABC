@@ -9,6 +9,7 @@ import UIKit
 
 class VisualMemoryViewController: UIViewController {
     var userName: String?
+    var heartlife = "❤️"
     
     @IBOutlet weak var startBtn: UIButton!
     @IBOutlet weak var readyView: UIView!
@@ -40,7 +41,7 @@ class VisualMemoryViewController: UIViewController {
         super.viewDidLoad()
         startBtn.isHidden = false
         
-        lifeLabel.text = "Life | \(life)"
+        lifeLabel.text = "Life | \(heartlife)\(heartlife)\(heartlife)"
         scoreLabel.text = "Score | \(score)"
         
         readyView.alpha = 1
@@ -150,7 +151,11 @@ extension VisualMemoryViewController: ContainerVCDelegate {
         
         life -= value
         if life > 0 {
-            lifeLabel.text = "Life | \(life)"
+            if life == 2 {
+                lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+            } else if life == 1 {
+                lifeLabel.text = "Life | \(heartlife)"
+            }
         } else {
             gotoResult()
         }
@@ -193,7 +198,11 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
         
         life -= value
         if life > 0 {
-            lifeLabel.text = "Life | \(life)"
+            if life == 2 {
+                lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+            } else if life == 1 {
+                lifeLabel.text = "Life | \(heartlife)"
+            }
         } else {
             gotoResult()
         }
@@ -235,7 +244,11 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
         
         life -= value
         if life > 0 {
-            lifeLabel.text = "Life | \(life)"
+            if life == 2 {
+                lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+            } else if life == 1 {
+                lifeLabel.text = "Life | \(heartlife)"
+            }
         } else {
             gotoResult()
         }
@@ -263,7 +276,11 @@ extension VisualMemoryViewController: ContainerVCDelegate4 {
         
         life -= value
         if life > 0 {
-            lifeLabel.text = "Life | \(life)"
+            if life == 2 {
+                lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+            } else if life == 1 {
+                lifeLabel.text = "Life | \(heartlife)"
+            }
         } else {
             gotoResult()
         }

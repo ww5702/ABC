@@ -272,59 +272,7 @@ class DBHelper {
         //print(result)
         return result
     }
-    func readDataForAimReaction(section: String) -> [MyModel] {
-        var statement: OpaquePointer?
-        // 반응속도일때만 오름차순으로
-        let queryString = "select * from ABC_user ORDER BY \(section);"
-        var totalRank = 1
-        
-        var result: [MyModel] = []
-        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
-            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
-            print("error while prepare: \(errorMessage)")
-            return result
-        }
-        while sqlite3_step(statement) == SQLITE_ROW {
-            let id = sqlite3_column_int(statement, 0) // 결과의 0번째 테이블 값
-            let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.
-            let reaction = sqlite3_column_int(statement, 2)
-            let verbal = sqlite3_column_int(statement, 3)
-            let visual = sqlite3_column_int(statement, 4)
-            let number = sqlite3_column_int(statement, 5)
-            let aim = sqlite3_column_double(statement, 6)
-            let chimp = sqlite3_column_int(statement, 7)
-            let sequence = sqlite3_column_int(statement, 8)
-            switch section {
-            case "reaction":
-                result.append(MyModel(rank: Int(totalRank), id: Int(id), myName: String(name), section: Int(reaction)))
-                break
-            case "verbal":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(verbal)))
-                break
-            case "visual":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(visual)))
-                break
-            case "number":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(number)))
-                break
-            case "aim":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(aim)))
-                break
-            case "chimp":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(chimp)))
-                break
-            case "sequence":
-                result.append(MyModel(rank: Int(totalRank),id: Int(id), myName: String(name), section: Int(sequence)))
-                break
-            default:
-                break
-            }
-            totalRank += 1
-        }
-        sqlite3_finalize(statement)
-        //print(result)
-        return result
-    }
+    
     func readMyData(name: String, section: String) -> [MymyModel] {
         var statement: OpaquePointer?
         // 반응속도일때만 오름차순으로
@@ -348,7 +296,8 @@ class DBHelper {
     
     func readRecordData(name: String, section : String) -> Int {
         var statement: OpaquePointer?
-        let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
+        var queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
+        
         print(queryString)
         var result: Int = 0
         
@@ -368,7 +317,6 @@ class DBHelper {
     func readRecordDataForAim(name: String, section : String) -> Double {
         var statement: OpaquePointer?
         let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
-        print(queryString)
         var result: Double = 0
         
         if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
@@ -410,7 +358,6 @@ class DBHelper {
         if section == "aim" {
             queryString = "select * from ABC_user ORDER BY \(section);"
         }
-        print(queryString)
         var totalRank = 1
         
         var result: Int = 0
@@ -453,53 +400,6 @@ class DBHelper {
         //print(result)
         return result
     }
-    func checkMyRankingforAim(checkname: String, section: String) -> Int {
-        var statement: OpaquePointer?
-        // 반응속도일때만 오름차순으로
-        let queryString = "select * from ABC_user ORDER BY \(section) DESC;"
-        var totalRank = 1
-        
-        var result: Int = 0
-        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
-            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
-            print("error while prepare: \(errorMessage)")
-            return result
-        }
-        while sqlite3_step(statement) == SQLITE_ROW {
-            let name = String(cString: sqlite3_column_text(statement, 1)) // 결과의 1번째 테이블 값.)
-            switch section {
-            case "reaction":
-                result = Int(totalRank)
-                break
-            case "verbal":
-                result = Int(totalRank)
-                break
-            case "visual":
-                result = Int(totalRank)
-                break
-            case "number":
-                result = Int(totalRank)
-                break
-            case "aim":
-                result = Int(totalRank)
-                break
-            case "chimp":
-                result = Int(totalRank)
-                break
-            case "sequence":
-                result = Int(totalRank)
-                break
-            default:
-                break
-            }
-            if name == checkname { break }
-            totalRank += 1
-        }
-        sqlite3_finalize(statement)
-        //print(result)
-        return result
-    }
-    
     
     
     func deleteTable(tableName: String) {

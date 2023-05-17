@@ -70,6 +70,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
             if let reaction = dataArray[indexPath.row].section {
                 cell.recordLabel.text = String(reaction)
             }
+            cell.rankLabel?.textColor = UIColor.white
+            cell.nameLabel?.textColor = UIColor.white
+            cell.recordLabel?.textColor = UIColor.white
             return cell
         } else if tableView == myTableView {
             cell.mynameLabel.text = String(mydataArray[0].myName)
@@ -78,6 +81,10 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                 cell.myrecordLabel.text = String(reaction)
             }
             cell.myrankingLabel.text = String(myRank)
+            
+            cell.myrankingLabel?.textColor = UIColor.white
+            cell.mynameLabel?.textColor = UIColor.white
+            cell.myrecordLabel?.textColor = UIColor.white
             return cell
         }
         return cell
@@ -157,6 +164,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let section = dataArray[indexPath.row].section {
                     cell.recordLabel.text = String(section)
                 }
+                cell.rankLabel?.textColor = UIColor.white
+                cell.nameLabel?.textColor = UIColor.white
+                cell.recordLabel?.textColor = UIColor.white
                 return cell
             } else if tableView == myTableView {
                 cell.mynameLabel.text = String(mydataArray[0].myName)
@@ -165,6 +175,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                     cell.myrecordLabel.text = String(section)
                 }
                 cell.myrankingLabel.text = String(myRank)
+                cell.myrankingLabel?.textColor = UIColor.white
+                cell.mynameLabel?.textColor = UIColor.white
+                cell.myrecordLabel?.textColor = UIColor.white
                 return cell
             }
             return cell
@@ -238,6 +251,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                 if let section = dataArray[indexPath.row].section {
                     cell.recordLabel.text = String(section)
                 }
+                cell.rankLabel?.textColor = UIColor.white
+                cell.nameLabel?.textColor = UIColor.white
+                cell.recordLabel?.textColor = UIColor.white
                 return cell
             } else if tableView == myTableView {
                 cell.mynameLabel.text = String(mydataArray[0].myName)
@@ -246,6 +262,9 @@ class RankViewController: UIViewController, UITableViewDelegate, UITableViewData
                     cell.myrecordLabel.text = String(section)
                 }
                 cell.myrankingLabel.text = String(myRank)
+                cell.myrankingLabel?.textColor = UIColor.white
+                cell.mynameLabel?.textColor = UIColor.white
+                cell.myrecordLabel?.textColor = UIColor.white
                 return cell
             }
             return cell

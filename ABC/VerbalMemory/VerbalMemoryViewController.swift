@@ -9,6 +9,7 @@ import UIKit
 
 class VerbalMemoryViewController: UIViewController {
     var userName: String?
+    var heartlife = "❤️"
     
     @IBOutlet weak var lifeLabel: UILabel!
     @IBOutlet weak var scoreLabel: UILabel!
@@ -29,7 +30,7 @@ class VerbalMemoryViewController: UIViewController {
         shuffleArr = []
         saveArr = []
         wordcount = 0
-        lifeLabel.text = "Life | \(life)"
+        lifeLabel.text = "Life | \(heartlife)\(heartlife)\(heartlife)"
         scoreLabel.text = "Score | \(score)"
         
         // txt 파일에서부터 단어 가져오기
@@ -80,7 +81,11 @@ class VerbalMemoryViewController: UIViewController {
             } else {
                 if life > 1 {
                     life -= 1
-                    lifeLabel.text = "Life | \(life)"
+                    if life == 2 {
+                        lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+                    } else if life == 1 {
+                        lifeLabel.text = "Life | \(heartlife)"
+                    }
                 } else {
                     gotoResult()
                 }
@@ -141,9 +146,11 @@ class VerbalMemoryViewController: UIViewController {
         } else {
             if life > 1 {
                 life -= 1
-                lifeLabel.text = "Life | \(life)"
-                
-                // 셔플해서 중복되더라도 단어 보여주기
+                if life == 2 {
+                    lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+                } else if life == 1 {
+                    lifeLabel.text = "Life | \(heartlife)"
+                }
                 showword()
             } else {
                 gotoResult()
