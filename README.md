@@ -168,3 +168,7 @@ CREATE TABLE IF NOT EXISTS test3(
 첫 화면에서 닉네임 입력시 중복형태의 닉네임 생성 불가
 닉네임 입력 키보드 출력시 키보드 크기만큼 화면 올리고 내리기   
 SignUp, login, logout 기능 구현   
+   
+-- 2023.05.11 ~ 05.15   
+db 기록에 따른 등수 표시 추가   
+dbHelper 간결화   
