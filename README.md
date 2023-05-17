@@ -27,7 +27,8 @@ To Do List
 -> view 자체를 탭 제스처로 표현하니까 해결 가능했었다.   
 ~~12. AimTrainer 게임 시작시 시간초 눈에 보이게 표시~~   
 13. ChimpTest 초기화 과정 정교화   
-14. GameSelect VC에서 버튼 비율 정밀화(정사각형)   
+~~14. GameSelect VC에서 버튼 비율 정밀화(정사각형)~~   
+-> 그냥 scroll view의 세로 길이를 늘렸다. 정사각형으로 맞추기 위해   
 15. 기록 1등 탈환시 이팩트(애니메이션 추가)   
 ~~16. DB Insert가 TEXT임에도 자동으로 BLOB으로 변경되어 저장되는 문제~~   
 -> 입력되는 name을 NSString(string: name).utf8String으로 변환시켜 저장   
