@@ -17,6 +17,7 @@ class VisualMemoryViewController: UIViewController {
     @IBOutlet weak var secondView: UIView!
     @IBOutlet weak var thirdView: UIView!
     @IBOutlet weak var fourthView: UIView!
+    @IBOutlet weak var fifthView: UIView!
     
     // 컨테이너 뷰 컨트롤러를 참조하는 변수 생성
     // 해당 변수가 있어야 VisualMemoryViewController의 아무곳에서 나중에 보낼 타깃을 가리킬수있다.
@@ -24,6 +25,7 @@ class VisualMemoryViewController: UIViewController {
     private var containerVC2: VisualMemorySecondViewController?
     private var containerVC3: VisualMemoryThirdViewController?
     private var containerVC4: VisualMemoryFourthViewController?
+    private var containerVC5: VisualMemoryFifthViewController?
     
     @IBOutlet weak var lifeLabel: UILabel!
     // 자식VC로 부터 받은 값을 표시할 레이블
@@ -49,6 +51,7 @@ class VisualMemoryViewController: UIViewController {
         secondView.alpha = 0
         thirdView.alpha = 0
         fourthView.alpha = 0
+        fifthView.alpha = 0
 
     }
 
@@ -64,6 +67,7 @@ class VisualMemoryViewController: UIViewController {
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 0
+            fifthView.alpha = 0
             
             startBtn.isHidden = true
             // 스코어를 전송
@@ -98,6 +102,9 @@ class VisualMemoryViewController: UIViewController {
             containerVC4 = segue.destination as? VisualMemoryFourthViewController
             containerVC4?.delegate = self
             
+        case "fifthContainer":
+            containerVC5 = segue.destination as? VisualMemoryFifthViewController
+            containerVC5?.delegate = self
         default:
             break
         }
@@ -127,6 +134,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
                 self.secondView.alpha = 1
                 self.thirdView.alpha = 0
                 self.fourthView.alpha = 0
+                self.fifthView.alpha = 0
                 self.containerVC2?.setisGameStart(self.isGameStart)
                 self.containerVC2?.setScore(self.score)
                 self.containerVC2?.setgamego()
@@ -137,6 +145,7 @@ extension VisualMemoryViewController: ContainerVCDelegate {
             secondView.alpha = 1
             thirdView.alpha = 0
             fourthView.alpha = 0
+            fifthView.alpha = 0
             containerVC2?.setisGameStart(isGameStart)
             containerVC2?.setScore(score)
             containerVC2?.setgamego()
@@ -174,6 +183,7 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
                 self.secondView.alpha = 0
                 self.thirdView.alpha = 1
                 self.fourthView.alpha = 0
+                self.fifthView.alpha = 0
                 self.containerVC3?.setisGameStart(self.isGameStart)
                 self.containerVC3?.setScore(self.score)
                 self.containerVC3?.setgamego()
@@ -184,6 +194,7 @@ extension VisualMemoryViewController: ContainerVCDelegate2 {
             secondView.alpha = 0
             thirdView.alpha = 1
             fourthView.alpha = 0
+            fifthView.alpha = 0
             containerVC3?.setisGameStart(isGameStart)
             containerVC3?.setScore(score)
             containerVC3?.setgamego()
@@ -220,6 +231,7 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
                 self.secondView.alpha = 0
                 self.thirdView.alpha = 0
                 self.fourthView.alpha = 1
+                self.fifthView.alpha = 0
                 self.containerVC4?.setisGameStart(self.isGameStart)
                 self.containerVC4?.setScore(self.score)
                 self.containerVC4?.setgamego()
@@ -230,6 +242,7 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 1
+            fifthView.alpha = 0
             containerVC4?.setisGameStart(isGameStart)
             containerVC4?.setScore(score)
             containerVC4?.setgamego()
@@ -254,20 +267,67 @@ extension VisualMemoryViewController: ContainerVCDelegate3 {
         }
     }
 }
-
 extension VisualMemoryViewController: ContainerVCDelegate4 {
     func didReceivedValueFromContainer(_ controller: VisualMemoryFourthViewController, value: Int) {
         score = value
         scoreLabel.text = "Score | \(score)"
         if value >= 15 {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
+                self.readyView.alpha = 0
+                self.firstView.alpha = 0
+                self.secondView.alpha = 0
+                self.thirdView.alpha = 0
+                self.fourthView.alpha = 0
+                self.fifthView.alpha = 1
+                self.containerVC5?.setisGameStart(self.isGameStart)
+                self.containerVC5?.setScore(self.score)
+                self.containerVC5?.setgamego()
+            })
+        }else if value >= 16 {
+            readyView.alpha = 0
+            firstView.alpha = 0
+            secondView.alpha = 0
+            thirdView.alpha = 0
+            fourthView.alpha = 0
+            fifthView.alpha = 1
+            containerVC4?.setisGameStart(isGameStart)
+            containerVC4?.setScore(score)
+            containerVC4?.setgamego()
+        }
+    }
+    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFourthViewController, value: Int) {
+        // 잠시 빨간색 후 다시 파란색
+        self.view.backgroundColor = UIColor.systemRed
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {
+            self.view.backgroundColor = UIColor(named: "background")
+        })
+        
+        life -= value
+        if life > 0 {
+            if life == 2 {
+                lifeLabel.text = "Life | \(heartlife)\(heartlife)"
+            } else if life == 1 {
+                lifeLabel.text = "Life | \(heartlife)"
+            }
+        } else {
+            gotoResult()
+        }
+    }
+}
+extension VisualMemoryViewController: ContainerVCDelegate5 {
+    func didReceivedValueFromContainer(_ controller: VisualMemoryFifthViewController, value: Int) {
+        score = value
+        scoreLabel.text = "Score | \(score)"
+        if value >= 25 {
             readyView.alpha = 1
             firstView.alpha = 0
             secondView.alpha = 0
             thirdView.alpha = 0
             fourthView.alpha = 0
+            fifthView.alpha = 0
         }
     }
-    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFourthViewController, value: Int) {
+    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFifthViewController, value: Int) {
         // 잠시 빨간색 후 다시 파란색
         self.view.backgroundColor = UIColor.systemRed
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5, execute: {

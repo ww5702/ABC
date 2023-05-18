@@ -7,13 +7,15 @@
 
 import UIKit
 
-protocol ContainerVCDelegate4: AnyObject {
+protocol ContainerVCDelegate5: AnyObject {
     // 자식 VC로부터 값을 전달받은뒤 부모 컨테이너에서 그 값을 다루는 내용을 구현
-    func didReceivedValueFromContainer(_ controller: VisualMemoryFourthViewController, value: Int)
-    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFourthViewController, value: Int)
+    func didReceivedValueFromContainer(_ controller: VisualMemoryFifthViewController, value: Int)
+    func didReceivedValueFromContainerLife(_ controller: VisualMemoryFifthViewController, value: Int)
 }
 
 class VisualMemoryFifthViewController: UIViewController {
+    
+    weak var delegate: ContainerVCDelegate5?
     
     
     @IBOutlet weak var btn1Label: UIButton!

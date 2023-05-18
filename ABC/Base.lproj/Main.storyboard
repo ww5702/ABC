@@ -728,6 +728,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="VisualMemory" id="3Q8-Z1-r26"/>
                     <connections>
+                        <outlet property="fifthView" destination="BF0-OO-4WZ" id="WXR-aX-bQO"/>
                         <outlet property="firstView" destination="bih-f4-XKQ" id="CyE-N6-vI6"/>
                         <outlet property="fourthView" destination="vVP-iV-1FT" id="IcD-IQ-ITY"/>
                         <outlet property="lifeLabel" destination="0ym-eY-qad" id="2Z6-Ql-9T6"/>
