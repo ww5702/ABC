@@ -51,6 +51,7 @@
 		C14F052F29E948210065DFA2 /* ChimpTestIcon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */; };
 		C15255A62A0E1953005701B2 /* ranking_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C15255A52A0E1953005701B2 /* ranking_image.jpg */; };
 		C15255A82A15FF63005701B2 /* congratulation.json in Resources */ = {isa = PBXBuildFile; fileRef = C15255A72A15FF63005701B2 /* congratulation.json */; };
+		C15255B02A160423005701B2 /* VisualMemoryFifthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15255AF2A160423005701B2 /* VisualMemoryFifthViewController.swift */; };
 		C15A6B3B29C99F800002B72E /* VerbalMemoryScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */; };
 		C15A6B3D29C9A5F20002B72E /* ReactionGameScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */; };
 		C15A6B4329CD88EC0002B72E /* VisualMemoryExplain.png in Resources */ = {isa = PBXBuildFile; fileRef = C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */; };
@@ -124,6 +125,7 @@
 		C14F052E29E948210065DFA2 /* ChimpTestIcon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ChimpTestIcon.jpeg; sourceTree = "<group>"; };
 		C15255A52A0E1953005701B2 /* ranking_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = ranking_image.jpg; path = image/ranking_image.jpg; sourceTree = SOURCE_ROOT; };
 		C15255A72A15FF63005701B2 /* congratulation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = congratulation.json; path = json/congratulation.json; sourceTree = SOURCE_ROOT; };
+		C15255AF2A160423005701B2 /* VisualMemoryFifthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisualMemoryFifthViewController.swift; sourceTree = "<group>"; };
 		C15A6B3A29C99F800002B72E /* VerbalMemoryScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerbalMemoryScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B3C29C9A5F20002B72E /* ReactionGameScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReactionGameScoreViewController.swift; sourceTree = "<group>"; };
 		C15A6B4229CD88EC0002B72E /* VisualMemoryExplain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = VisualMemoryExplain.png; sourceTree = "<group>"; };
@@ -269,6 +271,7 @@
 				C15A6B4D29D52AFA0002B72E /* VisualMemorySecondViewController.swift */,
 				C13FFB8A29DABCA100B5704B /* VisualMemoryThirdViewController.swift */,
 				C13FFB8C29DBFD5600B5704B /* VisualMemoryFourthViewController.swift */,
+				C15255AF2A160423005701B2 /* VisualMemoryFifthViewController.swift */,
 				C13FFB8E29DC0A0A00B5704B /* VisualMemoryScoreViewController.swift */,
 			);
 			path = VisualMemory;
@@ -466,6 +469,7 @@
 				C12AA37229E010D3006B5E41 /* NumberMemoryWrongViewController.swift in Sources */,
 				C12AA37929E3FFA2006B5E41 /* AimTrainerViewController.swift in Sources */,
 				C12AA36C29DD6942006B5E41 /* NumberMemoryFirstViewController.swift in Sources */,
+				C15255B02A160423005701B2 /* VisualMemoryFifthViewController.swift in Sources */,
 				C15A6B4C29D41C1E0002B72E /* VisualMemoryReadyViewController.swift in Sources */,
 				C137599C29C04BC40072DA77 /* AppDelegate.swift in Sources */,
 				C15A6B4629CD89130002B72E /* VisualMemoryExplainViewController.swift in Sources */,
