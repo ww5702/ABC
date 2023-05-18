@@ -272,6 +272,28 @@ class DBHelper {
         //print(result)
         return result
     }
+    func readBestData(section: String) -> String {
+        var statement: OpaquePointer?
+        // 반응속도일때만 오름차순으로
+        var queryString = "select \(section) from ABC_user ORDER BY \(section) DESC;"
+        if section == "aim" {
+            queryString = "select \(section) from ABC_user ORDER BY \(section);"
+        }
+        var result: [String] = []
+        
+        if sqlite3_prepare(databasePointer, queryString, -1, &statement, nil) != SQLITE_OK {
+            let errorMessage = String(cString: sqlite3_errmsg(databasePointer)!)
+            print("error while prepare: \(errorMessage)")
+            return result[0]
+        }
+        while sqlite3_step(statement) == SQLITE_ROW {
+            let reaction = sqlite3_column_int(statement, 0) // 결과의 1번째 테이블 값.
+            result.append(String(reaction))
+        }
+        sqlite3_finalize(statement)
+        //print(result)
+        return result[0]
+    }
     
     func readMyData(name: String, section: String) -> [MymyModel] {
         var statement: OpaquePointer?
@@ -296,7 +318,7 @@ class DBHelper {
     
     func readRecordData(name: String, section : String) -> Int {
         var statement: OpaquePointer?
-        var queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
+        let queryString = "SELECT \(section) FROM ABC_user WHERE name == '\(name)';"
         
         print(queryString)
         var result: Int = 0

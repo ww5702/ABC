@@ -17,6 +17,7 @@ class VisualMemoryScoreViewController: UIViewController {
     private var animationView: LottieAnimationView?
     var data = 0
     var versusData: Int = 0
+    var bestData: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()

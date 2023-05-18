@@ -89,5 +89,6 @@ class ReactionGameScoreViewController: UIViewController {
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "reaction")
             print("기록 갱신")
         }
+        
     }
 }

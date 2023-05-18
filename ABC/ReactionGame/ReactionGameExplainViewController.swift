@@ -38,7 +38,6 @@ class ReactionGameExplainViewController: UIViewController {
         view.addSubview(animationView!)
         animationView!.play(fromFrame: 0, toFrame: 31)
 
-        // Do any additional setup after loading the view.
     }
     
 

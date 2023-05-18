@@ -67,4 +67,5 @@ class VerbalMemoryExplainViewController: UIViewController {
         VerbalMemoryViewController.userName = self.userName
     }
     
+    
 }

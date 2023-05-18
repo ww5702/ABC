@@ -18,6 +18,7 @@ class VerbalMemoryScoreViewController: UIViewController {
     private var animationView: LottieAnimationView?
     var data = 60
     var versusData: Int = 0
+    var bestData: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,7 +45,6 @@ class VerbalMemoryScoreViewController: UIViewController {
         }
         
         inputRecord()
-        
     }
     func trophyAnimation(x : String) {
         animationView = .init(name: x)
@@ -97,10 +97,13 @@ class VerbalMemoryScoreViewController: UIViewController {
     
     func inputRecord() {
         versusData = dbHelper.readRecordData(name: userName!, section: "verbal")
+        bestData = Int(dbHelper.readBestData(section: "verbal"))!
+        print("bestdata = ", bestData)
         if data > versusData{
             dbHelper.updateDate(name: "\(userName!)", value: data, section: "verbal")
             print("기록 갱신")
         }
     }
+
 
 }
