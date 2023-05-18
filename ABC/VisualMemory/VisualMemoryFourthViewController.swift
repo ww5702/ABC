@@ -692,10 +692,6 @@ class VisualMemoryFourthViewController: UIViewController {
             }
         }
     }
-    
-    
-    
-    
     func gameStart() {
         if isGameStart == true {
             if value < 14 {
