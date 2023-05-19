@@ -271,7 +271,7 @@ extension VisualMemoryViewController: ContainerVCDelegate4 {
     func didReceivedValueFromContainer(_ controller: VisualMemoryFourthViewController, value: Int) {
         score = value
         scoreLabel.text = "Score | \(score)"
-        if value >= 15 {
+        if value >= 14 {
             DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                 self.readyView.alpha = 0
                 self.firstView.alpha = 0
@@ -283,7 +283,7 @@ extension VisualMemoryViewController: ContainerVCDelegate4 {
                 self.containerVC5?.setScore(self.score)
                 self.containerVC5?.setgamego()
             })
-        }else if value >= 16 {
+        }else if value >= 15 {
             readyView.alpha = 0
             firstView.alpha = 0
             secondView.alpha = 0
@@ -319,12 +319,13 @@ extension VisualMemoryViewController: ContainerVCDelegate5 {
         score = value
         scoreLabel.text = "Score | \(score)"
         if value >= 25 {
-            readyView.alpha = 1
-            firstView.alpha = 0
-            secondView.alpha = 0
-            thirdView.alpha = 0
-            fourthView.alpha = 0
-            fifthView.alpha = 0
+//            readyView.alpha = 1
+//            firstView.alpha = 0
+//            secondView.alpha = 0
+//            thirdView.alpha = 0
+//            fourthView.alpha = 0
+//            fifthView.alpha = 0
+            gotoResult()
         }
     }
     func didReceivedValueFromContainerLife(_ controller: VisualMemoryFifthViewController, value: Int) {

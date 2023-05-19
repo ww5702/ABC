@@ -694,12 +694,12 @@ class VisualMemoryFourthViewController: UIViewController {
     }
     func gameStart() {
         if isGameStart == true {
-            if value < 14 {
+            if value < 17 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {
                     let randomNum = Int.random(in: 1...36)
                     checkrandom.insert(randomNum)
-                    print(checkrandom)
+                    print(checkrandom.sorted())
                 }
                 for i in checkrandom {
                     switch i {
@@ -929,7 +929,7 @@ class VisualMemoryFourthViewController: UIViewController {
                 
                 // 몇초뒤에 다시 색을 변경해주어야한다.
                 // 1초 뒤에 파란색으로 다시 돌아가기
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5, execute: {
                     self.setblue()
                     self.isBtnColorChange = true
                 })

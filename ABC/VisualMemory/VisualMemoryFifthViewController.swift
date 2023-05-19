@@ -79,7 +79,7 @@ class VisualMemoryFifthViewController: UIViewController {
     var isBtnColorChange = false
     var gamelife = 3
     var count = 0
-    var value: Int = 18
+    var value: Int = 17
     
     var btnbool : [Bool] = Array(repeating: false, count: 49)
     var btnbool2 : [Bool] = Array(repeating: false, count: 49)
@@ -929,12 +929,12 @@ class VisualMemoryFifthViewController: UIViewController {
     
     func gameStart() {
         if isGameStart == true {
-            if value < 25 {
+            if value < 28 {
                 var checkrandom = Set<Int>()
                 while checkrandom.count < value {
                     let randomNum = Int.random(in: 1...49)
                     checkrandom.insert(randomNum)
-                    print(checkrandom)
+                    print(checkrandom.sorted())
                 }
                 for i in checkrandom {
                     switch i {
@@ -1241,7 +1241,7 @@ class VisualMemoryFifthViewController: UIViewController {
                 
                 // 몇초뒤에 다시 색을 변경해주어야한다.
                 // 1초 뒤에 파란색으로 다시 돌아가기
-                DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.0, execute: {
                     self.setblue()
                     self.isBtnColorChange = true
                 })
@@ -1262,9 +1262,9 @@ class VisualMemoryFifthViewController: UIViewController {
             })
             
             // set함수 초기화
-            btnbool = Array(repeating: false, count: 36)
-            btnbool2 = Array(repeating: false, count: 36)
-            btnbool3 = Array(repeating: false, count: 36)
+            btnbool = Array(repeating: false, count: 49)
+            btnbool2 = Array(repeating: false, count: 49)
+            btnbool3 = Array(repeating: false, count: 49)
             // 이제 +1 해준다음 게임 다시 시작
             value += 1
             // count또한 초기화

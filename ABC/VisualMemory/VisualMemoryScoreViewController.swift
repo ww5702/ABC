@@ -36,10 +36,14 @@ class VisualMemoryScoreViewController: UIViewController {
             trophyAnimation(x: "gold_trophy")
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "GREAT!\n최고는 아니지만 이정도면 어디가서 꿀리진 않겠어요!")
-        } else {
+        } else if data < 25{
             trophyAnimation(x: "champion_trophy")
             scoreLabel.text = "\(data) 점"
             textAnimation(x: "!!CHAMPION!!\n믿기지 않는 기억력!\n이보다 좋은 결과는 없을거에요")
+        } else if data == 25 {
+            trophyAnimation(x: "champion_trophy")
+            scoreLabel.text = "\(data) 점"
+            textAnimation(x: "더이상 높은 단계가 존재하지 않습니다..\n다음 업데이트를 기다려주세요...")
         }
         inputRecord()
         
