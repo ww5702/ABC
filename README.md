@@ -176,3 +176,9 @@ SignUp, login, logout 기능 구현
 -- 2023.05.11 ~ 05.15   
 db 기록에 따른 등수 표시 추가   
 dbHelper 간결화   
+   
+-- 2023.05.19    
+visual Memory 7x7 추가   
+app store 배포 준비.   
+https://velog.io/@heyksw/iOS-%EC%95%B1%EC%8A%A4%ED%86%A0%EC%96%B4-%EB%B0%B0%ED%8F%AC%EA%B3%BC%EC%A0%95   
+https://developer.apple.com/account/resources/identifiers/list   
