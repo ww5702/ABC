@@ -182,3 +182,5 @@ visual Memory 7x7 추가
 app store 배포 준비.   
 https://velog.io/@heyksw/iOS-%EC%95%B1%EC%8A%A4%ED%86%A0%EC%96%B4-%EB%B0%B0%ED%8F%AC%EA%B3%BC%EC%A0%95   
 https://developer.apple.com/account/resources/identifiers/list   
+   
+배포를 위한 애플디벨로퍼 계정 생성   
